@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Blade;
 use Validator;
 use View;
 
@@ -41,5 +42,9 @@ class AppServiceProvider extends ServiceProvider
         Validator::extend('without_spaces', function($attr, $value){
                     return preg_match('/^\S*$/u', $value);
                                                                 });
+															
+		Blade::directive('convert', function ($money) {
+			return "<?php echo number_format($money, 2); ?>";
+		});															
     }
 }

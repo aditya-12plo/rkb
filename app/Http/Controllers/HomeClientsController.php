@@ -1597,7 +1597,7 @@ class HomeClientsController extends Controller
 
     public function postDeposit(Request $request)
     {
-        $valid = $this->validate($request, [
+         $valid = $this->validate($request, [
             'account_number'        => 'required|max:255',
             'total_deposit'         => 'required|numeric|min:2',
             'image_deposit'         => 'required|mimes:pdf,jpg,png,jpeg',
@@ -1610,12 +1610,13 @@ class HomeClientsController extends Controller
         $destinationPath = 'public/client-deposit/'; // upload path
         $extension  = Input::file('image_deposit')->getClientOriginalExtension(); // getting image extension
         $fileName   = time().'.'.$extension; // renameing image
-
+		
         if(file_exists($destinationPath.$fileName)){
             $fileName   = Crypt::encryptString(time()).'.'.$extension; // renameing image
         }
 
             Input::file('image_deposit')->move($destinationPath, $fileName);
+
             $masuk = array(
                     'user_id'           => Auth::user()->id,
                     'total_deposit'     => $request->total_deposit,
@@ -1625,6 +1626,14 @@ class HomeClientsController extends Controller
                 );
     
             Models\Deposit::create($masuk);
+			
+				$attach = $destinationPath.$fileName;
+				$content = view('emails.email_deposit')->with($masuk);
+                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$attach){
+                    $message->to('finance@rajawalikapital.co.id')->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id"])->subject('Deposit Info');
+                    $message->attach($attach);
+                });
+				
             return response()->json(['status'=>200,'data'=> '','message'=>'Upload data berhasil']);
         }else{
             return response()->json(['status'=>402,'data'=> '','message'=>['error'=>['Anda tidak memiliki Akun Real.']]]);
