@@ -7,7 +7,15 @@
     
     Route::get('/personal-account', 'IndexController@akunIndividu')->name('personalAccount');
     Route::get('/akun-individu', 'IndexController@akunIndividu')->name('personalAccount');
+
+    Route::get('/institutional-account', 'IndexController@akunInstitusi')->name('institutionalAccount');
+    Route::get('/akun-institusi', 'IndexController@akunInstitusi')->name('institutionalAccount');
+
+    Route::get('/privacy-policy', ['as' => 'kebijakanPrivasiPerusahaanWeb', 'uses' => 'IndexController@kebijakanPrivasi']);
+    Route::get('/kebijakan-privasi', ['as' => 'kebijakanPrivasiPerusahaanWeb', 'uses' => 'IndexController@kebijakanPrivasi']);
     
+    Route::get('/daftar-akun-demo', ['as' => 'akunDemoPerusahaanWeb', 'uses' => 'IndexController@akunDemo']);
+    Route::get('/register-demo-account', ['as' => 'akunDemoPerusahaanWeb', 'uses' => 'IndexController@akunDemo']);
     
     Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
     Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);

@@ -51,19 +51,47 @@ class IndexController extends Controller
     }
 
 	public function kebijakanPrivasi(){ 
-        $this->data['title'] = 'Kebijakan Privasi Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Rajawali kapital berjangka Kami tidak akan menjual atau menyampaikan informasi pribadi Anda kepada pihak ketiga kecuali bagi mereka yang kami perlukan dalam kaitannya dengan normal operasi bisnis kami. Termasuk pusat pengolahan dan verifikasi kartu kredit, lembaga penegak hukum, regulator, auditor, dan Introducing Broker yang memiliki perjanjian bisnis dengan kami.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd Privacy Policy';
+            $this->data['description'] = 'Eagle Capital futures Ltd We will not sell or transmit your personal information to third parties except for those we need in connection with the normal operation of our business. Including credit card processing and verification centers, law enforcement agencies, regulators, auditors, and Introducing Brokers who have a business agreement with us.';
+            $this->data['keywords'] = $this->keywords.',eagle capital futures privacy policy, rkb profile';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd期货隐私政策';
+            $this->data['description'] = 'Eagle Capital Futures Ltd除我们正常业务需要的信息外，我们不会将您的个人信息出售或传输给第三方。 包括与我们有业务协议的信用卡处理和验证中心，执法机构，监管机构，审计师和介绍经纪人。';
+            $this->data['keywords'] = $this->keywords.',eagle capital futures privacy policy, rkb profile，鹰资本期货隐私政策，rkb个人资料';
+		}else{
+			$this->data['title'] = 'Kebijakan Privasi Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali kapital berjangka Kami tidak akan menjual atau menyampaikan informasi pribadi Anda kepada pihak ketiga kecuali bagi mereka yang kami perlukan dalam kaitannya dengan normal operasi bisnis kami. Termasuk pusat pengolahan dan verifikasi kartu kredit, lembaga penegak hukum, regulator, auditor, dan Introducing Broker yang memiliki perjanjian bisnis dengan kami.';
+            $this->data['keywords'] = $this->keywords.',kebijakan privasi rajawali kapital berjangka,profil rkb';
+		}
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',kebijakan privasi rajawali kapital berjangka,profil rkb';
+        
 		 
         return view('website.kebijakan-privasi')->with($this->data);
     }
 
-	public function akunDemo(){ 
-        $this->data['title'] = 'Daftar Akun Demo di Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Pendaftaran akun demo di Rajawali kapital berjangka.';
+	public function akunDemo(){
+        $config = app('config');
+        $default_locale = $config['app.locale']; 
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Register a Demo Account in Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Demo account registration in Eagle Capital Futures Ltd.';
+            $this->data['keywords'] = $this->keywords.', trading account registration, trading account, capital eagle account';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '在Eagle Capital Futures Ltd中注册模拟账户';
+            $this->data['description'] = '在Eagle Capital Futures Ltd.中注册模拟账户';
+            $this->data['keywords'] = $this->keywords.', trading account registration, trading account, capital eagle account，交易账户注册，交易账户，资本鹰账户';
+		}else{
+			$this->data['title'] = 'Daftar Akun Demo di Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Pendaftaran akun demo di Rajawali kapital berjangka.';
+            $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
+		}
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
+        
 		 
         return view('website.daftar-demo')->with($this->data);
     }
@@ -100,20 +128,47 @@ class IndexController extends Controller
     }
  
 	public function akunIndividu(){ 
-        $this->data['title'] = 'Akun Individu';
-        $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Individual Account';
+            $this->data['description'] = 'Segregated Account or a separate account is an account whose use is intended only for the needs of customer transactions and resolve obligations that arise at the request of a transaction from the customer. The use of separate accounts is regulated and monitored by the Commodity Futures Trading Regulatory Agency (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '个人账户';
+            $this->data['description'] = '独立帐户或单独帐户是仅用于满足客户交易需求并解决客户在交易请求时产生的义务的帐户。 商品期货交易监管机构（BAPPEBTI）对单独帐户的使用进行监管。';
+            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts，个人交易账户，个人账户，开设模拟账户，开设真实交易账户，账户，商品交易账户';
+		}else{
+			$this->data['title'] = 'Akun Individu';
+            $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',akun trading individu, akun personal,buka akun demo, buka akun trading real, akun, akun trading komoditi';
+        }
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',akun trading individu, akun personal,buka akun demo, buka akun trading real, akun, akun trading komoditi';
-		 
+
         return view('website.akun-individu')->with($this->data);
     }
  
 	public function akunInstitusi(){ 
-        $this->data['title'] = 'Akun Institusi';
-        $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Individual Account';
+            $this->data['description'] = 'Segregated Account or a separate account is an account whose use is intended only for the needs of customer transactions and resolve obligations that arise at the request of a transaction from the customer. The use of separate accounts is regulated and monitored by the Commodity Futures Trading Regulatory Agency (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '个人账户';
+            $this->data['description'] = '独立帐户或单独帐户是仅用于满足客户交易需求并解决客户在交易请求时产生的义务的帐户。 商品期货交易监管机构（BAPPEBTI）对单独帐户的使用进行监管。';
+            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts，个人交易账户，个人账户，开设模拟账户，开设真实交易账户，账户，商品交易账户';
+		}else{
+			$this->data['title'] = 'Akun Institusi';
+            $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',akun trading perusahaan, akun perusahaan,buka akun real ,trading beneran, buka akun trading real, akun, akun trading komoditi';
+        }
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',akun trading perusahaan, akun perusahaan,buka akun real ,trading beneran, buka akun trading real, akun, akun trading komoditi';
-		 
         return view('website.akun-institusi')->with($this->data);
     }
 
