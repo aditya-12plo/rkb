@@ -22,41 +22,88 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
+			<b>FORMULIR PBK. CDDS. 04</b>
                 <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
                  <tr>
-                    <td colspan="3" style="text-align:center;"><b>PERNYATAAN KEBENARAN DAN TANGGUNG JAWAB</b></td>
+                    <td colspan="3" style="text-align:center;"><b>DOKUMEN YANG DILAMPIRKAN</b></td>
                 </tr>
 
 <tr>
-    <td colspan="3">
-      <p>Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa semua informasi dan semua
-dokumen yang saya lampirkan dalam APLIKASI PEMBUKAAN REKENING TRANSAKSI SECARA
-ELEKTRONIK ON-LINE adalah benar dan tepat, Saya akan bertanggung jawab penuh apabila
-dikemudian hari terjadi sesuatu hal sehubungan dengan ketidakbenaran data yang saya berikan.
-</p>
+    <td>Rekening Koran Bank / Tagihan Kartu Kredit
+        <br>
+   <div v-if="forms.rekening_koran_bank">     
+        <a v-bind:href="url+forms.rekening_koran_bank" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('rekening_koran_bank',forms.rekening_koran_bank)">Hapus File</button>
+   </div>
     </td>
+    <td>:</td>
+    <td><input type="file" name="rekening_koran_bank" class="form-control" id="rekening_koran_bank" v-on:change="rekening_koran_bank"> </td>
 </tr>
 
 <tr>
-    <td width="30%"> Pernyataan Kebenaran dan Tanggung Jawab </td>
-    <td width="70%" colspan="2"><div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_statement_of_truth_and_responsibility" name="aggrement_statement_of_truth_and_responsibility" v-model="forms.aggrement_statement_of_truth_and_responsibility" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_statement_of_truth_and_responsibility">Ya</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_statement_of_truth_and_responsibility" name="aggrement_statement_of_truth_and_responsibility" v-model="forms.aggrement_statement_of_truth_and_responsibility" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_statement_of_truth_and_responsibility">Tidak</label>
-        </div> </td>
+    <td>Rekening Listrik / Telepon 
+        <br>
+   <div v-if="forms.rekening_listrik">     
+        <a v-bind:href="url+forms.rekening_listrik" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('rekening_listrik',forms.rekening_listrik)">Hapus File</button>
+   </div>
+
+    </td>
+    <td>:</td>
+    <td><input type="file" name="rekening_listrik" class="form-control" id="rekening_listrik" v-on:change="rekening_listrik"> </td>
 </tr>
 
 <tr>
-    <td width="30%">Menyatakan pada Tanggal </td>
-    <td width="70%" colspan="2"> {{this.customLokalFormatter(currentDate)}}</td>
+    <td>Tambahan dokumen lain 1 (apabila diperlukan)
+        <br>
+   <div v-if="forms.tambahan_dokumen">     
+        <a v-bind:href="url+forms.tambahan_dokumen" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('tambahan_dokumen',forms.tambahan_dokumen)">Hapus File</button>
+   </div>
+
+    </td>
+    <td>:</td>
+    <td><input type="file" name="tambahan_dokumen" class="form-control" id="tambahan_dokumen" v-on:change="tambahan_dokumen"> </td>
 </tr>
+
+<tr>
+    <td>Tambahan dokumen lain 2 (apabila diperlukan)
+        <br>
+   <div v-if="forms.tambahan_dokumen_2">     
+        <a v-bind:href="url+forms.tambahan_dokumen_2" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('tambahan_dokumen_2',forms.tambahan_dokumen_2)">Hapus File</button>
+   </div>
+
+    </td>
+    <td>:</td>
+    <td><input type="file" name="tambahan_dokumen_2" class="form-control" id="tambahan_dokumen_2" v-on:change="tambahan_dokumen_2"> </td>
+</tr>
+
+<tr>
+    <td>Foto Terkini <span style="color:red;">*</span>
+        <br>
+   <div v-if="forms.foto_terkini">     
+        <a v-bind:href="url+forms.foto_terkini" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('foto_terkini',forms.foto_terkini)">Hapus File</button>
+   </div>
+
+    </td>
+    <td>:</td>
+    <td><input type="file" name="foto_terkini" class="form-control" id="foto_terkini" v-on:change="foto_terkini"> </td>
+</tr>
+
+<tr>
+    <td>KTP/SIM/Passpor <span style="color:red;">*</span>
+        <br>
+   <div v-if="forms.scan_identitas">     
+        <a v-bind:href="url+forms.scan_identitas" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="submit" class="btn btn-danger" @click.prevent="DeleteFile('scan_identitas',forms.scan_identitas)">Hapus File</button>
+   </div>
+
+    </td>
+    <td>:</td>
+    <td><input type="file" name="scan_identitas" class="form-control" id="scan_identitas" v-on:change="scan_identitas"> </td>
+</tr>
+
+
 
                </table>
             </div>
@@ -112,7 +159,6 @@ export default {
       idCode:'',
 	    url:'/public/client-files/',
       position: 'up right',
-      button_ya_tidak:'',
       closeBtn: true,
       jenis_rekening_others:'',
       jenis_rekening_others_2:'',
@@ -150,17 +196,132 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', aggrement_statement_of_truth_and_responsibility:'',status:''},
+      forms: {id : '', foto_terkini:'', rekening_koran_bank:'', rekening_listrik:'', 
+      scan_identitas:'',tambahan_dokumen:'',tambahan_dokumen_2:'',status:''},
     }
   },
   watch: { 
 
   },
   methods: {
-
-    customLokalFormatter(date) {
-      return moment(date).format('DD-MM-YYYY');
+    DeleteFile(field,fileName) {
+        let masuk = new FormData();
+        masuk.set('id', this.forms.id)
+        masuk.set('field', field)
+        masuk.set('file_name', fileName)
+        axios.post('/clients-area/delete-file' , masuk).then(response => {
+                if(field == 'rekening_koran_bank'){
+                    this.forms.rekening_koran_bank = '';
+                }
+                if(field == 'foto_terkini'){
+                    this.forms.foto_terkini = '';
+                }
+                if(field == 'rekening_listrik'){
+                    this.forms.rekening_listrik = '';
+                }
+                if(field == 'scan_identitas'){
+                    this.forms.scan_identitas = '';
+                }
+                if(field == 'tambahan_dokumen'){
+                    this.forms.tambahan_dokumen = '';
+                }
+                if(field == 'tambahan_dokumen_2'){
+                    this.forms.tambahan_dokumen_2 = '';
+                }
+        });
     },
+
+    tambahan_dokumen_2(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) this.uploadFile('tambahan_dokumen_2',files[0]);
+                
+    },
+
+    tambahan_dokumen(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) this.uploadFile('tambahan_dokumen',files[0]);
+                
+    },
+
+    scan_identitas(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) this.uploadFile('scan_identitas',files[0]);
+                
+    },
+
+    rekening_listrik(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) this.uploadFile('rekening_listrik',files[0]);
+                
+    },
+
+    rekening_koran_bank(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) {
+            // this.forms.rekening_koran_bank = files[0];
+            this.uploadFile('rekening_koran_bank',files[0]);
+        }
+                
+    },
+    
+    foto_terkini(event) {
+        let files = event.target.files || e.dataTransfer.files;
+        if (files.length) this.uploadFile('foto_terkini',files[0]);
+                
+    },
+
+    uploadFile(field , fileName ){
+        this.loading();
+        let masuk = new FormData();
+        masuk.set('id', this.forms.id)
+        masuk.set('field', field)
+        masuk.set('file_name', fileName)
+        axios.post('/clients-area/upload-file' , masuk).then(response => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{
+                if(response.data.status == 200){ 
+                    if(field == 'rekening_koran_bank'){
+                        this.forms.rekening_koran_bank = response.data.data;
+                    }
+                    if(field == 'foto_terkini'){
+                        this.forms.foto_terkini = response.data.data;
+                    }
+                    if(field == 'rekening_listrik'){
+                        this.forms.rekening_listrik = response.data.data;
+                    }
+                    if(field == 'scan_identitas'){
+                        this.forms.scan_identitas = response.data.data;
+                    }
+                    if(field == 'tambahan_dokumen'){
+                        this.forms.tambahan_dokumen = response.data.data;
+                    }
+                    if(field == 'tambahan_dokumen_2'){
+                        this.forms.tambahan_dokumen_2 = response.data.data;
+                    }
+
+
+                     this.success(response.data.message);
+                }else{
+                   this.resultError(response.data.message)
+                }
+               
+            }
+        }).catch(error => {
+                if (! _.isEmpty(error.response)) {
+                                if (error.response.status = 422) {
+                                   this.resultError(error.response.data.errors)
+                                }else if (error.response.status = 500) {
+                                    this.$router.push('/server-error');
+                                }else{
+                                    this.$router.push('/page-not-found');
+                                }
+                            }
+                                        
+                        });
+
+    },
+
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
       return hashids.encode(id); 
@@ -212,7 +373,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            var data = {id : this.forms.id, button_ya_tidak:this.button_ya_tidak , aggrement_statement_of_truth_and_responsibility:this.forms.aggrement_statement_of_truth_and_responsibility,status:this.forms.status};
+            var data = {id : this.forms.id, status:this.forms.status};
             axios.post('/clients-area/post-real-account/step-10', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 

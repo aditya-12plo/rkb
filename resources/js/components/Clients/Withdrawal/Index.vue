@@ -101,7 +101,9 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="account_number">ID Akun</label>
-                        <input v-model="account_number" type="text" minlength="2" maxlength="25" class="form-control" required>
+						<select v-model="account_number" class="form-control" id="account_number" required>
+							<option v-for="realAccount in realAccounts" v-bind:value="realAccount.account_number" >{{ realAccount.account_number }}</option>
+						</select>
                         <span class="label label-danger" v-for="error of errorNya['account_number']">
                             {{ error }}
                         </span>
@@ -110,7 +112,7 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="total_withdrawal">Total Withdrawal</label>
-                        <input v-model="total_withdrawal" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)" required>
+						<money v-model="total_withdrawal" class="form-control" v-bind="money"></money> 
                         <span class="label label-danger" v-for="error of errorNya['total_withdrawal']">
                             {{ error }}
                         </span>
@@ -210,6 +212,7 @@
         };
 
 import Vue from 'vue' 
+import {Money} from 'v-money'
 import VueSweetalert2 from 'vue-sweetalert2'
 import moment from 'moment'
 import VueEvents from 'vue-events'
@@ -236,11 +239,13 @@ export default {
     VuetablePagination,
     VuetablePaginationInfo,
     Datepicker,  
+	Money,
   },
   data () {
     return { 
       isLoading: false,
        errors: [],
+       realAccounts:[],
        perPage: 10,
        account_number:'',
        total_withdrawal:'',
@@ -251,6 +256,14 @@ export default {
         endtime: {
             time: ''
         },
+	   money: {
+        decimal: ',',
+        thousands: '.',
+        prefix: '',
+        suffix: '',
+        precision: 2,
+        masked: false /* doesn't work with directive */
+      },
         option: {
             type: 'day',
             week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
@@ -521,6 +534,12 @@ export default {
        loader.hide()
        },1000);
     },
+	
+	getAccountNumber(){
+		axios.get('/clients-area/get-real-account').then(response => {
+			  this.realAccounts = response.data;
+		});
+	},
     onCancelLoading() {
       console.log('User cancelled the loader.'); 
     },
@@ -565,7 +584,8 @@ export default {
     });
 
   },
-	mounted(){  
+	mounted(){
+		this.getAccountNumber();	
   }
 
 }

@@ -50,7 +50,7 @@
                 <div class="title-form"><h3 class="reg-title">Daftar Akun Real</h3></div>
 
                 <form name="daftar-akun-real" action="/daftar-akun-real" method="POST">
-                {{ csrf_field() }}
+                @csrf
 
                     <div class="login-main-form">
 

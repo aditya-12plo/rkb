@@ -51,6 +51,12 @@ class HomeClientsController extends Controller
         
     }
 
+
+    public function getRealAccount(){
+        $query = Models\RealAccount::select('account_number')->where([['user_id',Auth::user()->id],['status' , 'approved']])->orderBy('id','DESC')->get();
+        return response()->json($query);
+    }
+	
     public function getUserDetail()
     {
         $user = Models\UserDetail::where("user_id",Auth::user()->id)->first();
@@ -276,6 +282,21 @@ class HomeClientsController extends Controller
             $stts = $res['status'];
             $message = $res['message'];
             $data = $res['data'];
+        }elseif($step == 16){
+            $res = $this->step_sixteen($id);
+            $stts = $res['status'];
+            $message = $res['message'];
+            $data = $res['data'];
+        }elseif($step == 17){
+            $res = $this->step_seventeen($id);
+            $stts = $res['status'];
+            $message = $res['message'];
+            $data = $res['data'];
+        }elseif($step == 18){
+            $res = $this->step_eightteen($id);
+            $stts = $res['status'];
+            $message = $res['message'];
+            $data = $res['data'];
         }else{
             $stts = 402;
             $message = ['error'=>['ID akun Tidak bisa didaftarkan']];
@@ -285,6 +306,8 @@ class HomeClientsController extends Controller
         
         return response()->json(['status'=>$stts,'data'=>$data,'message'=>$message]);
     }
+
+
 
     private function step_one($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
@@ -448,58 +471,27 @@ class HomeClientsController extends Controller
                             : (date("Y") - $birthDate[0]));
 
                             if($age > 17){
-								$account_number = Models\RealAccount::where('account_number',$request->account_number)->first();
-								if($account_number){
-									if($account_number->user_id == Auth::user()->id && $account_number->status == 'on-progress'){
-										$data = ["id" => $request->id , "status" => $request->status];
-										$stts = 200;
-										$message = 'Langkah ke 3';
-										Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
-											->update([
-												"name"              => $request->nama_lengkap,
-												"account_number"    => $request->account_number,
-												"place_of_birth"    => $request->tempat_lahir,
-												"date_of_birth"     => $request->tanggal_lahir,
-												"country"           => 'Indonesia',
-												"province"          => $request->provinsi,
-												"city"              => $request->kota,
-												"area"              => $request->kecamatan, 
-												"sub_area"          => $request->kelurahan,
-												"village"           => $request->desa,
-												"address"           => $request->alamat,
-												"postal_code"       => $request->kode_pos,
-												"type_of_identity_card" => $request->tipe_identitas,
-												"identity_card_number"  => $request->nomor_identitas,
-												"aggrement_simulation_commodity_trade_transaction" => date('Y-m-d')
-												]);
-										
-									}else{
-										$stts = 402;
-										$message = ['error'=>['ID akun Tidak bisa didaftarkan']];
-									}
-								}else{
-									$data = ["id" => $request->id , "status" => $request->status];
-									$stts = 200;
-									$message = 'Langkah ke 3';
-									Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
-										->update([
-											"name"              => $request->nama_lengkap,
-											"account_number"    => $request->account_number,
-											"place_of_birth"    => $request->tempat_lahir,
-											"date_of_birth"     => $request->tanggal_lahir,
-											"country"           => 'Indonesia',
-											"province"          => $request->provinsi,
-											"city"              => $request->kota,
-											"area"              => $request->kecamatan, 
-											"sub_area"          => $request->kelurahan,
-											"village"           => $request->desa,
-											"address"           => $request->alamat,
-											"postal_code"       => $request->kode_pos,
-											"type_of_identity_card" => $request->tipe_identitas,
-											"identity_card_number"  => $request->nomor_identitas,
-											"aggrement_simulation_commodity_trade_transaction" => date('Y-m-d')
-											]);
-								}
+                                $data = ["id" => $request->id , "status" => $request->status];
+                                $stts = 200;
+                                $message = 'Langkah ke 3';
+                                Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
+                                    ->update([
+                                        "name"              => $request->nama_lengkap,
+                                        "account_number"    => $request->account_number,
+                                        "place_of_birth"    => $request->tempat_lahir,
+                                        "date_of_birth"     => $request->tanggal_lahir,
+                                        "country"           => 'Indonesia',
+                                        "province"          => $request->provinsi,
+                                        "city"              => $request->kota,
+                                        "area"              => $request->kecamatan, 
+                                        "sub_area"          => $request->kelurahan,
+                                        "village"           => $request->desa,
+                                        "address"           => $request->alamat,
+                                        "postal_code"       => $request->kode_pos,
+                                        "type_of_identity_card" => $request->tipe_identitas,
+                                        "identity_card_number"  => $request->nomor_identitas,
+                                        "aggrement_simulation_commodity_trade_transaction" => date('Y-m-d')
+                                        ]);
                             }else{
                                 $data = $request;
                                 $stts = 402;
@@ -595,6 +587,73 @@ class HomeClientsController extends Controller
     private function step_four($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
+            if($check->status == "on-progress"){
+                $status = 200;
+                $message = '';
+                $data = array('id' => $check->id, 'disclosure_statement' => 'Ya', 'status' => $check->status);
+            }else{
+                $status = 402;
+                $data = '';
+                $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+            }
+        }else{
+            $status = 402;
+            $data = '';
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+        $res =  ['status'=>$status,'data'=>$data,'message'=>$message];
+        return $res;
+
+    }
+
+
+
+    
+    public function postRealAccountStep4(Request $request)
+    {
+        $data = ["id" => $request->id , "status" => $request->status];
+        $stts = 200;
+        $message = '';
+
+        $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
+        if($model){
+            if($model->status == 'on-progress'){
+				$valid = $this->validate($request, [
+                    'disclosure_statement'             => 'required|max:255',
+                ]);
+
+                if($request->disclosure_statement == "Tidak"){
+                    $stts = 402;
+                    $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+                }else{
+                    $data = ["id" => $request->id , "status" => $request->status];
+                    $stts = 200;
+                    $message = 'Langkah ke 5';
+                    Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
+                        ->update([
+                            "disclosure_statement" => date('Y-m-d')
+                            ]);
+                }
+            }else{
+                $stts = 200;
+                $message = 'Langkah ke 5';
+            }
+                 
+        }else{
+            $stts = 402;
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+
+        return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
+    }
+
+
+    
+
+
+    private function step_five($id){
+        $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
+        if($check){
             if($check->aggrement_implementing_commodity_trade_transaction && $check->status == "on-progress"){
                 $status = 200;
                 $message = '';
@@ -623,11 +682,9 @@ class HomeClientsController extends Controller
         return $res;
 
     }
-
-
-
-    
-    public function postRealAccountStep4(Request $request)
+	
+	
+    public function postRealAccountStep5(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -694,7 +751,7 @@ class HomeClientsController extends Controller
                         $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
                     }else{
                         $stts = 200;
-                        $message = 'Langkah ke 5';
+                        $message = 'Langkah ke 6';
                         Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                             ->update([
                                 "tax_number"             => $request->no_npwp,
@@ -715,7 +772,7 @@ class HomeClientsController extends Controller
               }
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 5';
+                $message = 'Langkah ke 6';
             }
                  
         }else{
@@ -725,16 +782,11 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
-
-
-    
-
-
     
 
    
 
-    private function step_five($id){
+private function step_six($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
             if($check->bankruptcy_by_court && $check->status == "on-progress"){
@@ -760,7 +812,7 @@ class HomeClientsController extends Controller
     }
 
 
-    public function postRealAccountStep5(Request $request)
+    public function postRealAccountStep6(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -779,7 +831,7 @@ class HomeClientsController extends Controller
                 
 
               $stts = 200;
-              $message = 'Langkah ke 6';
+              $message = 'Langkah ke 7';
               Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                   ->update([
                       "emergency_name"          => $request->nama_lengkap,
@@ -790,7 +842,7 @@ class HomeClientsController extends Controller
                       ]);
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 6';
+                $message = 'Langkah ke 7';
             }
                  
         }else{
@@ -800,10 +852,11 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
+    
 
     
 
-    private function step_six($id){
+    private function step_seven($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
             if($check->emergency_name && $check->status == "on-progress"){
@@ -831,7 +884,7 @@ class HomeClientsController extends Controller
     
 
 
-    public function postRealAccountStep6(Request $request)
+    public function postRealAccountStep7(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -859,7 +912,7 @@ class HomeClientsController extends Controller
                 }
 
               $stts = 200;
-              $message = 'Langkah ke 7';
+              $message = 'Langkah ke 8';
               Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                   ->update([
                       "job_category"            => $pekerjaan_others,
@@ -875,7 +928,7 @@ class HomeClientsController extends Controller
                       ]);
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 7';
+                $message = 'Langkah ke 8';
             }
                  
         }else{
@@ -886,8 +939,7 @@ class HomeClientsController extends Controller
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
 
-
-    private function step_seven($id){
+private function step_eight($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check->job_category && $check->status == "on-progress"){
             $status = 200;
@@ -907,7 +959,7 @@ class HomeClientsController extends Controller
     }
     
 
-    public function postRealAccountStep7(Request $request)
+    public function postRealAccountStep8(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -924,7 +976,7 @@ class HomeClientsController extends Controller
                 ]);
 
               $stts = 200;
-              $message = 'Langkah ke 8';
+              $message = 'Langkah ke 9';
               Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                   ->update([
                       "wealth_list_price"             => $request->penghasilan_per_tahun,
@@ -935,7 +987,7 @@ class HomeClientsController extends Controller
                       ]);
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 8';
+                $message = 'Langkah ke 9';
             }
                  
         }else{
@@ -948,7 +1000,7 @@ class HomeClientsController extends Controller
 
 
 
-    private function step_eight($id){
+    private function step_nine($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check->wealth_list_price && $check->status == "on-progress"){
             $status = 200;
@@ -970,7 +1022,7 @@ class HomeClientsController extends Controller
 
     }
 
-    public function postRealAccountStep8(Request $request)
+    public function postRealAccountStep9(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1013,7 +1065,7 @@ class HomeClientsController extends Controller
                 }
 
               $stts = 200;
-              $message = 'Langkah ke 9';
+              $message = 'Langkah ke 10';
               Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                   ->update([
                       "bank_margin_name"              => $request->nama_bank,
@@ -1029,7 +1081,7 @@ class HomeClientsController extends Controller
                       ]);
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 9';
+                $message = 'Langkah ke 10';
             }
                  
         }else{
@@ -1039,10 +1091,10 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
+	
+	
 
-
-
-    private function step_nine($id){
+    private function step_teen($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check->bank_margin_number && $check->status == "on-progress"){
             $status = 200;
@@ -1062,7 +1114,7 @@ class HomeClientsController extends Controller
     }
 
 
-    public function postRealAccountStep9(Request $request)
+    public function postRealAccountStep10(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1074,22 +1126,16 @@ class HomeClientsController extends Controller
                 if(empty($model->image_identity)){
                     $stts = 402;
                     $message = ['error'=>['Silahkan upload foto KTP/SIM/Passpor anda.']];
-                }elseif(empty($model->image_electricity)){
-                    $stts = 402;
-                    $message = ['error'=>['Silahkan upload Rekening Listrik / Telepon.']];
                 }elseif(empty($model->image_profile)){
                     $stts = 402;
                     $message = ['error'=>['Silahkan upload Foto Terkini anda.']];
-                }elseif(empty($model->image_bank)){
-                    $stts = 402;
-                    $message = ['error'=>['Silahkan upload Rekening Koran Bank / Tagihan Kartu Kredit.']];
                 }else{
                     $stts = 200;
-                    $message = 'Langkah ke 10';
+                    $message = 'Langkah ke 11';
                 }
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 10';
+                $message = 'Langkah ke 11';
             }
                  
         }else{
@@ -1099,9 +1145,11 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
+	
+	
 
     
-    private function step_teen($id){
+    private function step_eleven($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check->image_identity && $check->status == "on-progress"){
             $status = 200;
@@ -1120,7 +1168,7 @@ class HomeClientsController extends Controller
     }
     
 
-    public function postRealAccountStep10(Request $request)
+    public function postRealAccountStep11(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1131,7 +1179,7 @@ class HomeClientsController extends Controller
             if($model->status == 'on-progress'){
                 if($request->aggrement_statement_of_truth_and_responsibility == 'Ya'){
                 $stts = 200;
-                $message = 'Langkah ke 11';
+                $message = 'Langkah ke 12';
                 Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                 ->update([
                     "aggrement_statement_of_truth_and_responsibility"              => date('Y-m-d')
@@ -1143,7 +1191,7 @@ class HomeClientsController extends Controller
                 }
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 11';
+                $message = 'Langkah ke 12';
             }
         }else{
             $stts = 402;
@@ -1154,9 +1202,8 @@ class HomeClientsController extends Controller
     }
 
     
-    
    
-    private function step_eleven($id){
+    private function step_twelve($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check->aggrement_statement_of_truth_and_responsibility && $check->status == "on-progress"){
             $status = 200;
@@ -1164,60 +1211,6 @@ class HomeClientsController extends Controller
                 $date = date('Y-m-d');
             $data = array('id' => $check->id, 'aggrement_notice_of_risk' => 'Ya', 
             'status' => $check->status);
-        }else{
-            $status = 402;
-            $data = '';
-            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
-        }
-        $res =  ['status'=>$status,'data'=>$data,'message'=>$message];
-        return $res;
-
-    }
-
-    public function postRealAccountStep11(Request $request)
-    {
-        $data = ["id" => $request->id , "status" => $request->status];
-        $stts = 200;
-        $message = '';
-
-        $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
-        if($model){
-            if($model->status == 'on-progress'){
-                if($request->aggrement_notice_of_risk == 'Ya'){
-                $stts = 200;
-                $message = 'Langkah ke 12';
-                Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
-                ->update([
-                    "aggrement_notice_of_risk"  =>date('Y-m-d')
-                    ]);
-                }else{
-                    $stts = 402;
-                    $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya.']];
-
-                }
-            }else{
-                $stts = 200;
-                $message = 'Langkah ke 12';
-            }
-        }else{
-            $stts = 402;
-            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
-        }
-
-        return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
-    }
-    
-    
-    
-    private function step_twelve($id){
-        $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
-        if($check->aggrement_notice_of_risk && $check->status == "on-progress"){
-            $status = 200;
-            $message = '';
-            $date = date('Y-m-d');
-            $data = array('id' => $check->id, 'name' =>$check->name, 'job_category'=>$check->job_category, 'postal_code' => $check->postal_code,
-            'job_position' => $check->job_position, 'address' => $check->address,'country' => $check->country, 'province' => $check->province, 'city' => $check->city, 'area' => $check->area,  'sub_area' => $check->sub_area,   'village' => $check->village, 'disputes_through' => $check->disputes_through,
-            'aggrement_electronic_authorization' => 'Ya', 'office_authorization' => $check->office_authorization , 'status' => $check->status);
         }else{
             $status = 402;
             $data = '';
@@ -1237,32 +1230,13 @@ class HomeClientsController extends Controller
         $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
         if($model){
             if($model->status == 'on-progress'){
-                if($request->aggrement_electronic_authorization == 'Ya'){
-
-                    if($request->disputes_through == 'Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI)'){
-                        $stts = 200;
-                        $message = 'Langkah ke 13';
-                        Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
-                        ->update([
-                            "disputes_through"                    => 'Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI)',
-                            "aggrement_electronic_authorization"  => date('Y-m-d'),
-                            "office_authorization"                => $request->office_authorization
-                            ]);
-                    }else{
-                        $valid = $this->validate($request, [
-                            'pengadilan_negeri'             => 'required|max:255'
-                        ]);
-
-
-                        $stts = 200;
-                        $message = 'Langkah ke 13';
-                        Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
-                        ->update([
-                            "disputes_through"                    => $request->pengadilan_negeri,
-                            "aggrement_electronic_authorization"  => date('Y-m-d'),
-                            "office_authorization"                => $request->office_authorization
-                            ]);
-                    }
+                if($request->aggrement_notice_of_risk == 'Ya'){
+                $stts = 200;
+                $message = 'Langkah ke 13';
+                Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
+                ->update([
+                    "aggrement_notice_of_risk"  =>date('Y-m-d')
+                    ]);
                 }else{
                     $stts = 402;
                     $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya.']];
@@ -1279,9 +1253,67 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
+    
+    
+    
+    private function step_thirteen($id){
+        $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
+        if($check->aggrement_notice_of_risk && $check->status == "on-progress"){
+            $status = 200;
+            $message = '';
+            $date = date('Y-m-d');
+            $data = array('id' => $check->id, 'name' =>$check->name, 'job_category'=>$check->job_category, 'postal_code' => $check->postal_code,
+            'job_position' => $check->job_position, 'address' => $check->address,'country' => $check->country, 'province' => $check->province, 'city' => $check->city, 'area' => $check->area,  'sub_area' => $check->sub_area,   'village' => $check->village, 'disputes_through' => $check->disputes_through,
+            'aggrement_electronic_authorization' => 'Ya', 'office_authorization' => $check->office_authorization , 'status' => $check->status);
+        }else{
+            $status = 402;
+            $data = '';
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+        $res =  ['status'=>$status,'data'=>$data,'message'=>$message];
+        return $res;
+
+    }
+
+    public function postRealAccountStep13(Request $request)
+    {
+        $data = ["id" => $request->id , "status" => $request->status];
+        $stts = 200;
+        $message = '';
+
+        $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
+        if($model){
+            if($model->status == 'on-progress'){
+                if($request->aggrement_electronic_authorization == 'Ya'){
+
+                        $stts = 200;
+                        $message = 'Langkah ke 14';
+                        Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
+                        ->update([
+                            "aggrement_electronic_authorization"  => date('Y-m-d'),
+                            "office_authorization"                => $request->office_authorization
+                            ]);
+                    
+                }else{
+                    $stts = 402;
+                    $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya.']];
+
+                }
+            }else{
+                $stts = 200;
+                $message = 'Langkah ke 14';
+            }
+        }else{
+            $stts = 402;
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+
+        return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
+    }
 
    
-    private function step_thirteen($id){
+ 
+    private function step_fourteen($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
             if($check->aggrement_electronic_authorization && $check->status == "on-progress"){
@@ -1306,7 +1338,7 @@ class HomeClientsController extends Controller
     }
 
 
-    public function postRealAccountStep13(Request $request)
+    public function postRealAccountStep14(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1317,7 +1349,7 @@ class HomeClientsController extends Controller
             if($model->status == 'on-progress'){
                 if($request->aggrement_trading_rules == 'Ya'){
                 $stts = 200;
-                $message = 'Langkah ke 14';
+                $message = 'Langkah ke 15';
                 Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])
                 ->update([
                     "aggrement_trading_rules"  => date('Y-m-d')
@@ -1329,7 +1361,7 @@ class HomeClientsController extends Controller
                 }
             }else{
                 $stts = 200;
-                $message = 'Langkah ke 14';
+                $message = 'Langkah ke 15';
             }
         }else{
             $stts = 402;
@@ -1340,7 +1372,8 @@ class HomeClientsController extends Controller
     }
     
    
-    private function step_fourteen($id){
+
+    private function step_fiveteen($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
             if($check->aggrement_trading_rules && $check->status == "on-progress"){
@@ -1367,7 +1400,7 @@ class HomeClientsController extends Controller
 
     }
 
-    public function postRealAccountStep14(Request $request)
+    public function postRealAccountStep15(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1393,7 +1426,7 @@ class HomeClientsController extends Controller
                 }
             }else{
                 $stts = 200;
-                $message = 'Tim Kami akan menghubungi anda segera';
+                $message = 'Langkah 16';
             }
         }else{
             $stts = 402;
@@ -1405,7 +1438,128 @@ class HomeClientsController extends Controller
 
 
 
-    private function step_fiveteen($id){
+    private function step_sixteen($id){
+        $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
+        if($check){
+            if($check->aggrement_trading_rules && $check->status == "on-progress"){
+                $status = 200;
+                $message = '';
+                $data = array('id' => $check->id, 'name' => $check->name , 'place_of_birth' => $check->place_of_birth , 
+                'date_of_birth' => $check->date_of_birth, 'address' => $check->address , 'country' => $check->country, 'province' => $check->province, 'city' => $check->city, 'area' => $check->area,  'sub_area' => $check->sub_area,   'village' => $check->village,
+                'postal_code' => $check->postal_code, 'type_of_identity_card' => $check->type_of_identity_card, 
+                'identity_card_number' => $check->identity_card_number ,'account_number' => $check->account_number ,
+                'aggrement' =>'Ya', 'status' => $check->status);
+            }else{
+                $status = 402;
+                $data = '';
+                $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];                
+            }
+        }else{
+            $status = 402;
+            $data = '';
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+        $res =  ['status'=>$status,'data'=>$data,'message'=>$message];
+        return $res;
+
+    }
+
+
+    public function postRealAccountStep16(Request $request)
+    {
+        $data = ["id" => $request->id, "aggrement" => $request->aggrement , "status" => $request->status];
+        $stts = 200;
+        $message = '';
+
+        $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
+        if($model){
+			$data = ["id" => $request->id, "aggrement" => $request->aggrement , "status" => $request->status];
+            if($model->status == 'on-progress'){
+                if($request->aggrement == 'Ya'){
+				$data = ["id" => $request->id, "aggrement" => $request->aggrement , "status" => $request->status];
+                $stts = 200;
+                $message = 'Langkah 17';
+
+                }else{
+					$data = ["id" => $request->id, "aggrement" => $request->aggrement , "status" => $request->status];
+                    $stts = 402;
+                    $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya.']];
+
+                }
+            }else{
+				$data = ["id" => $request->id, "aggrement" => $request->aggrement , "status" => $request->status];
+                $stts = 200;
+                $message = 'Langkah 17';
+            }
+        }else{
+            $stts = 402;
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+		
+        return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
+    }
+
+
+    private function step_seventeen($id){
+        $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
+        if($check){
+            if($check->aggrement_trading_rules && $check->status == "on-progress"){
+                $status = 200;
+                $message = '';
+                $data = array('id' => $check->id, 'name' => $check->name , 'place_of_birth' => $check->place_of_birth , 
+                'date_of_birth' => $check->date_of_birth, 'address' => $check->address , 'country' => $check->country, 'province' => $check->province, 'city' => $check->city, 'area' => $check->area,  'sub_area' => $check->sub_area,   'village' => $check->village,
+                'postal_code' => $check->postal_code, 'type_of_identity_card' => $check->type_of_identity_card, 
+                'identity_card_number' => $check->identity_card_number ,'account_number' => $check->account_number ,
+                'aggrement' =>'Ya', 'status' => $check->status);
+            }else{
+                $status = 402;
+                $data = '';
+                $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];                
+            }
+        }else{
+            $status = 402;
+            $data = '';
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+        $res =  ['status'=>$status,'data'=>$data,'message'=>$message];
+        return $res;
+
+    }
+
+
+    public function postRealAccountStep17(Request $request)
+    {
+        $data = ["id" => $request->id , "status" => $request->status];
+        $stts = 200;
+        $message = '';
+
+        $model = Models\RealAccount::where([["id",$request->id],['user_id',Auth::user()->id]])->first();
+        if($model){
+            if($model->status == 'on-progress'){
+                if($request->aggrement == 'Ya'){
+                $stts = 200;
+                $message = 'Langkah 18';
+
+                }else{
+                    $stts = 402;
+                    $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya.']];
+
+                }
+            }else{
+                $stts = 200;
+                $message = 'Langkah 17';
+            }
+        }else{
+            $stts = 402;
+            $message = ['error'=>['Maaf anda tidak bisa melanjutkan tahap selanjutnya']];
+        }
+		
+        return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
+    }
+   
+
+
+    private function step_eightteen($id){
         $check = Models\RealAccount::where([["id",$id],['user_id',Auth::user()->id]])->first();
         if($check){
             if($check->aggrement_trading_rules && $check->status == "on-progress"){
@@ -1428,7 +1582,7 @@ class HomeClientsController extends Controller
     }
 
 
-    public function postRealAccountStep15(Request $request)
+    public function postRealAccountStep18(Request $request)
     {
         $data = ["id" => $request->id , "status" => $request->status];
         $stts = 200;
@@ -1480,6 +1634,8 @@ class HomeClientsController extends Controller
 
         return response()->json(['status'=>$stts,'data'=> $data,'message'=>$message]);
     }
+
+
 
     public function uploadFile(Request $request)
     {
@@ -1597,7 +1753,7 @@ class HomeClientsController extends Controller
 
     public function postDeposit(Request $request)
     {
-         $valid = $this->validate($request, [
+          $valid = $this->validate($request, [
             'account_number'        => 'required|max:255',
             'total_deposit'         => 'required|numeric|min:2',
             'image_deposit'         => 'required|mimes:pdf,jpg,png,jpeg',
@@ -1622,15 +1778,18 @@ class HomeClientsController extends Controller
                     'total_deposit'     => $request->total_deposit,
                     'account_number'    => $request->account_number,
                     'image_deposit'     => $fileName,
+                    'reason'		    => '',
                     'status'            => 'review'
                 );
     
             Models\Deposit::create($masuk);
 			
 				$attach = $destinationPath.$fileName;
+				
+				$masuk["title"] = "Rajawali Team";
 				$content = view('emails.email_deposit')->with($masuk);
                 Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$attach){
-                    $message->to('finance@rajawalikapital.co.id')->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id"])->subject('Deposit Info');
+                    $message->to('finance@rajawalikapital.co.id')->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id",Auth::user()->email])->subject('Review Deposit');
                     $message->attach($attach);
                 });
 				
@@ -1638,6 +1797,8 @@ class HomeClientsController extends Controller
         }else{
             return response()->json(['status'=>402,'data'=> '','message'=>['error'=>['Anda tidak memiliki Akun Real.']]]);
         }
+
+    
 
     }
 
@@ -1686,10 +1847,18 @@ class HomeClientsController extends Controller
                     'user_id'           => Auth::user()->id,
                     'total_withdrawal'  => $request->total_withdrawal,
                     'account_number'    => $request->account_number,
+                    'image_withdrawal'  => '',
+                    'reason'		    => '',
                     'status'            => 'review'
                 );
     
             Models\Withdrawal::create($masuk);
+			$masuk["title"] = "Rajawali Team";
+				$content = view('emails.email_deposit')->with($masuk);
+                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk){
+                    $message->to('finance@rajawalikapital.co.id')->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id",Auth::user()->email])->subject('Review Withdrawal');
+                });
+				
             return response()->json(['status'=>200,'data'=> '','message'=>'Upload data berhasil']);
         }else{
             return response()->json(['status'=>402,'data'=> '','message'=>['error'=>['Anda tidak memiliki Akun Real.']]]);

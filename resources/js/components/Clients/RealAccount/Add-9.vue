@@ -22,87 +22,108 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
+			<b>FORMULIR PBK. CDDS. 04</b>
                 <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
                  <tr>
-                    <td colspan="3" style="text-align:center;"><b>DOKUMEN YANG DILAMPIRKAN</b></td>
+                    <td colspan="3" style="text-align:center;"><b>REKENING BANK NASABAH UNTUK PENYETORAN DAN PENARIKAN MARGIN</b></td>
                 </tr>
-
 <tr>
-    <td>Rekening Koran Bank / Tagihan Kartu Kredit <span style="color:red;">*</span>
-        <br>
-   <div v-if="forms.rekening_koran_bank">     
-        <a v-bind:href="url+forms.rekening_koran_bank" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('rekening_koran_bank',forms.rekening_koran_bank)">Hapus File</button>
-   </div>
-    </td>
-    <td>:</td>
-    <td><input type="file" name="rekening_koran_bank" class="form-control" id="rekening_koran_bank" v-on:change="rekening_koran_bank"> </td>
+  <td colspan="3" style="text-align:left;">Rekening Bank Nasabah Untuk Penyetoran dan Penarikan Margin (hanya rekening dibawah ini yang dapat
+Saudara pergunakan untuk lalulintas margin)</td>
 </tr>
 
 <tr>
-    <td>Rekening Listrik / Telepon <span style="color:red;">*</span>
-        <br>
-   <div v-if="forms.rekening_listrik">     
-        <a v-bind:href="url+forms.rekening_listrik" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('rekening_listrik',forms.rekening_listrik)">Hapus File</button>
-   </div>
-
-    </td>
+    <td>Nama Bank <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input type="file" name="rekening_listrik" class="form-control" id="rekening_listrik" v-on:change="rekening_listrik"> </td>
+    <td><input v-model="forms.nama_bank" type="text" class="form-control" required="" aria-required="true"></td>
+</tr>
+<tr>
+    <td>Cabang <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td><input v-model="forms.cabang" type="text" class="form-control" required="" aria-required="true"></td>
+</tr>
+<tr>
+    <td>Nomor A/C <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td><input v-model="forms.nomor_a_c" type="text" minlength="2" maxlength="25" required="" class="form-control" @keypress="isNumber($event)"></td>
+</tr>
+<tr>
+    <td>No. Tlp</td>
+    <td>:</td>
+    <td><input v-model="forms.no_telepon" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
+</tr>
+<tr>
+    <td>Jenis Rekening  <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Giro" :checked="forms.jenis_rekening=='Giro'" required>
+            <label class="custom-control-label" for="jenis_rekening">Giro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Tabungan" :checked="forms.jenis_rekening=='Tabungan'" required>
+          <label class="custom-control-label" for="jenis_rekening">Tabungan</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Lainnya" :checked="forms.jenis_rekening=='Lainnya'" required>
+          <label class="custom-control-label" for="jenis_rekening">Lainnya</label>
+          <div v-if="this.checkJenisStatus(this.forms.jenis_rekening)">
+          <input v-model="jenis_rekening_others" type="text" class="form-control" required="" aria-required="true">
+          </div>
+        </div>
+      
+    </td>
+</tr>
+<tr>
+  <td colspan="3" style="text-align:left;"> </td>
 </tr>
 
 <tr>
-    <td>Tambahan dokumen lain 1 (apabila diperlukan)
-        <br>
-   <div v-if="forms.tambahan_dokumen">     
-        <a v-bind:href="url+forms.tambahan_dokumen" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('tambahan_dokumen',forms.tambahan_dokumen)">Hapus File</button>
-   </div>
-
-    </td>
+    <td>Nama Bank</td>
     <td>:</td>
-    <td><input type="file" name="tambahan_dokumen" class="form-control" id="tambahan_dokumen" v-on:change="tambahan_dokumen"> </td>
+    <td><input v-model="forms.nama_bank_2" type="text" class="form-control" aria-required="true"></td>
 </tr>
-
 <tr>
-    <td>Tambahan dokumen lain 2 (apabila diperlukan)
-        <br>
-   <div v-if="forms.tambahan_dokumen_2">     
-        <a v-bind:href="url+forms.tambahan_dokumen_2" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('tambahan_dokumen_2',forms.tambahan_dokumen_2)">Hapus File</button>
-   </div>
-
-    </td>
+    <td>Cabang</td>
     <td>:</td>
-    <td><input type="file" name="tambahan_dokumen_2" class="form-control" id="tambahan_dokumen_2" v-on:change="tambahan_dokumen_2"> </td>
+    <td><input v-model="forms.cabang_2" type="text" class="form-control" aria-required="true"></td>
 </tr>
-
 <tr>
-    <td>Foto Terkini <span style="color:red;">*</span>
-        <br>
-   <div v-if="forms.foto_terkini">     
-        <a v-bind:href="url+forms.foto_terkini" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="button" class="btn btn-danger" @click.prevent="DeleteFile('foto_terkini',forms.foto_terkini)">Hapus File</button>
-   </div>
-
-    </td>
+    <td>Nomor A/C</td>
     <td>:</td>
-    <td><input type="file" name="foto_terkini" class="form-control" id="foto_terkini" v-on:change="foto_terkini"> </td>
+    <td><input v-model="forms.nomor_a_c_2" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
 </tr>
-
 <tr>
-    <td>KTP/SIM/Passpor <span style="color:red;">*</span>
-        <br>
-   <div v-if="forms.scan_identitas">     
-        <a v-bind:href="url+forms.scan_identitas" target="_blank"><button type="button" class="btn btn-success">Download</button></a> <button type="submit" class="btn btn-danger" @click.prevent="DeleteFile('scan_identitas',forms.scan_identitas)">Hapus File</button>
-   </div>
-
-    </td>
+    <td>No. Tlp</td>
     <td>:</td>
-    <td><input type="file" name="scan_identitas" class="form-control" id="scan_identitas" v-on:change="scan_identitas"> </td>
+    <td><input v-model="forms.no_telepon_2" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
 </tr>
-
-
+<tr>
+    <td>Jenis Rekening</td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Giro" :checked="forms.jenis_rekening_2 == 'Giro'">
+            <label class="custom-control-label" for="jenis_rekening_2">Giro</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Tabungan" :checked="forms.jenis_rekening_2 == 'Tabungan'">
+          <label class="custom-control-label" for="jenis_rekening_2">Tabungan</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Lainnya" :checked="forms.jenis_rekening_2 == 'Lainnya'">
+          <label class="custom-control-label" for="jenis_rekening_2">Lainnya</label>
+          <div v-if="this.checkJenisStatus(this.forms.jenis_rekening_2)">
+          <input v-model="jenis_rekening_others_2" type="text" class="form-control" aria-required="true">
+          </div>
+        </div>
+      
+    </td>
+</tr>
 
                </table>
             </div>
@@ -156,7 +177,6 @@ export default {
       webURL:window.webURL,
       maxToasts: 100,
       idCode:'',
-	    url:'/public/client-files/',
       position: 'up right',
       closeBtn: true,
       jenis_rekening_others:'',
@@ -195,130 +215,23 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', foto_terkini:'', rekening_koran_bank:'', rekening_listrik:'', 
-      scan_identitas:'',tambahan_dokumen:'',tambahan_dokumen_2:'',status:''},
+      forms: {id : '', nama_bank:'', cabang:'', nomor_a_c:'', no_telepon:'',jenis_rekening:'',
+      nama_bank_2:'', cabang_2:'', nomor_a_c_2:'', no_telepon_2:'', jenis_rekening_2:'',status:''},
     }
   },
   watch: { 
 
   },
   methods: {
-    DeleteFile(field,fileName) {
-        let masuk = new FormData();
-        masuk.set('id', this.forms.id)
-        masuk.set('field', field)
-        masuk.set('file_name', fileName)
-        axios.post('/clients-area/delete-file' , masuk).then(response => {
-                if(field == 'rekening_koran_bank'){
-                    this.forms.rekening_koran_bank = '';
-                }
-                if(field == 'foto_terkini'){
-                    this.forms.foto_terkini = '';
-                }
-                if(field == 'rekening_listrik'){
-                    this.forms.rekening_listrik = '';
-                }
-                if(field == 'scan_identitas'){
-                    this.forms.scan_identitas = '';
-                }
-                if(field == 'tambahan_dokumen'){
-                    this.forms.tambahan_dokumen = '';
-                }
-                if(field == 'tambahan_dokumen_2'){
-                    this.forms.tambahan_dokumen_2 = '';
-                }
-        });
-    },
 
-    tambahan_dokumen_2(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) this.uploadFile('tambahan_dokumen_2',files[0]);
-                
-    },
-
-    tambahan_dokumen(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) this.uploadFile('tambahan_dokumen',files[0]);
-                
-    },
-
-    scan_identitas(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) this.uploadFile('scan_identitas',files[0]);
-                
-    },
-
-    rekening_listrik(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) this.uploadFile('rekening_listrik',files[0]);
-                
-    },
-
-    rekening_koran_bank(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) {
-            // this.forms.rekening_koran_bank = files[0];
-            this.uploadFile('rekening_koran_bank',files[0]);
-        }
-                
-    },
-    
-    foto_terkini(event) {
-        let files = event.target.files || e.dataTransfer.files;
-        if (files.length) this.uploadFile('foto_terkini',files[0]);
-                
-    },
-
-    uploadFile(field , fileName ){
-        this.loading();
-        let masuk = new FormData();
-        masuk.set('id', this.forms.id)
-        masuk.set('field', field)
-        masuk.set('file_name', fileName)
-        axios.post('/clients-area/upload-file' , masuk).then(response => {
-            if(!response.data){ 
-                window.location.href = window.webURL; 
-            }else{
-                if(response.data.status == 200){ 
-                    if(field == 'rekening_koran_bank'){
-                        this.forms.rekening_koran_bank = response.data.data;
-                    }
-                    if(field == 'foto_terkini'){
-                        this.forms.foto_terkini = response.data.data;
-                    }
-                    if(field == 'rekening_listrik'){
-                        this.forms.rekening_listrik = response.data.data;
-                    }
-                    if(field == 'scan_identitas'){
-                        this.forms.scan_identitas = response.data.data;
-                    }
-                    if(field == 'tambahan_dokumen'){
-                        this.forms.tambahan_dokumen = response.data.data;
-                    }
-                    if(field == 'tambahan_dokumen_2'){
-                        this.forms.tambahan_dokumen_2 = response.data.data;
-                    }
-
-
-                     this.success(response.data.message);
-                }else{
-                   this.resultError(response.data.message)
-                }
-               
-            }
-        }).catch(error => {
-                if (! _.isEmpty(error.response)) {
-                                if (error.response.status = 422) {
-                                   this.resultError(error.response.data.errors)
-                                }else if (error.response.status = 500) {
-                                    this.$router.push('/server-error');
-                                }else{
-                                    this.$router.push('/page-not-found');
-                                }
-                            }
-                                        
-                        });
-
+    checkJenisStatus(stts){
+      if(stts == 'Giro'){
+        return false;
+      }else if(stts == 'Tabungan'){
+        return false;
+      }else{
+        return true;
+      }
     },
 
     diacak(id){
@@ -344,6 +257,15 @@ export default {
             }else{ 
                 if(response.data.status == 200){ 
                     this.forms = response.data.data;
+                    if(this.checkJenisStatus(response.data.data.jenis_rekening)){
+                      this.forms.jenis_rekening = 'Lainnya';
+                      this.jenis_rekening_others = response.data.data.jenis_rekening;
+                    }
+                    if(this.checkJenisStatus(response.data.data.jenis_rekening_2)){
+                      this.forms.jenis_rekening_2 = 'Lainnya';
+                      this.jenis_rekening_others_2 = response.data.data.jenis_rekening_2;
+                    }
+
                 }else{
                     window.location.href = window.webURL; 
                 }
@@ -372,7 +294,12 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            var data = {id : this.forms.id, status:this.forms.status};
+            var data = {id : this.forms.id, nama_bank:this.forms.nama_bank, cabang:this.forms.cabang, 
+            nomor_a_c:this.forms.nomor_a_c, no_telepon:this.forms.no_telepon,jenis_rekening:this.forms.jenis_rekening,
+            nama_bank_2:this.forms.nama_bank_2, cabang_2:this.forms.cabang_2, nomor_a_c_2:this.forms.nomor_a_c_2, 
+            no_telepon_2:this.forms.no_telepon_2, jenis_rekening_2:this.forms.jenis_rekening_2,
+            jenis_rekening_others: this.jenis_rekening_others , jenis_rekening_others_2:this.jenis_rekening_others_2 ,
+            status:this.forms.status};
             axios.post('/clients-area/post-real-account/step-9', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 

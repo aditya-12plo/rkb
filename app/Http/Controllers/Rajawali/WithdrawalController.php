@@ -15,6 +15,7 @@ use PHPExcel_IOFactory;
 
 use App\Models\Withdrawal;
 use App\Models\RealAccount;
+use App\Models\User;
 
 class WithdrawalController extends Controller
 {
@@ -122,6 +123,7 @@ class WithdrawalController extends Controller
         }
 
         $check = Withdrawal::where('id',$request->id)->first();
+        $user = User::where('id',$check->user_id)->first();
         $model = RealAccount::where([["account_number",$request->account_number], ['status' , 'approved'] , ['user_id' , $request->user_id]])->first();
         if($model){
             $destinationPath = 'public/client-withdrawal/'; // upload path
@@ -144,6 +146,8 @@ class WithdrawalController extends Controller
                 $check->image_withdrawal   = $fileName;
                 $check->update(); 
             }else{
+				$fileName = $check->image_deposit;
+				
                 $check->admin_id        = Auth::guard('rajawali')->user()->id;
                 $check->total_withdrawal= $request->total_withdrawal;
                 $check->account_number  = $request->account_number;
@@ -151,6 +155,27 @@ class WithdrawalController extends Controller
                 $check->status          = $request->status;
                 $check->update();
             }
+			
+			
+            $masuk = array(
+                    'user_id'           => $check->user_id,
+                    'total_withdrawal'  => $request->total_withdrawal,
+                    'account_number'    => $request->account_number,
+                    'image_withdrawal'  => $fileName,
+                    'reason'		    => $request->reason,
+                    'status'            => $request->status,
+                    'title'             => $user->name
+                );
+			$subject = $request->status.' Withdrawal';
+			$to = $user->email;
+			$attach = $destinationPath.$fileName;
+			$content = view('emails.email_deposit')->with($masuk);
+            Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$attach,$subject,$to){
+                $message->to($to)->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id","finance@rajawalikapital.co.id"])->subject($subject);
+                $message->attach($attach);
+            });
+			
+			
             return response()->json(['status'=>200,'data'=> '','message'=>'update successfully']);
         }else{
             return response()->json(['status'=>402,'data'=> '','message'=>['error'=>['Account ID not found.']]]);

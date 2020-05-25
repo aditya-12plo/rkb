@@ -417,6 +417,7 @@ export default {
             },
         ],
         rows: [],
+		isCrud:'',
         rowsDemo: '',
         rowsReal: '',
         image_upload:'',
@@ -439,6 +440,30 @@ export default {
   watch: {  
   },
   methods: {
+	fetchIt(){
+		this.loading();
+        axios.get('/rajawaliadmin/check-access/client-demo').then((response) => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{ 
+                if(response.data.status == 200){ 
+                    this.isCrud = response.data.message;
+                }else{
+                    window.location.href = window.webURL; 
+                }
+            }
+        }).catch(error => {
+            if (! _.isEmpty(error.response)) {
+                if (error.response.status = 422) {
+                    this.$router.push('/server-error');
+                }else if (error.response.status = 500) {
+                    this.$router.push('/server-error');
+                }else{
+                    this.$router.push('/page-not-found');
+                }
+            }
+        });
+    },
     clearFilter() { 
 
       try {
@@ -804,6 +829,7 @@ export default {
 
   },
 	mounted(){  
+		this.fetchIt();
   }
 
 }

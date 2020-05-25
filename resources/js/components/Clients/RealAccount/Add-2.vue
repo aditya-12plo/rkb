@@ -22,6 +22,7 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
+				<h3 style="text-align:left;font-size: 1em;">Formulir PBK. CDDS. 02.1</h3>
                 <p style="text-align:center;"> <b>PERNYATAAN TELAH MELAKUKAN SIMULASI <br> PERDAGANGAN BERJANGKA KOMODITI </b></p>
             </div>
             <div class="form-group col-lg-12">
@@ -97,7 +98,7 @@
           <div class="form-row">
 
             <div class="form-group col-lg-6">
-                <label for="input1">Tipe Identitas <span style="color:red;">*</span></label>
+                <label for="input1">Tipe Identitas *)</label>
                 <select v-model="forms.tipe_identitas" class="form-control" id="tipe_identitas" required>
                     <option value="KTP">KTP</option>
                     <option value="SIM">SIM</option>
@@ -112,7 +113,7 @@
 
 <div class="form-group col-lg-12">
 <p>Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa saya telah melakukan simulasi bertransaksi
-di bidang Perdagangan Berjangka Komoditi pada <b>PT. Rajawali Kapital Berjangka</b>, dan telah memahami
+di bidang Perdagangan Berjangka Komoditi pada <b>PT. Rajawali Kapital Berjangka</b> **), dan telah memahami
 tentang tata cara bertransaksi di bidang Perdagangan Berjangka Komoditi.
 </p>
 
@@ -137,6 +138,13 @@ tanpa paksaan apapun dari pihak manapun.</p>
 
 <div class="form-group col-lg-12">
 Pernyataan pada Tanggal <b> {{this.customLokalFormatter(currentDate)}} </b>
+</div>
+
+<div class="form-group col-lg-12">
+<p style="text-align: left;font-size: 10px;">
+*) Pilih salah satu <br>
+**) Isi sesuai dengan nama Pialang Berjangka
+</p>
 </div>
  
 

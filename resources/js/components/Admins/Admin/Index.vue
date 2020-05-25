@@ -92,7 +92,12 @@
                     <div class="form-group">
                         <label for="role_id">Role</label>
                         <select v-model="forms.role_id" class="form-control" id="role_id" required>
-                            <option value="operation">operation</option>
+                            <option value="marketing">Marketing </option>
+                            <option value="compliance">WPB/Compliance </option>
+                            <option value="finance">Finance</option>
+                            <option value="settlement">Dealing/Settlement</option>
+                            <option value="maintenace">Maintenace Website</option>
+                            <option value="ib">Master IB</option>
                             <option value="admin">admin</option>
                         </select>
                         <span class="label label-danger" v-for="error of errors['role_id']">

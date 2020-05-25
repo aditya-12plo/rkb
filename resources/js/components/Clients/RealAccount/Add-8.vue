@@ -22,106 +22,61 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
+			<b>FORMULIR PBK. CDDS. 04</b>
                 <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
                  <tr>
-                    <td colspan="3" style="text-align:center;"><b>REKENING BANK NASABAH UNTUK PENYETORAN DAN PENARIKAN MARGIN</b></td>
+                    <td colspan="3" style="text-align:center;"><b>DAFTAR KEKAYAAN</b></td>
                 </tr>
 <tr>
-  <td colspan="3" style="text-align:left;">Rekening Bank Nasabah Untuk Penyetoran dan Penarikan Margin (hanya rekening dibawah ini yang dapat
-Saudara pergunakan untuk lalulintas margin)</td>
-</tr>
-
-<tr>
-    <td>Nama Bank <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.nama_bank" type="text" class="form-control" required="" aria-required="true"></td>
-</tr>
-<tr>
-    <td>Cabang <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.cabang" type="text" class="form-control" required="" aria-required="true"></td>
-</tr>
-<tr>
-    <td>Nomor A/C <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.nomor_a_c" type="text" minlength="2" maxlength="25" required="" class="form-control" @keypress="isNumber($event)"></td>
-</tr>
-<tr>
-    <td>No. Tlp</td>
-    <td>:</td>
-    <td><input v-model="forms.no_telepon" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
-</tr>
-<tr>
-    <td>Jenis Rekening  <span style="color:red;">*</span></td>
+    <td>Penghasilan Per tahun  <span style="color:red;">*</span></td>
     <td>:</td>
     <td>
         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Giro" :checked="forms.jenis_rekening=='Giro'" required>
-            <label class="custom-control-label" for="jenis_rekening">Giro</label>
+            <input type="radio" class="custom-control-input" id="penghasilan_per_tahun" name="penghasilan_per_tahun" v-model="forms.penghasilan_per_tahun" value="Antara 100-250 juta" :checked="forms.penghasilan_per_tahun=='Antara 100-250 juta'" required>
+            <label class="custom-control-label" for="penghasilan_per_tahun">Antara 100-250 juta </label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Tabungan" :checked="forms.jenis_rekening=='Tabungan'" required>
-          <label class="custom-control-label" for="jenis_rekening">Tabungan</label>
+          <input type="radio" class="custom-control-input" id="penghasilan_per_tahun" name="penghasilan_per_tahun" v-model="forms.penghasilan_per_tahun" value="Antara 250-500 juta" :checked="forms.penghasilan_per_tahun=='Antara 250-500 juta'" required>
+          <label class="custom-control-label" for="penghasilan_per_tahun">Antara 250-500 juta</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="jenis_rekening" name="jenis_rekening" v-model="forms.jenis_rekening" value="Lainnya" :checked="forms.jenis_rekening=='Lainnya'" required>
-          <label class="custom-control-label" for="jenis_rekening">Lainnya</label>
-          <div v-if="this.checkJenisStatus(this.forms.jenis_rekening)">
-          <input v-model="jenis_rekening_others" type="text" class="form-control" required="" aria-required="true">
-          </div>
+          <input type="radio" class="custom-control-input" id="penghasilan_per_tahun" name="penghasilan_per_tahun" v-model="forms.penghasilan_per_tahun" value="Di atas 500 juta" :checked="forms.penghasilan_per_tahun=='Di atas 500 juta'" required>
+          <label class="custom-control-label" for="penghasilan_per_tahun">Di atas 500 juta</label>
         </div>
       
     </td>
 </tr>
 <tr>
-  <td colspan="3" style="text-align:left;"> </td>
-</tr>
-
-<tr>
-    <td>Nama Bank</td>
-    <td>:</td>
-    <td><input v-model="forms.nama_bank_2" type="text" class="form-control" aria-required="true"></td>
+  <td colspan="3" style="text-align:left;"><b>Daftar Kekayaan</b></td>
 </tr>
 <tr>
-    <td>Cabang</td>
-    <td>:</td>
-    <td><input v-model="forms.cabang_2" type="text" class="form-control" aria-required="true"></td>
-</tr>
-<tr>
-    <td>Nomor A/C</td>
-    <td>:</td>
-    <td><input v-model="forms.nomor_a_c_2" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
-</tr>
-<tr>
-    <td>No. Tlp</td>
-    <td>:</td>
-    <td><input v-model="forms.no_telepon_2" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
-</tr>
-<tr>
-    <td>Jenis Rekening</td>
+    <td>Rumah Lokasi</td>
     <td>:</td>
     <td>
-        <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Giro" :checked="forms.jenis_rekening_2 == 'Giro'">
-            <label class="custom-control-label" for="jenis_rekening_2">Giro</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Tabungan" :checked="forms.jenis_rekening_2 == 'Tabungan'">
-          <label class="custom-control-label" for="jenis_rekening_2">Tabungan</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="jenis_rekening_2" name="jenis_rekening_2" v-model="forms.jenis_rekening_2" value="Lainnya" :checked="forms.jenis_rekening_2 == 'Lainnya'">
-          <label class="custom-control-label" for="jenis_rekening_2">Lainnya</label>
-          <div v-if="this.checkJenisStatus(this.forms.jenis_rekening_2)">
-          <input v-model="jenis_rekening_others_2" type="text" class="form-control" aria-required="true">
-          </div>
-        </div>
-      
-    </td>
+      <textarea v-model="forms.rumah_lokasi" class="form-control" aria-required="true"></textarea>
+      </td>
+</tr>
+<tr>
+    <td>Nilai NJOP</td>
+    <td>:</td>
+    <td><input v-model="forms.nilai_njop" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
+</tr>
+<tr>
+  <td colspan="3" style="text-align:left;"><b>Deposit Bank</b></td>
+</tr>
+<tr>
+    <td>Jumlah</td>
+    <td>:</td>
+    <td><input v-model="forms.jumlah_deposit_bank" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
+</tr>
+<tr>
+    <td>Lainnya</td>
+    <td>:</td>
+    <td><input v-model="forms.lainnya" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)"></td>
 </tr>
 
                </table>
@@ -178,8 +133,11 @@ export default {
       idCode:'',
       position: 'up right',
       closeBtn: true,
-      jenis_rekening_others:'',
-      jenis_rekening_others_2:'',
+      house_status_others:'',
+      penghasilan_per_tahun_others:'',
+      investment_experience_others:'',
+      bappebti_family_others:'',
+      bankruptcy_by_court_others:'',
       currentDate:new Date(),
       errors: [],
         endtime: {
@@ -214,25 +172,14 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', nama_bank:'', cabang:'', nomor_a_c:'', no_telepon:'',jenis_rekening:'',
-      nama_bank_2:'', cabang_2:'', nomor_a_c_2:'', no_telepon_2:'', jenis_rekening_2:'',status:''},
+      forms: {id : '', penghasilan_per_tahun:'', rumah_lokasi:'', nilai_njop:'', jumlah_deposit_bank:'',
+      lainnya:'', status:''},
     }
   },
   watch: { 
 
   },
   methods: {
-
-    checkJenisStatus(stts){
-      if(stts == 'Giro'){
-        return false;
-      }else if(stts == 'Tabungan'){
-        return false;
-      }else{
-        return true;
-      }
-    },
-
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
       return hashids.encode(id); 
@@ -256,15 +203,6 @@ export default {
             }else{ 
                 if(response.data.status == 200){ 
                     this.forms = response.data.data;
-                    if(this.checkJenisStatus(response.data.data.jenis_rekening)){
-                      this.forms.jenis_rekening = 'Lainnya';
-                      this.jenis_rekening_others = response.data.data.jenis_rekening;
-                    }
-                    if(this.checkJenisStatus(response.data.data.jenis_rekening_2)){
-                      this.forms.jenis_rekening_2 = 'Lainnya';
-                      this.jenis_rekening_others_2 = response.data.data.jenis_rekening_2;
-                    }
-
                 }else{
                     window.location.href = window.webURL; 
                 }
@@ -293,13 +231,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            var data = {id : this.forms.id, nama_bank:this.forms.nama_bank, cabang:this.forms.cabang, 
-            nomor_a_c:this.forms.nomor_a_c, no_telepon:this.forms.no_telepon,jenis_rekening:this.forms.jenis_rekening,
-            nama_bank_2:this.forms.nama_bank_2, cabang_2:this.forms.cabang_2, nomor_a_c_2:this.forms.nomor_a_c_2, 
-            no_telepon_2:this.forms.no_telepon_2, jenis_rekening_2:this.forms.jenis_rekening_2,
-            jenis_rekening_others: this.jenis_rekening_others , jenis_rekening_others_2:this.jenis_rekening_others_2 ,
-            status:this.forms.status};
-            axios.post('/clients-area/post-real-account/step-8', data).then(response => {
+            axios.post('/clients-area/post-real-account/step-8', this.forms).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
                 }else{ 

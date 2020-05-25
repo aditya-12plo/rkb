@@ -36,7 +36,7 @@
                                         <br>
                                         <button class="btn btn-primary m-1" @click.prevent="doFilter"><i class="fa fa-search"></i> Cari</button>
                                         <button class="btn btn-warning m-1" @click.prevent="resetFilter"><i class="fa fa-retweet"></i> Ulangi Pencarian</button>
-                                        <button type="button" class="btn btn-info m-1"  @click="createItem()"><i class="fa fa-plus"></i> Tambah Deposit</button>
+                                        <button type="button" class="btn btn-info m-1"  @click="createItem()"><i class="fa fa-plus"></i> Ajukan Deposit</button>
                                     </div>
                                 </div> 
                             </div>
@@ -101,7 +101,9 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="account_number">ID Akun</label>
-                        <input v-model="account_number" type="text" minlength="2" maxlength="25" class="form-control" required>
+						 <select v-model="account_number" class="form-control" id="account_number" required>
+							<option v-for="realAccount in realAccounts" v-bind:value="realAccount.account_number" >{{ realAccount.account_number }}</option>
+						</select>
                         <span class="label label-danger" v-for="error of errorNya['account_number']">
                             {{ error }}
                         </span>
@@ -110,7 +112,8 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="total_deposit">Total Deposit</label>
-                        <input v-model="total_deposit" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)" required>
+						<money v-model="total_deposit" class="form-control" v-bind="money"></money>  
+                        
                         <span class="label label-danger" v-for="error of errorNya['total_deposit']">
                             {{ error }}
                         </span>
@@ -187,6 +190,7 @@
         };
 
 import Vue from 'vue' 
+import {Money} from 'v-money'
 import VueSweetalert2 from 'vue-sweetalert2'
 import moment from 'moment'
 import VueEvents from 'vue-events'
@@ -213,15 +217,25 @@ export default {
     VuetablePagination,
     VuetablePaginationInfo,
     Datepicker,  
+	Money,
   },
   data () {
     return { 
       isLoading: false,
        errors: [],
        perPage: 10,
+       realAccounts:[],
        account_number:'',
        total_deposit:'',
        image_deposit:'',
+	   money: {
+        decimal: ',',
+        thousands: '.',
+        prefix: '',
+        suffix: '',
+        precision: 2,
+        masked: false /* doesn't work with directive */
+      },
         startTime: {
             time: ''
         },
@@ -348,9 +362,7 @@ export default {
         if (files.length) this.image_deposit = files[0];
     },
 
-	formatNumberRupiah (value) {
-      return accounting.formatMoney(value,  "", 0, ".")
-    },
+	 
     addItem(){
         this.loading();
         let masuk = new FormData();
@@ -393,16 +405,24 @@ export default {
         if ((charCode > 31 && (charCode < 48 || charCode > 57)) && charCode !== 46) {
             evt.preventDefault();
         }else {
-            return true;
+             return true;
         }
     },
 
+	formatNumberForm (value) {
+     console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 2 }).format(number));
+    },
+
+	formatNumberRupiah (value) {
+      return accounting.formatMoney(value,  "", 0, ".", ",")
+    },
+	
     createItem() {
-        this.errors = [];
-        this.account_number = '';
-       this.total_deposit = '';
-       this.image_deposit = '';
-        this.modal.set('create', true);
+		this.errors = [];
+		this.account_number = '';
+		this.total_deposit = '';
+		this.image_deposit = '';
+		this.modal.set('create', true);
     },
 
     doFilter () {
@@ -529,7 +549,12 @@ export default {
         this.isLoading = false;
 
         });
-    }
+    },
+	getAccountNumber(){
+		axios.get('/clients-area/get-real-account').then(response => {
+			  this.realAccounts = response.data;
+		});
+	}
 
   },
   events: {  
@@ -552,7 +577,8 @@ export default {
     });
 
   },
-	mounted(){  
+	mounted(){
+		this.getAccountNumber();
   }
 
 }

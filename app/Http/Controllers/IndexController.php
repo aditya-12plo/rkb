@@ -250,8 +250,11 @@ class IndexController extends Controller
 				$message->to($masuk['email'])->subject('Konfirmasi Pendaftaran Akun Demo');
 				$message->from('info@rajawalikapital.co.id','PT. Rajawali Kapital Berjangka');
 			});
-			
-			Session::flash('success', 'Silahkan cek email anda dan klik link konfirmasi.');
+			if (Mail::failures()) {
+				Session::flash('success', 'Email tidak terkirimkan silahkan login dengan email dan password '.$uniqid);
+			}else{
+				Session::flash('success', 'Silahkan cek email anda dan klik link konfirmasi.');
+			}
 			return redirect()->back();
 		}
     }
@@ -503,45 +506,53 @@ class IndexController extends Controller
     }
 
 	public function coba(){ 
-        $this->data['title'] = 'PT. Rajawali Kapital Berjangka'; 
-        $this->data['name'] = 'PT. Rajawali Kapital Berjangka'; 
-        $this->data['url'] = 'PT. Rajawali Kapital Berjangka'; 
-        $link = 'PT. Rajawali Kapital Berjangka';
+		$forex = new Models\ForexFactory;
+		$res = $forex->getNews();
+		print_r($res);
+		
+		// $xml = simplexml_load_string($res);
+		// $str_replace = str_replace('<span>More</span>', '', $xml);
+		// $str_replace = str_replace('<span class="loader"></span>', '', $str_replace);
+		// $str_replace = str_replace('/news/', '/berita-ekonomi/', $str_replace);
+        // $this->data['title'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['name'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['url'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $link = 'PT. Rajawali Kapital Berjangka';
 
 
-        $this->data['contact_name'] = 'PT. Rajawali Kapital Berjangka'; 
-        $this->data['contact_company'] = 'PT. Rajawali Kapital Berjangka'; 
-        $this->data['contact_email'] = 'PT. Rajawali Kapital Berjangka';
-        $this->data['contact_phone'] = 'PT. Rajawali Kapital Berjangka'; 
-        $this->data['contact_message'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['contact_name'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['contact_company'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['contact_email'] = 'PT. Rajawali Kapital Berjangka';
+        // $this->data['contact_phone'] = 'PT. Rajawali Kapital Berjangka'; 
+        // $this->data['contact_message'] = 'PT. Rajawali Kapital Berjangka'; 
 
-        $check = Models\User::where('email','nugrohoaditya10@gmail.com')->first();
-        $account = Models\MetaAccount::where('used',0)->first();
-        $real = Models\RealAccount::where('id',4)->first();
-        $send = array(
-            'title'             => 'Terima kasih, anda telah melakukan pendaftaran <b>Akun Real</b>',
-            'name'              => 'Auth::user()->name',
-            'message'           => 'Data anda sedang direview oleh tim kami. Tunggu kabar baiknya yah.',
-            'id'                => '$encrypted',
-			'user'              => $check,
-			'account'           => $account
-        ); 
+        // $check = Models\User::where('email','nugrohoaditya10@gmail.com')->first();
+        // $account = Models\MetaAccount::where('used',0)->first();
+        // $real = Models\RealAccount::where('id',4)->first();
+        // $send = array(
+            // 'title'             => 'Terima kasih, anda telah melakukan pendaftaran <b>Akun Real</b>',
+            // 'name'              => 'Auth::user()->name',
+            // 'message'           => 'Data anda sedang direview oleh tim kami. Tunggu kabar baiknya yah.',
+            // 'id'                => '$encrypted',
+			// 'user'              => $check,
+			// 'account'           => $account
+        // ); 
 		 
-			$masuk = array(
-				'name'                          => 'aaa', 
-				'email'                         => 'assdd',
-				'phone'                         => '98230802',
-				'terms_and_conditions'          => 'aa');
+			// $masuk = array(
+				// 'name'                          => 'aaa', 
+				// 'email'                         => 'assdd',
+				// 'phone'                         => '98230802',
+				// 'terms_and_conditions'          => 'aa');
 				
-        return view('emails.email_akun_demo')->with($send);
+        // return view('emails.email_akun_demo')->with($send);
         // return view('emails.email_akun_demo')->with($this->data);
         // return view('emails.email_notification_approval_real_account')->with(['data' => $real]);
 	}
          
 	
     public function detailDataAkunReal($id){
-        $decrypted = Crypt::decryptString($id);
-        $model = Models\RealAccount::where("id",$decrypted)->first();
+        // $decrypted = Crypt::decryptString($id);
+        $model = Models\RealAccount::where("id",$id)->first();
         if($model){
             $pdf = PDF::loadview('website.aggrement_online',['data'=>$model])->setPaper('a4', 'potrait')->setWarnings(false);
             return $pdf->stream('aggrement_online.pdf');
@@ -588,33 +599,33 @@ private function getBodyNews($string, $start, $end){
 	
 
 	public function econimicCalender(){
-		$forex = new Models\ForexFactory;
-		$res = $forex->getCalender();
-		$xml = simplexml_load_string($res);
-		$str_replace = str_replace('timezone.php', '', $xml);
-		$str_replace = str_replace('<a class="calendar__detail-link calendar__detail-link--graph-icon calendar_chart"></a>', '-', $str_replace);
+		// $forex = new Models\ForexFactory;
+		// $res = $forex->getCalender();
+		// $xml = simplexml_load_string($res);
+		// $str_replace = str_replace('timezone.php', '', $xml);
+		// $str_replace = str_replace('<a class="calendar__detail-link calendar__detail-link--graph-icon calendar_chart"></a>', '-', $str_replace);
 		$this->data['title'] = 'Kalender Berita - Rajawali Kapital Berjangka';
         $this->data['description'] = 'Kalender Berita - Rajawali Kapital Berjangka';
         $this->data['imageseo'] = '';
         $this->data['keywords'] = 'kalender rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.$this->keywords;
              
-        $this->data['forexFactory'] = $str_replace;
+        // $this->data['forexFactory'] = $str_replace;
         return view('website.forex-factory-calender')->with($this->data);
 		
 	}
 	
 	public function econimicCalenderDetail($id){
-		$forex = new Models\ForexFactory;
-		$res = $forex->getCalenderDetail($id);
-		$xml = simplexml_load_string($res);
-		$str_replace = str_replace('calendar.php', 'https://www.forexfactory.com/calendar.php', $xml);
-		$str_replace = str_replace('/news/', '/berita-ekonomi/', $str_replace);
-		$str_replace = str_replace('legal.php', 'https://www.forexfactory.com/legal.php', $str_replace);
-		$str_replace = str_replace('<span>More</span>', '', $str_replace);
-		$str_replace = str_replace('<span>Exit Graph</span>', '', $str_replace);
-		$str_replace = str_replace('<span>Graph</span>', '', $str_replace);
-		$str_replace = str_replace('<span class="loader"></span>', '', $str_replace);
-		$str_replace = str_replace('Exit Detail View', '<a href="/kalender-ekonomi">Exit Detail View</a>', $str_replace);
+		// $forex = new Models\ForexFactory;
+		// $res = $forex->getCalenderDetail($id);
+		// $xml = simplexml_load_string($res);
+		// $str_replace = str_replace('calendar.php', 'https://www.forexfactory.com/calendar.php', $xml);
+		// $str_replace = str_replace('/news/', '/berita-ekonomi/', $str_replace);
+		// $str_replace = str_replace('legal.php', 'https://www.forexfactory.com/legal.php', $str_replace);
+		// $str_replace = str_replace('<span>More</span>', '', $str_replace);
+		// $str_replace = str_replace('<span>Exit Graph</span>', '', $str_replace);
+		// $str_replace = str_replace('<span>Graph</span>', '', $str_replace);
+		// $str_replace = str_replace('<span class="loader"></span>', '', $str_replace);
+		// $str_replace = str_replace('Exit Detail View', '<a href="/kalender-ekonomi">Exit Detail View</a>', $str_replace);
 		$this->data['title'] = 'Kalender Ekonomi - Rajawali Kapital Berjangka';
         $this->data['description'] = 'Kalender Ekonomi - Rajawali Kapital Berjangka';
         $this->data['imageseo'] = '';

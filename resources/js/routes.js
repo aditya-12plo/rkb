@@ -24,6 +24,9 @@ import addRealAccount12 from './components/Clients/RealAccount/Add-12.vue';
 import addRealAccount13 from './components/Clients/RealAccount/Add-13.vue';
 import addRealAccount14 from './components/Clients/RealAccount/Add-14.vue';
 import addRealAccount15 from './components/Clients/RealAccount/Add-15.vue';
+import addRealAccount16 from './components/Clients/RealAccount/Add-16.vue';
+import addRealAccount17 from './components/Clients/RealAccount/Add-17.vue';
+import addRealAccount18 from './components/Clients/RealAccount/Add-18.vue';
 
 
 import RootListRealAccount from './components/Admins/RealAccount/Index.vue';
@@ -278,6 +281,21 @@ let routes=[
 	path:'/list-real-account/add/step-15/:idnya',
 	name: 'addRealAccount15',
 	component:addRealAccount15
+},
+{
+	path:'/list-real-account/add/step-16/:idnya',
+	name: 'addRealAccount16',
+	component:addRealAccount16
+},
+{
+	path:'/list-real-account/add/step-17/:idnya',
+	name: 'addRealAccount17',
+	component:addRealAccount17
+},
+{
+	path:'/list-real-account/add/step-18/:idnya',
+	name: 'addRealAccount18',
+	component:addRealAccount18
 },
 
 

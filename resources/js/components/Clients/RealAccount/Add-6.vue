@@ -22,98 +22,45 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-                <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
+			<b>FORMULIR PBK. CDDS. 04</b>
+                <p style="text-align:center;"> 
+			<b> APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
                  <tr>
-                    <td colspan="3" style="text-align:center;"><b>PEKERJAAN</b></td>
+                    <td colspan="3" style="text-align:center;"><b>PIHAK YANG DIHUBUNGI DALAM KEADAAN DARURAT</b></td>
+                </tr>
+                 <tr>
+                    <td colspan="3" style="text-align:left;">Dalam keadaan darurat, pihak yang dapat dihubungi</td>
                 </tr>
 <tr>
-    <td>Pekerjaan <span style="color:red;">*</span></td>
+    <td>Nama <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td><input v-model="forms.nama_lengkap" type="text" class="form-control" required="" aria-required="true"></td>
+</tr>
+<tr>
+    <td>Alamat <span style="color:red;">*</span></td>
     <td>:</td>
     <td>
-        <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Swasta" :checked="forms.pekerjaan=='Swasta'" required>
-            <label class="custom-control-label" for="pekerjaan">Pegawai Swasta</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Wiraswasta" :checked="forms.pekerjaan=='Wiraswasta'" required>
-          <label class="custom-control-label" for="pekerjaan">Wiraswasta</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Ibu RT" :checked="forms.pekerjaan=='Ibu RT'" required>
-          <label class="custom-control-label" for="pekerjaan">Ibu RT</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Profesional" :checked="forms.pekerjaan=='Profesional'" required>
-          <label class="custom-control-label" for="pekerjaan">Profesional</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Pegawai Negeri" :checked="forms.pekerjaan=='Pegawai Negeri'" required>
-          <label class="custom-control-label" for="pekerjaan">Pegawai Negeri</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Mahasiswa" :checked="forms.pekerjaan=='Mahasiswa'" required>
-          <label class="custom-control-label" for="pekerjaan">Mahasiswa</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="pekerjaan" name="pekerjaan" v-model="forms.pekerjaan" value="Lainnya" :checked="forms.pekerjaan=='Lainnya'" required>
-          <label class="custom-control-label" for="pekerjaan">Lainnya</label>
-          <div v-if="this.checkPekerjaanStatus(this.forms.pekerjaan)">
-          <input v-model="pekerjaan_others" type="text" class="form-control" required="" aria-required="true">
-          </div>
-        </div>
-      
-    </td>
-</tr>
-<tr>
-    <td>Nama Perusahaan <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.nama_perusahaan" type="text" class="form-control"></td>
-</tr>
-<tr>
-    <td>Bidang Usaha <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.bidang_usaha" type="text" class="form-control"></td>
-</tr>
-<tr>
-    <td>Jabatan <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.jabatan" type="text" class="form-control"></td>
-</tr>
-<tr>
-    <td>Lama Bekerja <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.lama_bekerja" type="text" minlength="1" maxlength="2" class="form-control" @keypress="isNumber($event)" required></td>
-</tr>
-<tr>
-    <td>Kantor Sebelumnya <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.kantor_sebelumnya" type="text" minlength="1" maxlength="2" class="form-control" @keypress="isNumber($event)" required></td>
-</tr>
-<tr>
-    <td>Alamat Kantor <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td>
-      <textarea v-model="forms.alamat_kantor" class="form-control" aria-required="true" required></textarea>
+      <textarea v-model="forms.alamat_lengkap" class="form-control" aria-required="true" required></textarea>
       </td>
 </tr>
 <tr>
     <td>Kode Pos <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.kode_pos" type="text" minlength="2" maxlength="8" class="form-control" @keypress="isNumber($event)" required></td>
+    <td><input v-model="forms.kode_pos" type="text" minlength="2" maxlength="8" class="form-control" @keypress="isNumber($event)" aria-required="true" required></td>
 </tr>
 <tr>
-    <td>No. Telp Kantor <span style="color:red;">*</span></td>
+    <td>No. Telp Handphone <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.no_telp_kantor" type="text" minlength="2" maxlength="15" class="form-control" @keypress="isNumber($event)" required></td>
+    <td><input v-model="forms.no_handphone" type="text" minlength="2" maxlength="15" class="form-control" required="" aria-required="true" @keypress="isNumber($event)"></td>
 </tr>
 <tr>
-    <td>No. Faksimili</td>
+    <td>Hubungan dengan anda <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.no_faksimili" type="text" minlength="2" maxlength="15" class="form-control" @keypress="isNumber($event)"></td>
+    <td><input v-model="forms.hubungan" type="text" class="form-control" required="" aria-required="true"></td>
 </tr>
 
                </table>
@@ -171,7 +118,7 @@ export default {
       position: 'up right',
       closeBtn: true,
       house_status_others:'',
-      pekerjaan_others:'',
+      purpose_open_account_others:'',
       investment_experience_others:'',
       bappebti_family_others:'',
       bankruptcy_by_court_others:'',
@@ -209,32 +156,15 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', pekerjaan:'', nama_perusahaan:'', bidang_usaha:'', jabatan:'',
-      lama_bekerja:'', kantor_sebelumnya:'',alamat_kantor:'',kode_pos:'',no_telp_kantor:'',no_faksimili:'', status:''},
+      forms: {id : '', nama_lengkap:'', alamat_lengkap:'', kode_pos:'', 
+      no_handphone:'', hubungan:'', status:''},
     }
   },
   watch: { 
 
   },
   methods: {
-
-    checkPekerjaanStatus(stts){
-      if(stts == 'Swasta'){
-        return false;
-      }else if(stts == 'Wiraswasta'){
-        return false;
-      }else if(stts == 'Ibu RT'){
-        return false;
-      }else if(stts == 'Profesional'){
-        return false;
-      }else if(stts == 'Pegawai Negeri'){
-        return false;
-      }else if(stts == 'Mahasiswa'){
-        return false;
-      }else{
-        return true;
-      }
-    },
+      
     
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
@@ -259,11 +189,6 @@ export default {
             }else{ 
                 if(response.data.status == 200){ 
                     this.forms = response.data.data;
-                    if(this.checkPekerjaanStatus(response.data.data.pekerjaan)){
-                      this.pekerjaan_others = response.data.data.pekerjaan;
-                      this.forms.pekerjaan = 'Lainnya';
-                    }
-
                 }else{
                     window.location.href = window.webURL; 
                 }
@@ -292,10 +217,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            var data = {id : this.forms.id, pekerjaan:this.forms.pekerjaan, nama_perusahaan:this.forms.nama_perusahaan, bidang_usaha:this.forms.bidang_usaha, jabatan:this.forms.jabatan,
-      lama_bekerja:this.forms.lama_bekerja, kantor_sebelumnya:this.forms.kantor_sebelumnya,alamat_kantor:this.forms.alamat_kantor,kode_pos:this.forms.kode_pos,
-      no_telp_kantor:this.forms.no_telp_kantor,no_faksimili:this.forms.no_faksimili, status:this.forms.status,pekerjaan_others:this.pekerjaan_others};
-            axios.post('/clients-area/post-real-account/step-6',data).then(response => {
+            axios.post('/clients-area/post-real-account/step-6', this.forms).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
                 }else{ 

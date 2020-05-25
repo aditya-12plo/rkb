@@ -95,7 +95,7 @@
 
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">PROFIL PERUSAHAAN PIALANG BERJANGKA</h3></td>
+            <td><b>Formulir PBK. CDDS. 01</b> <br> <h3 style="text-align:center;">PROFIL PERUSAHAAN PIALANG BERJANGKA</h3></td>
         </tr>
 </table>
     
@@ -148,7 +148,7 @@
                 <tr>
                     <td width="20%">Direktur Utama </td>
                     <td width="1%">:</td>
-                    <td width="79%">Eri Ria Djulia</td>
+                    <td width="79%">Teti Hartiyati</td>
                 </tr>
                 <tr>
                     <td>Direktur</td>
@@ -166,12 +166,12 @@
                 <tr>
                     <td>Komisaris Utama</td>
                     <td>:</td>
-                    <td> Drs. Monang Siringoringo, MM</td>
+                    <td> Sabri Usman</td>
                 </tr>
                 <tr>
                     <td>Komisaris</td>
                     <td>:</td>
-                    <td>Marcelline Rosavina</td>
+                    <td>Theo Antares</td>
                 </tr>
             </table>
             <hr>
@@ -182,9 +182,8 @@
                         <b><u>Susunan Pemegang Saham Perusahaan : </u></b>
                 
                         <ol>
-                            <li>Drs. Monang Siriongoringo, MM</li>
-                            <li>Marcelline Rosavina</li>
-                            <li>Eri Ria Djulia</li>
+                            <li>Christian Wirajaya</li>
+							<li>Theo Antares</li>
                         </ol>
                     </td>
                 </tr> 
@@ -209,7 +208,7 @@
                     <td colspan="3">
                         <b><u>Nomor dan Tanggal Keanggotaan Bursa Berjangka : </u></b>
                         <br> <br>
-                <b>No. Tanggal : </b>
+                <b>No. 196/SPKB/ICDX/DIR/III/2020 Tanggal : 31 Maret 2020 </b>
                     </td>
                 </tr> 
             </table>
@@ -221,7 +220,7 @@
                     <td colspan="3">
                         <b><u>Nomor dan Tanggal Keanggotaan Lembaga Kliring Berjangka :</u></b>
                         <br> <br>
-                <b>No. Tanggal : </b>
+                <b>No. 177/SPKK/ICH/III/2020 Tanggal : 31 Maret 2020 </b>
                     </td>
                 </tr> 
             </table>
@@ -244,14 +243,61 @@
                 </tr> 
             </table>
 
+
+            <hr>
+
+
+            <table width="100%">
+                <tr>
+                    <td colspan="3">
+                        <b><u>Kontrak Derivatif Syariah Yang Diperdagangkan *): </u></b>
+                
+                        <ol>
+                            <li><b> </b></li>
+                        </ol>
+                    </td>
+                </tr> 
+            </table>
+<br><br>
+    
+
             </td>
         </tr>
     </table>
 
     <table width="100%" frame="box" style="margin:15px !important;">
         <tr>
-            <td>
+            <td> 
+            <table width="100%">
+                <tr>
+                    <td colspan="3">
+                        <b><u>Kontrak Derivatif dalam Sistem Perdagangan Alternatif *): </u></b>
+                
+                        <ol>
+                            <li><b> </b></li>
+                        </ol>
+                    </td>
+                </tr> 
+            </table>
+			<br><br>
+            <hr>
 
+
+            <table width="100%">
+                <tr>
+                    <td colspan="3">
+                        <b><u>Kontrak Derivatif dalam Sistem Perdagangan Alternatif dengan volume minimum 0,1 (nol koma
+satu) lot Yang Ddiperdagangkan *):</u></b>
+                
+                        <ol>
+                            <li><b> </b></li>
+                        </ol>
+                    </td>
+                </tr> 
+            </table>
+			<br><br>
+			<hr>
+			
 <table width="100%">
     <tr>
         <td>
@@ -272,7 +318,7 @@
 <td>
 <b><u>Nomor atau alamat email jika terjadi keluhan :</u></b>
 <br><br>
-info@rajawalikapital.co.id
+compliance@rajawalikapital.co.id
 </td>
 </tr> 
 </table>
@@ -287,22 +333,26 @@ info@rajawalikapital.co.id
 Penyelesaian Perselisihan Mempergunakan Sarana Melalui Prosedur Sebagai Berikut.
 <ol>
     
-<li>Nasabah menyampaikan pengaduannya dengan mengisi ringkasan kasusnya pada Form Pengaduan
-Nasabah dan diserahkan kepada Departement Compliance
+<li>Nasabah menyampaikan pengaduannya dengan mengisi ringkasan kasusnya pada Form
+Pengaduan Nasabah dan diserahkan kepada Divisi Compliance
+
 </li>
-          <li>Depertement Compliance berkoordinasi dengan departmen lainnya yang terkait akan melakukan
-verifikasi kasus atas dokumen-dokumen dan bukti-bukti pendukung lainnya dengan mengacu pada
-ketentuan yang berlaku di Perusahaan serta peraturan yang telah di tetapkan oleh instansi yang
-berwenang di bidang Perdagangan Berjangka Komoditi.</li>
-          <li>Setelah diperoleh hasil verifikasi atas dokumen-dokumen dan bukti-bukti pendukung tersebut ,
-Departement Compliance akan menghubungi Nasabah serta pihak-pihak yang terkait pada kasus
-tersebut untuk melakukan musyawarah dengan tujuan mencapai mufakat </li>
-          <li>Apabila perselisihan ternyata belum terselesaikan dalam musyawarah tersebut, maka selanjutnya
-penyelesainya akan memanfaatkan sarana penyelesaian yang tersedia di Bursa Berjangka (ICDX)
+          <li>Divisi Compliance berkoordinasi dengan departmen lainnya yang terkait akan melakukan
+verifikasi kasus atas dokumen-dokumen dan bukti-bukti pendukung lainnya dengan
+mengacu pada ketentuan yang berlaku di Perusahaan serta peraturan yang telah di tetapkan
+oleh instansi yang berwenang di bidang Perdagangan Berjangka Komoditi.</li>
+          <li>Setelah diperoleh hasil verifikasi atas dokumen-dokumen dan bukti-bukti pendukung
+tersebut , Divisi Compliance akan menghubungi Nasabah serta pihak-pihak yang terkait pada
+kasus tersebut untuk melakukan musyawarah dengan tujuan mencapai mufakat.
  </li>
-          <li> Apabila Perselisihan ternyata belum terselesaikan di bursa berjangka, maka selanjutnya perselisihan
-akan di selesaikan melalui Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI) atau Pengadilan
-Negeri yang berwenang.</li>
+          <li>Apabila perselisihan ternyata belum terselesaikan dalam musyawarah tersebut, maka
+selanjutnya penyelesainya akan memanfaatkan sarana penyelesaian yang tersedia di Bursa
+Berjangka (ICDX).
+
+ </li>
+          <li>Apabila Perselisihan ternyata belum terselesaikan di BBJ maka selanjutnya perselisihan akan
+di selesaikan melalui Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI) atau
+Pengadilan Negeri yang berwenang.</li>
 </ol>
 </td>
 </tr> 
@@ -315,14 +365,12 @@ Negeri yang berwenang.</li>
 <td>
 <b><u>Nama-nama Wakil Pialang Berjangka yang Bekerja di Perusahaan Pialang Berjangka :</u></b>
 <br>
-Penyelesaian Perselisihan Mempergunakan Sarana Melalui Prosedur Sebagai Berikut.
-<ol>
-    <li> _____________ NO Izin : </li>
-    <li> _____________</li>
-    <li> _____________</li>
-    <li>  _____________</li>
-    <li>  _____________ </li>
-</ol>
+         <ol>
+           <li> Benny Fery Fransiscus </li>
+           <li> Rico Adrianto Winarko </li>
+           <li> Cahyo Edi Purnomo </li>
+           <li>  </li>
+           </ol>
 </td>
 </tr> 
 </table>
@@ -333,13 +381,11 @@ Penyelesaian Perselisihan Mempergunakan Sarana Melalui Prosedur Sebagai Berikut.
 <tr>
 <td>
 <b><u>Nama – Nama Wakil Pialang Berjangka yang secara khusus ditunjuk oleh Pialang Berjangka untuk
-melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line :</u></b>
+melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line :
+</u></b>
 <ol>
-    <li> _____________ NO Izin : </li>
-    <li> _____________</li>
-    <li> _____________</li>
-    <li>  _____________</li>
-    <li>  _____________ </li>
+    <li>Rico Adrianto Winarko No. Izin : </li>
+    <li> Cahyo Edi Purnomo No. Izin : </li>
 </ol>
 </td>
 </tr> 
@@ -358,7 +404,7 @@ melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line :</u></b
 </tr>
 <tr>
     <td><b>130-0021-00333-3</b></td>
-    <td><b> </b></td>
+    <td><b>03 </b></td>
 </tr>
 </table>
 </td>
@@ -398,6 +444,9 @@ memahami isinya.
     <td>Pernyataan pada Tanggal </td>
     <td><?php echo date('d-m-Y', strtotime($data->aggrement_see_company_profile)); ?></td>
 </tr>
+<tr>
+    <td colspan="2"><p style="text-align: left;font-size: 10px;">*) Isi sesuai dengan kontrak yang diperdagangkan (mini lot) </p></td>
+</tr>
 </table>
 
  
@@ -431,7 +480,9 @@ memahami isinya.
 <hr>
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">PERNYATAAN TELAH MELAKUKAN SIMULASI <br>PERDAGANGAN BERJANGKA KOMODITI</h3></td>
+            <td>
+			<b>Formulir PBK. CDDS. 02.1</b>
+			<h3 style="text-align:center;">PERNYATAAN TELAH MELAKUKAN SIMULASI <br>PERDAGANGAN BERJANGKA KOMODITI</h3></td>
         </tr>
 </table>
 
@@ -458,7 +509,7 @@ memahami isinya.
             Kode Pos : {{$data->postal_code}}</td>
         </tr>
         <tr>
-            <td>No. Identitas {{$data->type_of_identity_card}}</td>
+            <td>No. Identitas {{$data->type_of_identity_card}} *)</td>
             <td width="1%">:</td>
             <td>{{$data->identity_card_number}}</td>
         </tr>
@@ -469,7 +520,7 @@ memahami isinya.
         </tr>
         <tr>
             <td colspan ="3" style="padding-top:15px;">Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa saya telah melakukan simulasi bertransaksi
-di bidang Perdagangan Berjangka Komoditi pada PT. Rajawali Kapital Berjangka, dan telah memahami
+di bidang Perdagangan Berjangka Komoditi pada <b>PT. Rajawali Kapital Berjangka</b> **), dan telah memahami
 tentang tata cara bertransaksi di bidang Perdagangan Berjangka Komoditi.
 </td>
         </tr>
@@ -500,6 +551,14 @@ tanpa paksaan apapun dari pihak manapun.
     <td>Pernyataan pada Tanggal </td>
     <td><?php echo date('d-m-Y', strtotime($data->aggrement_simulation_commodity_trade_transaction)); ?></td>
 </tr>
+<tr>
+    <td colspan="2"> 
+	<p style="text-align: left;font-size: 10px;">
+	*) Pilih salah satu <br>
+**) Isi sesuai dengan nama Pialang Berjangka
+</p>
+</td>
+</tr>
 </table>
 
 
@@ -534,7 +593,9 @@ tanpa paksaan apapun dari pihak manapun.
 <hr>
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">SURAT PERNYATAAN TELAH BERPENGALAMAN <br>
+            <td>
+			<b>Formulir PBK. CDDS. 02.2</b>
+			<h3 style="text-align:center;">SURAT PERNYATAAN TELAH BERPENGALAMAN <br>
 MELAKSANAKAN TRANSAKSI PERDAGANGAN BERJANGKA KOMODITI</h3></td>
         </tr>
 </table>
@@ -560,7 +621,7 @@ MELAKSANAKAN TRANSAKSI PERDAGANGAN BERJANGKA KOMODITI</h3></td>
             Kode Pos : {{$data->postal_code}}</td>
         </tr>
         <tr>
-            <td>No. Identitas {{$data->type_of_identity_card}}</td>
+            <td>No. Identitas {{$data->type_of_identity_card}}  *)</td>
             <td width="1%">:</td>
             <td>{{$data->identity_card_number}}</td>
         </tr>
@@ -572,7 +633,7 @@ MELAKSANAKAN TRANSAKSI PERDAGANGAN BERJANGKA KOMODITI</h3></td>
         <tr>
             <td colspan ="3" style="padding-top:15px;">Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa saya telah memiliki pengalaman yang
 mencukupi dalam melaksanakan transaksi Perdagangan Berjangka karena pernah bertransaksi pada
-Perusahaan Pialang Berjangka {{$data->name_implementing_commodity_trade_transaction}}, dan telah memahami tentang tata cara bertransaksi Perdagangan
+Perusahaan Pialang Berjangka {{$data->name_implementing_commodity_trade_transaction}} **), dan telah memahami tentang tata cara bertransaksi Perdagangan
 Berjangka.
 </td>
         </tr>
@@ -603,10 +664,121 @@ tanpa paksaan apapun dari pihak manapun.
     <td>Pernyataan pada Tanggal </td>
     <td><?php echo date('d-m-Y', strtotime($data->aggrement_implementing_commodity_trade_transaction)); ?></td>
 </tr>
+<tr>
+    <td colspan="2">
+		<p style="text-align: left;font-size: 10px;">
+		*) Pilih salah satu<br>
+**) Isi sesuai dengan nama Pialang Berjangka tempat pernah melakukan transaksi
+Perdagangan Berjangka sebelum ini
+		</p>
+	</td>
+</tr>
 </table>
 
 
 
+<p style="text-align: justify;margin:15px;font-size: 12px;" class="page-break"> </p>
+
+ 
+
+<div class="information">
+    <table width="100%">
+        <tr>
+            <td style="text-align: left;" style="width: 50%;">
+             
+            <img src="http://rajawalikapital.co.id/public/assets/images/logo-200-x-100.png" alt="Logo" class="img-valign"/>
+                         
+        </td>
+        </td>
+            <td style="text-align: right;" style="width: 50%;">
+            <span class="text2"><b>Rajawali Kapital Berjangka</b></span>
+            <br>
+                <span class="text3">
+                Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih<br>
+                Kec.  Bojongloa Kaler Kota Bandung Jawa Barat 40321 - Indonesia<br>
+                Telp.  022-20585060. Fax. 022-20582219. Email : info@rajawalikapital.co.id
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
+<table width="100%" style="margin:15px !important;">
+        <tr>
+            <td>
+			<b>FORMULIR PKB. CDDS. 03</b>
+			<h3 style="text-align:center;">PERNYATAAN PENGUNGKAPAN <br>
+			(DISCLOSURE STATEMENT)
+
+</h3></td>
+        </tr>
+</table>
+
+<table width="100%" style="margin:15px !important;">
+        <tr>
+            <td colspan ="3">
+				<ol>
+					<li>Perdagangan Berjangka BERISIKO SANGAT TINGGI tidak cocok untuk semua orang. Pastikan bahwa
+anda SEPENUHNYA MEMAHAMI RISIKO ini sebelum melakukan perdagangan.<br><br></li>
+<li>Perdagangan Berjangka merupakan produk keuangan dengan leverage dan dapat menyebabkan
+KERUGIAN ANDA MELEBIHI setoran awal Anda. Anda harus siap apabila SELURUH DANA ANDA HABIS.<br><br></li>
+<li>TIDAK ADA PENDAPATAN TETAP (<i>FIXED INCOME</i>) dalam Perdagangan Berjangka.</li>
+<li>Apabila anda PEMULA kami sarankan untuk mempelajari mekanisme transaksinya, PERDAGANGAN BERJANGKA membutuhkan pengetahuan dan pemahaman khusus.
+<br><br>
+</li>
+<li>ANDA HARUS MELAKUKAN TRANSAKSI SENDIRI, segala risiko yang akan timbul akibat transaksi
+sepenuhnya akan menjadi tanggung jawab Saudara.<br><br></li>
+<li><i>User id</i> dan <i>password</i> BERSIFAT PRIBADI DAN RAHASIA, anda bertanggung jawab atas
+penggunaannya, JANGAN SERAHKAN ke pihak lain terutama Wakil Pialang Berjangka dan pegawai
+Pialang Berjangka.<br><br></li>
+<li>ANDA berhak menerima LAPORAN ATAS TRANSAKSI yang anda lakukan. Waktu anda 2 X 24 JAM
+UNTUK MEMBERIKAN SANGGAHAN. Untuk transaksi yang TELAH SELESAI (<i>DONE</i>/<i>SETTLE</i>) DAPAT
+ANDA CEK melalui ystem informasi transaksi nasabah yang berfungsi untuk memastikan transaksi
+anda telah terdaftar di Lembaga Kliring Berjangka.<br><br>
+</li>
+				</ol>
+			</td>
+        </tr>
+         
+        <tr>
+            <td colspan ="3" style="padding-top:15px;">
+			<br> 
+<p style="text-align: center;"> <b>
+SECARA DETAIL BACA DOKUMEN PEMBERITAHUAN ADANYA RISIKO DAN <br>
+DOKUMEN PERJANJIAN PEMBERIAN AMANAT
+</b>
+</p>
+</td>
+        </tr>
+</table>
+
+
+<table width="100%" style="margin:15px !important;">
+<tr>
+    <td width="30%">Pernyataan menerima / Tidak</td>
+    <td width="70%">
+    <table width="50%">
+            <tr>
+                <td><input type="checkbox" name="vehicle1" value="Ya" checked></td>
+                <td>&nbsp;&nbsp; <span>Ya</span> &nbsp;&nbsp;&nbsp;</td>
+                <td><input type="checkbox" name="vehicle1" value="Tidak"></td>
+                <td>&nbsp; <span>Tidak</span> </td>
+            </tr>   
+        </table> 
+    </td>
+</tr>
+<tr>
+    <td>Pernyataan pada Tanggal </td>
+    <td>
+	<?php if($data->disclosure_statement) {
+		echo date('d-m-Y', strtotime($data->disclosure_statement));
+	}else{
+		echo date('d-m-Y', strtotime($data->aggrement_implementing_commodity_trade_transaction));
+	} ?></td>
+</tr>
+</table>
 
 
  
@@ -639,7 +811,9 @@ tanpa paksaan apapun dari pihak manapun.
 
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">APLIKASI PEMBUKAAN REKENING TRANSAKSI<br>
+            <td>
+			<b>FORMULIR PBK. CDDS. 04</b>
+			<h3 style="text-align:center;">APLIKASI PEMBUKAAN REKENING TRANSAKSI<br>
             SECARA ELEKTRONIK ON-LINE</h3></td>
         </tr>
 </table>
@@ -659,12 +833,12 @@ tanpa paksaan apapun dari pihak manapun.
             <td>{{$data->place_of_birth}} / {{$data->date_of_birth}}</td>
         </tr>
         <tr>
-            <td>No. Identitas {{$data->type_of_identity_card}}</td>
+            <td>No. Identitas {{$data->type_of_identity_card}} *)</td>
             <td width="1%">:</td>
             <td>{{$data->identity_card_number}}</td>
         </tr>
         <tr>
-            <td>No. NPWP </td>
+            <td>No. NPWP *)</td>
             <td width="1%">:</td>
             <td>{{$data->tax_number}}</td>
         </tr>
@@ -683,7 +857,7 @@ tanpa paksaan apapun dari pihak manapun.
             </td>
         </tr>
         <tr>
-            <td>Nama Istri/Suami</td>
+            <td>Nama Istri/Suami *)</td>
             <td width="1%">:</td>
             <td>{{$data->name_husband_or_wife}}</td>
         </tr>
@@ -882,7 +1056,7 @@ Berjangka?</td>
         </tr>
 
         <tr>
-            <td colspan ="3" style="background-color: #A4A1A1;text-align:center;"><b>PEKERJAAN</b></td>
+            <td colspan ="3" style="background-color: #A4A1A1;text-align:center;"><b>DATA PEKERJAAN NASABAH</b></td>
         </tr>
         <tr>
             <td>Pekerjaan</td>
@@ -1142,7 +1316,7 @@ Saudara pergunakan untuk lalulintas margin)
             </td>
         </tr> 
         <tr>
-            <td>Tambahan dokumen lain 1 (apabila diperlukan)</td>
+            <td>Tambahan dokumen lain 1 (apabila diperlukan) ***)</td>
             <td> </td>
             <td>
             
@@ -1206,7 +1380,7 @@ Saudara pergunakan untuk lalulintas margin)
             </td>
         </tr> 
         <tr>
-            <td>KTP/SIM/Passpor</td>
+            <td>KTP/SIM/Passpor *)</td>
             <td> </td>
             <td>
             
@@ -1259,6 +1433,18 @@ dikemudian hari terjadi sesuatu hal sehubungan dengan ketidakbenaran data yang s
     <td>Pernyataan pada Tanggal </td>
     <td><?php echo date('d-m-Y', strtotime($data->aggrement_statement_of_truth_and_responsibility)); ?></td>
 </tr>
+<tr>
+    <td colspan="2">
+		<p style="text-align: left;font-size: 10px;">
+		*) Wajib diisi<br>
+**) Isi sesuai dengan nama Pialang Berjangka tempat pernah melakukan transaksi Perdagangan
+Berjangka sebelum ini<br>
+***) Dalam hal Nasabah belum cakap hukum, maka Nasabah wajib membuat Surat Pernyataan di
+atas bermaterai cukup yang isinya menerangkan bahwa orang tua/wali Nasabah yang
+bersangkutan menyetujui Nasabah untuk bertransaksi di bidang Perdagangan Berjangka. Surat 
+		</p>
+	</td>
+</tr>
 </table>
             </td>
         </tr>
@@ -1299,7 +1485,10 @@ dikemudian hari terjadi sesuatu hal sehubungan dengan ketidakbenaran data yang s
 
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">DOKUMEN PEMBERITAHUAN ADANYA RISIKO YANG HARUS DISAMPAIKAN OLEH PIALANG
+            <td>
+			
+			<b>Formulir PBK. CDDS. 05. 1</b>
+			<h3 style="text-align:center;">DOKUMEN PEMBERITAHUAN ADANYA RISIKO YANG HARUS DISAMPAIKAN OLEH PIALANG
 BERJANGKA UNTUK TRANSAKSI KONTRAK BERJANGKA</h3><br><br></td>
         </tr>
         <tr>
@@ -1686,7 +1875,7 @@ PEMBERITAHUAN ADANYA RISIKO” mengerti dan menyetujui isinya.</p>
 
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td><h3 style="text-align:center;">PERJANJIAN PEMBERIAN AMANAT SECARA ELEKTRONIK ON-LINE  <br>
+            <td><b>FORMULIR PBK. CDDS. 06. 1</b><h3 style="text-align:center;">PERJANJIAN PEMBERIAN AMANAT SECARA ELEKTRONIK ON-LINE  <br>
             UNTUK TRANSAKSI KONTRAK BERJANGKA</h3></td>
         </tr>
 </table>
@@ -2435,22 +2624,7 @@ usul perubahan tersebut.
     <li>Semua perselisihan dan perbedaan pendapat yang timbul dalam pelaksanaan Perjanjian
 ini wajib diselesaikan terlebih dahulu secara musyawarah untuk mencapai mufakat
 antara Para Pihak.</li>
-    <li>Apabila perselisihan dan perbedaan pendapat yang timbul tidak dapat diselesaikan
-secara musyawarah untuk mencapai mufakat, Para Pihak wajib memanfaatkan sarana
-penyelesaian perselisihan yang tersedia di Bursa Berjangka.</li>
-    <li>Apabila perselisihan dan perbedaan pendapat yang timbul tidak dapat diselesaikan
-melalui cara sebagaimana dimaksud pada angka (1) dan angka (2), maka Para Pihak
-sepakat untuk menyelesaikan perselisihan melalui *):
-<ol type="a">
-    @if($data->disputes_through == 'Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI)')
-    <li>Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI) berdasarkan
-Peraturan dan Prosedur Badan Arbitrase Perdagangan Berjangka Komoditi
-(BAKTI)</li>
-@else
-<li>Pengadilan Negeri {{$data->disputes_through}}</li>
-@endif 
-</ol>
-</li>
+     
 <li>
 Kantor atau kantor cabang Pialang Berjangka terdekat dengan domisili Nasabah tempat
 penyelesaian dalam hal terjadi perselisihan
@@ -2470,6 +2644,13 @@ Bojongloa Kaler-Bandung Jawa Barat
 </td>
 </tr>
 </table>
+</li><li>
+Apabila perselisihan dan perbedaan pendapat yang timbul tidak dapat diselesaikan
+secara musyawarah untuk mencapai mufakat, maka Para Pihak sepakat untuk
+menyelesaikan perselisihan melalui Badan Arbitrase Perdagangan Berjangka Komoditi
+(BAKTI) dengan prosedur beracara khusus terkait dengan Penerimaan Nasabah Secara
+Elektronik Online dengan Customer Due Diligence (CDD) Sederhana sesuai dengan
+peraturan BAKTI.
 </li>
 </ol>
         
@@ -2558,10 +2739,37 @@ perjanjian ini”.
 
 
 <p style="text-align: justify;margin:15px;font-size: 12px;" class="page-break"> </p>
+
+<div class="information">
+    <table width="100%">
+        <tr>
+            <td style="text-align: left;" style="width: 50%;">
+             
+            <img src="http://rajawalikapital.co.id/public/assets/images/logo-200-x-100.png" alt="Logo" class="img-valign"/>
+                         
+        </td>
+        </td>
+            <td style="text-align: right;" style="width: 50%;">
+            <span class="text2"><b>Rajawali Kapital Berjangka</b></span>
+            <br>
+                <span class="text3">
+                Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih<br>
+                Kec.  Bojongloa Kaler Kota Bandung Jawa Barat 40321 - Indonesia<br>
+                Telp.  022-20585060. Fax. 022-20582219. Email : info@rajawalikapital.co.id
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
+
 <table width="100%" style="margin:15px !important;">
 <tr>
-    <td style="text-align:center;">
-    <h3> PERATURAN PERDAGANGAN (TRADING RULES) </h3>
+    <td>
+			<b style="text-align:left;">Formulir PBK. CDDS. 07</b>
+    <h3 style="text-align:center;"> PERATURAN PERDAGANGAN (TRADING RULES) </h3>
     </td>
 </tr>
 <tr>
@@ -3086,114 +3294,6 @@ price) dari sumber acuan di hari akhir perdagangan,
     </td>
 </tr>
 <tr>
-    <td>
-        
-    <ol>
-        <li><b>Transaksi</b> <br> Semua transaksi dilakukan dengan sistem online menggunakan platform Meta Trader 5
-(MT5) dan Smart Trader secara langsung terkoneksi ke bursa <b>Indonesia Commodity and
-Derivatives Exchange (ICDX)</b>. </li>
-        <li><b>Deposit Margin</b><br> Deposit Margin Awal Untuk Akun Mini, Minimal <b>Rp. 5.000.000,- (lima juta rupiah)</b>
-<br>
-Deposit Margin Awal Untuk Akun Mikro, Minimal <b>Rp. 500.000,- (lima ratus ribu rupiah)</b>
-<br>
-Nasabah dapat menyetor dana untuk Account nya ke <i>segregated bank account</i> (Rekening
-Terpisah): 
-<ul>
-<li><b>Bank Mandiri (IDR) Rekening : 130 000 060 3333 a/n PT. Rajawali Kapital Berjangka</b></li>
-</ul>
-Semua dana transfer harus dilakukan antara <b>segregated bank account PT. Rajawali Kapital
-Berjangka</b> dan bank account atas nama Nasabah yang bersangkutan.
-Catatan : bukti transfer harap di fax ke 022-20582219.
-</li>
-        <li><b>Penarikan Dana (Withdrawal)</b><br>Nasabah yang ingin melakukan penarikan dana diharuskan mengisi formulir penarikan dana
-yang disediakan oleh PT. Rajawali Kapital Berjangka dapat di download pada
-http://www.rajawalikapital.co.id kemudian di fax ke 022-20582219 atau email ;<br>
-dealing@rajawalikapital.co.id <br>
-Formulir yang diterima PT. Rajawali Kapital Berjangka sebelum jam 11.00 wib, proses
-transfer dana akan ditransfer pada hari yang sama, kecuali hari libur Nasional/Perbankan. <br>
-Formulir yang diterima PT. Rajawali Kapital Berjangka sebelum jam 11.00 wib, proses
-transfer dana akan ditransfer pada hari yang sama, kecuali hari libur Nasional/Perbankan. 
-<br>
-Sedangkan Formulir yang diterima PT. Rajawali Kapital Berjangka setelah jam 11.00 wib,
-proses transfer dana akan dilakukan pada hari berikutnya, kecuali hari libur
-Nasional/Perbankan.<br>
-Semua dana transfer harus dilakukan antara segregated bank account PT. Rajawali Kapital
-Berjangka dan bank account atas nama Nasabah yang bersangkutan. Apabila nama penyetor
-berbeda dengan nama pada Akun Nasabah, maka otomatis ditolak oleh sistem.
-</li>
-        <li><b>Laporan Secara Elektronik</b><br>Nasabah tidak akan menerima laporan fisik namun laporan transaksi akan dikirim ke
-Nasabah sesuai dengan alamat email yang tercantum dalam Formulir Pembukaan Rekening.
-Agar pengiriman laporan sesuai, Nasabah harus menginformasikan alamat email yang benar
-atau menginformasikan jika adanya perubahan alamat email ke<b> PT. Rajawali Kapital
-Berjangka.</b></li>
-        <li><b>Limit Order</b><br>Limit Order adalah jenis tipe order untuk melakukan Buy atau Sell pada harga dan volume
-Lot yang ditentukan Nasabah<br>
-Limit Order Buy = input order price sama dengan harga market atau di bawah lebih rendah
-dari harga market.<br>
-Limit Order Sell = input order price sama dengan harga market atau lebih tinggi dari harga
-market.
-</li>
-        <li><b>Stop Limit</b><br>Stop limit adalah jenis tipe order yang dapat memasukan dua harga berbeda yang ditentukan
-oleh Nasabah, ketika harga yang pertama sebagai stop order akan aktif saat tercapainya harga
-last price sama dengan harga stop order yang di pesan oleh Nasabah, maka order stop limit
-pada harga yang kedua akan aktif menjadi limit order untuk Buy atau Sell pada harga yang
-telah ditentukan, biasanya Stop Order digunakan untuk meminimalkan atau membatasi
-kerugian. </li>
-        <li><b>Limit FAK</b><br>Adalah jenis tipe order yang segera langsung filled dengan harga pasar untuk Buy atau Sell
-pada harga dan jumlah volume Lot yang ditentukan oleh Nasabah. Menggunakan LIMIT
-(FILL AND KILL) maka Nasabah akan mencoba untuk bertransaksi sebanyak jumlah volume
-Lot dan harganya yang diinginkan Nasabah dengan kondisi Order yang dapat dieksekusi
-filled dengan sebagian volume lot dan sisanya dapat dibatalkan.</li>
-        <li><b>Limit – Maket FOK</b><br>Adalah jenis tipe order yang segera langsung filled dengan harga pasar untuk Buy atau Sell
-pada harga dan jumlah volume Lot yang ditentukan oleh Nasabah. Menggunakan LIMIT
-(FILL OR KILL) maka Nasabah akan bertransaksi dengan kondisi harus sesuai harga dan
-jumlah seluruh volume yang telah Order dijalankan atau, tidak dapat melaksanakan Order
-akan secara total dibatalkan.</li>
-        <li><b>Stop Order</b>
-<br>
-Adalah jenis tipe Order untuk melakukan Buy atau Sell pada harga yang telah ditentukan
-oleh Naabah, yang dikenal sebagai order price. Ketika harga stop order yang dipesan akan
-aktif saat tercapainya harga last price sama dengan harga stop order yang sudah dipesan oleh
-Nasabah, maka order stop akan menjadi Market Order.
-</li>
-        <li><b>Limit I Touch</b><br>Adalah jenis tipe order yang dapat memasukan dua harga berbeda yang ditentukan oleh
-Nasabah, ketika harga yang pertama if-touch order akan aktif saat tercapainya harga last price
-sama dengan harga if-touch order yang dipesan oleh Nasabah, maka order limit if-touch pada
-harga yang kedua akan aktif menjadi limit order untuk Buy atau Sell pada harga yang telah
-ditentukan Nasabah.</li>
-        <li><b>Auto Pull/Cancel Order
-</b><br>
-Pada waktu penutupan hari perdagangan setiap hari nya,semua transaksi nasabah atau
-working order akan cancel secara otomatis oleh system.
-</li>
-        <li><b>Margin Call dan Auto Cut Equity</b><br>
-        <ul>
-          <li>Nasabah wajib memelihara/memenuhi tingkat Margin yang harus tersedia di rekening
-sesuai dengan jumlah yang telah ditetapkan baik diminta maupun tidak oleh perusahaan.</li>
-          <li>Margin Call terjadi apabila Equity ratio Nasabah dibawah <b>100% (seratus persen)</b> dari
-Margin Requirement atas posisi terbuka. Nasabah diwajibkan menambah sejumlah dana
-supaya memenuhi Margin yang dibutuhkan.</li>
-          <li>Nasabah dilarang membuka posisi baru sampai kewajiban Margin Call tersebut terpenuhi,
-yang mana jika kewajiban tersebut tidak dilaksanakan oleh Nasabah maka perusahaan
-berhak sepenuhnya untuk me-likuidasi posisi terbuka Nasabah baik sebagian atau
-seluruhnya tanpa perlu persetujuan dari Nasabah terlebih dahulu.</li>
-          <li>Apabila Equity nasabah turun mencapai atau lebih sedikit dari <b>30% ( tiga puluh persen)</b>
-dari Margin Requirement maka PT. Rajawali Kapital Berjangka akan melikuidasi seluruh
-posisi nasabah secara otomatis tanpa perlu persetujuan nasabah.</li>
-        </ul>
-        </li>
-        <li><b>Over Trading</b><br>Sistem akan menolak posisi Nasabah apabila Nasabah melakukan transaksi yang melebihi
-dana atau margin yang ada. </li>
-        <li><b>Penyelesaian Fisik </b><br>Apabila terjadi penyerahan fisik maka akan diatur sesuai dengan ketentuan bursa ICDX
-(Indonesia Commodity and Derivatives Exchange) dan ICH (Indonesia Clearing House),
-dengan berdasarkan ketentuan-ketentuan yang berlaku pada saat melakukan
-transaksi/penyelesaian fisik.
-</li> 
-      </ol>
-
-    </td>
-</tr>
-<tr>
     <td style="text-align:left;">
     *)Perusahaan berhak untuk merubah segala ketentuan/ peraturan yang ada dalam peraturan
 transaksi ini tanpa pemberitahuan terlebih dahulu
@@ -3207,16 +3307,7 @@ transaksi ini tanpa pemberitahuan terlebih dahulu
 <p style="text-align:center;">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya telah
 membaca tentang PERATURAN PERDAGANGAN (TRADING RULES), mengerti dan
 menerima ketentuan dalam bertransaksi.</p>
-
-Kode akses transaksi atau Login dan Password akan dikirim ke email Nasabah yang terdaftar,
-dan disarankan untuk merubah Pasword pada saat Login pertama kali dilakukan. PT. Rajawali
-Kapital Berjangka tidak bertanggung jawab Terhadap Penggunaan Login dan Password dari
-segala bentuk penyalahgunaan sehubungan dengan kehilangan, pencurian atau penggunaan
-oleh pihak yang tidak berhak atas Kode Akses tersebut. 
-
-<b>Dengan melakukan ceklist dokumen ini, saya menyatakan bahwa saya telah membaca tentang
-PERATURAN PERDAGANGAN (TRADING RULES), mengerti dan memahami ketentuan
-dalam bertransaksi”.</b>
+ 
 <table width="50%">
             <tr>
                 <td><input type="checkbox" name="vehicle1" value="Ya" checked></td>
@@ -3257,10 +3348,36 @@ dalam bertransaksi”.</b>
 
 <p style="text-align: justify;margin:15px;font-size: 12px;" class="page-break"> </p>
 
+<div class="information">
+    <table width="100%">
+        <tr>
+            <td style="text-align: left;" style="width: 50%;">
+             
+            <img src="http://rajawalikapital.co.id/public/assets/images/logo-200-x-100.png" alt="Logo" class="img-valign"/>
+                         
+        </td>
+        </td>
+            <td style="text-align: right;" style="width: 50%;">
+            <span class="text2"><b>Rajawali Kapital Berjangka</b></span>
+            <br>
+                <span class="text3">
+                Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih<br>
+                Kec.  Bojongloa Kaler Kota Bandung Jawa Barat 40321 - Indonesia<br>
+                Telp.  022-20585060. Fax. 022-20582219. Email : info@rajawalikapital.co.id
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
 
 <table width="100%" style="margin:15px !important;">
         <tr>
-            <td colspan="3"><h3 style="text-align:center;">APERNYATAAN BERTANGGUNG JAWAB ATAS <br>
+            <td colspan="3">
+			<b>Formulir PBK. CDDS. 08</b>
+			<h3 style="text-align:center;">PERNYATAAN BERTANGGUNG JAWAB ATAS <br>
 KODE AKSES TRANSAKSI NASABAH (Personal Access Password)</h3><br><br><br></td>
         </tr><tr>
     <td colspan="3">
@@ -3321,6 +3438,314 @@ kepentingan dengan dengan Pialang Berjangka dilarang menerima kode akses transak
 
 <p style="text-align:justify;">Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
 tanpa paksaan apapun dari pihak manapun.</p>
+
+<table width="100%" style="margin:15px !important;">
+<tr>
+    <td width="30%">Pernyataan menerima / Tidak</td>
+    <td width="70%">
+    <table width="50%">
+            <tr>
+                <td><input type="checkbox" name="vehicle1" value="Ya" checked></td>
+                <td>&nbsp;&nbsp; <span>Ya</span> &nbsp;&nbsp;&nbsp;</td>
+                <td><input type="checkbox" name="vehicle1" value="Tidak"></td>
+                <td>&nbsp; <span>Tidak</span> </td>
+            </tr>   
+        </table> 
+    </td>
+</tr>
+<tr>
+    <td>Pernyataan pada Tanggal </td>
+    <td><?php echo date('d-m-Y', strtotime($data->aggrement_personal_access_password)); ?></td>
+</tr>
+</table>
+
+    </td>
+</tr>
+
+
+</table>
+
+
+
+
+
+<p style="text-align: justify;margin:15px;font-size: 12px;" class="page-break"> </p>
+
+<div class="information">
+    <table width="100%">
+        <tr>
+            <td style="text-align: left;" style="width: 50%;">
+             
+            <img src="http://rajawalikapital.co.id/public/assets/images/logo-200-x-100.png" alt="Logo" class="img-valign"/>
+                         
+        </td>
+        </td>
+            <td style="text-align: right;" style="width: 50%;">
+            <span class="text2"><b>Rajawali Kapital Berjangka</b></span>
+            <br>
+                <span class="text3">
+                Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih<br>
+                Kec.  Bojongloa Kaler Kota Bandung Jawa Barat 40321 - Indonesia<br>
+                Telp.  022-20585060. Fax. 022-20582219. Email : info@rajawalikapital.co.id
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
+
+<table width="100%" style="margin:15px !important;">
+        <tr>
+            <td colspan="3">
+			<b>Formulir PBK. CDDS. 09</b>
+			<h3 style="text-align:center;">PERNYATAAN BAHWA DANA YANG DIGUNAKAN SEBAGAI MARGIN <br>
+MERUPAKAN DANA MILIK NASABAH SENDIRI</h3><br><br><br></td>
+        </tr><tr>
+    <td colspan="3">
+<p style="text-align:left;">Yang mengisi formulir di bawah ini : <br><br></p>
+    </td>
+</tr>
+
+<tr>
+    <td width="20%"> Nama Lengkap   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{$data->name}}   </td>
+</tr>
+
+
+<tr>
+    <td width="20%"> Tempat/Tanggal Lahir   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{$data->place_of_birth}} / {{$data->date_of_birth}}   </td>
+</tr>
+
+<tr>
+    <td width="20%"> Alamat Rumah   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{$data->address}} ,{{$data->province}} {{$data->city}} ,{{$data->area}}, {{$data->sub_area}} , {{$data->country}} <br>
+            Kode Pos : {{$data->postal_code}} </td>
+</tr>
+
+
+<tr>
+    <td width="20%"> No. Identitas ({{$data->type_of_identity_card}})     </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{$data->identity_card_number}}   </td>
+</tr>
+
+<tr>
+    <td width="20%"> No. Acc. </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{$data->account_number}}   </td>
+</tr>
+
+
+<tr>
+    <td colspan="3">
+        <br><br>
+<p style="text-align:justify;">Dengan mengisi kolom “YA” di bawah ini, Bersama ini saya menyatakan bahwa dana yang saya gunakan untuk
+bertransaksi di <b>PT. Rajawali Kapital Berjangka</b> **) adalah milik saya pribadi dan bukan dana pihak lain, serta
+tidak diperoleh dari hasil kejahatan, penipuan, penggelapan, tindak pidanan korupsi, tindak pidana narkotika,
+tindak pidana di bidang kehutanan, hasil pencucian uang, dan perbuatan melawan hokum lainnya serta
+dimaksudkan untuk melakukan pencucuian uang dan/atau pendanaan terorisme.
+</p>
+ 
+
+<p style="text-align:justify;">Demikian surat Pernyataan ini saya buat dalam keadaan sadar, sehat jasmani dan rohani serta tanpa paksaan
+apapun dari pihak manapun. </p>
+<p style="text-align:justify;">Demikian surat Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
+tanpa paksaan apapun dari pihak manapun. </p>
+
+<table width="100%" style="margin:15px !important;">
+<tr>
+    <td width="30%">Pernyataan menerima / Tidak</td>
+    <td width="70%">
+    <table width="50%">
+            <tr>
+                <td><input type="checkbox" name="vehicle1" value="Ya" checked></td>
+                <td>&nbsp;&nbsp; <span>Ya</span> &nbsp;&nbsp;&nbsp;</td>
+                <td><input type="checkbox" name="vehicle1" value="Tidak"></td>
+                <td>&nbsp; <span>Tidak</span> </td>
+            </tr>   
+        </table> 
+    </td>
+</tr>
+<tr>
+    <td>Pernyataan pada Tanggal </td>
+    <td><?php echo date('d-m-Y', strtotime($data->aggrement_personal_access_password)); ?></td>
+</tr>
+</table>
+
+    </td>
+</tr>
+
+
+</table>
+
+
+
+<p style="text-align: justify;margin:15px;font-size: 12px;" class="page-break"> </p>
+
+<div class="information">
+    <table width="100%">
+        <tr>
+            <td style="text-align: left;" style="width: 50%;">
+             
+            <img src="http://rajawalikapital.co.id/public/assets/images/logo-200-x-100.png" alt="Logo" class="img-valign"/>
+                         
+        </td>
+        </td>
+            <td style="text-align: right;" style="width: 50%;">
+            <span class="text2"><b>Rajawali Kapital Berjangka</b></span>
+            <br>
+                <span class="text3">
+                Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih<br>
+                Kec.  Bojongloa Kaler Kota Bandung Jawa Barat 40321 - Indonesia<br>
+                Telp.  022-20585060. Fax. 022-20582219. Email : info@rajawalikapital.co.id
+                </span>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<hr>
+
+<table width="100%" style="margin:15px !important;">
+        <tr>
+            <td colspan="3">
+			<b>Formulir PBK. CDDS. 10</b>
+			<h3 style="text-align:center;">VERIFIKASI KELENGKAPAN PROSES PENERIMAAN NASABAH SECARA<br>
+ELEKTRONIK ONLINE DENGAN CDD SEDERHANA</h3><br><br><br></td>
+        </tr><tr>
+    <td colspan="3">
+<p style="text-align:left;">Yang mengisi formulir di bawah ini : <br><br></p>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="3"> 
+<table width="100%">
+
+<tr>
+    <td width="1%"> No </td>
+    <td width="40%"> FORM   </td>
+    <td width="50%"> PROSES </td>
+    <td width="9%"> STATUS </td>
+</tr>
+
+<tr>
+    <td width="1%"> 1 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 01   </td>
+    <td width="50%"> PROFIL PERUSAHAAN PIALANG BERJANGKA </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked>  </td>
+</tr>
+
+  
+
+<tr>
+    <td width="1%"> 2 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 02 </td>
+    <td width="50%"> PERNYATAAN TELAH MELAKUKAN SIMULASI
+PERDAGANGAN BERJANGKA ATAU PERNYATAAN TELAH
+BERPENGALAMAN DALAM MELAKSANAKAN TRANSAKSI
+PERDAGANGAN BERJANGKA </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked>  </td>
+</tr>
+
+
+<tr>
+    <td width="1%"> 3 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 03 </td>
+    <td width="50%">PERNYATAAN PENGUNGKAPAN (<i>DISCLOSURE
+STATEMENT</i>)</td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked> </td>
+</tr>
+
+
+
+<tr>
+    <td width="1%"> 4 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 04 </td>
+    <td width="50%">APLIKASI PEMBUKAAN REKENING TRANSAKSI</td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked> </td>
+</tr>
+
+
+
+<tr>
+    <td width="1%"> 5 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 05 </td>
+    <td width="50%"> DOKUMEN PEMBERITAHUAN ADANYA RISIKO </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked> </td>
+</tr>
+
+
+
+<tr>
+    <td width="1%"> 6 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 06 </td>
+    <td width="50%"> PERJANJIAN PEMBERIAN AMANAT </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked>  </td>
+</tr>
+
+    
+
+
+<tr>
+    <td width="1%"> 7 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 07  </td>
+    <td width="50%"> DAFTAR KONTRAK BERJANGKA, KONTRAK DERIVATIF
+DAN KONTRAK DERIVATIF LAINNYA BESERTA
+PERATURAN PERDAGANGAN (<i>TRADING RULES</i>)
+ </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked> </td>
+</tr>
+
+    
+
+
+
+<tr>
+    <td width="1%"> 8 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 08   </td>
+    <td width="50%"> PERNYATAAN BERTANGGUNG JAWAB ATAS KODE AKSES
+TRANSAKSI NASABAH (<i>PERSONAL ACCESS PASSWORD</i>)
+ </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked>  </td>
+</tr>
+
+
+
+
+<tr>
+    <td width="1%"> 9 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 09  </td>
+    <td width="50%">PERNYATAAN BAHWA DANA YANG DIGUNAKAN
+SEBAGAI MARGIN MERUPAKAN DANA MILIK NASABAH
+SENDIRI
+ </td>
+    <td width="9%"> <input type="checkbox" name="vehicle1" value="Ya" checked>  </td>
+</tr>
+
+    
+
+               </table>
+	</td>
+</tr>
+
+ 
+
+
+<tr>
+    <td colspan="3">
+        <br><br>
+<p style="text-align:left;"> Demikian surat Pernyataan ini saya buat dalam keadaan sadar, sehat jasmani dan rohani serta tanpa paksaan
+apapun dari pihak manapun.</p>
+<p style="text-align:left;">Demikian surat Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
+tanpa paksaan apapun dari pihak manapun. </p>
 
 <table width="100%" style="margin:15px !important;">
 <tr>

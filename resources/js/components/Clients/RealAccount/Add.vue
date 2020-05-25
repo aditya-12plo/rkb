@@ -22,6 +22,7 @@
         
 
 <div class="form-group col-lg-12">
+<h3 style="text-align:left;font-size: 1em;">Formulir PBK. CDDS. 01</h3>
 <h3 class="animated fadeInLeft" style="text-align:center;font-size: 3em;"><u>PROFIL PERUSAHAAN PIALANG BERJANGKA</u></h3>
 </div>
 
@@ -35,9 +36,9 @@
         <td><b>PT. RAJAWALI KAPITAL BERJANGKA</b></td>
       </tr>
       <tr>
-        <td>Alamat</td>
-        <td width="2%">:</td>
-        <td>Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) <br>Suka Asih, <br>Bojongloa Kaler<br>
+        <td valign="top">Alamat</td>
+        <td width="2%" valign="top">:</td>
+        <td valign="top">Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) <br>Suka Asih, <br>Bojongloa Kaler<br>
             Bandung-Jawa Barat 40231</td>
       </tr>
       <tr>
@@ -69,7 +70,7 @@
       <tr>
         <td>Direktur Utama</td>
         <td width="2%">:</td>
-        <td><b>Eri Ria Djulia</b></td>
+        <td><b>Teti Hartiyati</b></td>
       </tr>
       <tr>
         <td>Direktur</td>
@@ -87,18 +88,18 @@
       <tr>
         <td>Komisaris Utama</td>
         <td width="2%">:</td>
-        <td><b>Drs. Monang Siringoringo, MM</b></td>
+        <td><b>Sabri Usman</b></td>
       </tr>
       <tr>
         <td>Komisaris</td>
         <td width="2%">:</td>
-        <td><b>Marcelline Rosavina</b></td>
+        <td><b>Theo Antares</b></td>
       </tr>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Susunan Pemegang Saham Perusahaan</u></b></td>
       </tr>
       <tr>
-        <td colspan="3" style="text-align:left;"><ol><li>Drs. Monang Siriongoringo, MM</li><li>Marcelline Rosavina</li><li>Eri Ria Djulia</li></ol></td>
+        <td colspan="3" style="text-align:left;"><ol><li>Christian Wirajaya</li><li>Theo Antares</li></ol></td>
       </tr>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Nomor dan Tanggal Izin Usaha Dari Bappebti </u></b></td>
@@ -110,13 +111,13 @@
         <td colspan="3" style="text-align:left;"><b><u>Nomor dan Tanggal Keanggotaan Bursa Berjangka</u>  </b></td>
       </tr>
       <tr>
-        <td colspan="3" style="text-align:left;"><b>No. Tanggal :  </b></td>
+        <td colspan="3" style="text-align:left;"><b>No. 196/SPKB/ICDX/DIR/III/2020 Tanggal : 31 Maret 2020 </b></td>
       </tr>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Nomor dan Tanggal Keanggotaan Lembaga Kliring Berjangka</u> </b></td>
       </tr>
       <tr>
-        <td colspan="3" style="text-align:left;"><b>No. Tanggal :  </b></td>
+        <td colspan="3" style="text-align:left;"><b>No. 177/SPKK/ICH/III/2020 Tanggal : 31 Maret 2020  </b></td>
       </tr>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Kontrak Berjangka Yang Diperdagangkan : </u></b> <br> 
@@ -127,35 +128,62 @@
           </ol>
           </td>
       </tr>
+      <tr>
+        <td colspan="3" style="text-align:left;"><b><u>Kontrak Derivatif Syariah Yang Diperdagangkan *): </u></b> <br> 
+        <ol>
+          <li> </li>
+          </ol>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align:left;"><b><u>Kontrak Derivatif dalam Sistem Perdagangan Alternatif *):</u></b> <br> 
+        <ol>
+          <li> </li>
+          </ol>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align:left;"><b><u>Kontrak Derivatif dalam Sistem Perdagangan Alternatif dengan volume minimum 0,1 (nol koma
+satu) lot Yang Ddiperdagangkan *):
+</u></b> <br> 
+        <ol>
+          <li> </li>
+          </ol>
+          </td>
+      </tr>
       
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Biaya Secara Rinci yang Di Bebankan Pada Nasabah</u></b> <br> 
         <ol><li>Komisi</li><li>Interest Biaya / Bunga</li></ol></td>
       </tr>
       <tr>
-        <td colspan="3" style="text-align:left;"><b><u>Nomor atau alamat email jika terjadi keluhan</u></b> <br><br> <ul><li>info@rajawalikapital.co.id</li></ul></td>
+        <td colspan="3" style="text-align:left;"><b><u>Nomor atau alamat email jika terjadi keluhan</u></b> <br><br> <ul><li>compliance@rajawalikapital.co.id</li></ul></td>
       </tr>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Sarana Penyelesaian perselisihan yang dipergunakan apabila terjadi perselisihan</u></b> <br> 
         Penyelesaian Perselisihan Mempergunakan Sarana Melalui Prosedur Sebagai Berikut
         <br>
         <ol>
-          <li>Nasabah menyampaikan pengaduannya dengan mengisi ringkasan kasusnya pada Form Pengaduan
-Nasabah dan diserahkan kepada Departement Compliance
+         <li>Nasabah menyampaikan pengaduannya dengan mengisi ringkasan kasusnya pada Form
+Pengaduan Nasabah dan diserahkan kepada Divisi Compliance
+
 </li>
-          <li>Depertement Compliance berkoordinasi dengan departmen lainnya yang terkait akan melakukan
-verifikasi kasus atas dokumen-dokumen dan bukti-bukti pendukung lainnya dengan mengacu pada
-ketentuan yang berlaku di Perusahaan serta peraturan yang telah di tetapkan oleh instansi yang
-berwenang di bidang Perdagangan Berjangka Komoditi.</li>
-          <li>Setelah diperoleh hasil verifikasi atas dokumen-dokumen dan bukti-bukti pendukung tersebut ,
-Departement Compliance akan menghubungi Nasabah serta pihak-pihak yang terkait pada kasus
-tersebut untuk melakukan musyawarah dengan tujuan mencapai mufakat </li>
-          <li>Apabila perselisihan ternyata belum terselesaikan dalam musyawarah tersebut, maka selanjutnya
-penyelesainya akan memanfaatkan sarana penyelesaian yang tersedia di Bursa Berjangka (ICDX)
+          <li>Divisi Compliance berkoordinasi dengan departmen lainnya yang terkait akan melakukan
+verifikasi kasus atas dokumen-dokumen dan bukti-bukti pendukung lainnya dengan
+mengacu pada ketentuan yang berlaku di Perusahaan serta peraturan yang telah di tetapkan
+oleh instansi yang berwenang di bidang Perdagangan Berjangka Komoditi.</li>
+          <li>Setelah diperoleh hasil verifikasi atas dokumen-dokumen dan bukti-bukti pendukung
+tersebut , Divisi Compliance akan menghubungi Nasabah serta pihak-pihak yang terkait pada
+kasus tersebut untuk melakukan musyawarah dengan tujuan mencapai mufakat.
  </li>
-          <li> Apabila Perselisihan ternyata belum terselesaikan di bursa berjangka, maka selanjutnya perselisihan
-akan di selesaikan melalui Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI) atau Pengadilan
-Negeri yang berwenang.</li>
+          <li>Apabila perselisihan ternyata belum terselesaikan dalam musyawarah tersebut, maka
+selanjutnya penyelesainya akan memanfaatkan sarana penyelesaian yang tersedia di Bursa
+Berjangka (ICDX).
+
+ </li>
+          <li>Apabila Perselisihan ternyata belum terselesaikan di BBJ maka selanjutnya perselisihan akan
+di selesaikan melalui Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI) atau
+Pengadilan Negeri yang berwenang.</li>
         </ol>
         </td>
       </tr>
@@ -163,20 +191,22 @@ Negeri yang berwenang.</li>
       <tr>
         <td colspan="3" style="text-align:left;"><b><u>Nama-nama Wakil Pialang Berjangka yang Bekerja di Perusahaan Pialang Berjangka</u></b> <br>
          <ol>
-           <li> No. </li>
-           <li>  </li>
-           <li>  </li>
+           <li> Benny Fery Fransiscus </li>
+           <li> Rico Adrianto Winarko </li>
+           <li> Cahyo Edi Purnomo </li>
            <li>  </li>
            </ol>
          </td>
       </tr>
 
       <tr>
-        <td colspan="3" style="text-align:left;"><b><u>Nama – Nama Wakil Pialang Berjangka yang secara khusus ditunjuk oleh Pialang Berjangka untuk
-melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line</u></b> <br>
+        <td colspan="3" style="text-align:left;"><b><u>
+		Nama – Nama Wakil Pialang Berjangka yang secara khusus ditunjuk oleh Pialang Berjangka untuk
+melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line :
+		</u></b> <br>
          <ol>
-           <li> No. </li>
-           <li> No. </li>
+    <li>Rico Adrianto Winarko No. Izin : </li>
+    <li> Cahyo Edi Purnomo No. Izin : </li>
            </ol>
          </td>
       </tr>
@@ -187,7 +217,7 @@ melakukanVerifikasi dalam rangka penerimaan Nasabah elektronik on- Line</u></b> 
         <table width="100%" cellspacing="0" class="table table-striped table-bordered">
           <tr>
             <td><b> Mandiri - (Rupiah) <br> 130-0021-00333-3 </b></td>
-            <td><b> Mandiri - (dollar) <br> -  </b></td>
+            <td><b> Mandiri - (dollar) <br> 03  </b></td>
           </tr>
         </table>
          </td>
@@ -222,6 +252,13 @@ memahami isinya.
       <tr>
         <td colspan="3" style="text-align:left;">Pernyataan pada Tanggal <br>
          <b> {{this.customFormatter(currentDate)}} </b>
+         </td>
+        
+      </tr> 
+
+      <tr>
+        <td colspan="3" style="text-align:left;">
+		<p style="text-align: left;font-size: 10px;">*) Isi sesuai dengan kontrak yang diperdagangkan (mini lot) </p>
          </td>
         
       </tr> 

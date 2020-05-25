@@ -36,7 +36,7 @@
 <button class="btn btn-warning m-1" @click.prevent="downloadData"><i class="fa fa-download"></i> Download Data </button>
 <button class="btn btn-danger m-1" @click.prevent="clearFilter"><i class="fa fa-trash"></i> Clear Filter </button>
 
- <div class="card-body">
+ <div v-if="this.isCrud == 'crud'" class="card-body">
 
 <vue-good-table
     title="real-account"
@@ -73,6 +73,42 @@
             <button v-if="props.row.status == 'review'" class="btn ripple btn-3d btn-primary" @click.prevent="ApprovedById(props.index , props.row)">
                 <div>
                     <span> approval </span>
+                    <span class="ink animate" style="height: 86px; width: 86px; top: -32px; left: -1px;"></span>
+                </div>
+            </button>
+        </span>
+        <span v-else>
+            {{props.formattedRow[props.column.field]}}
+        </span>
+      </template> 
+</vue-good-table>
+
+</div>
+
+
+ <div v-else class="card-body">
+
+<vue-good-table
+    title="real-account"
+    mode="remote"
+    @on-selected-rows-change="selectionChanged"
+    @on-page-change="onPageChange"
+    @on-sort-change="onSortChange"
+    @on-column-filter="onColumnFilter"
+    @on-per-page-change="onPerPageChange"
+    :totalRows="totalRecords"
+    :line-numbers="true"
+    :isLoading.sync="isLoading"
+    :pagination-options="{
+        enabled: true,
+    }"
+  :rows="rows"
+  :columns="columns">
+          <template slot="table-row" slot-scope="props">
+        <span v-if="props.column.field == 'actions'">
+            <button class="btn ripple btn-3d btn-info" @click.prevent="downloadById(props.index , props.row)">
+                <div>
+                    <span> download </span>
                     <span class="ink animate" style="height: 86px; width: 86px; top: -32px; left: -1px;"></span>
                 </div>
             </button>
@@ -127,6 +163,7 @@ export default {
   data () {
     return {
        direction: 'ltr',
+		isCrud:'',
     format: moment.localeData().longDateFormat('L'),
     separator: ' - ',
     applyLabel: 'Apply',
@@ -218,6 +255,30 @@ export default {
   watch: {  
   },
   methods: {
+	fetchIt(){
+		this.loading();
+        axios.get('/rajawaliadmin/check-access/real-account').then((response) => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{ 
+                if(response.data.status == 200){ 
+                    this.isCrud = response.data.message;
+                }else{
+                    window.location.href = window.webURL; 
+                }
+            }
+        }).catch(error => {
+            if (! _.isEmpty(error.response)) {
+                if (error.response.status = 422) {
+                    this.$router.push('/server-error');
+                }else if (error.response.status = 500) {
+                    this.$router.push('/server-error');
+                }else{
+                    this.$router.push('/page-not-found');
+                }
+            }
+        });
+    },
     createData(){
       this.$router.push('/root/add-real-account');
     },
@@ -519,6 +580,7 @@ export default {
 
   },
 	mounted(){  
+		this.fetchIt();
   }
 
 }

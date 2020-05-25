@@ -10,6 +10,7 @@ class VRealAccountUser extends Model
     protected $table = 'vw_real_account_users';
     protected $primaryKey = 'id';
     protected $fillable = array('user_id','email','admin_id','admin_email','admin_name','aggrement_see_company_profile',
+	'disclosure_statement',
     'name','place_of_birth','date_of_birth','account_number','type_of_identity_card','identity_card_number',
     'country','province','city','area','sub_area','village','address','postal_code','aggrement_simulation_commodity_trade_transaction',
     'name_implementing_commodity_trade_transaction','aggrement_implementing_commodity_trade_transaction',

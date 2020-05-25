@@ -175,6 +175,7 @@ export default {
     return {
     file_data:'',
     direction: 'ltr',
+		isCrud:'',
     format: moment.localeData().longDateFormat('L'),
     separator: ' - ',
     applyLabel: 'Apply',
@@ -245,6 +246,30 @@ export default {
   watch: {  
   },
   methods: {
+	fetchIt(){
+		this.loading();
+        axios.get('/rajawaliadmin/check-access/demo-account').then((response) => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{ 
+                if(response.data.status == 200){ 
+                    this.isCrud = response.data.message;
+                }else{
+                    window.location.href = window.webURL; 
+                }
+            }
+        }).catch(error => {
+            if (! _.isEmpty(error.response)) {
+                if (error.response.status = 422) {
+                    this.$router.push('/server-error');
+                }else if (error.response.status = 500) {
+                    this.$router.push('/server-error');
+                }else{
+                    this.$router.push('/page-not-found');
+                }
+            }
+        });
+    },
     uploadData(){
   let masuk = new FormData();
    masuk.set('file_data', this.file_data)
@@ -529,7 +554,8 @@ export default {
     });
 
   },
-	mounted(){  
+	mounted(){
+		this.fetchIt();  
   }
 
 }

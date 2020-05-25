@@ -53,28 +53,41 @@
             <div id="left-menu">
               <div class="sub-left-menu scroll">
                 <ul class="nav nav-list">
-
+				
                 <li><a href="/rajawaliadmin"><span class="fa-home fa"></span> Dashboard</a></li>
-                      <li><a href="{{url('/rajawaliadmin#/root/user/index')}}"><span class="fa fa-users"></span> User Client Demo</a></li>
-                      <li><a href="{{url('/rajawaliadmin#/root/ib-partnership')}}"><span class="fa fa-registered"></span> IB (partnership)</a></li>
-                <li><a href="{{url('/rajawaliadmin#/root/list-real-account/index')}}"><span class="fa fa-unlock"></span> Real Account</a></li>
+				@if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'compliance' || Auth::guard('rajawali')->user()->role_id == 'marketing' || Auth::guard('rajawali')->user()->role_id == 'settlement' || Auth::guard('rajawali')->user()->role_id == 'finance')
+                <li><a href="{{url('/rajawaliadmin#/root/user/index')}}"><span class="fa fa-users"></span> User Client Demo</a></li>
+				@endif
+				@if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'ib' || Auth::guard('rajawali')->user()->role_id == 'compliance')
+                <li><a href="{{url('/rajawaliadmin#/root/ib-partnership')}}"><span class="fa fa-registered"></span> IB (partnership)</a></li>
+				@endif
+				
+				@if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'settlement')					
                 <li> <a href="{{url('/rajawaliadmin#/root/list-demo-account/index')}}"><span class="fa fa-lock"></span> Demo Account</a></li>
+				@endif
+				@if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'compliance' || Auth::guard('rajawali')->user()->role_id == 'marketing' || Auth::guard('rajawali')->user()->role_id == 'settlement' || Auth::guard('rajawali')->user()->role_id == 'finance')
+                <li><a href="{{url('/rajawaliadmin#/root/list-real-account/index')}}"><span class="fa fa-unlock"></span> Real Account</a></li>
                 <li><a href="{{url('/rajawaliadmin#/root/list-deposit/index')}}"><span class="fa fa-credit-card"></span> Deposit</a></li>
                 <li><a href="{{url('/rajawaliadmin#/root/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span> Withdrawal</a></li>
-                      <li><a href="{{url('/rajawaliadmin#/root/web-contact')}}"><span class="fa fa-phone"></span> Web Contact</a></li>
-                      <li><a href="{{url('/rajawaliadmin#/root/newslatter')}}"><span class="fa fa-paper-plane"></span> Newslatter</a></li>
+				@endif
+				@if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'maintenace')
+                <li><a href="{{url('/rajawaliadmin#/root/web-contact')}}"><span class="fa fa-phone"></span> Web Contact</a></li>
+                <li><a href="{{url('/rajawaliadmin#/root/newslatter')}}"><span class="fa fa-paper-plane"></span> Newslatter</a></li>
                 <li><a href="{{url('/rajawaliadmin#/root/list-banner/index')}}"><span class="fa fa-film"></span> Web Banner</a></li>
                 <li><a href="{{url('/rajawaliadmin#/root/files/index')}}"><span class="fa fa-file"></span> Files</a></li>
                 <li><a href="{{url('/rajawaliadmin#/root/news/index')}}"><span class="fa fa-internet-explorer"></span> News</a></li>
+				@endif
                 <li class="active ripple">
                       <a class="tree-toggle nav-header"><span class="fa fa-gears"></span> Setting 
                         <span class="fa right-arrow text-right fa-angle-right"></span>
                       <span class="ink animate" style="height: 226px; width: 226px; top: -87px; left: 1.5px;"></span></a>
                       <ul class="nav nav-list tree" style="display: none;">
                       
-                      @if(Auth::guard('rajawali')->user()->role_id == 'admin')
-                          <li><a href="{{url('/rajawaliadmin#/root/admin/index')}}">Web Admin</a></li>
-                          <li><a href="{{url('/rajawaliadmin#/root/email/index')}}">Email Configuration</a></li>
+                     
+                      @if(Auth::guard('rajawali')->user()->role_id == 'admin' || Auth::guard('rajawali')->user()->role_id == 'maintenace')
+						<li><a href="{{url('/rajawaliadmin#/root/user/index')}}">Client Area</a></li>
+                        <li><a href="{{url('/rajawaliadmin#/root/admin/index')}}">Web Admin</a></li>
+                        <li><a href="{{url('/rajawaliadmin#/root/email/index')}}">Email Configuration</a></li>
                       @endif
 
                           <li><a href="{{url('/rajawaliadmin#/root/password')}}">Profile</a></li>
@@ -163,7 +176,7 @@
     <script src="/public/assets-miminium/js/plugins/jquery.nicescroll.js"></script>
     <!-- custom -->
      <script src="/public/assets-miminium/js/main.js"></script>
-    <script src="{{ asset('public/js/app-002.js') }}"></script>
+    <script src="{{ asset('public/js/app-003.js') }}"></script>
  
   </body>
 </html>

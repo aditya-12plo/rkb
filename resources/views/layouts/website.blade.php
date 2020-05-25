@@ -178,7 +178,7 @@
                  <a href="daftar-akun-demo"><p class="md-trigger box-lang" data-modal="modal-demo"><span class="txt-lg">AKUN DEMO</span></p></a>
             </div>
             <div class="box-language">
-                <a href="daftar-akun-real"><p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">AKUN REAL</span></p></a>
+                <a href="/daftar-akun-real"><p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">AKUN REAL</span></p></a>
             </div>
             @endif 
         </nav>

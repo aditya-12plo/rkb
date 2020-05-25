@@ -15,6 +15,7 @@ use PHPExcel_IOFactory;
 
 use App\Models\Deposit;
 use App\Models\RealAccount;
+use App\Models\User;
 
 class DepositController extends Controller
 {
@@ -122,6 +123,7 @@ class DepositController extends Controller
         }
 
         $check = Deposit::where('id',$request->id)->first();
+        $user = User::where('id',$check->user_id)->first();
         $model = RealAccount::where([["account_number",$request->account_number], ['status' , 'approved'] , ['user_id' , $request->user_id]])->first();
         if($model){
             $destinationPath = 'public/client-deposit/'; // upload path
@@ -144,6 +146,8 @@ class DepositController extends Controller
                 $check->image_deposit   = $fileName;
                 $check->update(); 
             }else{
+				$fileName = $check->image_deposit;
+				
                 $check->admin_id        = Auth::guard('rajawali')->user()->id;
                 $check->total_deposit   = $request->total_deposit;
                 $check->account_number  = $request->account_number;
@@ -151,6 +155,25 @@ class DepositController extends Controller
                 $check->status          = $request->status;
                 $check->update();
             }
+			
+			 $masuk = array(
+                    'user_id'           => $check->user_id,
+                    'total_deposit'     => $request->total_deposit,
+                    'account_number'    => $request->account_number,
+                    'image_deposit'     => $fileName,
+                    'reason'		    => $request->reason,
+                    'status'            => $request->status,
+                    'title'             => $user->name
+                );
+			$subject = $request->status.' Deposit';
+			$to = $user->email;
+			$attach = $destinationPath.$fileName;
+			$content = view('emails.email_deposit')->with($masuk);
+            Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$attach,$subject,$to){
+                $message->to($to)->cc(["dealing@rajawalikapital.co.id","settlement@rajawalikapital.co.id","finance@rajawalikapital.co.id"])->subject($subject);
+                $message->attach($attach);
+            });
+			
             return response()->json(['status'=>200,'data'=> '','message'=>'update successfully']);
         }else{
             return response()->json(['status'=>402,'data'=> '','message'=>['error'=>['Account ID not found.']]]);

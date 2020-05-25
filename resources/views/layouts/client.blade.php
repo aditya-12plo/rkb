@@ -123,7 +123,7 @@
     <script src="/public/assets-miminium/js/plugins/jquery.nicescroll.js"></script>
     <!-- custom -->
      <script src="/public/assets-miminium/js/main.js"></script>
-    <script src="{{ asset('public/js/app-004.js') }}"></script>
+    <script src="{{ asset('public/js/app-003.js') }}"></script>
  
   </body>
 </html>

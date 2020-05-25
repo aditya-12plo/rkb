@@ -22,231 +22,41 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-                <p style="text-align:center;"> <b>DOKUMEN PEMBERITAHUAN ADANYA RISIKO YANG HARUS DISAMPAIKAN OLEH PIALANG
-BERJANGKA UNTUK TRANSAKSI KONTRAK BERJANGKA</b></p>
+			<b>FORMULIR PBK. CDDS. 04</b>
+                <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+                 <tr>
+                    <td colspan="3" style="text-align:center;"><b>PERNYATAAN KEBENARAN DAN TANGGUNG JAWAB</b></td>
+                </tr>
+
 <tr>
     <td colspan="3">
-      <p>Dokumen Pemberitahuan Adanya Risiko ini disampaikan kepada Anda sesuai dengan Pasal 50 ayat
-(2) Undang-Undang Nomor 32 Tahun 1997 tentang Perdagangan Berjangka Komoditi sebagaimana
-telah diubah dengan Undang-Undang Nomor 10 Tahun 2011 tentang Perubahan Atas UndangUndang Nomor 32 Tahun 1997 Tentang Perdagangan Berjangka Komoditi.
+      <p>Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa semua informasi dan semua
+dokumen yang saya lampirkan dalam APLIKASI PEMBUKAAN REKENING TRANSAKSI SECARA
+ELEKTRONIK ON-LINE adalah benar dan tepat, Saya akan bertanggung jawab penuh apabila
+dikemudian hari terjadi sesuatu hal sehubungan dengan ketidakbenaran data yang saya berikan.
 </p>
     </td>
 </tr>
 
 <tr>
-    <td colspan="3">
-      <p>
-Maksud dokumen ini adalah memberitahukan bahwa kemungkinan kerugian atau keuntungan dalam
-perdagangan Kontrak Berjangka bisa mencapai jumlah yang sangat besar. Oleh karena itu, Anda
-harus berhati-hati dalam memutuskan untuk melakukan transaksi, apakah kondisi keuangan Anda
-mencukupi.
-</p>
-    </td>
-</tr>
-
-<tr>
-    <td colspan="3">
-      <p>
-
-<ol>
-    <li><b><u>Perdagangan Kontrak Berjangka belum tentu layak bagi semua investor.</u></b> Anda dapat
-menderita kerugian dalam jumlah besar dan dalam jangka waktu singkat. Jumlah kerugian
-uang dimungkinkan dapat melebihi jumlah uang yang pertama kali Anda setor (Margin awal)
-ke Pialang Berjangka Anda.
-Anda mungkin menderita kerugian seluruh Margin dan Margin tambahan yang ditempatkan
-pada Pialang Berjangka untuk mempertahankan posisi Kontrak Berjangka Anda.
-Hal ini disebabkan Perdagangan Berjangka sangat dipengaruhi oleh mekanisme leverage,
-dimana dengan jumlah investasi dalam bentuk yang relatif kecil dapat digunakan untuk
-membuka posisi dengan aset yang bernilai jauh lebih tinggi. Apabila Anda tidak siap dengan
-risiko seperti ini, sebaiknya Anda tidak melakukan perdagangan Kontrak Berjangka.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_satu" name="button_satu" value="Ya" required>
-<label class="custom-control-label" for="button_satu"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Perdagangan Kontrak Berjangka mempunyai risiko dan mempunyai kemungkinan kerugian
-yang tidak terbatas yang jauh lebih besar dari jumlah uang yang disetor (Margin) ke
-Pialang Berjangka.</u></b> Kontrak Berjangka sama dengan produk keuangan lainnya yang
-mempunyai risiko tinggi, Anda sebaiknya tidak menaruh risiko terhadap dana yang Anda
-tidak siap untuk menderita rugi, seperti tabungan pensiun, dana kesehatan atau dana untuk
-keadaan darurat, dana yang disediakan untuk pendidikan atau kepemilikan rumah, dana
-yang diperoleh dari pinjaman pendidikan atau gadai, atau dana yang digunakan untuk
-memenuhi kebutuhan sehari-hari.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_dua" name="button_dua" value="Ya" required>
-<label class="custom-control-label" for="button_dua"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Berhati-hatilah terhadap pernyataan bahwa Anda pasti mendapatkan keuntungan besar
-dari perdagangan Kontrak Berjangka.</u></b> Meskipun perdagangan Kontrak Berjangka dapat
-memberikan keuntungan yang besar dan cepat, namun hal tersebut tidak pasti, bahkan
-dapat menimbulkan kerugian yang besar dan cepat juga. Seperti produk keuangan lainnya,
-tidak ada yang dinamakan “pasti untung”.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_tiga" name="button_tiga" value="Ya" required>
-<label class="custom-control-label" for="button_tiga"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Disebabkan adanya mekanisme leverage dan sifat dari transaksi Kontrak Berjangka, Anda
-dapat merasakan dampak bahwa Anda menderita kerugian dalam waktu cepat.</u></b>
-Keuntungan maupun kerugian dalam transaksi Kontrak Berjangka akan langsung dikredit
-atau didebet ke rekening Anda, paling lambat secara harian. Apabila pergerakan di pasar
-terhadap Kontrak Berjangka menurunkan nilai posisi Anda dalam Kontrak Berjangka, Anda
-diwajibkan untuk menambah dana untuk pemenuhan kewajiban Margin ke Pialang
-Berjangka. Apabila rekening Anda berada dibawah minimum Margin yang telah ditetapkan
-Lembaga Kliring Berjangka atau Pialang Berjangka, maka posisi Anda dapat dilikuidasi pada
-saat rugi, dan Anda wajib menyelesaikan defisit (jika ada) dalam rekening Anda.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_empat" name="button_empat" value="Ya" required>
-<label class="custom-control-label" for="button_empat"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Pada saat pasar dalam keadaan tertentu, Anda mungkin akan sulit atau tidak mungkin
-melikuidasi posisi.</u></b> Pada umumnya Anda harus melakukan transaksi offset jika ingin
-melikuidasi posisi dalam Kontrak Berjangka. Apabila Anda tidak dapat melikuidasi posisi
-Kontrak Berjangka, Anda tidak dapat merealisasikan keuntungan pada nilai posisi tersebut
-atau mencegah kerugian yang lebih tinggi. Kemungkinan tidak dapat melikuidasi dapat
-terjadi, antara lain: jika perdagangan berhenti dikarenakan aktivitas perdagangan yang tidak
-lazim pada Kontrak Berjangka atau subjek Kontrak Berjangka, terjadi kerusakan sistem pada
-Bursa Berjangka atau Pialang Berjangka, atau posisi Anda berada dalam pasar yang tidak
-likuid. Bahkan apabila Anda dapat melikuidasi posisi tersebut, Anda mungkin terpaksa
-melakukannya pada harga yang menimbulkan kerugian besar.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_lima" name="button_lima" value="Ya" required>
-<label class="custom-control-label" for="button_lima"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Pada saat pasar dalam keadaan tertentu, Anda mungkin akan sulit atau tidak mungkin
-mengelola risiko atas posisi terbuka Kontrak Berjangka dengan cara membuka posisi
-dengan nilai yang sama namun dengan posisi yang berlawanan dalam kontrak bulan yang
-berbeda, dalam pasar yang berbeda atau dalam “subjek Kontrak Berjangka” yang berbeda.</u></b>
-Kemungkinan untuk tidak dapat mengambil posisi dalam rangka membatasi risiko yang
-timbul, contohnya: jika perdagangan dihentikan pada pasar yang berbeda disebabkan
-aktivitas perdagangan yang tidak lazim pada Kontrak Berjangka atau “subjek Kontrak
-Berjangka”.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_enam" name="button_enam" value="Ya" required>
-<label class="custom-control-label" for="button_enam"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Anda dapat diwajibkan untuk menyelesaikan Kontrak Berjangka dengan penyerahan fisik
-dari “subjek Kontrak Berjangka”.</u></b> Jika Anda mempertahankan posisi penyelesaian fisik
-dalam Kontrak Berjangka sampai hari terakhir perdagangan berdasarkan tanggal jatuh
-tempo Kontrak Berjangka, Anda akan diwajibkan menyerahkan atau menerima penyerahan
-“subjek Kontrak Berjangka” yang dapat mengakibatkan adanya penambahan biaya.
-Pengertian penyelesaian dapat berbeda untuk suatu Kontrak Berjangka dengan Kontrak
-Berjangka lainnya atau suatu Bursa Berjangka dengan Bursa Berjangka lainnya. Anda harus
-melihat secara teliti mengenai penyelesaian dan kondisi penyerahan sebelum membeli atau
-menjual Kontrak Berjangka.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_tujuh" name="button_tujuh" value="Ya" required>
-<label class="custom-control-label" for="button_tujuh"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Anda dapat menderita kerugian yang disebabkan kegagalan sistem informasi.</u></b>
-Sebagaimana yang terjadi pada setiap transaksi keuangan, Anda dapat menderita kerugian
-jika amanat untuk melaksanakan transaksi Kontrak Berjangka tidak dapat dilakukan karena
-kegagalan sistem informasi di Bursa Berjangka, penyelenggara maupun sistem informasi di
-Pialang Berjangka yang mengelola posisi Anda. Kerugian Anda akan semakin besar jika
-Pialang Berjangka yang mengelola posisi Anda tidak memiliki sistem informasi cadangan atau
-prosedur yang layak.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_delapan" name="button_delapan" value="Ya" required>
-<label class="custom-control-label" for="button_delapan"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Semua Kontrak Berjangka mempunyai risiko, dan tidak ada strategi berdagang yang dapat
-menjamin untuk menghilangkan risiko tersebut.</u></b> Strategi dengan menggunakan kombinasi
-posisi seperti spread, dapat sama berisiko seperti posisi long atau short. Melakukan
-Perdagangan Berjangka memerlukan pengetahuan mengenai Kontrak Berjangka dan pasar
-berjangka.
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_9" name="button_9" value="Ya" required>
-<label class="custom-control-label" for="button_9"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Strategi perdagangan harian dalam Kontrak Berjangka dan produk lainnya memiliki risiko
-khusus.</u></b> Seperti pada produk keuangan lainnya, pihak yang ingin membeli atau menjual
-Kontrak Berjangka yang sama dalam satu hari untuk mendapat keuntungan dari perubahan
-harga pada hari tersebut (“<i>day traders</i>”) akan memiliki beberapa risiko tertentu antara lain
-jumlah komisi yang besar, risiko terkena efek pengungkit (“exposure to leverage”), dan
-persaingan dengan pedagang profesional. Anda harus mengerti risiko tersebut dan memiliki
-pengalaman yang memadai sebelum melakukan perdagangan harian (“<i>day trading</i>”).
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_10" name="button_10" value="Ya" required>
-<label class="custom-control-label" for="button_10"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Menetapkan amanat bersyarat, seperti Kontrak Berjangka dilikuidasi pada keadaan
-tertentu untuk membatasi rugi (<i>stop loss</i>), mungkin tidak akan dapat membatasi kerugian
-Anda sampai jumlah tertentu saja.</u></b> Amanat bersyarat tersebut mungkin tidak dapat
-dilaksanakan karena terjadi kondisi pasar yang tidak memungkinkan melikuidasi Kontrak
-Berjangka.
-
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_11" name="button_11" value="Ya" required>
-<label class="custom-control-label" for="button_11"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li><b><u>Anda harus membaca dengan seksama dan memahami Perjanjian Pemberian Amanat
-dengan Pialang Berjangka Anda sebelum melakukan transaksi Kontrak Berjangka.</u></b>
-
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_12" name="button_12" value="Ya" required>
-<label class="custom-control-label" for="button_12"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li>Pernyataan singkat ini tidak dapat memuat secara rinci seluruh risiko atau aspek penting
-lainnya tentang Perdagangan Berjangka. Oleh karena itu Anda harus mempelajari kegiatan
-Perdagangan Berjangka secara cermat sebelum memutuskan melakukan transaksi.
-
-
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_13" name="button_13" value="Ya" required>
-<label class="custom-control-label" for="button_13"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-    <li>Dokumen Pemberitahuan Adanya Risiko (<i>Risk Disclosure</i>) ini dibuat dalam Bahasa Indonesia
-<div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_14" name="button_14" value="Ya" required>
-<label class="custom-control-label" for="button_14"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div>
-</li>
-</ol>
-
-</p>
-<p style="text-align:center;">
-PERNYATAAN MENERIMA PEMBERITAHUAN ADANYA RISIKO
-</p>
-<p style="text-align:center;">
-Dengan mengisi kolom “YA” di bawah, saya menyatakan bahwa saya telah menerima “DOKUMEN
-PEMBERITAHUAN ADANYA RISIKO” mengerti dan menyetujui isinya.
-
-</p>
-    </td>
-</tr>
-
-
-<tr>
-    <td width="30%">Pernyataan menerima / Tidak </td>
-    <td width="70%" colspan="2">
-        <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_notice_of_risk" name="aggrement_notice_of_risk" v-model="forms.aggrement_notice_of_risk" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_notice_of_risk">Ya</label>
+    <td width="30%"> Pernyataan Kebenaran dan Tanggung Jawab </td>
+    <td width="70%" colspan="2"><div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="aggrement_statement_of_truth_and_responsibility" name="aggrement_statement_of_truth_and_responsibility" v-model="forms.aggrement_statement_of_truth_and_responsibility" value="Ya" required>
+            <label class="custom-control-label" for="aggrement_statement_of_truth_and_responsibility">Ya</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_notice_of_risk" name="aggrement_notice_of_risk" v-model="forms.aggrement_notice_of_risk" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_notice_of_risk">Tidak</label>
+          <input type="radio" class="custom-control-input" id="aggrement_statement_of_truth_and_responsibility" name="aggrement_statement_of_truth_and_responsibility" v-model="forms.aggrement_statement_of_truth_and_responsibility" value="Tidak" required>
+          <label class="custom-control-label" for="aggrement_statement_of_truth_and_responsibility">Tidak</label>
         </div> </td>
 </tr>
 
 <tr>
-    <td width="30%">Menerima pada Tanggal </td>
-    <td width="70%" colspan="2">{{this.customLokalFormatter(currentDate)}}</td>
+    <td width="30%">Menyatakan pada Tanggal </td>
+    <td width="70%" colspan="2"> {{this.customLokalFormatter(currentDate)}}</td>
 </tr>
 
                </table>
@@ -341,7 +151,7 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', aggrement_notice_of_risk:'',status:''},
+      forms: {id : '', aggrement_statement_of_truth_and_responsibility:'',status:''},
     }
   },
   watch: { 
@@ -403,7 +213,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            var data = {id : this.forms.id, button_ya_tidak:this.button_ya_tidak , aggrement_notice_of_risk:this.forms.aggrement_notice_of_risk,status:this.forms.status};
+            var data = {id : this.forms.id, button_ya_tidak:this.button_ya_tidak , aggrement_statement_of_truth_and_responsibility:this.forms.aggrement_statement_of_truth_and_responsibility,status:this.forms.status};
             axios.post('/clients-area/post-real-account/step-11', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 

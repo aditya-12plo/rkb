@@ -274,6 +274,7 @@ export default {
   data () {
     return {
        direction: 'ltr',
+		isCrud:'',
     format: moment.localeData().longDateFormat('L'),
     separator: ' - ',
     applyLabel: 'Apply',
@@ -330,6 +331,31 @@ export default {
   watch: {  
   },
   methods: {
+	fetchIt(){
+		this.loading();
+        axios.get('/rajawaliadmin/check-access/web-news').then((response) => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{ 
+                if(response.data.status == 200){ 
+                    this.isCrud = response.data.message;
+                }else{
+                    window.location.href = window.webURL; 
+                }
+            }
+        }).catch(error => {
+            if (! _.isEmpty(error.response)) {
+                if (error.response.status = 422) {
+                    this.$router.push('/server-error');
+                }else if (error.response.status = 500) {
+                    this.$router.push('/server-error');
+                }else{
+                    this.$router.push('/page-not-found');
+                }
+            }
+        });
+    },
+	
     downloadAttachment(fileName){
         var masuk = {fileName:fileName}; 
         axios({
@@ -683,6 +709,7 @@ export default {
 
   },
 	mounted(){  
+		this.fetchIt(); 
   }
 
 }

@@ -1,4 +1,4 @@
-<template>
+asda<template>
 <div> 
 <loading :active.sync="isLoading"></loading>
 
@@ -22,49 +22,222 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
+			<b>FORMULIR PBK. CDDS. 04</b>
                 <p style="text-align:center;"> <b>APLIKASI PEMBUKAAN REKENING TRANSAKSI<br> SECARA ELEKTRONIK ON-LINE</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
                  <tr>
-                    <td colspan="3" style="text-align:center;"><b>PIHAK YANG DIHUBUNGI DALAM KEADAAN DARURAT</b></td>
-                </tr>
-                 <tr>
-                    <td colspan="3" style="text-align:left;">Dalam keadaan darurat, pihak yang dapat dihubungi</td>
-                </tr>
-<tr>
-    <td>Nama <span style="color:red;">*</span></td>
-    <td>:</td>
-    <td><input v-model="forms.nama_lengkap" type="text" class="form-control" required="" aria-required="true"></td>
+    <td colspan="3" style="text-align:center;"><b>DATA PRIBADI</b></td>
 </tr>
 <tr>
-    <td>Alamat <span style="color:red;">*</span></td>
+    <td width="30%">Nama Lengkap</td>
+    <td width="2%">:</td>
+    <td width="68%">{{this.forms.name}}</td>
+</tr>
+<tr>
+    <td>Tempat Lahir / Tanggal Lahir</td>
+    <td>:</td>
+    <td>{{this.forms.place_of_birth}} / {{this.forms.date_of_birth}}</td>
+</tr>
+<tr>
+    <td>Alamat</td>
+    <td>:</td>
+    <td>{{this.forms.address}} <br> 
+        {{this.forms.province}} {{this.forms.city}} <br>
+        {{this.forms.area}}, {{this.forms.sub_area}},<br>
+        {{this.forms.country}} <br>
+        Postal Kode : {{this.forms.postal_code}}
+    </td>
+</tr>
+<tr>
+    <td>Tipe Identitas</td>
+    <td>:</td>
+    <td>{{this.forms.type_of_identity_card}}</td>
+</tr>
+<tr>
+    <td>No. Identitas</td>
+    <td>:</td>
+    <td>{{this.forms.identity_card_number}}</td>
+</tr>
+<tr>
+    <td>No. NPWP <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td><input v-model="forms.no_npwp" type="text" class="form-control" required="" aria-required="true"></td>
+</tr>
+<tr>
+    <td>Jenis Kelamin <span style="color:red;">*</span></td>
     <td>:</td>
     <td>
-      <textarea v-model="forms.alamat_lengkap" class="form-control" aria-required="true" required></textarea>
-      </td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="gander" name="gander" v-model="forms.gander" value="Laki-laki" :checked="forms.gander=='Laki-laki'" required>
+            <label class="custom-control-label" for="gander">Laki-laki</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="gander" name="gander" v-model="forms.gander" value="Perempuan" :checked="forms.gander=='Perempuan'" required>
+          <label class="custom-control-label" for="gander">Perempuan</label>
+        </div>      
+    </td>
 </tr>
 <tr>
-    <td>Kode Pos <span style="color:red;">*</span></td>
+    <td>Status Perkawinan <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.kode_pos" type="text" minlength="2" maxlength="8" class="form-control" @keypress="isNumber($event)" aria-required="true" required></td>
+    <td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="marital_status" name="marital_status" v-model="forms.marital_status" value="Tidak Kawin" :checked="forms.marital_status=='Tidak Kawin'" required>
+            <label class="custom-control-label" for="marital_status">Tidak Kawin</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="marital_status" name="marital_status" v-model="forms.marital_status" value="Kawin" :checked="forms.marital_status=='Kawin'" required>
+          <label class="custom-control-label" for="marital_status">Kawin</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="marital_status" name="marital_status" v-model="forms.marital_status" value="Janda" :checked="forms.marital_status=='Janda'" required>
+          <label class="custom-control-label" for="marital_status">Janda</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="marital_status" name="marital_status" v-model="forms.marital_status" value="Duda" :checked="forms.marital_status=='Duda'" required>
+          <label class="custom-control-label" for="marital_status">Duda</label>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Nama Istri/Suami</td>
+    <td>:</td>
+    <td><input v-model="forms.nama_suami_atau_istri" type="text" class="form-control"></td>
+</tr>
+<tr>
+    <td>Nama Ibu Kandung <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td><input v-model="forms.mother_name" type="text" class="form-control" required="" aria-required="true"></td>
+</tr>
+<tr>
+    <td>No. Telp Rumah</td>
+    <td>:</td>
+    <td><input v-model="forms.phone_house" type="text" minlength="2" maxlength="15" class="form-control" @keypress="isNumber($event)"></td>
+</tr>
+<tr>
+    <td>No. Faksimili Rumah</td>
+    <td>:</td>
+    <td><input v-model="forms.fax_house" type="text" minlength="2" maxlength="15" class="form-control" @keypress="isNumber($event)"></td>
 </tr>
 <tr>
     <td>No. Telp Handphone <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.no_handphone" type="text" minlength="2" maxlength="15" class="form-control" required="" aria-required="true" @keypress="isNumber($event)"></td>
+    <td><input v-model="forms.no_handphone" type="text" minlength="2" maxlength="15" class="form-control" @keypress="isNumber($event)" aria-required="true" required></td>
 </tr>
 <tr>
-    <td>Hubungan dengan anda <span style="color:red;">*</span></td>
+    <td>Status Kepemilikan Rumah <span style="color:red;">*</span></td>
     <td>:</td>
-    <td><input v-model="forms.hubungan" type="text" class="form-control" required="" aria-required="true"></td>
+    <td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="house_status" name="house_status" v-model="forms.house_status" value="Pribadi" :checked="forms.house_status=='Pribadi'" required>
+            <label class="custom-control-label" for="house_status">Pribadi</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="house_status" name="house_status" v-model="forms.house_status" value="Keluarga" :checked="forms.house_status=='Keluarga'" required>
+          <label class="custom-control-label" for="house_status">Keluarga</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="house_status" name="house_status" v-model="forms.house_status" value="Sewa/Kontrak" :checked="forms.house_status=='Sewa/Kontrak'" required>
+          <label class="custom-control-label" for="house_status">Sewa/Kontrak</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="house_status" name="house_status" v-model="forms.house_status" value="Lainnya" :checked="forms.house_status=='Lainnya'" required>
+          <label class="custom-control-label" for="house_status">Lainnya</label>
+          <div v-if="this.checkHouseStatus(this.forms.house_status)">
+          <input v-model="house_status_lainnya" type="text" class="form-control" required="" aria-required="true">
+          </div>
+        </div>
+    </td>
 </tr>
-
+<tr>
+    <td>Tujuan Pembukaan Rekening <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="purpose_open_account" name="purpose_open_account" v-model="forms.purpose_open_account" value="Lindung Nilai" :checked="forms.purpose_open_account=='Lindung Nilai'" required>
+            <label class="custom-control-label" for="purpose_open_account">Lindung Nilai</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="purpose_open_account" name="purpose_open_account" v-model="forms.purpose_open_account" value="Gain" :checked="forms.purpose_open_account=='Gain'" required>
+          <label class="custom-control-label" for="purpose_open_account">Gain</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="purpose_open_account" name="purpose_open_account" v-model="forms.purpose_open_account" value="Spekulasi" :checked="forms.purpose_open_account=='Spekulasi'" required>
+          <label class="custom-control-label" for="purpose_open_account">Spekulasi</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="purpose_open_account" name="purpose_open_account" v-model="forms.purpose_open_account" value="Lainnya" :checked="forms.purpose_open_account=='Lainnya'" required>
+          <label class="custom-control-label" for="purpose_open_account">Lainnya</label>
+          <div v-if="this.checkPurposeStatus(this.forms.purpose_open_account)">
+          <input v-model="purpose_open_account_lainnya" type="text" class="form-control" required="" aria-required="true">
+          </div>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Pengalaman Investasi <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="investment_experience" name="investment_experience" v-model="forms.investment_experience" value="Ya" :checked="forms.investment_experience=='Ya'" required>
+          <label class="custom-control-label" for="investment_experience">Ya</label>
+          <div v-if="this.checkExperienceStatus(this.forms.investment_experience)">
+          <input v-model="investment_experience_lainnya" type="text" class="form-control" required="" aria-required="true">
+          </div>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="investment_experience" name="investment_experience" v-model="forms.investment_experience" value="Tidak" :checked="forms.investment_experience=='Tidak'" required>
+            <label class="custom-control-label" for="investment_experience">Tidak</label>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Apakah Anda memiliki anggota keluarga yang bekerja di BAPPEBTI/Bursa Berjangka/ Kliring
+Berjangka ? <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="bappebti_family" name="bappebti_family" v-model="forms.bappebti_family" value="Ya" :checked="forms.bappebti_family=='Ya'" required>
+          <label class="custom-control-label" for="bappebti_family">Ya</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="bappebti_family" name="bappebti_family" v-model="forms.bappebti_family" value="Tidak" :checked="forms.bappebti_family=='Tidak'" required>
+            <label class="custom-control-label" for="bappebti_family">Tidak</label>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td>Apakah Anda telah dinyatakan pailit oleh Pengadilan ? <span style="color:red;">*</span></td>
+    <td>:</td>
+    <td>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="bankruptcy_by_court" name="bankruptcy_by_court" v-model="forms.bankruptcy_by_court" value="Ya" :checked="forms.bankruptcy_by_court=='Ya'" required>
+          <label class="custom-control-label" for="bankruptcy_by_court">Ya</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="bankruptcy_by_court" name="bankruptcy_by_court" v-model="forms.bankruptcy_by_court" value="Tidak" :checked="forms.bankruptcy_by_court=='Tidak'" required>
+            <label class="custom-control-label" for="bankruptcy_by_court">Tidak</label>
+        </div>
+    </td>
+</tr>
                </table>
             </div>
   
 
+
+<div class="form-group col-lg-12">
+		<p style="text-align: left;font-size: 10px;">
+		*) Wajib diisi<br>
+**) Isi sesuai dengan nama Pialang Berjangka tempat pernah melakukan transaksi Perdagangan
+Berjangka sebelum ini<br>
+***) Dalam hal Nasabah belum cakap hukum, maka Nasabah wajib membuat Surat Pernyataan di
+atas bermaterai cukup yang isinya menerangkan bahwa orang tua/wali Nasabah yang
+bersangkutan menyetujui Nasabah untuk bertransaksi di bidang Perdagangan Berjangka. Surat 
+		</p>
+</div>
 
 <div class="form-group col-lg-12">
   
@@ -115,9 +288,9 @@ export default {
       idCode:'',
       position: 'up right',
       closeBtn: true,
-      house_status_others:'',
-      purpose_open_account_others:'',
-      investment_experience_others:'',
+      house_status_lainnya:'',
+      purpose_open_account_lainnya:'',
+      investment_experience_lainnya:'',
       bappebti_family_others:'',
       bankruptcy_by_court_others:'',
       currentDate:new Date(),
@@ -154,8 +327,11 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', nama_lengkap:'', alamat_lengkap:'', kode_pos:'', 
-      no_handphone:'', hubungan:'', status:''},
+      forms: {id : '', name:'', place_of_birth:'', date_of_birth:'', 
+      type_of_identity_card:'', identity_card_number:'', no_npwp:'',gander:'',
+      marital_status:'', nama_suami_atau_istri:'', mother_name:'', postal_code:'', country:'',province:'',city:'',
+      area:'',sub_area:'',village:'', address:'', no_handphone:'', phone_house:'', fax_house:'', house_status:'',
+      purpose_open_account:'',investment_experience:'' , bappebti_family:'', bankruptcy_by_court:'', status:''},
     }
   },
   watch: { 
@@ -187,6 +363,21 @@ export default {
             }else{ 
                 if(response.data.status == 200){ 
                     this.forms = response.data.data;
+                    if(this.checkHouseStatus(response.data.data.house_status)){
+                      this.house_status_lainnya = response.data.data.house_status;
+                      this.forms.house_status = 'Lainnya';
+                    }
+                    
+                    if(this.checkPurposeStatus(response.data.data.purpose_open_account)){
+                      this.purpose_open_account_lainnya = response.data.data.purpose_open_account;
+                      this.forms.purpose_open_account = 'Lainnya';
+                    }
+
+                    if(this.checkExperienceStatus(response.data.data.investment_experience)){
+                      this.investment_experience_lainnya = response.data.data.investment_experience;
+                      this.forms.investment_experience = 'Ya';
+                    }
+
                 }else{
                     window.location.href = window.webURL; 
                 }
@@ -204,6 +395,45 @@ export default {
         });
     },
 
+    checkHouseStatus(stts){
+      if(stts == 'Pribadi'){
+        return false;
+      }else if(stts == 'Keluarga'){
+        return false;
+      }else if(stts == 'Sewa/Kontrak'){
+        return false;
+      }else{
+        return true;
+      }
+    },
+
+    checkPurposeStatus(stts){
+      if(stts == 'Lindung Nilai'){
+        return false;
+      }else if(stts == 'Gain'){
+        return false;
+      }else if(stts == 'Spekulasi'){
+        return false;
+      }else{
+        return true;
+      }
+    },
+
+    checkExperienceStatus(stts){
+      if(stts == 'Tidak'){
+        return false;
+      }else{
+        return true;
+      }
+    },
+
+    checkBappebtiStatus(stts){
+      if(stts == 'Tidak'){
+        return false;
+      }else{
+        return true;
+      }
+    },
 
     submitData(){
       this.$swal({
@@ -215,7 +445,19 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            axios.post('/clients-area/post-real-account/step-5', this.forms).then(response => {
+            var data = {id:this.forms.id , name: this.forms.name , place_of_birth:this.forms.place_of_birth, 
+            date_of_birth:this.forms.date_of_birth, type_of_identity_card:this.forms.type_of_identity_card,
+            identity_card_number:this.forms.identity_card_number , no_npwp:this.forms.no_npwp,
+            gander:this.forms.gander , marital_status:this.forms.marital_status,nama_suami_atau_istri:this.forms.nama_suami_atau_istri,
+            mother_name:this.forms.mother_name, postal_code:this.forms.postal_code,address:this.forms.address,
+            no_handphone:this.forms.no_handphone, phone_house:this.forms.phone_house, fax_house:this.forms.fax_house,
+            house_status:this.forms.house_status, purpose_open_account:this.forms.purpose_open_account, 
+            investment_experience:this.forms.investment_experience , bappebti_family:this.forms.bappebti_family,
+            bankruptcy_by_court:this.forms.bankruptcy_by_court, status:this.forms.status,
+            house_status_lainnya:this.house_status_lainnya , purpose_open_account_lainnya:this.purpose_open_account_lainnya,
+            investment_experience_lainnya:this.investment_experience_lainnya, bappebti_family_others:this.bappebti_family_others,
+            bankruptcy_by_court_others:this.bankruptcy_by_court_others};
+            axios.post('/clients-area/post-real-account/step-5', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
                 }else{ 

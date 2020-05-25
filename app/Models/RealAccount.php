@@ -11,6 +11,7 @@ class RealAccount extends Model
     protected $primaryKey = 'id';
     protected $fillable = array('user_id','admin_id','aggrement_see_company_profile',
     'name','place_of_birth','date_of_birth','account_number','type_of_identity_card','identity_card_number',
+	'disclosure_statement',
     'country','province','city','area','sub_area','village','address','postal_code','aggrement_simulation_commodity_trade_transaction',
     'name_implementing_commodity_trade_transaction','aggrement_implementing_commodity_trade_transaction',
     'customer_code','tax_number','gander','marital_status','name_husband_or_wife','mother_name',

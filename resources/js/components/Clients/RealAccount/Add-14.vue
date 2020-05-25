@@ -22,8 +22,8 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-                <p style="text-align:center;"> <b>PERNYATAAN BERTANGGUNG JAWAB ATAS
-KODE AKSES TRANSAKSI NASABAH (Personal Access Password)</b></p>
+			<b>Formulir PBK. CDDS. 07</b>
+                <p style="text-align:center;"> <b>PERATURAN PERDAGANGAN (TRADING RULES)</b></p>
             </div>
 
             <div class="form-group col-lg-12">
@@ -31,86 +31,545 @@ KODE AKSES TRANSAKSI NASABAH (Personal Access Password)</b></p>
 
 <tr>
     <td colspan="3">
-<p style="text-align:left;">Yang mengisi formulir di bawah ini:</p>
-    </td>
-</tr>
-
-
-<tr>
-    <td width="20%"> Nama Lengkap   </td>
-    <td width="1%"> :   </td>
-    <td width="79%"> {{this.forms.name}}   </td>
-</tr>
-
-
-<tr>
-    <td width="20%"> Tempat/Tanggal Lahir   </td>
-    <td width="1%"> :   </td>
-    <td width="79%"> {{this.forms.place_of_birth}} / {{this.forms.date_of_birth}}   </td>
-</tr>
-
-<tr>
-    <td width="20%"> Alamat Rumah   </td>
-    <td width="1%"> :   </td>
-    <td width="79%"> {{this.forms.address}} <br> 
-        {{this.forms.province}} {{this.forms.city}} <br>
-        {{this.forms.area}}, {{this.forms.sub_area}}, <br>
-         {{this.forms.country}} <br>
-        Kode Pos : {{this.forms.postal_code}}  </td>
-</tr>
-
-
-<tr>
-    <td width="20%"> No. Identitas ({{this.forms.type_of_identity_card}})     </td>
-    <td width="1%"> :   </td>
-    <td width="79%"> {{this.forms.identity_card_number}}   </td>
-</tr>
-
-
-
-<tr>
-    <td width="20%">No. Demo Acc. </td>
-    <td width="1%"> :   </td>
-    <td width="79%"> {{this.forms.account_number}}   </td>
-</tr>
-
-
-<tr>
+<h4><b>TRADING RULES KONTRAK BERJANGKA : </b></h4>
+<br>
+<table class="table" width="100%" cellspacing="0">
+  <tr>
+    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK EMAS LOCO LONDON (MINI)</b></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDUD </b></td>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDID </b></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Bulan Kontrak </td>
+    <td style="text-align:left;" colspan="2"> </td> 
+  </tr>
+  <tr>
+    <td style="text-align:left;">Satuan Kontrak (Per
+Lot) </td>
+    <td style="text-align:left;"> 10 troy ounce (1 lot)</td>
+    <td style="text-align:left;"> 10 troy ounce (1 lot)</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Hari & Jam
+Perdagangan </td>
+    <td style="text-align:left;" colspan="2"> Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Hari Perdagangan
+Terakhir</td>
+    <td style="text-align:left;" colspan="2"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Mutu </td>
+    <td style="text-align:left;" colspan="2">Emas Loco London </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Kuotasi Harga </td>
+    <td style="text-align:left;"> US Dollar (USD) </td>
+    <td style="text-align:left;"> Rupiah (IDR) </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Perubahan Harga
+Minimum </td>
+    <td style="text-align:left;"> USD 0.1 per troy ounce (USD 1 per
+satuan kontrak)</td>
+    <td style="text-align:left;"> IDR 1.000 per troy ounce IDR 10.000 per
+satuan kontrak)
+</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Harga Penyelesaian</td>
+    <td style="text-align:left;"> <ul>
+  <li>Harga Penyelesaian Harian akan
+ditetapkan dengan merujuk pada
+harga sumber acuan pada saat jam
+penutupan perdagangan
+GOLDUD</li>
+  <li>Sumber acuan berasal dari harga
+Loco London pada saat jam
+penutupan perdagangan
+GOLDUD
+</li>
+</ul> </td>
+    <td style="text-align:left;"> <ol>
+      <li>Harga Penyelesaian Harian akan
+ditetapkan dengan merujuk pada harga
+sumber acuan pada saat jam penutupan
+perdagangan GOLDID</li>
+      <li>Sumber acuan berasal dari harga Loco
+London pada saat jam penutupan
+perdagangan GOLDID</li>
+      <li>Harga Loco London akan dikonversikan
+ke dalam Rupiah menggunakan kurs yang
+ditetapkan oleh Lembaga Kliring</li>
+      </ol></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Biaya Gulir </td>
+    <td style="text-align:left;" colspan="2"> Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Margin</td>
+    <td style="text-align:left;" colspan="2"> 1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Batas Posisi </td>
+    <td style="text-align:center;" colspan="2"> 5.000 lot</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Posisi Wajib Lapor  </td>
+    <td style="text-align:center;" colspan="2"> 2.500 lot </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Metode Penyelesaian </td>
+    <td style="text-align:center;" colspan="2"> Penyelesaian secara tunai</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Komisi Transaksi </td>
+    <td style="text-align:left;"> Maksimal USD 10/lot/side</td>
+    <td style="text-align:left;">Rp 30.000/lot/side </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK MINYAK (MINI)</b></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
+    <td style="text-align:center;background-color:#f18109;color:black;" colspan="2"> <b> COFR </b></td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Bulan Kontrak</td>
+    <td style="text-align:left;" colspan="2"> 3 (Tiga) Bulan Kontrak berturut-turut ditambah 2 (dua) bulan kontrak
+terdekat setelahnya (Maret, Mei, Juli, September, Desember)</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Satuan Kontrak (Per Lot)</td>
+    <td style="text-align:left;" colspan="2"> 100 barel</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Hari & Jam Perdagangan </td>
+    <td style="text-align:left;" colspan="2">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST) </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Hari Perdagangan Terakhir</td>
+    <td style="text-align:left;" colspan="2">1 (satu) hari kerja sebelum Hari Perdagangan Terakhir dari Kontrak
+Berjangka WTI Crude Oil di New York Mercantile Exchange (NYMEX) </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Mutu</td>
+    <td style="text-align:left;" colspan="2">Sesuai dengan mutu WTI Crude Oil yang diperdagangkan di NYMEX </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Kuotasi Harga </td>
+    <td style="text-align:left;" colspan="2">Rupiah (IDR) per Barel </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Perubahan Harga Minimum </td>
+    <td style="text-align:left;" colspan="2">IDR 100 (seratus) per barel (IDR 10.000 persatuan kontrak)
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Batas Perubahan Harga </td>
+    <td style="text-align:left;" colspan="2">4% dari harga penyelesaian hari sebelumnya </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Harga Penyelesaian </td>
+    <td style="text-align:left;" colspan="2"><b>Harga Penyelesaian Harian,</b> Volume Weighted Average Price (VWAP)
+semua transaksi yang terjadi di 5 (lima) menit terakhir di bursa pada Hari
+perdagangan tersebut.<br><br> <b>Harga Penyelesaian Akhir,</b> Harga penyelesaian kontrak WTI Crude Oil di
+New York Mercantile Exchange (NMEX) yang telah dikonversikan ke
+dalam Rupiah menggunakan kurs yang ditetapkan oleh Lembaga Kliring.</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Biaya Gulir </td>
+    <td style="text-align:left;" colspan="2">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Margin</td>
+    <td style="text-align:left;" colspan="2">4% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga
+Kliring) </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Batas Posisi </td>
+    <td style="text-align:left;" colspan="2">1.500 lot </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Posisi Wajib Lapor</td>
+    <td style="text-align:left;" colspan="2">750 lot </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Metode Penyelesaian </td>
+    <td style="text-align:left;" colspan="2">Penyelesaian secara tunai
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Komisi Transaksi </td>
+    <td style="text-align:left;" colspan="2">Rp 50.000/lot/side </td>
+  </tr> 
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK FOREX / MATA UANG (MINI)</b></td>
+  </tr>
+  <tr>
     <td colspan="3">
-<p style="text-align:left;">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya bertanggungjawab sepenuhnya
-terhadap kode akses transaksi Nasabah (Personal Access Password) dan tidak menyerahkan kode akses
-transaksi Nasabah (Personal Access Password) ke pihak lain, terutama kepada pegawai Pialang Berjangka atau
-pihak yang memiliki kepentingan dengan Pialang Berjangka.</p>
+      <table class="table" width="100%" cellspacing="0">
+        <tr>
+          <td style="text-align:center;background-color:#f18109;color:black;">SIMBOL</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">EUR/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">AUD/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/JPY</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">GBP/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/CHF</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">NZD/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/CAD</td>
+        </tr>
+        <tr>
+          <td>Satuan Kontrak
+(Per Lot)
+</td>
+          <td>EUR 10.000</td>
+          <td>AAUD 10.000</td>
+          <td>USD 10.000</td>
+          <td>GBP 10.000</td>
+          <td>USD 10.000</td>
+          <td>NZD 10.000</td>
+          <td>USD 10.000</td>
+        </tr>
+        <tr>
+          <td>Hari & Jam
+Perdagangan
+</td>
+          <td colspan="7">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST)</td>
+        </tr>
+        <tr>
+          <td>Kuotasi harga</td>
+          <td>US Dollar
+(USD)</td>
+          <td>US Dollar
+(USD)</td>
+          <td>Japanese
+Yen (JPY)</td>
+          <td>US Dollar
+(USD)</td>
+          <td>Swiss Franc
+(CHF)</td>
+          <td>US Dollar
+(USD)</td>
+          <td>Canadian
+(CAD)</td>
+        </tr>
+        <tr>
+          <td>Perubahan
+Harga Minimum</td>
+          <td>0.00001 (USD
+0.1 per lot)</td>
+          <td>0.00001 (USD
+0.1 per lot)</td>
+          <td>0.001 (JPY
+10 per lot)</td>
+          <td>0.00001 (USD
+0.1 per lot)</td>
+          <td>0.00001 (CHF
+0.1 per lot)</td>
+          <td>0.00001 (USD
+0.1 per lot)</td>
+          <td>0.00001 (CAD
+0.1 per lot)</td>
+        </tr>
+        <tr>
+          <td>Harga
+Penyelesaian</td>
+          <td colspan="7"><ol><li>Harga Penyelesaian Harian akan merujuk pada harga transaksi akhir (last trade price)
+dari sumber acuan di hari akhir perdagangan,</li><li>Sumber acuan akan ditetapkan Bursa melalui SEB.</li></ol></td>
+        </tr>
+        <tr>
+          <td>Biaya Gulir</td>
+          <td colspan="7">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring melalui SEB</td>
+        </tr>
+        <tr>
+          <td>Margin</td>
+          <td colspan="7">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
+        </tr>
+        <tr>
+          <td>Batas Posisi</td>
+          <td colspan="7">5.000 lot
+</td>
+        </tr>
+        <tr>
+          <td>Posisi Wajib Lapor</td>
+          <td colspan="7">2.500 lot</td>
+        </tr>
+        <tr>
+          <td>Penyelesaian</td>
+          <td colspan="7">Penyelesaian secara tunai</td>
+        </tr>
+        <tr>
+          <td>Komisi</td>
+          <td colspan="7">USD 3 /lot/side</td>
+        </tr>
+      </table>
     </td>
-</tr>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr> 
+  <tr>
+    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK EMAS LOCO LONDON (MIKRO)</b></td>
+  </tr>
+  <tr>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
+    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDUD </b></td>
+    <td style="text-align:center;background-color:#f18109;color:black;">  </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Bulan Kontrak</td>
+    <td style="text-align:left;" colspan="2"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Satuan Kontrak (Per
+Lot)
+</td>
+    <td style="text-align:left;">1 troy ounce (1 lot) </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Hari & Jam
+Perdagangan </td>
+    <td style="text-align:left;" colspan="2"> Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> Hari Perdagangan
+Terakhir
+</td>
+    <td style="text-align:left;" colspan="2"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Mutu </td>
+    <td style="text-align:left;" colspan="2"> <b>Emas Loco London (LBMA Minimum Purity Standard)</b> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Kuotasi Harga </td>
+    <td style="text-align:left;">US Dollar (USD)
+ </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Perubahan Harga
+Minimum </td>
+    <td style="text-align:left;"> USD 0.1 per troy ounce (USD 0,1 per
+satuan kontrak)
+</td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Harga Penyelesaian </td>
+    <td style="text-align:left;"><ul>
+      <li>Harga Penyelesaian Harian akan
+ditetapkan dengan merujuk pada
+harga sumber acuan pada saat jam
+penutupan perdagangan
+GOLDUD</li><li>Sumber acuan berasal dari harga
+Loco London pada saat jam
+penutupan perdagangan
+GOLDUD
+</li>
+      </ul> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Biaya Gulir  </td>
+    <td style="text-align:left;" colspan="2">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Margin  </td>
+    <td style="text-align:left;" colspan="2">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring)
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Batas Posisi</td>
+    <td style="text-align:left;" colspan="2">50.000 lot
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Posisi Wajib Lapor</td>
+    <td style="text-align:left;" colspan="2">25.000 lot
 
-<tr>
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Metode Penyelesaian</td>
+    <td style="text-align:left;" colspan="2">Penyelesaian secara tunai
+ </td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">Komisi Transaksi </td>
+    <td style="text-align:left;" colspan="2"> Maksimal USD 5/lot/side</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK FOREX / MATA UANG (MIKRO)</b></td>
+  </tr>
+  <tr>
     <td colspan="3">
-<p style="text-align:center;"><b>PERINGATAN !!!
-Pialang Berjangka, Wakil Pialang Berjangka, pegawai Pialang Berjangka, atau pihak yang memiliki
-kepentingan dengan dengan Pialang Berjangka dilarang menerima kode akses transaksi Nasabah
-(Personal Access Password).</b></p>
+      <table class="table" width="100%" cellspacing="0">
+        <tr>
+          <td style="text-align:center;background-color:#f18109;color:black;">SIMBOL</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">EUR/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">AUD/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/JPY</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">GBP/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/CHF</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">NZD/USD</td>
+          <td style="text-align:center;background-color:#f18109;color:black;">USD/CAD</td>
+        </tr>
+        <tr>
+          <td>Satuan Kontrak
+(Per Lot)</td>
+          <td>EUR 1000</td>
+          <td>AUD 1000</td>
+          <td>USD 1000</td>
+         <td>GBP 1000</td>
+          <td>USD 1000</td>
+          <td>NZD 1000</td>
+          <td>USD 1000</td>
+        </tr>
+        <tr>
+          <td>Hari & Jam
+Perdagangan
+</td>
+          <td colspan="6">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST)</td>
+        </tr>
+        <tr>
+          <td>Kuotasi harga</td>
+          <td>US Dollar
+(USD</td>
+          <td>US Dollar
+(USD)</td>
+          <td>Japanese
+Yen (JPY)</td>
+         <td>US Dollar
+(USD)</td>
+          <td>Swiss Franc
+(CHF)
+</td>
+          <td>US Dollar
+(USD)</td>
+          <td>Canadian
+(CAD)
+</td>
+        </tr>
+        <tr>
+          <td>Perubahan
+Harga Minimum</td>
+          <td>0.00001 (USD
+0.01 per lot)</td>
+          <td>0.00001 (USD
+0.01 per lot)</td>
+          <td>0.001 (JPY
+1 per lot)
+</td>
+         <td>0.00001 (USD
+0.01 per lot)</td>
+          <td>0.00001 (CHF
+0.01 per lot)</td>
+          <td>0.00001 (USD
+0.01 per lot)</td>
+          <td>0.00001 (CAD
+0.01 per lot)</td>
+        </tr>
+        <tr>
+          <td>Harga
+Penyelesaian
+</td>
+          <td colspan="7"><ol>
+            <li>Harga Penyelesaian Harian akan merujuk pada harga transaksi akhir (last trade
+price) dari sumber acuan di hari akhir perdagangan,
+            </li>
+            <li>Sumber acuan akan ditetapkan Bursa melalui SEB.</li>
+            </ol></td>
+        </tr>
+        <tr>
+          <td>Biaya Gulir</td>
+          <td colspan="7">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring melalui SEB</td> 
+        </tr>
+        <tr>
+          <td>Margin</td>
+          <td colspan="7">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
+        </tr>
+        <tr>
+          <td>Batas Posisi </td>
+          <td colspan="7">50.000 lot</td>
+        </tr>
+        <tr>
+          <td>Posisi Wajib Lapor </td>
+          <td colspan="7">25.000 lot</td>
+        </tr>
+        <tr>
+          <td>Penyelesaian </td>
+          <td colspan="7">Penyelesaian secara tunai</td>
+        </tr>
+        <tr>
+          <td>Komisi </td>
+          <td colspan="7">Maksimum USD 5 /lot/side</td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+   
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+   
+  <tr>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+    <td style="text-align:left;"> </td>
+  </tr>
+  
+</table
+<br>
+<p>*)Perusahaan berhak untuk merubah segala ketentuan/ peraturan yang ada dalam peraturan
+transaksi ini tanpa pemberitahuan terlebih dahulu</p>
+
+<p style="text-align:center;">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya telah
+membaca tentang PERATURAN PERDAGANGAN (TRADING RULES), mengerti dan
+menerima ketentuan dalam bertransaksi.</p>
     </td>
 </tr>
 
 
-<tr>
-    <td colspan="3">
-<p style="text-align:left;">Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
-tanpa paksaan apapun dari pihak manapun.</p>
-    </td>
-</tr>
+
 
 <tr>
     <td width="30%">Pernyataan menerima / Tidak </td>
     <td width="70%" colspan="2">
         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_personal_access_password" name="aggrement_personal_access_password" v-model="forms.aggrement_personal_access_password" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_personal_access_password">Ya</label>
+            <input type="radio" class="custom-control-input" id="aggrement_trading_rules" name="aggrement_trading_rules" v-model="forms.aggrement_trading_rules" value="Ya" required>
+            <label class="custom-control-label" for="aggrement_trading_rules">Ya</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_personal_access_password" name="aggrement_personal_access_password" v-model="forms.aggrement_personal_access_password" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_personal_access_password">Tidak</label>
+          <input type="radio" class="custom-control-input" id="aggrement_trading_rules" name="aggrement_trading_rules" v-model="forms.aggrement_trading_rules" value="Tidak" required>
+          <label class="custom-control-label" for="aggrement_trading_rules">Tidak</label>
         </div> </td>
 </tr>
 
@@ -127,7 +586,7 @@ tanpa paksaan apapun dari pihak manapun.</p>
 <div class="form-group col-lg-12">
   
     <button class="btn btn-warning pd-x-20" type="button" @click.prevent="backLink()">Kembali</button> 
-    <button class="btn btn-info pd-x-20" type="submit">Selesai</button> 
+    <button class="btn btn-info pd-x-20" type="submit">Langkah 15</button> 
 </div>
 
       </div>
@@ -171,7 +630,7 @@ export default {
       webURL:window.webURL,
       maxToasts: 100,
       idCode:'',
-	  url:'/public/client-files/',
+	    url:'/public/client-files/',
       position: 'up right',
       button_ya_tidak:'',
       closeBtn: true,
@@ -211,8 +670,7 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', name:'', place_of_birth:'', date_of_birth:'', address:'',country:'' , province:'' , city:'', area:'', sub_area:'', village:'', postal_code:'' , type_of_identity_card:'',
-      identity_card_number:'', account_number:'', aggrement_personal_access_password:'' ,status:''},
+      forms: {id : '', aggrement_trading_rules:'',status:''},
     }
   },
   watch: { 
@@ -266,7 +724,7 @@ export default {
 
     submitData(){
       this.$swal({
-        title: 'Apakah anda sudah yakin dengan data yang akan di berikan ?',
+        title: 'Lanjut Langkah ke 15 ?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -274,8 +732,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-              var data = {id : this.forms.id, aggrement_personal_access_password: this.forms.aggrement_personal_access_password ,
-              status:this.forms.status, button_ya_tidak:this.button_ya_tidak}
+              var data = {aggrement_trading_rules:this.forms.aggrement_trading_rules , id:this.forms.id , status:this.forms.status}
             axios.post('/clients-area/post-real-account/step-14', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 

@@ -21,7 +21,8 @@
 
 
       <div class="col-md-12">
-<button class="btn btn-primary m-1" @click.prevent="createData"><i class="fa fa-plus"></i> Create Deposit </button>
+	  
+<button v-if="this.isCrud == 'crud'" class="btn btn-primary m-1" @click.prevent="createData"><i class="fa fa-plus"></i> Create Deposit </button>
 
 <button class="btn btn-warning m-1" @click.prevent="downloadData"><i class="fa fa-download"></i> Download Data </button>
 
@@ -37,7 +38,8 @@
     
 <button class="btn btn-danger m-1" @click.prevent="clearFilter"><i class="fa fa-trash"></i> Clear Filter </button>
 
- <div class="card-body">
+ 
+ <div class="card-body" v-if="this.isCrud == 'crud'">
 
 <vue-good-table
     title="real-account"
@@ -64,9 +66,43 @@
                 </div>
             </button>
 <br><br>
-            <button class="btn ripple btn-3d btn-danger" @click.prevent="updateData(props.index , props.row)">
+            <button v-if="props.row.status=='review'" class="btn ripple btn-3d btn-danger" @click.prevent="updateData(props.index , props.row)">
                 <div>
                     <span> update </span>
+                    <span class="ink animate" style="height: 86px; width: 86px; top: -32px; left: -1px;"></span>
+                </div>
+            </button>
+        </span>
+        <span v-else>
+            {{props.formattedRow[props.column.field]}}
+        </span>
+      </template> 
+</vue-good-table>
+
+</div>
+ <div class="card-body" v-else>
+
+<vue-good-table
+    title="real-account"
+    mode="remote"
+    @on-selected-rows-change="selectionChanged"
+    @on-page-change="onPageChange"
+    @on-sort-change="onSortChange"
+    @on-column-filter="onColumnFilter"
+    @on-per-page-change="onPerPageChange"
+    :totalRows="totalRecords"
+    :line-numbers="true"
+    :isLoading.sync="isLoading"
+    :pagination-options="{
+        enabled: true,
+    }"
+  :rows="rows"
+  :columns="columns">
+          <template slot="table-row" slot-scope="props">
+        <span v-if="props.column.field == 'actions'">
+            <button class="btn ripple btn-3d btn-default" @click.prevent="detailData(props.index , props.row)">
+                <div>
+                    <span> detail </span>
                     <span class="ink animate" style="height: 86px; width: 86px; top: -32px; left: -1px;"></span>
                 </div>
             </button>
@@ -166,7 +202,7 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="account_number">Account ID</label>
-                        <input v-model="forms.account_number" type="text" minlength="2" maxlength="25" class="form-control" required>
+                        <input v-model="forms.account_number" type="text" disabled minlength="2" maxlength="25" class="form-control" required>
                         <span class="label label-danger" v-for="error of errors['account_number']">
                             {{ error }}
                         </span>
@@ -175,7 +211,7 @@
                     <!-- form Group -->
                     <div class="form-group">
                         <label for="total_deposit">Total Deposit</label>
-                        <input v-model="forms.total_deposit" type="text" minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)" required>
+                        <input v-model="forms.total_deposit" type="text" disabled minlength="2" maxlength="25" class="form-control" @keypress="isNumber($event)" required>
                         <span class="label label-danger" v-for="error of errors['total_deposit']">
                             {{ error }}
                         </span>
@@ -384,6 +420,7 @@ export default {
     cancelLabel: 'Cancel',
     modal:new CrudModal({ create:false , update:false , detail:false}),
     weekLabel: 'W',
+	isCrud:'',
     customRangeLabel: 'Custom Range',
     daysOfWeek: moment.weekdaysMin(),
     monthNames: moment.monthsShort(),
@@ -456,6 +493,31 @@ export default {
   watch: {  
   },
   methods: {
+  fetchIt(){
+    this.loading();
+        axios.get('/rajawaliadmin/check-access/deposit').then((response) => {
+            if(!response.data){ 
+                window.location.href = window.webURL; 
+            }else{ 
+                if(response.data.status == 200){ 
+                    this.isCrud = response.data.message;
+                }else{
+                    window.location.href = window.webURL; 
+                }
+            }
+        }).catch(error => {
+            if (! _.isEmpty(error.response)) {
+                if (error.response.status = 422) {
+                    this.$router.push('/server-error');
+                }else if (error.response.status = 500) {
+                    this.$router.push('/server-error');
+                }else{
+                    this.$router.push('/page-not-found');
+                }
+            }
+        });
+    },
+	
     downloadAttachment(fileName){
         var masuk = {fileName:fileName};
         axios({
@@ -839,7 +901,8 @@ export default {
     });
 
   },
-	mounted(){  
+	mounted(){
+		this.fetchIt();
   }
 
 }

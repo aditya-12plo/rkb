@@ -22,7 +22,9 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-                <p style="text-align:center;"> <b>REGISTRASI ONLINE TRADING TELAH BERHASIL</b></p>
+			<b>Formulir PBK. CDDS. 08</b>
+                <p style="text-align:center;"> <b>PERNYATAAN BERTANGGUNG JAWAB ATAS
+KODE AKSES TRANSAKSI NASABAH (Personal Access Password)</b></p>
             </div>
 
             <div class="form-group col-lg-12">
@@ -30,37 +32,93 @@
 
 <tr>
     <td colspan="3">
-<p style="text-align:center;">Terima kasih anda telah berhasil melakukan registrasi pembukaan akun secara online <hr></p>
+<p style="text-align:left;">Yang mengisi formulir di bawah ini:</p>
+    </td>
+</tr>
+
+
+<tr>
+    <td width="20%"> Nama Lengkap   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{this.forms.name}}   </td>
+</tr>
+
+
+<tr>
+    <td width="20%"> Tempat/Tanggal Lahir   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{this.forms.place_of_birth}} / {{this.forms.date_of_birth}}   </td>
+</tr>
+
+<tr>
+    <td width="20%"> Alamat Rumah   </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{this.forms.address}} <br> 
+        {{this.forms.province}} {{this.forms.city}} <br>
+        {{this.forms.area}}, {{this.forms.sub_area}}, <br>
+         {{this.forms.country}} <br>
+        Kode Pos : {{this.forms.postal_code}}  </td>
+</tr>
+
+
+<tr>
+    <td width="20%"> No. Identitas ({{this.forms.type_of_identity_card}})     </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{this.forms.identity_card_number}}   </td>
+</tr>
+
+
+
+<tr>
+    <td width="20%">No. Demo Acc. </td>
+    <td width="1%"> :   </td>
+    <td width="79%"> {{this.forms.account_number}}   </td>
+</tr>
+
+
+<tr>
+    <td colspan="3">
+<p style="text-align:left;">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya bertanggungjawab sepenuhnya
+terhadap kode akses transaksi Nasabah (Personal Access Password) dan tidak menyerahkan kode akses
+transaksi Nasabah (Personal Access Password) ke pihak lain, terutama kepada pegawai Pialang Berjangka atau
+pihak yang memiliki kepentingan dengan Pialang Berjangka.</p>
     </td>
 </tr>
 
 <tr>
     <td colspan="3">
-<p style="text-align:left;">Pendaftaran akun telah selesai, dan akun anda sedang dalam proses.
-Mohon periksa email anda dalam waktu 1 hari kerja
-</p>
+<p style="text-align:center;"><b>PERINGATAN !!!
+Pialang Berjangka, Wakil Pialang Berjangka, pegawai Pialang Berjangka, atau pihak yang memiliki
+kepentingan dengan dengan Pialang Berjangka dilarang menerima kode akses transaksi Nasabah
+(Personal Access Password).</b></p>
     </td>
 </tr>
- 
+
 
 <tr>
     <td colspan="3">
-<p style="text-align:left;">Salam,
-<br>
-<img src="/public/assets/images/logo-200-x-100.png" style="max-width: 200px;max-height: 150px;" class="img-responsive">
-<br>
-PT Rajawali Kapital Berjangka
-</p>
+<p style="text-align:left;">Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
+tanpa paksaan apapun dari pihak manapun.</p>
     </td>
-</tr>  
+</tr>
 
 <tr>
-    <td colspan="3">
-<p style="text-align:left;">Untuk melihat review registrasi online anda, silahkan klik  
-    <a @click.prevent="preview()" target="_blank">PREVIEW</a>
-    </p>
-    </td>
-</tr>  
+    <td width="30%">Pernyataan menerima / Tidak </td>
+    <td width="70%" colspan="2">
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="aggrement_personal_access_password" name="aggrement_personal_access_password" v-model="forms.aggrement_personal_access_password" value="Ya" required>
+            <label class="custom-control-label" for="aggrement_personal_access_password">Ya</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="aggrement_personal_access_password" name="aggrement_personal_access_password" v-model="forms.aggrement_personal_access_password" value="Tidak" required>
+          <label class="custom-control-label" for="aggrement_personal_access_password">Tidak</label>
+        </div> </td>
+</tr>
+
+<tr>
+    <td width="30%">Menerima pada Tanggal </td>
+    <td width="70%" colspan="2"> {{this.customLocalFormatter(currentDate)}}</td>
+</tr>
 
                </table>
             </div>
@@ -70,7 +128,7 @@ PT Rajawali Kapital Berjangka
 <div class="form-group col-lg-12">
   
     <button class="btn btn-warning pd-x-20" type="button" @click.prevent="backLink()">Kembali</button> 
-    <button class="btn btn-info pd-x-20" type="submit">Selesai</button> 
+    <button class="btn btn-info pd-x-20" type="submit">Langkah 16</button> 
 </div>
 
       </div>
@@ -154,7 +212,8 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : ''},
+      forms: {id : '', name:'', place_of_birth:'', date_of_birth:'', address:'',country:'' , province:'' , city:'', area:'', sub_area:'', village:'', postal_code:'' , type_of_identity_card:'',
+      identity_card_number:'', account_number:'', aggrement_personal_access_password:'' ,status:''},
     }
   },
   watch: { 
@@ -179,11 +238,6 @@ export default {
     customFormatter(date) {
       return moment(date).format('YYYY-MM-DD');
     },
-    preview(){
-        var url = 'http://rajawalikapital.co.id/detail-data-pendaftar-akun-real/'+this.forms.id;
-        window.open(url, '_blank');
-    },
-
     fetchIt(){
     this.loading();
         this.idCode = this.dibalik(this.$route.params.idnya);
@@ -211,8 +265,9 @@ export default {
     },
 
 
-    submitData(){this.$swal({
-        title: 'Apakah anda sudah yakin dengan data yang akan di berikan ?',
+    submitData(){
+      this.$swal({
+        title: 'Lanjut Langkah ke 16 ?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -220,7 +275,8 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-              var data = {id : this.forms.id , status:this.forms.status}
+              var data = {id : this.forms.id, aggrement_personal_access_password: this.forms.aggrement_personal_access_password ,
+              status:this.forms.status, button_ya_tidak:this.button_ya_tidak}
             axios.post('/clients-area/post-real-account/step-15', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
@@ -228,7 +284,7 @@ export default {
                   if(response.data.status == 200){
                         this.errors = '';
                         this.success(response.data.message);
-						this.$router.push({name:'UserListRealAccount'});
+                        this.$router.push({name:'addRealAccount16', params: {idnya:this.diacak(response.data.data.id)}});
                     }else{
                         this.resultError(response.data.message)
                     }

@@ -8,7 +8,7 @@
   <div class="panel-body">
     <div class="col-md-12">
       <h3 class="animated fadeInLeft" style="text-align:center;font-size: 3em;">Pendaftaran Akun Real</h3>
-      <h4 class="animated fadeInLeft" style="text-align:center;font-size: 2em;">Langkah 3</h4>
+      <h4 class="animated fadeInLeft" style="text-align:center;font-size: 2em;">Langkah 17</h4>
     </div>
   </div>
 </div>
@@ -22,126 +22,158 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-				<h3 style="text-align:left;font-size: 1em;">Formulir PBK. CDDS. 02.2</h3>
-                <p style="text-align:center;"> <b>SURAT PERNYATAAN TELAH BERPENGALAMAN <br> MELAKSANAKAN TRANSAKSI PERDAGANGAN BERJANGKA KOMODITI </b></p>
-            </div>
-            <div class="form-group col-lg-12">
-                <p style="text-align:left;"> Yang mengisi formulir di bawah ini :</p>
+			<b>Formulir PBK. CDDS. 10</b>
+                <p style="text-align:center;"> <b>VERIFIKASI KELENGKAPAN PROSES PENERIMAAN NASABAH SECARA<br>
+ELEKTRONIK ONLINE DENGAN CDD SEDERHANA</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+
 <tr>
-    <td width="30%">Nama Lengkap</td>
-    <td width="2%">:</td>
-    <td width="68%">{{this.forms.name}}</td>
+    <td width="1%"> No </td>
+    <td width="40%"> FORM   </td>
+    <td width="50%"> PROSES </td>
+    <td width="9%"> STATUS </td>
 </tr>
+
 <tr>
-    <td>ID Akun</td>
-    <td>:</td>
-    <td>{{this.forms.account_number}}</td>
+    <td width="1%"> 1 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 01   </td>
+    <td width="50%"> PROFIL PERUSAHAAN PIALANG BERJANGKA </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+  
+
 <tr>
-    <td>Tempat Lahir / Tanggal Lahir</td>
-    <td>:</td>
-    <td>{{this.forms.place_of_birth}} / {{this.forms.date_of_birth}}</td>
+    <td width="1%"> 2 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 02 </td>
+    <td width="50%"> PERNYATAAN TELAH MELAKUKAN SIMULASI
+PERDAGANGAN BERJANGKA ATAU PERNYATAAN TELAH
+BERPENGALAMAN DALAM MELAKSANAKAN TRANSAKSI
+PERDAGANGAN BERJANGKA </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+
 <tr>
-    <td>Negara</td>
-    <td>:</td>
-    <td>{{this.forms.country}}</td>
+    <td width="1%"> 3 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 03 </td>
+    <td width="50%">PERNYATAAN PENGUNGKAPAN (<i>DISCLOSURE
+STATEMENT</i>)</td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+
+
 <tr>
-    <td>Provinsi</td>
-    <td>:</td>
-    <td>{{this.forms.province}}</td>
+    <td width="1%"> 4 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 04 </td>
+    <td width="50%">APLIKASI PEMBUKAAN REKENING TRANSAKSI</td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+
+
 <tr>
-    <td>Kota</td>
-    <td>:</td>
-    <td>{{this.forms.city}}</td>
+    <td width="1%"> 5 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 05 </td>
+    <td width="50%"> DOKUMEN PEMBERITAHUAN ADANYA RISIKO </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+
+
 <tr>
-    <td>Kecamatan</td>
-    <td>:</td>
-    <td>{{this.forms.area}}</td>
+    <td width="1%"> 6 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 06 </td>
+    <td width="50%"> PERJANJIAN PEMBERIAN AMANAT </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+    
+
+
 <tr>
-    <td>Kelurahan</td>
-    <td>:</td>
-    <td>{{this.forms.sub_area}}</td>
+    <td width="1%"> 7 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 07  </td>
+    <td width="50%"> DAFTAR KONTRAK BERJANGKA, KONTRAK DERIVATIF
+DAN KONTRAK DERIVATIF LAINNYA BESERTA
+PERATURAN PERDAGANGAN (<i>TRADING RULES</i>)
+ </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+    
+
+
+
 <tr>
-    <td>Desa</td>
-    <td>:</td>
-    <td>{{this.forms.village}}</td>
+    <td width="1%"> 8 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 08   </td>
+    <td width="50%"> PERNYATAAN BERTANGGUNG JAWAB ATAS KODE AKSES
+TRANSAKSI NASABAH (<i>PERSONAL ACCESS PASSWORD</i>)
+ </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
+
+
+
+
 <tr>
-    <td>Postal Kode</td>
-    <td>:</td>
-    <td>{{this.forms.postal_code}}</td>
+    <td width="1%"> 9 </td>
+    <td width="40%"> FORMULIR PBK. CDDS. 09  </td>
+    <td width="50%">PERNYATAAN BAHWA DANA YANG DIGUNAKAN
+SEBAGAI MARGIN MERUPAKAN DANA MILIK NASABAH
+SENDIRI
+ </td>
+    <td width="9%"> &#10004;  </td>
 </tr>
-<tr>
-    <td>Alamat</td>
-    <td>:</td>
-    <td>{{this.forms.address}}</td>
-</tr>
-<tr>
-    <td>Tipe Identitas *)</td>
-    <td>:</td>
-    <td>{{this.forms.type_of_identity_card}}</td>
-</tr>
-<tr>
-    <td>No. Identitas</td>
-    <td>:</td>
-    <td>{{this.forms.identity_card_number}}</td>
-</tr>
+
+    
+
                </table>
             </div>
   
- 
-<div class="form-group col-lg-12">
-<p>Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa saya telah memiliki pengalaman yang
-mencukupi dalam melaksanakan transaksi Perdagangan Berjangka karena pernah bertransaksi pada
-Perusahaan Pialang Berjangka <input v-model="forms.name_implementing_commodity_trade_transaction" type="text" class="form-control" required="" aria-required="true" placeholder="Tempat pernah melakukan transaksi Perdagangan Berjangka sebelum ini"> **), dan telah memahami tentang tata cara bertransaksi Perdagangan
-Berjangka.</p>
-
-<p>Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
-tanpa paksaan apapun dari pihak manapun.</p>
-
-</div>
-
-
-<div class="form-group col-lg-12">
-    <label for="input1">Pernyataan menerima / Tidak</label> 
-        <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_implementing_commodity_trade_transaction" name="aggrement_implementing_commodity_trade_transaction" v-model="forms.aggrement_implementing_commodity_trade_transaction" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_implementing_commodity_trade_transaction">Ya</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_implementing_commodity_trade_transaction" name="aggrement_implementing_commodity_trade_transaction" v-model="forms.aggrement_implementing_commodity_trade_transaction" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_implementing_commodity_trade_transaction">Tidak</label>
-        </div>
-</div>
-
-<div class="form-group col-lg-12">
-Pernyataan pada Tanggal <b> {{this.customFormatter(currentDate)}} </b>
-</div>
-
-<div class="form-group col-lg-12">
-<p style="text-align: left;font-size: 10px;">
-*) Pilih salah satu <br>
-**) Isi sesuai dengan nama Pialang Berjangka tempat pernah melakukan transaksi
-Perdagangan Berjangka sebelum ini
+ <div class="form-group col-lg-12">
+	<p align="justify">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya telah membaca dan
+memahami seluruh isi dokumen yang disampaikan dalam FORMULIR PBK. CDDS. 01 sampai dengan
+FORMULIR PBK. CDDS. 09.
 </p>
-</div>
- 
+<p align="justify">
+Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani
+serta tanpa paksaan apapun dari pihak manapun.
+</p>
+ </div>
 
+<div class="form-group col-lg-12">
+<table class="table table-striped table-bordered" width="100%" cellspacing="0">
+<tr>
+    <td width="30%">Pernyataan menerima / Tidak </td>
+    <td width="70%" colspan="2">
+        <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" id="aggrement" name="aggrement" v-model="forms.aggrement" value="Ya" required>
+            <label class="custom-control-label" for="aggrement">Ya</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input type="radio" class="custom-control-input" id="aggrement" name="aggrement" v-model="forms.aggrement" value="Tidak" required>
+          <label class="custom-control-label" for="aggrement">Tidak</label>
+        </div> </td>
+</tr>
+
+<tr>
+    <td width="30%">Menerima pada Tanggal </td>
+    <td width="70%" colspan="2"> {{this.customLocalFormatter(currentDate)}}</td>
+</tr>
+
+               </table>
+</div>
 
 <div class="form-group col-lg-12">
   
     <button class="btn btn-warning pd-x-20" type="button" @click.prevent="backLink()">Kembali</button> 
-    <button class="btn btn-info pd-x-20" type="submit">Langkah 4</button> 
+    <button class="btn btn-info pd-x-20" type="submit">Langkah 18</button> 
 </div>
 
       </div>
@@ -185,8 +217,12 @@ export default {
       webURL:window.webURL,
       maxToasts: 100,
       idCode:'',
+	  url:'/public/client-files/',
       position: 'up right',
+      button_ya_tidak:'',
       closeBtn: true,
+      jenis_rekening_others:'',
+      jenis_rekening_others_2:'',
       currentDate:new Date(),
       errors: [],
         endtime: {
@@ -221,15 +257,18 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '',account_number:'', place_of_birth:'', date_of_birth:'', type_of_identity_card:'', identity_card_number:'', aggrement_implementing_commodity_trade_transaction:'', status:'', country:'', province:'', city:'', area:'', sub_area:'', postal_code:'', village:'',address:''},
+      forms: {id : '', name:'', place_of_birth:'', date_of_birth:'', address:'',country:'' , province:'' , city:'', area:'', sub_area:'', village:'', postal_code:'' , type_of_identity_card:'',
+      identity_card_number:'', account_number:'', aggrement:'' ,status:''},
     }
   },
   watch: { 
 
   },
   methods: {
-      
-    
+
+    customLocalFormatter(date) {
+      return moment(date).format('DD-MM-YYYY');
+    },
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
       return hashids.encode(id); 
@@ -247,7 +286,7 @@ export default {
     fetchIt(){
     this.loading();
         this.idCode = this.dibalik(this.$route.params.idnya);
-        axios.get('/clients-area/create-real-account/step/3/'+this.idCode).then((response) => {
+        axios.get('/clients-area/create-real-account/step/17/'+this.idCode).then((response) => {
             if(!response.data){ 
                 window.location.href = window.webURL; 
             }else{ 
@@ -269,9 +308,11 @@ export default {
             }
         });
     },
+
+
     submitData(){
       this.$swal({
-        title: 'Lanjut Langkah ke 4 ?',
+        title: 'Lanjut Langkah ke 18 ?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -279,14 +320,16 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            axios.post('/clients-area/post-real-account/step-3', this.forms).then(response => {
+              var data = {id : this.forms.id, aggrement: this.forms.aggrement ,
+              status:this.forms.status, button_ya_tidak:this.button_ya_tidak}
+            axios.post('/clients-area/post-real-account/step-17', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
                 }else{ 
                   if(response.data.status == 200){
                         this.errors = '';
                         this.success(response.data.message);
-                        this.$router.push({name:'addRealAccount4', params: {idnya:this.diacak(response.data.data.id)}});
+                        this.$router.push({name:'addRealAccount18', params: {idnya:this.diacak(response.data.data.id)}});
                     }else{
                         this.resultError(response.data.message)
                     }

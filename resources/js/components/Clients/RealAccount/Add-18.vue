@@ -8,7 +8,7 @@
   <div class="panel-body">
     <div class="col-md-12">
       <h3 class="animated fadeInLeft" style="text-align:center;font-size: 3em;">Pendaftaran Akun Real</h3>
-      <h4 class="animated fadeInLeft" style="text-align:center;font-size: 2em;">Langkah 3</h4>
+      <h4 class="animated fadeInLeft" style="text-align:center;font-size: 2em;">Langkah 18</h4>
     </div>
   </div>
 </div>
@@ -22,126 +22,55 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-				<h3 style="text-align:left;font-size: 1em;">Formulir PBK. CDDS. 02.2</h3>
-                <p style="text-align:center;"> <b>SURAT PERNYATAAN TELAH BERPENGALAMAN <br> MELAKSANAKAN TRANSAKSI PERDAGANGAN BERJANGKA KOMODITI </b></p>
-            </div>
-            <div class="form-group col-lg-12">
-                <p style="text-align:left;"> Yang mengisi formulir di bawah ini :</p>
+                <p style="text-align:center;"> <b>REGISTRASI ONLINE TRADING TELAH BERHASIL</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+
 <tr>
-    <td width="30%">Nama Lengkap</td>
-    <td width="2%">:</td>
-    <td width="68%">{{this.forms.name}}</td>
+    <td colspan="3">
+<p style="text-align:center;">Terima kasih anda telah berhasil melakukan registrasi pembukaan akun secara online <hr></p>
+    </td>
 </tr>
+
 <tr>
-    <td>ID Akun</td>
-    <td>:</td>
-    <td>{{this.forms.account_number}}</td>
+    <td colspan="3">
+<p style="text-align:left;">Pendaftaran akun telah selesai, dan akun anda sedang dalam proses.
+Mohon periksa email anda dalam waktu 1 hari kerja
+</p>
+    </td>
 </tr>
+ 
+
 <tr>
-    <td>Tempat Lahir / Tanggal Lahir</td>
-    <td>:</td>
-    <td>{{this.forms.place_of_birth}} / {{this.forms.date_of_birth}}</td>
-</tr>
+    <td colspan="3">
+<p style="text-align:left;">Salam,
+<br>
+<img src="/public/assets/images/logo-200-x-100.png" style="max-width: 200px;max-height: 150px;" class="img-responsive">
+<br>
+PT Rajawali Kapital Berjangka
+</p>
+    </td>
+</tr>  
+
 <tr>
-    <td>Negara</td>
-    <td>:</td>
-    <td>{{this.forms.country}}</td>
-</tr>
-<tr>
-    <td>Provinsi</td>
-    <td>:</td>
-    <td>{{this.forms.province}}</td>
-</tr>
-<tr>
-    <td>Kota</td>
-    <td>:</td>
-    <td>{{this.forms.city}}</td>
-</tr>
-<tr>
-    <td>Kecamatan</td>
-    <td>:</td>
-    <td>{{this.forms.area}}</td>
-</tr>
-<tr>
-    <td>Kelurahan</td>
-    <td>:</td>
-    <td>{{this.forms.sub_area}}</td>
-</tr>
-<tr>
-    <td>Desa</td>
-    <td>:</td>
-    <td>{{this.forms.village}}</td>
-</tr>
-<tr>
-    <td>Postal Kode</td>
-    <td>:</td>
-    <td>{{this.forms.postal_code}}</td>
-</tr>
-<tr>
-    <td>Alamat</td>
-    <td>:</td>
-    <td>{{this.forms.address}}</td>
-</tr>
-<tr>
-    <td>Tipe Identitas *)</td>
-    <td>:</td>
-    <td>{{this.forms.type_of_identity_card}}</td>
-</tr>
-<tr>
-    <td>No. Identitas</td>
-    <td>:</td>
-    <td>{{this.forms.identity_card_number}}</td>
-</tr>
+    <td colspan="3">
+<p style="text-align:left;">Untuk melihat review registrasi online anda, silahkan klik  
+    <a @click.prevent="preview()" target="_blank">PREVIEW</a>
+    </p>
+    </td>
+</tr>  
+
                </table>
             </div>
   
- 
-<div class="form-group col-lg-12">
-<p>Dengan mengisi kolom <b>“YA”</b> di bawah ini, saya menyatakan bahwa saya telah memiliki pengalaman yang
-mencukupi dalam melaksanakan transaksi Perdagangan Berjangka karena pernah bertransaksi pada
-Perusahaan Pialang Berjangka <input v-model="forms.name_implementing_commodity_trade_transaction" type="text" class="form-control" required="" aria-required="true" placeholder="Tempat pernah melakukan transaksi Perdagangan Berjangka sebelum ini"> **), dan telah memahami tentang tata cara bertransaksi Perdagangan
-Berjangka.</p>
-
-<p>Demikian Pernyataan ini dibuat dengan sebenarnya dalam keadaan sadar, sehat jasmani dan rohani serta
-tanpa paksaan apapun dari pihak manapun.</p>
-
-</div>
-
-
-<div class="form-group col-lg-12">
-    <label for="input1">Pernyataan menerima / Tidak</label> 
-        <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_implementing_commodity_trade_transaction" name="aggrement_implementing_commodity_trade_transaction" v-model="forms.aggrement_implementing_commodity_trade_transaction" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_implementing_commodity_trade_transaction">Ya</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_implementing_commodity_trade_transaction" name="aggrement_implementing_commodity_trade_transaction" v-model="forms.aggrement_implementing_commodity_trade_transaction" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_implementing_commodity_trade_transaction">Tidak</label>
-        </div>
-</div>
-
-<div class="form-group col-lg-12">
-Pernyataan pada Tanggal <b> {{this.customFormatter(currentDate)}} </b>
-</div>
-
-<div class="form-group col-lg-12">
-<p style="text-align: left;font-size: 10px;">
-*) Pilih salah satu <br>
-**) Isi sesuai dengan nama Pialang Berjangka tempat pernah melakukan transaksi
-Perdagangan Berjangka sebelum ini
-</p>
-</div>
- 
 
 
 <div class="form-group col-lg-12">
   
     <button class="btn btn-warning pd-x-20" type="button" @click.prevent="backLink()">Kembali</button> 
-    <button class="btn btn-info pd-x-20" type="submit">Langkah 4</button> 
+    <button class="btn btn-info pd-x-20" type="submit">Selesai</button> 
 </div>
 
       </div>
@@ -185,8 +114,12 @@ export default {
       webURL:window.webURL,
       maxToasts: 100,
       idCode:'',
+	  url:'/public/client-files/',
       position: 'up right',
+      button_ya_tidak:'',
       closeBtn: true,
+      jenis_rekening_others:'',
+      jenis_rekening_others_2:'',
       currentDate:new Date(),
       errors: [],
         endtime: {
@@ -221,15 +154,17 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '',account_number:'', place_of_birth:'', date_of_birth:'', type_of_identity_card:'', identity_card_number:'', aggrement_implementing_commodity_trade_transaction:'', status:'', country:'', province:'', city:'', area:'', sub_area:'', postal_code:'', village:'',address:''},
+      forms: {id : ''},
     }
   },
   watch: { 
 
   },
   methods: {
-      
-    
+
+    customLocalFormatter(date) {
+      return moment(date).format('DD-MM-YYYY');
+    },
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
       return hashids.encode(id); 
@@ -244,10 +179,15 @@ export default {
     customFormatter(date) {
       return moment(date).format('YYYY-MM-DD');
     },
+    preview(){
+        var url = 'http://rajawalikapital.co.id/detail-data-pendaftar-akun-real/'+this.forms.id;
+        window.open(url, '_blank');
+    },
+
     fetchIt(){
     this.loading();
         this.idCode = this.dibalik(this.$route.params.idnya);
-        axios.get('/clients-area/create-real-account/step/3/'+this.idCode).then((response) => {
+        axios.get('/clients-area/create-real-account/step/15/'+this.idCode).then((response) => {
             if(!response.data){ 
                 window.location.href = window.webURL; 
             }else{ 
@@ -269,9 +209,10 @@ export default {
             }
         });
     },
-    submitData(){
-      this.$swal({
-        title: 'Lanjut Langkah ke 4 ?',
+
+
+    submitData(){this.$swal({
+        title: 'Apakah anda sudah yakin dengan data yang akan di berikan ?',
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -279,14 +220,15 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-            axios.post('/clients-area/post-real-account/step-3', this.forms).then(response => {
+              var data = {id : this.forms.id , status:this.forms.status}
+            axios.post('/clients-area/post-real-account/step-15', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
                 }else{ 
                   if(response.data.status == 200){
                         this.errors = '';
                         this.success(response.data.message);
-                        this.$router.push({name:'addRealAccount4', params: {idnya:this.diacak(response.data.data.id)}});
+						this.$router.push({name:'UserListRealAccount'});
                     }else{
                         this.resultError(response.data.message)
                     }

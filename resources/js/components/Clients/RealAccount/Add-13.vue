@@ -22,683 +22,748 @@
         <div class="form-row">
 
             <div class="form-group col-lg-12">
-                <p style="text-align:center;"> <b>PERATURAN PERDAGANGAN (TRADING RULES)</b></p>
+			<b>FORMULIR PBK. CDDS. 06. 1</b>
+                <p style="text-align:center;"> <b>PERJANJIAN PEMBERIAN AMANAT SECARA ELEKTRONIK ON-LINE
+UNTUK TRANSAKSI KONTRAK BERJANGKA</b></p>
             </div>
 
             <div class="form-group col-lg-12">
                <table class="table table-striped table-bordered" width="100%" cellspacing="0">
-
 <tr>
-    <td colspan="3">
-<h4><b>TRADING RULES KONTRAK BERJANGKA : </b></h4>
-<br>
-<table class="table" width="100%" cellspacing="0">
-  <tr>
-    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK EMAS LOCO LONDON (MINI)</b></td>
-  </tr>
-  <tr>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDUD </b></td>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDID </b></td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Bulan Kontrak </td>
-    <td style="text-align:left;" colspan="2"> </td> 
-  </tr>
-  <tr>
-    <td style="text-align:left;">Satuan Kontrak (Per
-Lot) </td>
-    <td style="text-align:left;"> 10 troy ounce (1 lot)</td>
-    <td style="text-align:left;"> 10 troy ounce (1 lot)</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Hari & Jam
-Perdagangan </td>
-    <td style="text-align:left;" colspan="2"> Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Hari Perdagangan
-Terakhir</td>
-    <td style="text-align:left;" colspan="2"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Mutu </td>
-    <td style="text-align:left;" colspan="2">Emas Loco London </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Kuotasi Harga </td>
-    <td style="text-align:left;"> US Dollar (USD) </td>
-    <td style="text-align:left;"> Rupiah (IDR) </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Perubahan Harga
-Minimum </td>
-    <td style="text-align:left;"> USD 0.1 per troy ounce (USD 1 per
-satuan kontrak)</td>
-    <td style="text-align:left;"> IDR 1.000 per troy ounce IDR 10.000 per
-satuan kontrak)
-</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Harga Penyelesaian</td>
-    <td style="text-align:left;"> <ul>
-  <li>Harga Penyelesaian Harian akan
-ditetapkan dengan merujuk pada
-harga sumber acuan pada saat jam
-penutupan perdagangan
-GOLDUD</li>
-  <li>Sumber acuan berasal dari harga
-Loco London pada saat jam
-penutupan perdagangan
-GOLDUD
-</li>
-</ul> </td>
-    <td style="text-align:left;"> <ol>
-      <li>Harga Penyelesaian Harian akan
-ditetapkan dengan merujuk pada harga
-sumber acuan pada saat jam penutupan
-perdagangan GOLDID</li>
-      <li>Sumber acuan berasal dari harga Loco
-London pada saat jam penutupan
-perdagangan GOLDID</li>
-      <li>Harga Loco London akan dikonversikan
-ke dalam Rupiah menggunakan kurs yang
-ditetapkan oleh Lembaga Kliring</li>
-      </ol></td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Biaya Gulir </td>
-    <td style="text-align:left;" colspan="2"> Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Margin</td>
-    <td style="text-align:left;" colspan="2"> 1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Batas Posisi </td>
-    <td style="text-align:center;" colspan="2"> 5.000 lot</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Posisi Wajib Lapor  </td>
-    <td style="text-align:center;" colspan="2"> 2.500 lot </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Metode Penyelesaian </td>
-    <td style="text-align:center;" colspan="2"> Penyelesaian secara tunai</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Komisi Transaksi </td>
-    <td style="text-align:left;"> Maksimal USD 10/lot/side</td>
-    <td style="text-align:left;">Rp 30.000/lot/side </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK MINYAK (MINI)</b></td>
-  </tr>
-  <tr>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
-    <td style="text-align:center;background-color:#f18109;color:black;" colspan="2"> <b> COFR </b></td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Bulan Kontrak</td>
-    <td style="text-align:left;" colspan="2"> 3 (Tiga) Bulan Kontrak berturut-turut ditambah 2 (dua) bulan kontrak
-terdekat setelahnya (Maret, Mei, Juli, September, Desember)</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Satuan Kontrak (Per Lot)</td>
-    <td style="text-align:left;" colspan="2"> 100 barel</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Hari & Jam Perdagangan </td>
-    <td style="text-align:left;" colspan="2">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST) </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Hari Perdagangan Terakhir</td>
-    <td style="text-align:left;" colspan="2">1 (satu) hari kerja sebelum Hari Perdagangan Terakhir dari Kontrak
-Berjangka WTI Crude Oil di New York Mercantile Exchange (NYMEX) </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Mutu</td>
-    <td style="text-align:left;" colspan="2">Sesuai dengan mutu WTI Crude Oil yang diperdagangkan di NYMEX </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Kuotasi Harga </td>
-    <td style="text-align:left;" colspan="2">Rupiah (IDR) per Barel </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Perubahan Harga Minimum </td>
-    <td style="text-align:left;" colspan="2">IDR 100 (seratus) per barel (IDR 10.000 persatuan kontrak)
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Batas Perubahan Harga </td>
-    <td style="text-align:left;" colspan="2">4% dari harga penyelesaian hari sebelumnya </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Harga Penyelesaian </td>
-    <td style="text-align:left;" colspan="2"><b>Harga Penyelesaian Harian,</b> Volume Weighted Average Price (VWAP)
-semua transaksi yang terjadi di 5 (lima) menit terakhir di bursa pada Hari
-perdagangan tersebut.<br><br> <b>Harga Penyelesaian Akhir,</b> Harga penyelesaian kontrak WTI Crude Oil di
-New York Mercantile Exchange (NMEX) yang telah dikonversikan ke
-dalam Rupiah menggunakan kurs yang ditetapkan oleh Lembaga Kliring.</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Biaya Gulir </td>
-    <td style="text-align:left;" colspan="2">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Margin</td>
-    <td style="text-align:left;" colspan="2">4% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga
-Kliring) </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Batas Posisi </td>
-    <td style="text-align:left;" colspan="2">1.500 lot </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Posisi Wajib Lapor</td>
-    <td style="text-align:left;" colspan="2">750 lot </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Metode Penyelesaian </td>
-    <td style="text-align:left;" colspan="2">Penyelesaian secara tunai
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Komisi Transaksi </td>
-    <td style="text-align:left;" colspan="2">Rp 50.000/lot/side </td>
-  </tr> 
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK FOREX / MATA UANG (MINI)</b></td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <table class="table" width="100%" cellspacing="0">
-        <tr>
-          <td style="text-align:center;background-color:#f18109;color:black;">SIMBOL</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">EUR/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">AUD/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/JPY</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">GBP/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/CHF</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">NZD/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/CAD</td>
-        </tr>
-        <tr>
-          <td>Satuan Kontrak
-(Per Lot)
-</td>
-          <td>EUR 10.000</td>
-          <td>AAUD 10.000</td>
-          <td>USD 10.000</td>
-          <td>GBP 10.000</td>
-          <td>USD 10.000</td>
-          <td>NZD 10.000</td>
-          <td>USD 10.000</td>
-        </tr>
-        <tr>
-          <td>Hari & Jam
-Perdagangan
-</td>
-          <td colspan="7">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST)</td>
-        </tr>
-        <tr>
-          <td>Kuotasi harga</td>
-          <td>US Dollar
-(USD)</td>
-          <td>US Dollar
-(USD)</td>
-          <td>Japanese
-Yen (JPY)</td>
-          <td>US Dollar
-(USD)</td>
-          <td>Swiss Franc
-(CHF)</td>
-          <td>US Dollar
-(USD)</td>
-          <td>Canadian
-(CAD)</td>
-        </tr>
-        <tr>
-          <td>Perubahan
-Harga Minimum</td>
-          <td>0.00001 (USD
-0.1 per lot)</td>
-          <td>0.00001 (USD
-0.1 per lot)</td>
-          <td>0.001 (JPY
-10 per lot)</td>
-          <td>0.00001 (USD
-0.1 per lot)</td>
-          <td>0.00001 (CHF
-0.1 per lot)</td>
-          <td>0.00001 (USD
-0.1 per lot)</td>
-          <td>0.00001 (CAD
-0.1 per lot)</td>
-        </tr>
-        <tr>
-          <td>Harga
-Penyelesaian</td>
-          <td colspan="7"><ol><li>Harga Penyelesaian Harian akan merujuk pada harga transaksi akhir (last trade price)
-dari sumber acuan di hari akhir perdagangan,</li><li>Sumber acuan akan ditetapkan Bursa melalui SEB.</li></ol></td>
-        </tr>
-        <tr>
-          <td>Biaya Gulir</td>
-          <td colspan="7">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring melalui SEB</td>
-        </tr>
-        <tr>
-          <td>Margin</td>
-          <td colspan="7">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
-        </tr>
-        <tr>
-          <td>Batas Posisi</td>
-          <td colspan="7">5.000 lot
-</td>
-        </tr>
-        <tr>
-          <td>Posisi Wajib Lapor</td>
-          <td colspan="7">2.500 lot</td>
-        </tr>
-        <tr>
-          <td>Penyelesaian</td>
-          <td colspan="7">Penyelesaian secara tunai</td>
-        </tr>
-        <tr>
-          <td>Komisi</td>
-          <td colspan="7">USD 3 /lot/side</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr> 
-  <tr>
-    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK EMAS LOCO LONDON (MIKRO)</b></td>
-  </tr>
-  <tr>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> SIMBOL </b> </td>
-    <td style="text-align:center;background-color:#f18109;color:black;"> <b> GOLDUD </b></td>
-    <td style="text-align:center;background-color:#f18109;color:black;">  </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Bulan Kontrak</td>
-    <td style="text-align:left;" colspan="2"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Satuan Kontrak (Per
-Lot)
-</td>
-    <td style="text-align:left;">1 troy ounce (1 lot) </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Hari & Jam
-Perdagangan </td>
-    <td style="text-align:left;" colspan="2"> Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> Hari Perdagangan
-Terakhir
-</td>
-    <td style="text-align:left;" colspan="2"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Mutu </td>
-    <td style="text-align:left;" colspan="2"> <b>Emas Loco London (LBMA Minimum Purity Standard)</b> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Kuotasi Harga </td>
-    <td style="text-align:left;">US Dollar (USD)
- </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Perubahan Harga
-Minimum </td>
-    <td style="text-align:left;"> USD 0.1 per troy ounce (USD 0,1 per
-satuan kontrak)
-</td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Harga Penyelesaian </td>
-    <td style="text-align:left;"><ul>
-      <li>Harga Penyelesaian Harian akan
-ditetapkan dengan merujuk pada
-harga sumber acuan pada saat jam
-penutupan perdagangan
-GOLDUD</li><li>Sumber acuan berasal dari harga
-Loco London pada saat jam
-penutupan perdagangan
-GOLDUD
-</li>
-      </ul> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Biaya Gulir  </td>
-    <td style="text-align:left;" colspan="2">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Margin  </td>
-    <td style="text-align:left;" colspan="2">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring)
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Batas Posisi</td>
-    <td style="text-align:left;" colspan="2">50.000 lot
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Posisi Wajib Lapor</td>
-    <td style="text-align:left;" colspan="2">25.000 lot
-
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Metode Penyelesaian</td>
-    <td style="text-align:left;" colspan="2">Penyelesaian secara tunai
- </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;">Komisi Transaksi </td>
-    <td style="text-align:left;" colspan="2"> Maksimal USD 5/lot/side</td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td colspan="3" style="text-align:center;background-color:#bec4c0;"><b>SPESIFIKASI KONTRAK FOREX / MATA UANG (MIKRO)</b></td>
-  </tr>
-  <tr>
-    <td colspan="3">
-      <table class="table" width="100%" cellspacing="0">
-        <tr>
-          <td style="text-align:center;background-color:#f18109;color:black;">SIMBOL</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">EUR/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">AUD/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/JPY</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">GBP/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/CHF</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">NZD/USD</td>
-          <td style="text-align:center;background-color:#f18109;color:black;">USD/CAD</td>
-        </tr>
-        <tr>
-          <td>Satuan Kontrak
-(Per Lot)</td>
-          <td>EUR 1000</td>
-          <td>AUD 1000</td>
-          <td>USD 1000</td>
-         <td>GBP 1000</td>
-          <td>USD 1000</td>
-          <td>NZD 1000</td>
-          <td>USD 1000</td>
-        </tr>
-        <tr>
-          <td>Hari & Jam
-Perdagangan
-</td>
-          <td colspan="6">Senin - Jumat (06-00-04.30 GMT +7 (06:00 - 03:30 GMT +7 Selama DST)</td>
-        </tr>
-        <tr>
-          <td>Kuotasi harga</td>
-          <td>US Dollar
-(USD</td>
-          <td>US Dollar
-(USD)</td>
-          <td>Japanese
-Yen (JPY)</td>
-         <td>US Dollar
-(USD)</td>
-          <td>Swiss Franc
-(CHF)
-</td>
-          <td>US Dollar
-(USD)</td>
-          <td>Canadian
-(CAD)
-</td>
-        </tr>
-        <tr>
-          <td>Perubahan
-Harga Minimum</td>
-          <td>0.00001 (USD
-0.01 per lot)</td>
-          <td>0.00001 (USD
-0.01 per lot)</td>
-          <td>0.001 (JPY
-1 per lot)
-</td>
-         <td>0.00001 (USD
-0.01 per lot)</td>
-          <td>0.00001 (CHF
-0.01 per lot)</td>
-          <td>0.00001 (USD
-0.01 per lot)</td>
-          <td>0.00001 (CAD
-0.01 per lot)</td>
-        </tr>
-        <tr>
-          <td>Harga
-Penyelesaian
-</td>
-          <td colspan="7"><ol>
-            <li>Harga Penyelesaian Harian akan merujuk pada harga transaksi akhir (last trade
-price) dari sumber acuan di hari akhir perdagangan,
-            </li>
-            <li>Sumber acuan akan ditetapkan Bursa melalui SEB.</li>
-            </ol></td>
-        </tr>
-        <tr>
-          <td>Biaya Gulir</td>
-          <td colspan="7">Biaya Gulir akan diumumkan oleh Bursa dan Lembaga Kliring melalui SEB</td> 
-        </tr>
-        <tr>
-          <td>Margin</td>
-          <td colspan="7">1,5% (Margin dapat berubah sewaktu-waktu oleh Bursa dan Lembaga Kliring</td>
-        </tr>
-        <tr>
-          <td>Batas Posisi </td>
-          <td colspan="7">50.000 lot</td>
-        </tr>
-        <tr>
-          <td>Posisi Wajib Lapor </td>
-          <td colspan="7">25.000 lot</td>
-        </tr>
-        <tr>
-          <td>Penyelesaian </td>
-          <td colspan="7">Penyelesaian secara tunai</td>
-        </tr>
-        <tr>
-          <td>Komisi </td>
-          <td colspan="7">Maksimum USD 5 /lot/side</td>
-        </tr>
-
-      </table>
-    </td>
-  </tr>
-   
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;" colspan="3"> 
-      <ol>
-        <li><b>Transaksi</b> <br> Semua transaksi dilakukan dengan sistem online menggunakan platform Meta Trader 5
-(MT5) dan Smart Trader secara langsung terkoneksi ke bursa <b>Indonesia Commodity and
-Derivatives Exchange (ICDX)</b>. </li>
-        <li><b>Deposit Margin</b><br> Deposit Margin Awal Untuk Akun Mini, Minimal <b>Rp. 5.000.000,- (lima juta rupiah)</b>
-<br>
-Deposit Margin Awal Untuk Akun Mikro, Minimal <b>Rp. 500.000,- (lima ratus ribu rupiah)</b>
-<br>
-Nasabah dapat menyetor dana untuk Account nya ke <i>segregated bank account</i> (Rekening
-Terpisah): 
-<ul>
-<li><b>Bank Mandiri (IDR) Rekening : 130 000 060 3333 a/n PT. Rajawali Kapital Berjangka</b></li>
-</ul>
-Semua dana transfer harus dilakukan antara <b>segregated bank account PT. Rajawali Kapital
-Berjangka</b> dan bank account atas nama Nasabah yang bersangkutan.
-Catatan : bukti transfer harap di fax ke 022-20582219.
-</li>
-        <li><b>Penarikan Dana (Withdrawal)</b><br>Nasabah yang ingin melakukan penarikan dana diharuskan mengisi formulir penarikan dana
-yang disediakan oleh PT. Rajawali Kapital Berjangka dapat di download pada
-http://www.rajawalikapital.co.id kemudian di fax ke 022-20582219 atau email ;<br>
-dealing@rajawalikapital.co.id <br>
-Formulir yang diterima PT. Rajawali Kapital Berjangka sebelum jam 11.00 wib, proses
-transfer dana akan ditransfer pada hari yang sama, kecuali hari libur Nasional/Perbankan. <br>
-Formulir yang diterima PT. Rajawali Kapital Berjangka sebelum jam 11.00 wib, proses
-transfer dana akan ditransfer pada hari yang sama, kecuali hari libur Nasional/Perbankan. 
-<br>
-Sedangkan Formulir yang diterima PT. Rajawali Kapital Berjangka setelah jam 11.00 wib,
-proses transfer dana akan dilakukan pada hari berikutnya, kecuali hari libur
-Nasional/Perbankan.<br>
-Semua dana transfer harus dilakukan antara segregated bank account PT. Rajawali Kapital
-Berjangka dan bank account atas nama Nasabah yang bersangkutan. Apabila nama penyetor
-berbeda dengan nama pada Akun Nasabah, maka otomatis ditolak oleh sistem.
-</li>
-        <li><b>Laporan Secara Elektronik</b><br>Nasabah tidak akan menerima laporan fisik namun laporan transaksi akan dikirim ke
-Nasabah sesuai dengan alamat email yang tercantum dalam Formulir Pembukaan Rekening.
-Agar pengiriman laporan sesuai, Nasabah harus menginformasikan alamat email yang benar
-atau menginformasikan jika adanya perubahan alamat email ke<b> PT. Rajawali Kapital
-Berjangka.</b></li>
-        <li><b>Limit Order</b><br>Limit Order adalah jenis tipe order untuk melakukan Buy atau Sell pada harga dan volume
-Lot yang ditentukan Nasabah<br>
-Limit Order Buy = input order price sama dengan harga market atau di bawah lebih rendah
-dari harga market.<br>
-Limit Order Sell = input order price sama dengan harga market atau lebih tinggi dari harga
-market.
-</li>
-        <li><b>Stop Limit</b><br>Stop limit adalah jenis tipe order yang dapat memasukan dua harga berbeda yang ditentukan
-oleh Nasabah, ketika harga yang pertama sebagai stop order akan aktif saat tercapainya harga
-last price sama dengan harga stop order yang di pesan oleh Nasabah, maka order stop limit
-pada harga yang kedua akan aktif menjadi limit order untuk Buy atau Sell pada harga yang
-telah ditentukan, biasanya Stop Order digunakan untuk meminimalkan atau membatasi
-kerugian. </li>
-        <li><b>Limit FAK</b><br>Adalah jenis tipe order yang segera langsung filled dengan harga pasar untuk Buy atau Sell
-pada harga dan jumlah volume Lot yang ditentukan oleh Nasabah. Menggunakan LIMIT
-(FILL AND KILL) maka Nasabah akan mencoba untuk bertransaksi sebanyak jumlah volume
-Lot dan harganya yang diinginkan Nasabah dengan kondisi Order yang dapat dieksekusi
-filled dengan sebagian volume lot dan sisanya dapat dibatalkan.</li>
-        <li><b>Limit – Maket FOK</b><br>Adalah jenis tipe order yang segera langsung filled dengan harga pasar untuk Buy atau Sell
-pada harga dan jumlah volume Lot yang ditentukan oleh Nasabah. Menggunakan LIMIT
-(FILL OR KILL) maka Nasabah akan bertransaksi dengan kondisi harus sesuai harga dan
-jumlah seluruh volume yang telah Order dijalankan atau, tidak dapat melaksanakan Order
-akan secara total dibatalkan.</li>
-        <li><b>Stop Order</b>
-<br>
-Adalah jenis tipe Order untuk melakukan Buy atau Sell pada harga yang telah ditentukan
-oleh Naabah, yang dikenal sebagai order price. Ketika harga stop order yang dipesan akan
-aktif saat tercapainya harga last price sama dengan harga stop order yang sudah dipesan oleh
-Nasabah, maka order stop akan menjadi Market Order.
-</li>
-        <li><b>Limit I Touch</b><br>Adalah jenis tipe order yang dapat memasukan dua harga berbeda yang ditentukan oleh
-Nasabah, ketika harga yang pertama if-touch order akan aktif saat tercapainya harga last price
-sama dengan harga if-touch order yang dipesan oleh Nasabah, maka order limit if-touch pada
-harga yang kedua akan aktif menjadi limit order untuk Buy atau Sell pada harga yang telah
-ditentukan Nasabah.</li>
-        <li><b>Auto Pull/Cancel Order
-</b><br>
-Pada waktu penutupan hari perdagangan setiap hari nya,semua transaksi nasabah atau
-working order akan cancel secara otomatis oleh system.
-</li>
-        <li><b>Margin Call dan Auto Cut Equity</b><br>
-        <ul>
-          <li>Nasabah wajib memelihara/memenuhi tingkat Margin yang harus tersedia di rekening
-sesuai dengan jumlah yang telah ditetapkan baik diminta maupun tidak oleh perusahaan.</li>
-          <li>Margin Call terjadi apabila Equity ratio Nasabah dibawah <b>100% (seratus persen)</b> dari
-Margin Requirement atas posisi terbuka. Nasabah diwajibkan menambah sejumlah dana
-supaya memenuhi Margin yang dibutuhkan.</li>
-          <li>Nasabah dilarang membuka posisi baru sampai kewajiban Margin Call tersebut terpenuhi,
-yang mana jika kewajiban tersebut tidak dilaksanakan oleh Nasabah maka perusahaan
-berhak sepenuhnya untuk me-likuidasi posisi terbuka Nasabah baik sebagian atau
-seluruhnya tanpa perlu persetujuan dari Nasabah terlebih dahulu.</li>
-          <li>Apabila Equity nasabah turun mencapai atau lebih sedikit dari <b>30% ( tiga puluh persen)</b>
-dari Margin Requirement maka PT. Rajawali Kapital Berjangka akan melikuidasi seluruh
-posisi nasabah secara otomatis tanpa perlu persetujuan nasabah.</li>
-        </ul>
-        </li>
-        <li><b>Over Trading</b><br>Sistem akan menolak posisi Nasabah apabila Nasabah melakukan transaksi yang melebihi
-dana atau margin yang ada. </li>
-        <li><b>Penyelesaian Fisik </b><br>Apabila terjadi penyerahan fisik maka akan diatur sesuai dengan ketentuan bursa ICDX
-(Indonesia Commodity and Derivatives Exchange) dan ICH (Indonesia Clearing House),
-dengan berdasarkan ketentuan-ketentuan yang berlaku pada saat melakukan
-transaksi/penyelesaian fisik.
-</li> 
-      </ol>
-
-      Kode akses transaksi atau Login dan Password akan dikirim ke email Nasabah yang terdaftar,
-dan disarankan untuk merubah Pasword pada saat Login pertama kali dilakukan. PT. Rajawali
-Kapital Berjangka tidak bertanggung jawab Terhadap Penggunaan Login dan Password dari
-segala bentuk penyalahgunaan sehubungan dengan kehilangan, pencurian atau penggunaan
-oleh pihak yang tidak berhak atas Kode Akses tersebut. 
-
-<br>
-<br>
-
-<b>Dengan melakukan ceklist dokumen ini, saya menyatakan bahwa saya telah membaca tentang
-PERATURAN PERDAGANGAN (TRADING RULES), mengerti dan memahami ketentuan
-dalam bertransaksi”.</b>
-
-    </td>
-  </tr>
-  <tr>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-    <td style="text-align:left;"> </td>
-  </tr>
-  <tr>
-    <td colspan="3" style="text-align:left;"><div class="custom-control custom-radio">
-<input type="checkbox" class="custom-control-input" id="button_12" name="button_12" value="Ya" required>
-<label class="custom-control-label" for="button_1"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
-</div></td>
-  </tr>
-</table
-<br>
-<p>*)Perusahaan berhak untuk merubah segala ketentuan/ peraturan yang ada dalam peraturan
-transaksi ini tanpa pemberitahuan terlebih dahulu</p>
-
-<p style="text-align:center;">Dengan mengisi kolom “YA” di bawah ini, saya menyatakan bahwa saya telah
-membaca tentang PERATURAN PERDAGANGAN (TRADING RULES), mengerti dan
-menerima ketentuan dalam bertransaksi.</p>
+    <td colspan="3" border="3">
+      <p style="text-align:center;">
+          <b>
+PERHATIAN ! <br>
+PERJANJIAN INI MERUPAKAN KONTRAK HUKUM. HARAP DIBACA DENGAN SEKSAMA.
+          </b>
+</p>
     </td>
 </tr>
 
+<tr>
+    <td colspan="3">
+      <p>
+Pada hari ini {{this.getDay(this.currentDate)}}, tanggal {{this.getTanggal(this.currentDate)}}, bulan {{this.getMonth(this.currentDate)}}, tahun {{this.getTahun(this.currentDate)}} kami yang mengisi perjanjian
+di bawah ini:
+</p>
+    </td>
+</tr>
 
+<tr>
+    <td colspan="3">
+<ol>
+    <li>
+        <table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="30%" style="border:0px !important;">Nama</td>
+                <td width="1%" style="border:0px !important;">:</td>
+                <td width="69%" style="border:0px !important;">{{this.forms.name}}</td>
+            </tr>
+            <tr>
+                <td style="border:0px !important;">Pekerjaan / Jabatan</td>
+                <td style="border:0px !important;">:</td>
+                <td style="border:0px !important;">{{this.forms.job_category}} / {{this.forms.job_position}}</td>
+            </tr>
+            <tr>
+                <td style="border:0px !important;">Alamat</td>
+                <td style="border:0px !important;">:</td>
+                <td style="border:0px !important;">{{this.forms.address}} <br> 
+                    {{this.forms.province}} {{this.forms.city}} <br>
+                    {{this.forms.area+' '+this.forms.sub_area}} <br>
+                    {{this.forms.country}} <br>
+                    Postal Kode : {{this.forms.postal_code}}</td>
+            </tr>
+        </table>
+    </li>
+</ol>
+<p>dalam hal ini bertindak untuk dan atas nama sendiri, yang selanjutnya disebut Nasabah,</p>
+<ol start="2">
+    <li>
+        <table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="30%" style="border:0px !important;">Nama</td>
+                <td width="1%" style="border:0px !important;">:</td>
+                <td width="69%" style="border:0px !important;">Salmun Baranna</td>
+            </tr>
+            <tr>
+                <td style="border:0px !important;">Pekerjaan / Jabatan</td>
+                <td style="border:0px !important;">:</td>
+                <td style="border:0px !important;">Direktur Kepatuhan</td>
+            </tr>
+            <tr>
+                <td style="border:0px !important;">Alamat</td>
+                <td style="border:0px !important;">:</td>
+                <td style="border:0px !important;"> Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan) Suka Asih, Bojongloa Kaler <br>Bandung-Jawa Barat 40231</td>
+            </tr>
+        </table>
+    </li>
+</ol>
+
+<p>Dalam hal ini bertindak untuk dan atas nama <b>PT. Rajawali Kapital Berjangka</b> yang selanjutnya
+disebut Pialang Berjangka,</p>
+
+<p>Nasabah dan Pialang Berjangka secara bersama – sama selanjutnya disebut <b>Para Pihak</b>.</p>
+
+<p>Para Pihak sepakat untuk mengadakan Perjanjian Pemberian Amanat untuk melakukan transaksi
+penjualan maupun pembelian Kontrak Berjangka dengan ketentuan sebagai berikut:
+</p>
+ <p>
+
+<ol>
+    <li><b>Margin dan Pembayaran Lainnya</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol start="1">
+                        <li>Nasabah menempatkan sejumlah dana (Margin) ke Rekening Terpisah (<i>Segregated
+Account</i>) Pialang Berjangka sebagai Margin awal dan wajib mempertahankannya
+sebagaimana ditetapkan.</li>
+                        <li>membayar biaya-biaya yang diperlukan untuk transaksi yaitu biaya transaksi, pajak, komisi,
+dan biaya pelayanan, biaya bunga sesuai tingkat yang berlaku, dan biaya lainnya yang
+dapat dipertanggungjawabkan berkaitan dengan transaksi sesuai amanat Nasabah,
+maupun biaya rekening Nasabah.</li>
+                    </ol>
+                </td>
+            </tr>
+
+            
+        
+        </table>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_1" name="button_1" value="Ya" required>
+<label class="custom-control-label" for="button_1"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+    <li><b>Pelaksanaan Amanat</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Setiap amanat yang disampaikan oleh Nasabah atau kuasanya yang ditunjuk secara tertulis
+oleh Nasabah, dianggap sah apabila diterima oleh Pialang Berjangka sesuai dengan
+ketentuan yang berlaku, dapat berupa amanat tertulis yang ditandatangani oleh Nasabah
+atau kuasanya, amanat telepon yang direkam, dan/atau amanat transaksi elektronik
+lainnya.</li>
+                        <li>Setiap amanat Nasabah yang diterima dapat langsung dilaksanakan sepanjang nilai Margin
+yang tersedia pada rekeningnya mencukupi dan eksekusinya tergantung pada kondisi dan
+sistem transaksi yang berlaku yang mungkin dapat menimbulkan perbedaan waktu
+terhadap proses pelaksanaan amanat tersebut. Nasabah harus mengetahui posisi Margin
+dan posisi terbuka sebelum memberikan amanat untuk transaksi berikutnya.</li>
+                        <li>Amanat Nasabah hanya dapat dibatalkan dan/atau diperbaiki apabila transaksi atas
+amanat tersebut belum terjadi. Pialang Berjangka tidak bertanggung jawab atas kerugian
+yang timbul akibat tidak terlaksananya pembatalan dan/atau perbaikan sepanjang bukan
+karena kelalaian Pialang Berjangka.</li>
+                        <li>Pialang Berjangka berhak menolak amanat Nasabah apabila harga yang ditawarkan atau
+diminta tidak wajar.</li> 
+                    </ol>
+                </td>
+            </tr>
+
+             
+        </table>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_2" name="button_2" value="Ya" required>
+<label class="custom-control-label" for="button_2"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Antisipasi penyerahan barang</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Untuk kontrak-kontrak tertentu penyelesaian transaksi dapat dilakukan dengan
+penyerahan atau penerimaan barang (<i>delivery</i>) apabila kontrak jatuh tempo. Nasabah
+menyadari bahwa penyerahan atau penerimaan barang mengandung risiko yang lebih
+besar daripada melikuidasi posisidengan <i>offset</i>. Penyerahan fisik barang memiliki
+konsekuensi kebutuhan dana yang lebih besar serta tambahan biaya pengelolaan barang.</li>
+                        <li>Pialang Berjangka tidak bertanggung jawab atas klasifikasi mutu (<i>grade</i>), kualitas atau
+tingkat toleransi atas komoditi yang diserahkan atau akan diserahkan.</li>
+                        <li>Pelaksanaan penyerahan atau penerimaan barang tersebut akan diatur dan dijamin oleh
+Lembaga Kliring Berjangka.</li>
+                    </ol>
+                </td>
+            </tr> 
+           
+        </table>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_3" name="button_3" value="Ya" required>
+<label class="custom-control-label" for="button_3"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Kewajiban Memelihara Margin</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Nasabah wajib memelihara/memenuhi tingkat Margin yang harus tersedia di rekening pada
+Pialang Berjangka sesuai dengan jumlah yang telah ditetapkan baik diminta ataupun tidak
+oleh Pialang Berjangka</li>
+                        <li>Apabila jumlah Margin memerlukan penambahan maka Pialang Berjangka wajib
+memberitahukan dan memintakan kepada Nasabah untuk menambah Margin segera</li>
+                        <li>Apabila jumlah Margin memerlukan tambahan (<i>Call Margin</i>) maka Nasabah wajib
+melakukan penyerahan <i>Call Margin</i> selambat-lambatnya sebelum dimulai hari
+perdagangan berikutnya. Kewajiban Nasabah sehubungan dengan penyerahan <i>Call Margin</i>
+tidak terbatas pada jumlah Margin awal.</li>
+                        <li>Pialang Berjangka tidak berkewajiban melaksanakan amanat untuk melakukan transaksi
+yang baru dari Nasabah sebelum <i>Call Margin</i> dipenuhi;</li>
+                        <li> Untuk memenuhi kewajiban <i>Call Margin</i> dan keuangan lainnya dari Nasabah, Pialang
+Berjangka dapat mencairkan dana Nasabah yang ada di Pialang Berjangka.</li> 
+                    </ol>
+                </td>
+            </tr>
+  
+           
+        </table>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_4" name="button_4" value="Ya" required>
+<label class="custom-control-label" for="button_4"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Hak Pialang Berjangka Melikuidasi Posisi Nasabah</b> <br>
+<p>Nasabah bertanggung jawab memantau/mengetahui posisi terbukanya secara terus-menerus
+dan memenuhi kewajibannya. Apabila dalam jangka waktu tertentu dana pada rekening
+Nasabah kurang dari yang dipersyaratkan, Pialang Berjangka dapat menutup posisi terbuka
+Nasabah secara keseluruhan atau sebagian, membatasi transaksi, atau tindakan lain untuk
+melindungi diri dalam pemenuhan Margin tersebut dengan terlebih dahulu memberitahu atau
+tanpa memberitahu Nasabah dan Pialang Berjangka tidak bertanggung jawab atas kerugian yang
+timbul akibat tindakan tersebut.</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_5" name="button_5" value="Ya" required>
+<label class="custom-control-label" for="button_5"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Penggantian Kerugian Tidak Menyerahkan Barang</b> <br>
+<p>Apabila Nasabah tidak mampu menyerahkan komoditi atas Kontrak Berjangka yang jatuh tempo,
+Nasabah memberikan kuasa kepada Pialang Berjangka untuk meminjam atau membeli komoditi
+untuk penyerahan tersebut.Nasabah wajib membayar secepatnya semua biaya, kerugian dan
+premi yang telah dibayarkan oleh Pialang Berjangka atas tindakan tersebut. Apabila Pialang
+Berjangka harus menerima penyerahan komoditi atau surat berharga maka Nasabah
+bertanggung jawab atas penurunan nilai dari komoditi atas surat berharga tersebut.</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_6" name="button_6" value="Ya" required>
+<label class="custom-control-label" for="button_6"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Penggantian Kerugian Tidak Adanya Penutupan Posisi</b> <br>
+<p>Apabila Nasabah tidak mampu melakukan penutupan atas transaksi yang jatuh tempo, Pialang
+Berjangka dapat melakukan penutupan atas transaksi di Bursa. Nasabah wajib membayar biayabiaya, termasuk biaya kerugian dan premi yang telah dibayarkan oleh Pialang Berjangka, dan
+apabila Nasabah lalai untuk membayar biaya-biaya tersebut, Pialang Berjangka berhak untuk
+mengambil pembayaran dari dana Nasabah.
+</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_7" name="button_7" value="Ya" required>
+<label class="custom-control-label" for="button_7"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pialang Berjangka Dapat Membatasi Posisi</b> <br>
+<p>Nasabah mengakui hak Pialang Berjangka untuk membatasi posisi terbuka Kontrak Berjangka
+Nasabah dan Nasabah tidak melakukan transaksi melebihi batas yang telah ditetapkan tersebut.
+</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_8" name="button_8" value="Ya" required>
+<label class="custom-control-label" for="button_8"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Tidak Ada Jaminan atas Informasi atau Rekomendasi</b> <br>
+<p>Nasabah mengakui bahwa :</p>
+
+<table class="table" width="100%" cellspacing="0"> <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Informasi dan rekomendasi yang diberikan oleh Pialang Berjangka kepada Nasabah tidak
+selalu lengkap dan perlu diverifikasi.</li>
+                        <li>Pialang Berjangka tidak menjamin bahwa informasi dan rekomendasi yang diberikan
+merupakan informasi yang akurat dan lengkap.</li>
+                        <li>Informasi dan rekomendasi yang diberikan oleh Wakil Pialang Berjangka yang satu dengan
+yang lain mungkin berbeda karena perbedaan analisis fundamental atau teknikal. Nasabah
+menyadari bahwa ada kemungkinan Pialang Berjangka dan pihak terafiliasinya memiliki
+posisi di pasar dan memberikan rekomendasi tidak konsisten kepada Nasabah.</li>
+                    </ol>
+                </td>
+            </tr>
+ 
+          
+        </table>    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_9" name="button_9" value="Ya" required>
+<label class="custom-control-label" for="button_9"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pembatasan Tanggung Jawab Pialang Berjangka</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="1%" style="border:0px !important;">
+                        <ol>
+                            <li>Pialang Berjangka tidak bertanggung jawab untuk memberikan penilaian kepada Nasabah
+mengenai iklim, pasar, keadaan politik dan
+ekonomi nasional dan internasional, nilai kontrak berjangka, kolateral, atau memberikan
+nasihat mengenai keadaan pasar. Pialang Berjangka hanya memberikan pelayanan untuk
+melakukan transaksi secara jujur serta memberikan laporan atas transaksi tersebut.</li>
+                            <li>Perdagangan sewaktu-waktu dapat dihentikan oleh pihak yang memiliki otoritas
+(Bappebti/Bursa Berjangka) tanpa pemberitahuan terlebih dahulu kepada Nasabah. Atas
+posisi terbuka yang masih dimiliki oleh Nasabah pada saat perdagangan tersebut
+dihentikan, maka akan diselesaikan (likuidasi) berdasarkan pada peraturan/ketentuan
+yang dikeluarkan dan ditetapkan oleh pihak otoritas tersebut, dan semua kerugian serta
+biaya yang timbul sebagai akibat dihentikannya transaksi oleh pihak otoritas perdagangan
+tersebut, menjadi beban dan tanggung jawab Nasabah sepenuhnya.</li>
+                        </ol>
+                </td>
+            </tr>
+  
+        </table>    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_10" name="button_10" value="Ya" required>
+<label class="custom-control-label" for="button_10"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Transaksi Harus Mematuhi Peraturan Yang Berlaku</b> <br>
+<p>Semua transaksi baik yang dilakukan sendiri oleh Nasabah maupun melalui Pialang Berjangka
+wajib mematuhi peraturan perundang-undangan di bidang Perdagangan Berjangka, kebiasaan
+dan interpretasi resmi yang ditetapkan oleh Bappebti atau Bursa Berjangka.</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_11" name="button_11" value="Ya" required>
+<label class="custom-control-label" for="button_11"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pialang Berjangka tidak Bertanggung jawab atas Kegagalan Komunikasi</b> <br>
+<p>Pialang Berjangka tidak bertanggung jawab atas keterlambatan atau tidak tepat waktunya
+pengiriman amanat atau informasi lainnya yang disebabkan oleh kerusakan fasilitas komunikasi
+atau sebab lain diluar kontrol Pialang Berjangka.
+</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_12" name="button_12" value="Ya" required>
+<label class="custom-control-label" for="button_12"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Konfirmasi</b> <br>
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="1%" style="border:0px !important;">
+                    <ol>
+                        <li>Konfirmasi dari Nasabah dapat berupa surat, telex, media lain, secara tertulis ataupun
+rekaman suara.</li>
+                        <li>Pialang Berjangka berkewajiban menyampaikan konfirmasi transaksi, laporan rekening,
+permintaan Call Margin, dan pemberitahuan lainnya kepada Nasabah secara akurat, benar
+dan secepatnya pada alamat Nasabah sesuai dengan yang tertera dalam rekening
+Nasabah. Apabila dalam jangka waktu 2 x 24 jam setelah amanat jual atau beli
+disampaikan, tetapi Nasabah belum menerima konfirmasi tertulis, Nasabah segera
+memberitahukan hal tersebut kepada Pialang Berjangka melalui telepon dan disusul
+dengan pemberitahuan tertulis.</li>
+                        <li>Jika dalam waktu 2 x 24 jam sejak tanggal penerimaan konfirmasi tertulis tersebut tidak
+ada sanggahan dari Nasabah maka konfirmasi Pialang Berjangka dianggap benar dan sah.</li>
+                        <li>Kekeliruan atas konfirmasi yang diterbitkan Pialang Berjangka akan diperbaiki oleh Pialang
+Berjangka sesuai keadaan yang sebenarnya dan demi hukum konfirmasi yang lama batal.</li>
+                        <li>Nasabah tidak bertanggung jawab atas transaksi yang dilaksanakan atas rekeningnya
+apabila konfirmasi tersebut tidak disampaikan secara benar dan akurat.</li>
+                    </ol>
+                </td>
+            </tr>  
+              
+        </table>  
+ 
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_13" name="button_13" value="Ya" required>
+<label class="custom-control-label" for="button_13"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Kebenaran Informasi Nasabah</b> <br>
+<p>Nasabah memberikan informasi yang benar dan akurat mengenai data Nasabah yang diminta
+oleh Pialang Berjangka dan akan memberitahukan paling lambat dalam waktu 3 (tiga) hari kerja
+setelah terjadi perubahan, termasuk perubahan kemampuan keuangannya untuk terus
+melaksanakan transaksi.
+</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_14" name="button_14" value="Ya" required>
+<label class="custom-control-label" for="button_14"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Komisi Transaksi</b> <br>
+<p>Nasabah mengetahui dan menyetujui bahwa Pialang Berjangka berhak untuk memungut komisi
+atas transaksi yang telah dilaksanakan, dalam jumlah sebagaimana akan ditetapkan dari waktu
+ke waktu oleh Pialang Berjangka. Perubahan beban (<i>fees</i>) dan biaya lainnya harus disetujui
+secara tertulis oleh Para Pihak.
+</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_15" name="button_15" value="Ya" required>
+<label class="custom-control-label" for="button_15"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pemberian Kuasa</b> <br>
+<p>Nasabah memberikan kuasa kepada Pialang Berjangka untuk menghubungi bank, lembaga
+keuangan, Pialang Berjangka lain, atau institusi lain yang terkait untuk memperoleh keterangan
+atau verifikasi mengenai informasi yang diterima dari Nasabah. Nasabah mengerti bahwa
+penelitian mengenai data hutang pribadi dan bisnis dapat dilakukan oleh Pialang Berjangka
+apabila diperlukan.Nasabah diberikan kesempatan untuk memberitahukan secara tertulis
+dalam jangka waktu yang telah disepakati untuk melengkapi persyaratan yang diperlukan.
+</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_16" name="button_16" value="Ya" required>
+<label class="custom-control-label" for="button_16"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pemindahan Dana</b> <br>
+<p>Pialang Berjangka dapat setiap saat mengalihkan dana dari satu rekening ke rekening lainnya
+berkaitan dengan kegiatan transaksi yang dilakukan Nasabah seperti pembayaran komisi,
+pembayaran biaya transaksi, kliring,
+dan keterlambatan dalam memenuhi kewajibannya, tanpa terlebih dahulu memberitahukan
+kepada Nasabah. Transfer yang telah dilakukan akan segera diberitahukan secara tertulis
+kepada Nasabah.
+</p>   
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_17" name="button_17" value="Ya" required>
+<label class="custom-control-label" for="button_17"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Pemberitahuan</b> <br>
+
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="1%" style="border:0px !important;">
+                    <ol>
+                        <li>Semua komunikasi, uang, surat berharga, dan kekayaan lainnya harus dikirimkan
+langsung ke alamat Nasabah seperti tertera dalam rekeningnya atau alamat lain yang
+ditetapkan/diberitahukan secara tertulis oleh Nasabah.</li>
+                        <li>Semua uang, harus disetor atau ditransfer langsung oleh Nasabah ke:
+   <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+        <tr>
+            <td width="20%" style="border:0px !important;">Nama</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;"><b>PT. Rajawali Kapital Berjangka</b></td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Alamat</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan), Suka Asih,
+Bojongloa Kaler-Bandung Jawa Barat</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Bank Mandiri</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">130-0021-00333-3 (IDR)</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Bank Mandiri</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;"> ............. (USD)</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Bank Sinarmas</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;"> ............. (USD)</td>
+        </tr>
+   </table> </li>
+                        <li>Semua surat berharga, kekayaan lainnya, atau komunikasi harus dikirim kepada Pialang
+Berjangka :
+ <table class="table table-striped table-bordered" width="100%" cellspacing="0">
+        <tr>
+            <td width="20%" style="border:0px !important;">Nama</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;"><b>PT. Rajawali Kapital Berjangka</b></td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Alamat</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan), Suka Asih,
+Bojongloa Kaler-Bandung Jawa Barat</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Telepon</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">022 – 20585060, 022 - 20582432</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">Faksimili</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">022 - 20582219</td>
+        </tr>
+        <tr>
+            <td width="20%" style="border:0px !important;">E-mail</td>
+            <td width="1%" style="border:0px !important;">:</td>
+            <td width="79%" style="border:0px !important;">info@rajawalikapital.co.id</td>
+        </tr>
+   </table>  </li>
+                    </ol>    
+                </td>
+            </tr> 
+          
+            
+            <tr>
+                <td style="border:0px !important;">dan dianggap sudah diterima oleh Pialang Berjangka apabila sudah ada tanda bukti
+penerimaan dari pegawai Pialang Berjangka.</td>
+            </tr>
+        </table>  
+
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_18" name="button_18" value="Ya" required>
+<label class="custom-control-label" for="button_18"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+    <li><b>Dokumen Pemberitahuan Adanya Risiko</b> <br>
+
+<p>Nasabah mengakui menerima dan mengerti Dokumen Pemberitahuan Adanya Risiko.</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_19" name="button_19" value="Ya" required>
+<label class="custom-control-label" for="button_19"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+    <li><b>Jangka Waktu Perjanjian dan Pengakhiran</b> <br>
+
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Perjanjian ini mulai berlaku terhitung sejak tanggal ditandatanganinya sampai
+disampaikannya pemberitahuan pengakhiran secara tertulis oleh Nasabah atau Pialang
+Berjangka.</li>
+                        <li>Nasabah dapat mengakhiri Perjanjian ini hanya jika Nasabah sudah tidak lagi memiliki
+posisi terbuka dan tidak ada kewajiban Nasabah yang diemban oleh atau terhutang kepada
+Pialang Berjangka.</li>
+                        <li>Pengakhiran tidak membebaskan salah satu Pihak dari tanggung jawab atau kewajiban
+yang terjadi sebelum pemberitahuan tersebut.</li>
+                    </ol>
+                </td>
+            </tr>
+            
+           
+        </table> 
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_20" name="button_20" value="Ya" required>
+<label class="custom-control-label" for="button_20"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+
+    <li><b>Berakhirnya Perjanjian</b> <br>
+Perjanjian dapat berakhir dalam hal Nasabah :
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="1%" style="border:0px !important;"> 
+                    <ol>
+                        <li>dinyatakan pailit, memiliki hutang yang sangat besar, dalam proses peradilan, menjadi
+hilang ingatan, mengundurkan diri atau meninggal;</li>
+                        <li>tidak dapat memenuhi atau mematuhi perjanjian ini dan/atau melakukan pelanggaran
+terhadapnya;</li>
+                        <li>berkaitan dengan angka (1) dan (2) tersebut di atas, Pialang Berjangka dapat :  <br>
+                            <ol type="i">
+                                <li>meneruskan atau menutup posisi Nasabah tersebut setelah mempertimbangkannya
+secara cermat dan jujur; dan</li>
+                                <li>menolak perintah dari Nasabah atau kuasanya.</li>
+                            </ol>
+                        </li>
+                        <li>Pengakhiran Perjanjian sebagaimana dimaksud dengan angka (1) dan (2) tersebut di atas
+tidak melepaskan kewajiban dari Para Pihak yang berhubungan dengan penerimaan atau
+kewajiban pembayaran atau pertanggungjawaban kewajiban lainnya yang timbul dari
+Perjanjian.</li>
+                    </ol>
+                </td>
+            </tr>
+           
+           
+        </table> 
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_21" name="button_21" value="Ya" required>
+<label class="custom-control-label" for="button_21"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b><i>Force Majeur</i></b> <br>
+<p>Tidak ada satupun pihak di dalam Perjanjian dapat diminta pertanggungjawabannya untuk
+suatu keterlambatan atau terhalangnya memenuhi kewajiban berdasarkan Perjanjian yang
+diakibatkan oleh suatu sebab yang berada di luar kemampuannya atau kekuasaannya (<i>force
+majeur</i>), sepanjang pemberitahuan tertulis mengenai sebab itu disampaikannya kepada pihak
+lain dalam Perjanjian dalam waktu tidak lebih dari 24 (dua puluh empat) jam sejak timbulnya
+sebab itu. Yang dimaksud dengan <i>Force Majeur</i> dalam Perjanjian adalah peristiwa kebakaran,
+bencana alam (seperti gempa bumi, banjir, angin topan, petir), pemogokan umum, huru hara,
+peperangan, perubahan terhadap peraturan perundang-undangan yang berlaku dan kondisi di
+bidang ekonomi, keuangan dan Perdagangan Berjangka, pembatasan yang dilakukan oleh
+otoritas Perdagangan Berjangka dan Bursa Berjangka serta terganggunya sistem perdagangan,
+kliring dan penyelesaian transaksi Kontrak Berjangka di mana transaksi dilaksanakan yang
+secara langsung mempengaruhi pelaksanaan pekerjaan berdasarkan Perjanjian.</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_22" name="button_22" value="Ya" required>
+<label class="custom-control-label" for="button_22"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Perubahan atas Isian dalam Perjanjian Pemberian Amanat</b> <br>
+<p>Perubahan atas isian dalam Perjanjian ini hanya dapat dilakukan atas persetujuan Para Pihak,
+atau Pialang Berjangka telah memberitahukan secara tertulis perubahan yang diinginkan, dan
+Nasabah tetap memberikan perintah untuk transaksi dengan tanpa memberikan tanggapan
+secara tertulis atas usul perubahan tersebut. Tindakan Nasabah tersebut dianggap setuju atas
+usul perubahan tersebut.
+</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_23" name="button_23" value="Ya" required>
+<label class="custom-control-label" for="button_23"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Penyelesaian Perselisihan</b> <br>
+
+<table class="table" width="100%" cellspacing="0">
+            <tr>
+                <td width="100%" style="border:0px !important;">
+                    <ol>
+                        <li>Semua perselisihan dan perbedaan pendapat yang timbul dalam pelaksanaan Perjanjian
+ini wajib diselesaikan terlebih dahulu secara musyawarah untuk mencapai mufakat
+antara Para Pihak.</li>
+                        <li>
+						Kantor atau kantor cabang Pialang Berjangka terdekat dengan domisili Nasabah tempat
+penyelesaian dalam hal terjadi perselisihan
+<table class="table" width="100%" cellspacing="0">
+<tr>
+<td>Daftar Kantor</td>
+<td>Kantor yang dipilih (salah satu)</td>
+</tr>
+<tr>
+<td>Kantor A</td>
+<td>
+
+<div class="custom-control custom-radio">
+<input type="radio" class="custom-control-input" id="office_authorization" name="office_authorization" v-model="forms.office_authorization" value="office_1" :checked="forms.office_authorization=='office_1'" required>
+<label class="custom-control-label" for="office_authorization">Pilih</label>
+</div>    
+Ruko Kopo Plaza Blok B No. 24, Jl. Peta (Lingkar Selatan), Suka Asih,
+Bojongloa Kaler-Bandung Jawa Barat
+</td>
+</tr>
+</table>
+						</li>
+<li>
+Apabila perselisihan dan perbedaan pendapat yang timbul tidak dapat diselesaikan
+secara musyawarah untuk mencapai mufakat, maka Para Pihak sepakat untuk
+menyelesaikan perselisihan melalui Badan Arbitrase Perdagangan Berjangka Komoditi
+(BAKTI) dengan prosedur beracara khusus terkait dengan Penerimaan Nasabah Secara
+Elektronik Online dengan Customer Due Diligence (CDD) Sederhana sesuai dengan
+peraturan BAKTI.
+</li>
+                    </ol>
+                </td>
+            </tr>
+          
+             
+        </table>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_24" name="button_24" value="Ya" required>
+<label class="custom-control-label" for="button_24"><b  style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+<li><b>Bahasa</b> <br>
+<p>Perjanjian ini dibuat dalam Bahasa Indonesia.</p>
+    
+<div class="custom-control custom-radio">
+<input type="checkbox" class="custom-control-input" id="button_25" name="button_25" value="Ya" required>
+<label class="custom-control-label" for="button_25"><b style="color:#eb4034;">Saya sudah membaca dan memahami</b></label>
+</div>
+<br>
+</li>
+
+</ol>
+
+</p>
+
+
+<p style="text-align:center;">
+Demikian Perjanjian Pemberian Amanat ini dibuat oleh Para Pihak dalam keadaan sadar,
+sehat jasmani rohani dan tanpa unsur paksaan dari pihak manapun.
+</p>
+
+<p style="text-align:center;">
+Dengan mengisi kolom <b>“YA”</b> di bawah, saya menyatakan bahwa saya telah
+</p>
+
+<p style="text-align:center;">
+menerima
+</p>
+
+<p style="text-align:center;">
+“PERJANJIAN PEMBERIAN AMANAT TRANSAKSI KONTRAK BERJANGKA”
+</p>
+
+<p style="text-align:center;">
+mengerti dan menyetujui isinya.
+</p>
+
+<p style="text-align:center;">
+“Saya telah membaca, mengerti dan setuju terhadap semua ketentuan yang tercantum dalam
+perjanjian ini”.
+</p>
+
+    </td>
+</tr>
 
 
 <tr>
     <td width="30%">Pernyataan menerima / Tidak </td>
     <td width="70%" colspan="2">
         <div class="custom-control custom-radio">
-            <input type="radio" class="custom-control-input" id="aggrement_trading_rules" name="aggrement_trading_rules" v-model="forms.aggrement_trading_rules" value="Ya" required>
-            <label class="custom-control-label" for="aggrement_trading_rules">Ya</label>
+            <input type="radio" class="custom-control-input" id="aggrement_electronic_authorization" name="aggrement_electronic_authorization" v-model="forms.aggrement_electronic_authorization" value="Ya" required>
+            <label class="custom-control-label" for="aggrement_electronic_authorization">Ya</label>
         </div>
         <div class="custom-control custom-radio">
-          <input type="radio" class="custom-control-input" id="aggrement_trading_rules" name="aggrement_trading_rules" v-model="forms.aggrement_trading_rules" value="Tidak" required>
-          <label class="custom-control-label" for="aggrement_trading_rules">Tidak</label>
+          <input type="radio" class="custom-control-input" id="aggrement_electronic_authorization" name="aggrement_electronic_authorization" v-model="forms.aggrement_electronic_authorization" value="Tidak" required>
+          <label class="custom-control-label" for="aggrement_electronic_authorization">Tidak</label>
         </div> </td>
 </tr>
 
 <tr>
     <td width="30%">Menerima pada Tanggal </td>
-    <td width="70%" colspan="2"> {{this.customLocalFormatter(currentDate)}}</td>
+    <td width="70%" colspan="2"> {{this.customLokalFormatter(currentDate)}}</td>
 </tr>
 
                </table>
@@ -752,10 +817,10 @@ export default {
       isLoading: false,
       webURL:window.webURL,
       maxToasts: 100,
+      pengadilan_negeri:'',
       idCode:'',
 	    url:'/public/client-files/',
       position: 'up right',
-      button_ya_tidak:'',
       closeBtn: true,
       jenis_rekening_others:'',
       jenis_rekening_others_2:'',
@@ -793,7 +858,7 @@ export default {
         },
         position: 'up right',
         closeBtn: true,
-      forms: {id : '', aggrement_trading_rules:'',status:''},
+      forms: {id : '', job_category: '' , job_position:'', country:'' , province:'' , city:'', area:'', sub_area:'', village:'', postal_code:'' , address:'',office_authorization:'', aggrement_electronic_authorization:'',status:''},
     }
   },
   watch: { 
@@ -801,8 +866,15 @@ export default {
   },
   methods: {
 
-    customLocalFormatter(date) {
+    customLokalFormatter(date) {
       return moment(date).format('DD-MM-YYYY');
+    },
+    checkPurposeStatus(stts){
+      if(stts == 'Badan Arbitrase Perdagangan Berjangka Komoditi (BAKTI)'){
+        return false;
+      }else{
+        return true;
+      }
     },
     diacak(id){
       var hashids = new Hashids('',1000,'abcdefghijklmnopqrstuvwxyz0987654321ABCDEFGHIJKLMNOPQRSTUVWXYZ'); // no padding
@@ -815,6 +887,22 @@ export default {
     backLink() {
 		  this.$router.go(-1);
     } ,
+    getDay(date) {
+       moment.locale('id');
+      return moment(date).format('dddd');
+    },
+    getTanggal(date) {
+       moment.locale('id');
+      return moment(date).format('DD');
+    },
+    getTahun(date) {
+       moment.locale('id');
+      return moment(date).format('YYYY');
+    },
+    getMonth(date) {
+       moment.locale('id');
+      return moment(date).format('MMMM');
+    },
     customFormatter(date) {
       return moment(date).format('YYYY-MM-DD');
     },
@@ -826,7 +914,7 @@ export default {
                 window.location.href = window.webURL; 
             }else{ 
                 if(response.data.status == 200){ 
-                    this.forms = response.data.data;
+                    this.forms = response.data.data; 
                 }else{
                     window.location.href = window.webURL; 
                 }
@@ -855,7 +943,7 @@ export default {
         confirmButtonText: 'Yes!'
       }).then((result) => {
           if (result.value) {
-              var data = {aggrement_trading_rules:this.forms.aggrement_trading_rules , id:this.forms.id , status:this.forms.status}
+            var data = {id : this.forms.id, aggrement_electronic_authorization:this.forms.aggrement_electronic_authorization ,office_authorization:this.forms.office_authorization, pengadilan_negeri:this.pengadilan_negeri,status:this.forms.status};
             axios.post('/clients-area/post-real-account/step-13', data).then(response => {
                 if(!response.data){ 
                   window.location.href = window.webURL; 
