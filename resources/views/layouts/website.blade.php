@@ -75,7 +75,7 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <a href="/">
-                    <h3 class="logo"><img src="{{asset('/public/assets/images/rajawali-kapital-berjangka-logo-biru.png')}}" alt="PT. Rajawali Kapital Berjangka - RKB" />Rajawali</h3>
+                    <h3 class="logo"><img src="{{asset('/public/assets/images/rajawali-kapital-berjangka-logo-biru.png')}}" alt="PT. Rajawali Kapital Berjangka - RKB" />@if(Config::get('app.locale') == 'id') Rajawali @else Eagle @endif</h3>
                 </a>
                 <i class="fas fa-times"></i>
             </div>
@@ -145,6 +145,18 @@
                     <li @if($menuName == 'danaPerusahaanWeb') class="active" @endif>
                         <a href="{{url('/dana-terpisah-perusahaan')}}"> Dana Terpisah</a>
                     </li>
+                </ul>
+            </div>
+            <div class="box-list" style="padding-bottom:10px;padding-top:10px;">
+                <p class="sub-title" style="padding: 0px 30px !important;">Language
+				<a href="javascript:void(0);" class="icon" onclick="menuLanguage()">
+					<i class="fa fa-caret-down"></i>
+				  </a>
+				</p>
+                <ul class="list-unstyled components" id="mymenuLanguage" style="display: none;"> 
+                    <li><a href="{{url('/en')}}"> English</a></li>
+                    <li><a href="{{url('/id')}}"> Indonesia</a></li>
+                    <li><a href="{{url('/cn')}}"> China</a></li>
                 </ul>
             </div>
             <div class="box-list">

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'Rajawali Kapital Berjangka',
+    'name' => 'Eagle Capital Futures Ltd',
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,13 @@ return [
     |
     */
 
-    'locale' => 'id',
+    'locale' => 'en',
+	'locales' => [
+		'en' => 'English',
+		'cn' => 'China',
+		'id' => 'Indonesia',
+		// Add as many languages you want
+	],
 
     /*
     |--------------------------------------------------------------------------

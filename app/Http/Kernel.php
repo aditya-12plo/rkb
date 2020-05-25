@@ -37,10 +37,6 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-			/*
-			* multiple language
-			*/
-            \App\Http\Middleware\Localization::class,
         ],
 
         'api' => [
@@ -69,6 +65,7 @@ class Kernel extends HttpKernel
         'checkuserstatus' => \App\Http\Middleware\CheckUserStatus::class,
         'rajawali.auth' => AdminRedirectIfNotAuthenticated::class,
         'rajawali.guest' => AdminRedirectIfAuthenticated::class,
+        'localized' => \App\Http\Middleware\Localization::class, // change language middlewera
     ];
 
     /**

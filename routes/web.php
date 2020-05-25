@@ -1,5 +1,20 @@
 <?php 
  
+ Route::middleware(['localized'])->group(function () {
+    Route::get('/', 'IndexController@index'); 
+    
+    
+    
+    Route::get('/personal-account', 'IndexController@akunIndividu')->name('personalAccount');
+    Route::get('/akun-individu', 'IndexController@akunIndividu')->name('personalAccount');
+    
+    
+    Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
+    Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);
+        
+});
+
+ /*
 Route::get('/', ['as' => 'indexWeb', 'uses' => 'IndexController@index']);
 Route::get('/get-json-country', ['as' => 'getJsonCountry', 'uses' => 'IndexController@getJsonCountry']);
 Route::get('/profil-perusahaan', ['as' => 'profilPerusahaanWeb', 'uses' => 'IndexController@profilPerusahaan']);
@@ -183,3 +198,4 @@ Route::get('/get-list-newslatters', 'NewslatterController@index')->name('Rajawal
 Route::post('/download-newslatters', 'NewslatterController@download')->name('Rajawali.downloadNewslatter');
 });
 
+*/

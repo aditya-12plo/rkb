@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        app()->setLocale(request()->segment(1));
         Schema::defaultStringLength(191);
         Validator::extend('image64', function ($attribute, $value, $parameters, $validator) {
               $type = explode('/', explode(':', substr($value, 0, strpos($value, ';')))[1])[1];

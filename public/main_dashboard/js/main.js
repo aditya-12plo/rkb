@@ -245,15 +245,24 @@ $(function () {
 });
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function menuProduct() {
-  var x = document.getElementById("mymenuProduct");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+function menuLanguage() {
+    var x = document.getElementById("mymenuLanguage");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
   }
-}
 
+  function menuProduct() {
+    var x = document.getElementById("mymenuProduct");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+    
 function menuAccount() {
   var x = document.getElementById("mymenuAccount");
   if (x.style.display === "block") {

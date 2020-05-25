@@ -63,16 +63,21 @@ class Handler extends ExceptionHandler
 		}
         if($this->isHttpException($exception))
         {
+			$config = app('config');
+			$default_locale = $config['app.locale'];
             switch ($exception->getStatusCode()) {
                 case 404:
-                return redirect()->route('pagenotfound');
+                // return redirect()->route('pagenotfound');
+                return redirect('/'.$default_locale.'/page-not-found');
                     break;
                 case 500:
-                return redirect()->route('servererror');
+                // return redirect()->route('servererror');
+                return redirect('/'.$default_locale.'/server-error');
                     break;
                 
                 default:
-                    return $this->route('pagenotfound');
+                    // return $this->route('pagenotfound');
+                return redirect('/'.$default_locale.'/server-error');
                     break;
             }
         }

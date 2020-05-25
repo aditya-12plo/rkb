@@ -13,7 +13,9 @@ class IndexController extends Controller
 {
 	
 	public function __construct(){
-        $this->keywords = 'rejawali kapital berjangka, rajawali, rajawali kapital, broker forex, broker indonesia, indonesia, broker oil, broker gold,rkb broker, berjangka forex, global kapital, rajawali kapital forex , rkb trade, komoditi indonesia';
+        $this->keywords = 'rajawali kapital berjangka, rajawali, rajawali kapital, broker forex, broker indonesia, indonesia, broker oil, broker gold,rkb broker, berjangka forex, global kapital, rajawali kapital forex , rkb trade, komoditi indonesia';
+        $this->keywordsEn = 'eagle capital futures ltd, eagle capital futures, eagle capital, eagle futures , broker forex, commodities, futures, oil, gold, indonesia commodity,';
+        $this->keywordsCn = 'eagle capital futures ltd, eagle capital futures, eagle capital, eagle futures , broker forex, commodities, futures, oil, gold, indonesia commodity, 鹰资本期货有限公司，鹰资本期货，鹰资本，鹰期货，经纪人外汇，商品，期货，石油，黄金，印度尼西亚商品，';
 		$agent = new Agent();
         if($agent->isMobile()){
             $this->data['isMobile'] = true;
@@ -24,13 +26,28 @@ class IndexController extends Controller
 	}
 	
 	public function index(){ 
-        $this->data['title'] = 'Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+
+        
+		$config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd';
+			$this->data['description'] = 'Eagle Capital Futures Ltd exists as a company or broker that relies on the goal of providing benefits and contributions to the community.';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd';
+			$this->data['description'] = 'Eagle Capital Futures Ltd 作为一家公司或经纪人存在，其目标是为社区提供利益和贡献.';
+		}else{
+			$this->data['title'] = 'Rajawali Kapital Berjangka';
+			$this->data['description'] = 'Rajawali Kapital Berjangka hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+		}
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
         $this->data['keywords'] = $this->keywords;
         $this->data['banners'] =  Models\Banners::orderBy('sequence','ASC')->get();
 		 
         return view('website.index')->with($this->data);
+
     }
 
 	public function kebijakanPrivasi(){ 
