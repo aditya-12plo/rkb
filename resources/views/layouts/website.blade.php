@@ -142,10 +142,12 @@
 				  </a></p>
                 <ul class="list-unstyled components" id="mymenuAboutUs" style="display: none;"> 
                     <li @if($menuName == 'profilPerusahaanWeb') class="active" @endif>
-                        <a href="{{url('/profil-perusahaan')}}"> @if(Config::get('app.locale') == 'id')Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif </a>
+                            @if(Config::get('app.locale') == 'id') <a href="{{url('/profil-perusahaan')}}"> @else <a href="{{url('/company-profile')}}"> @endif
+                            @if(Config::get('app.locale') == 'id')Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif </a>
                     </li>
                     <li @if($menuName == 'danaPerusahaanWeb') class="active" @endif>
-                        <a href="{{url('/dana-terpisah-perusahaan')}}">@if(Config::get('app.locale') == 'id')Dana Terpisah @elseif(Config::get('app.locale') == 'cn') 分开的资金 @else Separate Funds @endif  </a>
+                            @if(Config::get('app.locale') == 'id') <a href="{{url('/dana-terpisah-perusahaan')}}"> @else <a href="{{url('/separate-company-funds')}}"> @endif
+                            @if(Config::get('app.locale') == 'id')Dana Terpisah @elseif(Config::get('app.locale') == 'cn') 分开的资金 @else Separate Funds @endif  </a>
                     </li>
                 </ul>
             </div>
@@ -183,7 +185,8 @@
                  <a href="@if(Config::get('app.locale') == 'id') /daftar-akun-demo @else /register-demo-account @endif"><p class="md-trigger box-lang" data-modal="modal-demo" style="color:white;margin: 35px 0px 0 40px !important;">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else DEMO ACCOUNT @endif </p></a>
             </div>
             <div class="box-language">
-                <a href="daftar-akun-real"> <p class="md-trigger box-lang" data-modal="modal-real" style="color:white;">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</p></a>
+                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif
+                 <p class="md-trigger box-lang" data-modal="modal-real" style="color:white;">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</p></a>
             </div>
             @else
              <div id="root">
@@ -192,7 +195,7 @@
                  <a href="@if(Config::get('app.locale') == 'id') /daftar-akun-demo @else /register-demo-account @endif"><p class="md-trigger box-lang" data-modal="modal-demo"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo Account @endif</span></p></a>
             </div>
             <div class="box-language">
-                <a href="/daftar-akun-real"><p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</span></p></a>
+                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</span></p></a>
             </div>
             @endif 
         </nav>
@@ -256,7 +259,7 @@
                         <li>Meta Trader 5</li>
                     </ul>
                 </div>
-                <a href="/daftar-akun-real"><button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
+                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -276,7 +279,7 @@
                         <li>Meta Trader 5</li>
                     </ul>
                 </div>
-                <a href="/daftar-akun-real"><button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
+                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
             </div>
         </div>
 
@@ -406,7 +409,8 @@
                                 </h3>
                                 <ul>
                                     <li><a href="{{url('/')}}">@if(Config::get('app.locale') == 'id') Beranda @elseif(Config::get('app.locale') == 'cn') 家 @else Home @endif</a></li>
-                                    <li><a href="{{url('/profil-perusahaan')}}">@if(Config::get('app.locale') == 'id') Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif</a></li>
+                                    <li>@if(Config::get('app.locale') == 'id') <a href="{{url('/profil-perusahaan')}}"> @else <a href="{{url('/company-profile')}}"> @endif
+                                        @if(Config::get('app.locale') == 'id') Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif</a></li>
                                     <li><a href="{{url('/akun-individu')}}">@if(Config::get('app.locale') == 'id') Akun Individu @elseif(Config::get('app.locale') == 'cn') 个人账户 @else Individual Account @endif</a></li>
                                     <li><a href="{{url('/akun-institusi')}}">@if(Config::get('app.locale') == 'id') Akun Institusi @elseif(Config::get('app.locale') == 'cn') 机构账户 @else Institutional Account @endif</a></li>
                                     <li>@if(Config::get('app.locale') == 'id') <a href="{{url('/kebijakan-privasi')}}"> @else <a href="{{url('/privacy-policy')}}"> @endif 

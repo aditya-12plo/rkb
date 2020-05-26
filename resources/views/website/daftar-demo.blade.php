@@ -90,7 +90,7 @@
                                 <label class="policy-terms" id="policyLabel" for="terms_and_conditions">
                                     @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="/kebijakan-privasi" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
                                     {{-- text turun --}}
-                                    @elseif(Config::get('app.locale') == 'cn') 我已阅读并同意 <a href="/privacy-policy" style="color:#eab016;" target="_blank">隐私政策</a>
+                                    {{-- @elseif(Config::get('app.locale') == 'cn') 我已阅读并同意 <a href="/privacy-policy" style="color:#eab016;" target="_blank">隐私政策</a> --}}
                                     @else I have read and agree <a href="/privacy-policy" style="color:#eab016;" target="_blank">Privacy policy</a> 
                                     @endif
                                 

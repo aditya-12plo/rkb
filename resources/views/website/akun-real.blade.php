@@ -6,20 +6,20 @@
             <div class="box-info-reg col-12 col-lg-6 align-self-center">
                 <div class="sign-up-info mobile-off">
                     <div class="sign-info-page">
-                    <h3>Terhubung dengan jutaan investor di platform perdagangan yang langsung ditransaksikan di dalam  <font style="color:#f18109 !important;">Bursa</font></h3>
+                    <h3>@if(Config::get('app.locale') == 'id') Terhubung dengan jutaan investor di platform perdagangan yang langsung ditransaksikan di dalam  <font style="color:#f18109 !important;">Bursa</font></h3> @elseif(Config::get('app.locale') == 'cn') 在直接在<font style="color:#f18109 !important;">交易所</font>交易的交易平台上与数百万投资者联系 @else Connect with millions of investors on a trading platform that is directly traded on <font style="color:#f18109 !important;">the exchange</font> @endif
 
                         <ul class="seperator">
                             <li>
                                 <img src="/public/assets/images/news.png" alt="" />
-                                <p>Kami disahkan oleh regulator di Indonesia.</p>
+                                <p>@if(Config::get('app.locale') == 'id') Kami disahkan oleh regulator di Indonesia. @elseif(Config::get('app.locale') == 'cn') 我们已获得印度尼西亚监管机构的授权。 @else We are authorized by regulators in Indonesia. @endif</p>
                             </li>
                             <li>
                                 <img src="/public/assets/images/user.png" alt="" />
-                                <p>Kami menghargai dan menghormati privasi Anda.</p>
+                                <p>@if(Config::get('app.locale') == 'id') Kami menghargai dan menghormati privasi Anda. @elseif(Config::get('app.locale') == 'cn') 我们尊重并尊重您的隐私。 @else We respect and respect your privacy. @endif</p>
                             </li>
                             <li>
                                 <img src="/public/assets/images/privacy.png" alt="" />
-                                <p> Dana Anda disimpan dengan aman di lembaga kliring.</p>
+                                <p>@if(Config::get('app.locale') == 'id') Dana Anda disimpan dengan aman di lembaga kliring. @elseif(Config::get('app.locale') == 'cn') 您的资金安全地存放在交换所中。 @else Your funds are deposited safely at the clearing house. @endif</p>
                             </li>
                         </ul>
 
@@ -28,12 +28,12 @@
                     <div class="risk-disclaimer seperator">
                     <div class="component-1">
                                 <div class="title-right-component">
-                                    <h3>Butuh Bantuan ?</h3>
+                                    <h3>@if(Config::get('app.locale') == 'id') Butuh Bantuan ? @elseif(Config::get('app.locale') == 'cn') 需要帮忙 ？ @else Need Help ? @endif</h3>
                                 </div>
                                 <div class="body-right-component">
-                                <p>Telepon : +62 222 0585 060</p>
-                                <p>Fax : +62 222 0582 219</p>
-                                <p>Email : INFO@RAJAWALIKAPITAL.CO.ID</p>
+                                    <p>@if(Config::get('app.locale') == 'id') Telepon @elseif(Config::get('app.locale') == 'cn') 电话 @else Phone @endif :  +6222 2058 5060</p>
+                                    <p>@if(Config::get('app.locale') == 'cn') 传真: +62 222 0582 219 @else Fax : +62 222 0582 219 @endif</p>
+                                    <p>@if(Config::get('app.locale') == 'cn') 电子邮件 @else Email @endif : INFO@RAJAWALIKAPITAL.CO.ID</p>
                                 </div>
                             </div>
                     </div>
@@ -47,32 +47,32 @@
             <div class="box-login registration col-12 col-lg-4 align-self-center">
             @endif
 
-                <div class="title-form"><h3 class="reg-title">Daftar Akun Real</h3></div>
+                <div class="title-form"><h3 class="reg-title">@if(Config::get('app.locale') == 'id') Daftar Akun Real @elseif(Config::get('app.locale') == 'cn') 注册真实账户 @else Register Real Account @endif</h3></div>
 
                 <form name="daftar-akun-real" action="/daftar-akun-real" method="POST">
                 @csrf
 
                     <div class="login-main-form">
 
-                         <input id="name" class="input-stl" name="name" placeholder="Nama Lengkap" type="text" required="">
+                         <input id="name" class="input-stl" name="name" placeholder="@if(Config::get('app.locale') == 'id') Nama Lengkap @elseif(Config::get('app.locale') == 'cn') 全名 @else Full name @endif" type="text" required="">
                         @if ($errors->has('name'))
                                         <span class="help-block">
                                             <p class="error" style="color:#FFBABA;"><strong> {{ $errors->first('name') }} </strong></p>
                                         </span>
                         @endif
-                        <input id="phoneNumber" class="input-stl"  onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" minlength="5" maxlength="15" autocomplete="off" name="phoneNumber" placeholder="Telepon" type="text" required="">
+                        <input id="phoneNumber" class="input-stl"  onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" minlength="5" maxlength="15" autocomplete="off" name="phoneNumber" placeholder="@if(Config::get('app.locale') == 'id') Telepon @elseif(Config::get('app.locale') == 'cn') 电话号码 @else Phone Number @endif" type="text" required="">
                         @if ($errors->has('phoneNumber'))
                                         <span class="help-block">
                                             <p class="error" style="color:#FFBABA;"><strong> {{ $errors->first('phoneNumber') }} </strong></p>
                                         </span>
                         @endif
-                        <input id="email" class="input-stl" name="email" placeholder="Email" type="email" required="">
+                        <input id="email" class="input-stl" name="email" placeholder="@if(Config::get('app.locale') == 'cn') 电子邮件 @else Email @endif" type="email" required="">
                         @if ($errors->has('email'))
                                         <span class="help-block">
                                             <p class="error" style="color:#FFBABA;"><strong> {{ $errors->first('email') }} </strong></p>
                                         </span>
                         @endif
-                        <input id="referral_code" class="input-stl" name="referral_code" placeholder="Kode Refferal" type="text">
+                        <input id="referral_code" class="input-stl" name="referral_code" placeholder="@if(Config::get('app.locale') == 'id') Kode Refferal @elseif(Config::get('app.locale') == 'cn') 推荐码 @else Referral Code @endif" type="text">
                         @if ($errors->has('referral_code'))
                                         <span class="help-block">
                                             <p class="error" style="color:#FFBABA;"><strong> {{ $errors->first('referral_code') }} </strong></p>
@@ -89,18 +89,22 @@
                               <div id="login-remember-me">
                                 <input type="checkbox" class="e-cb-input terms" id="cb1" name="newslater_register" value="1">
                                 <label class="terms-cond" id="termsLabel" for="cb1">
-                                Saya setuju untuk menerima berita dan email promosi dari Rajawali Kapital Berjangka
+                                    @if(Config::get('app.locale') == 'id') Saya setuju untuk menerima berita dan email promosi dari Rajawali Kapital Berjangka @elseif(Config::get('app.locale') == 'cn') 我同意从Eagle Capital Futures Ltd接收新闻和促销电子邮件 @else I agree to receive news and promotional emails from Eagle Capital Futures Ltd @endif
                                 </label>
                             </div>
                             <div class="login-more-forgot register-policy">
                                 <input type="checkbox" class="e-cb-input policy" id="terms_and_conditions" value="1" name="terms_and_conditions" required="">
                                 <label class="policy-terms" id="policyLabel" for="terms_and_conditions">
-                                Saya telah membaca dan setuju <a href="/kebijakan-privasi" style="color:#eab016;" target="_blank">kebijakan privasi</a>
+                                    @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="/kebijakan-privasi" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
+                                    {{-- text turun --}}
+                                    {{-- @elseif(Config::get('app.locale') == 'cn') 我已阅读并同意 <a href="/privacy-policy" style="color:#eab016;" target="_blank">隐私政策</a> --}}
+                                    @else I have read and agree <a href="/privacy-policy" style="color:#eab016;" target="_blank">Privacy policy</a> 
+                                    @endif
                                 </label>
                             </div>
                         </div>
                         <div class="login-btn-wrapp">
-                            <button automation-id="login-sts-btn-sign-in" class="">Daftar</button>
+                            <button automation-id="login-sts-btn-sign-in" class="">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button>
                         </div>
                     </div>
                 </form>

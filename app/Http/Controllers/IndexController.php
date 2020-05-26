@@ -97,33 +97,72 @@ class IndexController extends Controller
     }
 
 	public function akunReal(){ 
-        $this->data['title'] = 'Daftar Akun Real di Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Pendaftaran akun real di Rajawali kapital berjangka.';
+        $config = app('config');
+        $default_locale = $config['app.locale']; 
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Register a Real Account in Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Real account registration in Eagle Capital Futures Ltd.';
+            $this->data['keywords'] = $this->keywords.', trading account registration, trading account, capital eagle account';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '在Eagle Capital Futures Ltd中注册真实账户';
+            $this->data['description'] = '在Eagle Capital Futures Ltd.中进行真实帐户注册';
+            $this->data['keywords'] = $this->keywords.', trading account registration, trading account, capital eagle account，交易账户注册，交易账户，资本鹰账户';
+		}else{
+			$this->data['title'] = 'Daftar Akun Real di Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Pendaftaran akun real di Rajawali kapital berjangka.';
+            $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
+		}
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
 		 
         return view('website.akun-real')->with($this->data);
     }
  
 	public function profilPerusahaan(){ 
-        $this->data['title'] = 'Profil Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Rajawali kapital berjangka adalah perusahaan broker anggota Bursa Komoditi dan Derivatif
-        Indonesia (ICDX) yang terpercaya, yang saat ini fokus di Asia Tenggara yang menyediakan
-        layanan untuk para customer baik retail maupun corporate dalam melakukan transaksi produk-
-        produk berjangka komoditi yang transaksinya langsung di dalam bursa.';
+        $config = app('config');
+        $default_locale = $config['app.locale']; 
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Profile of Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Real account registration in Eagle Capital Futures Ltd.';
+            $this->data['keywords'] = $this->keywords.',eagle capital futures profiles, rkb profiles';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '老鹰资本期货简介';
+            $this->data['description'] = 'Rajawali capital futures is a brokerage company that is a member of the Commodity and Derivatives Exchange
+            Trusted Indonesia (ICDX), which currently focuses on providing Southeast Asia
+            services for both retail and corporate customers in conducting commodity-futures product transactions that are transacted directly on the exchange.';
+            $this->data['keywords'] = $this->keywords.',eagle capital futures ltd profiles, rkb profiles,rkb 个人资料, eagle capital futures ltd 个人资料';
+		}else{
+			$this->data['title'] = 'Profil Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali kapital berjangka adalah perusahaan broker anggota Bursa Komoditi dan Derivatif
+            Indonesia (ICDX) yang terpercaya, yang saat ini fokus di Asia Tenggara yang menyediakan
+            layanan untuk para customer baik retail maupun corporate dalam melakukan transaksi produk-
+            produk berjangka komoditi yang transaksinya langsung di dalam bursa.';
+            $this->data['keywords'] = $this->keywords.',profil rajawali kapital berjangka,profil rkb';
+		}
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',profil rajawli kapital berjangka,profil rkb';
 		 
         return view('website.profil-perusahaan')->with($this->data);
     }
 	
  
 	public function danaPerusahaan(){ 
-        $this->data['title'] = 'Dana Terpisah Perusahaan';
-        $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+        $config = app('config');
+        $default_locale = $config['app.locale']; 
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Separate Funds of the Company';
+            $this->data['description'] = 'Segregated Account is an account whose purpose is intended only for the needs of customer transactions and to settle obligations arising from transaction requests from customers. The use of separate accounts is regulated and monitored by the Commodity Futures Trading Regulatory Agency (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',separate funds, commodity futures trading watchdogs, bappebti, commodity exchanges';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '公司自有资金';
+            $this->data['description'] = '隔离帐户是一种帐户，其目的仅用于满足客户交易的需要并解决因客户的交易请求而产生的义务。 商品期货交易监管机构（BAPPEBTI）对单独帐户的使用进行监管。';
+            $this->data['keywords'] = $this->keywords.',独立基金，商品期货交易监管机构，bappebti，商品交易所, separate funds, commodity futures trading watchdogs, bappebti, commodity exchanges';
+		}else{
+			$this->data['title'] = 'Dana Terpisah Perusahaan';
+            $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';
+            $this->data['keywords'] = $this->keywords.',dana terpisah,badan pengawas perdagangan berjangka komoditi, bappebti,bursa komoditi';
+		}
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',dana terpisah,badan pengawas perdagangan berjangka komoditi, bappebti,bursa komoditi';
-		 
+        
         return view('website.dana-perusahaan')->with($this->data);
     }
  
@@ -173,10 +212,24 @@ class IndexController extends Controller
     }
 
 	public function gofxGold(){ 
-        $this->data['title'] = 'GOLD - Produk GOFX';
-        $this->data['description'] = 'Gold produk GOFX. Emas adalah salah satu instrumen pengelola kekayaan tertua di dunia dan selama ribuan tahun telah dihargai sebagai mata uang global, komoditas, investasi, dan sekadar sebagai obyek kecantikan.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '黄金-GOFX产品';
+            $this->data['description'] = '黄金GOFX产品。 黄金是世界上最古老的财富管理工具之一，几千年来，它一直被视为全球货币，商品，投资以及仅仅是作为美丽的对象而被重视。';
+            $this->data['keywords'] = $this->keywords.',trading in gold, gold, commodity,交易黄金，黄金，商品';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'GOLD - GOFX products';
+            $this->data['description'] = 'Gold GOFX products. Gold is one of the oldest wealth management instruments in the world and for thousands of years it has been valued as a global currency, commodity, investment and simply as an object of beauty.';
+            $this->data['keywords'] = $this->keywords.',trading in gold, gold, commodity';
+		}else{
+            $this->data['title'] = 'GOLD - Produk GOFX';
+            $this->data['description'] = 'Gold produk GOFX. Emas adalah salah satu instrumen pengelola kekayaan tertua di dunia dan selama ribuan tahun telah dihargai sebagai mata uang global, komoditas, investasi, dan sekadar sebagai obyek kecantikan.';
+            $this->data['keywords'] = $this->keywords.',trading komoditi emas,emas,komoditi';
+        }
+       
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',trading komoditi emas,emas,komoditi';
 		 
         return view('website.gofx-gold')->with($this->data);
     }

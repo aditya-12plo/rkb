@@ -11,11 +11,22 @@
     Route::get('/institutional-account', 'IndexController@akunInstitusi')->name('institutionalAccount');
     Route::get('/akun-institusi', 'IndexController@akunInstitusi')->name('institutionalAccount');
 
-    Route::get('/privacy-policy', ['as' => 'kebijakanPrivasiPerusahaanWeb', 'uses' => 'IndexController@kebijakanPrivasi']);
-    Route::get('/kebijakan-privasi', ['as' => 'kebijakanPrivasiPerusahaanWeb', 'uses' => 'IndexController@kebijakanPrivasi']);
+    Route::get('/privacy-policy', 'IndexController@kebijakanPrivasi')->name('privacyPolicy');
+    Route::get('/kebijakan-privasi', 'IndexController@kebijakanPrivasi')->name('privacyPolicy');
     
-    Route::get('/daftar-akun-demo', ['as' => 'akunDemoPerusahaanWeb', 'uses' => 'IndexController@akunDemo']);
-    Route::get('/register-demo-account', ['as' => 'akunDemoPerusahaanWeb', 'uses' => 'IndexController@akunDemo']);
+    Route::get('/daftar-akun-demo', 'IndexController@akunDemo')->name('registerDemoAccount');
+    Route::get('/register-demo-account',  'IndexController@akunDemo')->name('registerDemoAccount');
+    
+    Route::get('/daftar-akun-real',  'IndexController@akunReal')->name('registerRealAccount');
+    Route::get('/register-real-account',  'IndexController@akunReal')->name('registerRealAccount');
+
+    Route::get('/company-profile',  'IndexController@profilPerusahaan')->name('companyProfile');
+    Route::get('/profil-perusahaan',  'IndexController@profilPerusahaan')->name('companyProfile');
+
+    Route::get('/dana-terpisah-perusahaan',  'IndexController@danaPerusahaan')->name('companyFunds');
+    Route::get('/separate-company-funds',  'IndexController@danaPerusahaan')->name('companyFunds');
+
+    Route::get('/gofx/gold',  'IndexController@gofxGold')->name('gofxGold');
     
     Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
     Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);
