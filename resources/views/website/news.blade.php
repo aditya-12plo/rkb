@@ -30,12 +30,12 @@
                         <div class="right-column">
                             <div class="component-1">
                                 <div class="title-right-component">
-                                    <h3>Butuh Bantuan ?</h3>
+                                    <h3>@if(Config::get('app.locale') == 'id') Butuh Bantuan ? @elseif(Config::get('app.locale') == 'cn') 需要帮忙 ？ @else Need Help ? @endif</h3>
                                 </div>
                                 <div class="body-right-component">
-                                <p>Telepon : +62 222 0585 060</p>
-                                <p>Fax : +62 222 0582 219</p>
-                                <p>Email : INFO@RAJAWALIKAPITAL.CO.ID</p>
+                                <p>@if(Config::get('app.locale') == 'id') Telepon @elseif(Config::get('app.locale') == 'cn') 电话 @else Phone @endif :  +6222 2058 5060</p>
+                                <p>@if(Config::get('app.locale') == 'cn') 传真: +62 222 0582 219 @else Fax : +62 222 0582 219 @endif</p>
+                                <p>@if(Config::get('app.locale') == 'cn') 电子邮件 @else Email @endif : INFO@RAJAWALIKAPITAL.CO.ID</p>
                                 </div>
                             </div>
 

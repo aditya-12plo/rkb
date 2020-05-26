@@ -117,7 +117,7 @@
                 </ul>
             </div>
             <div class="box-list">
-                <a href="{{url('/teknologi')}}" @if($menuName == 'technologyPerusahaanWeb') class="active" @endif>
+                    <a href="@if(Config::get('app.locale') == 'id') {{url('/teknologi')}} @else {{url('/technology')}} @endif" @if($menuName == 'technologyPerusahaanWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale') == 'id')Teknologi @elseif(Config::get('app.locale') == 'cn') 技术 @else Technology @endif </p>
                 </a>
             </div>
@@ -126,8 +126,8 @@
 						<i class="fa fa-caret-down"></i>
 					  </a></p>
 				<ul class="list-unstyled components" id="mymenuNews" style="display: none;"> 
-                    <li @if($menuName == 'econimiccalender') class="active" @endif><a href="{{url('/kalender-ekonomi')}}">@if(Config::get('app.locale') == 'id')Kalender Ekonomi @elseif(Config::get('app.locale') == 'cn') 经济日历 @else Economic Calendar @endif </a></li>
-                    <li @if($menuName == 'newsForexFactory') class="active" @endif><a href="{{url('/berita-ekonomi')}}">@if(Config::get('app.locale') == 'id')Berita @elseif(Config::get('app.locale') == 'cn') 新闻 @else News @endif </a></li>
+                    <li @if($menuName == 'econimiccalender') class="active" @endif><a href="@if(Config::get('app.locale') == 'id') {{url('/kalender-ekonomi')}} @else {{url('/economic-calendar')}} @endif">@if(Config::get('app.locale') == 'id')Kalender Ekonomi @elseif(Config::get('app.locale') == 'cn') 经济日历 @else Economic Calendar @endif </a></li>
+                    <li @if($menuName == 'newsForexFactory') class="active" @endif><a href="@if(Config::get('app.locale') == 'id') {{url('/berita-ekonomi')}} @else {{url('/economic-news')}} @endif">@if(Config::get('app.locale') == 'id')Berita @elseif(Config::get('app.locale') == 'cn') 新闻 @else News @endif </a></li>
                 </ul>
             </div>
             <div class="box-list">
@@ -164,7 +164,7 @@
                 </ul>
             </div>
             <div class="box-list">
-                <a href="{{url('/hubungi-kami')}}" @if($menuName == 'hubungiKamiWeb') class="active" @endif>
+                   <a href="@if(Config::get('app.locale') == 'id') {{url('/hubungi-kami')}} @else {{url('/contact-us')}} @endif" @if($menuName == 'hubungiKamiWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale') == 'id')Hubungi Kami @elseif(Config::get('app.locale') == 'cn') 联系我们 @else Contact Us @endif </p>
                 </a>
             </div>
@@ -212,7 +212,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 box-header-price">
-            <h3 class="title">@if(Config::get('app.locale') == 'id')Tipe <span>Akun @elseif(Config::get('app.locale') == 'cn') 帐户 <span>类型 @else Account <span>Type @endif </span></h3>
+            <h3 class="title">@if(Config::get('app.locale') == 'id')Tipe <span>Akun @elseif(Config::get('app.locale') == 'cn')<span>帐户 </span>类型 @else Account <span>Type @endif </span></h3>
             <div class="line-centered-circolar"></div>
             <p>
                 @if(Config::get('app.locale') == 'id')Kini Anda dapat memilih tipe akun sesuai dengan karakter trading anda. @elseif(Config::get('app.locale') == 'cn') 现在，您可以根据自己的交易特征选择帐户类型。 @else Now you can choose the type of account according to your trading character. @endif 

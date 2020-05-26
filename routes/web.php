@@ -2,9 +2,7 @@
  
  Route::middleware(['localized'])->group(function () {
     Route::get('/', 'IndexController@index'); 
-    
-    
-    
+
     Route::get('/personal-account', 'IndexController@akunIndividu')->name('personalAccount');
     Route::get('/akun-individu', 'IndexController@akunIndividu')->name('personalAccount');
 
@@ -28,6 +26,30 @@
 
     Route::get('/gofx/gold',  'IndexController@gofxGold')->name('gofxGold');
     
+    Route::get('/gofx/oil',  'IndexController@gofxOil')->name('gofxOil');
+
+    Route::get('/gofx/forex',  'IndexController@gofxForex')->name('gofxForex');
+
+    Route::get('/teknologi', 'IndexController@technology')->name('technology');
+    Route::get('/technology', 'IndexController@technology')->name('technology');
+    
+    Route::get('/partnership', 'IndexController@partnership')->name('partnership');
+
+    Route::get('/berita-pasar-terbaru', 'IndexController@newsPerusahaanWeb')->name('newsPerusahaanWeb');
+    Route::get('/latest-market-news', 'IndexController@newsPerusahaanWeb')->name('newsPerusahaanWeb');
+    
+    /*Route indexweb not definied
+    Route::get('/berita-pasar/{slug}', 'IndexController@newsDetailPerusahaanWeb')->name('newsDetailPerusahaanWeb');
+    */
+    Route::get('/hubungi-kami', 'IndexController@hubungiPerusahaan')->name('hubungiPerusahaan');
+    Route::get('/contact-us', 'IndexController@hubungiPerusahaan')->name('hubungiPerusahaan');
+    
+    Route::get('/berita-ekonomi', 'IndexController@newsForexFactory')->name('newsForexFactory');
+    Route::get('/economic-news', 'IndexController@newsForexFactory')->name('newsForexFactory');
+    
+    Route::get('/kalender-ekonomi', 'IndexController@econimicCalender')->name('econimicCalender');
+    Route::get('/economic-calendar', 'IndexController@econimicCalender')->name('econimicCalender');
+
     Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
     Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);
         

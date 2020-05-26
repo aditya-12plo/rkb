@@ -127,7 +127,7 @@ class IndexController extends Controller
             $this->data['keywords'] = $this->keywords.',eagle capital futures profiles, rkb profiles';
 		}elseif($default_locale == 'cn'){
 			$this->data['title'] = '老鹰资本期货简介';
-            $this->data['description'] = 'Rajawali capital futures is a brokerage company that is a member of the Commodity and Derivatives Exchange
+            $this->data['description'] = 'Eagle Capital futures is a brokerage company that is a member of the Commodity and Derivatives Exchange
             Trusted Indonesia (ICDX), which currently focuses on providing Southeast Asia
             services for both retail and corporate customers in conducting commodity-futures product transactions that are transacted directly on the exchange.';
             $this->data['keywords'] = $this->keywords.',eagle capital futures ltd profiles, rkb profiles,rkb 个人资料, eagle capital futures ltd 个人资料';
@@ -235,20 +235,48 @@ class IndexController extends Controller
     }
 
 	public function gofxOil(){ 
-        $this->data['title'] = 'Crude Oil - Produk GOFX';
-        $this->data['description'] = 'Crude Oil produk GOFX. Naik turunnya harga minyak dunia sangat mempengaruhi perekonomian global. Sebagai sumber bahan bakar utama harga minyak akan mempengaruhi biaya transportasi maupun biaya manufaktur sehingga mempengaruhi harga komoditi, barang dan jasa.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '原油-GOFX产品';
+            $this->data['description'] = '原油GOFX产品。 世界石油价格的上升和下降极大地影响了全球经济。 石油价格是主要的燃料来源，会影响运输成本和制造成本，从而影响商品，商品和服务的价格。';
+            $this->data['keywords'] = $this->keywords.', crude oil, trading of petroleum commodities, oil, petroleum, oil, commodities，原油，石油商品贸易，石油，石油，石油，商品';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Crude Oil - GOFX product';
+            $this->data['description'] = 'Crude Oil GOFX products. The rise and fall of world oil prices greatly affects the global economy. As the main fuel source, oil prices will affect transportation costs and manufacturing costs, thereby affecting the prices of commodities, goods and services.';
+            $this->data['keywords'] = $this->keywords.', crude oil, trading of petroleum commodities, oil, petroleum, oil, commodities';
+		}else{
+            $this->data['title'] = 'Crude Oil - Produk GOFX';
+            $this->data['description'] = 'Crude Oil produk GOFX. Naik turunnya harga minyak dunia sangat mempengaruhi perekonomian global. Sebagai sumber bahan bakar utama harga minyak akan mempengaruhi biaya transportasi maupun biaya manufaktur sehingga mempengaruhi harga komoditi, barang dan jasa.';
+            $this->data['keywords'] = $this->keywords.',crude oil,trading komoditi minyak bumi,oil,minyak bumi,minyak,komoditi';
+        }
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',crude oil,trading komoditi minyak bumi,oil,minyak bumi,minyak,komoditi';
-		 
+
+
         return view('website.gofx-oil')->with($this->data);
     }
 
 	public function gofxForex(){ 
-        $this->data['title'] = 'Forex - Produk GOFX';
-        $this->data['description'] = 'Forex produk GOFX.Pasar FX adalah pasar modal terbesar dan terdalam di dunia. Ini diperdagangkan hampir sepanjang waktu, di seluruh dunia, setiap hari.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '外汇-GOFX产品';
+            $this->data['description'] = '外汇GOFX产品。 外汇市场是世界上最大和最深的资本市场。 它几乎每天都在世界各地进行交易。';
+            $this->data['keywords'] = $this->keywords.', forex trading, playing forex, foreign exchange trading，外汇交易，玩外汇，外汇交易';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Forex - GOFX products';
+            $this->data['description'] = 'Forex GOFX products. The FX market is the largest and deepest capital market in the world. It is traded almost all the time, all over the world, every day.';
+            $this->data['keywords'] = $this->keywords.', forex trading, playing forex, foreign exchange trading';
+		}else{
+            $this->data['title'] = 'Forex - Produk GOFX';
+            $this->data['description'] = 'Forex produk GOFX.Pasar FX adalah pasar modal terbesar dan terdalam di dunia. Ini diperdagangkan hampir sepanjang waktu, di seluruh dunia, setiap hari.';
+            $this->data['keywords'] = $this->keywords.',forex trading,bermain forex, trading valuta asing';
+        }
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',forex trading,bermain forex, trading valuta asing';
-		 
+        
         return view('website.gofx-forex')->with($this->data);
     }
 
@@ -304,29 +332,71 @@ class IndexController extends Controller
     }
 
 	public function hubungiPerusahaan(){
-        $this->data['title'] = 'Hubungi Kami';
-        $this->data['description'] = 'PT. Rajawali Kapital Berjangka beralamat di Ruko Kopo Plaza Blok B no 24 jl. peta (lingkar selatan) Kota Bandung,Jawa Barat';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '联系我们';
+            $this->data['description'] = 'Eagle Capital Futures Ltd位于Ruko Kopo Plaza Blok B no 24 jl。 Peta（lingkar selatan）西爪哇省万隆市。';
+            $this->data['keywords'] = $this->keywords.', Eagle Capital Futures Ltd, 鹰资本期货有限公司';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Contact us';
+            $this->data['description'] = 'Eagle Capital Futures Ltd is located at Ruko Kopo Plaza Blok B no 24 jl. peta (lingkar selatan) Bandung City, West Java.';
+            $this->data['keywords'] = $this->keywords.', Eagle Capital Futures Ltd';
+		}else{
+            $this->data['title'] = 'Hubungi Kami';
+            $this->data['description'] = 'PT. Rajawali Kapital Berjangka beralamat di Ruko Kopo Plaza Blok B no 24 jl. peta (lingkar selatan) Kota Bandung,Jawa Barat.';
+            $this->data['keywords'] = $this->keywords.',Rajawali Kapital Berjangka';
+        }
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',Rajawali Kapital Berjangka';
-		 
+        
         return view('website.hubungi-perusahaan')->with($this->data);
     }
 
 
 	public function technology(){ 
-        $this->data['title'] = 'Teknologi di Rajawali Kapital Berjangka';
-        $this->data['description'] = 'MetaTrader 5 merupakan platform trading yang paling populer di seluruh dunia. Kami memberikan kemudahan untuk para Trader agar bisa bertransaksi produk Gold, Oil & Forex langsung di Bursa melalui platform MT 5.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd中的技术';
+            $this->data['description'] = 'MetaTrader 5是全球最受欢迎的交易平台。 我们使交易者可以通过MT 5平台直接在交易所上轻松交易黄金，石油和外汇产品。';
+            $this->data['keywords'] = $this->keywords.', meta trader, meta 5.5, meta，元交易者，元5.5，元';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Technology in Eagle Capital Futures Ltd';
+            $this->data['description'] = 'MetaTrader 5 is the most popular trading platform in the whole world. We make it easy for traders to trade Gold, Oil & Forex products directly on the Exchange through the MT 5 platform.';
+            $this->data['keywords'] = $this->keywords.', meta trader, meta 5.5, meta';
+		}else{
+            $this->data['title'] = 'Teknologi di Rajawali Kapital Berjangka';
+            $this->data['description'] = 'MetaTrader 5 merupakan platform trading yang paling populer di seluruh dunia. Kami memberikan kemudahan untuk para Trader agar bisa bertransaksi produk Gold, Oil & Forex langsung di Bursa melalui platform MT 5.';
+            $this->data['keywords'] = $this->keywords.',meta trader, meta 5,5,meta';
+        }
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',meta trader, meta 5,5,meta';
-		 
+        
         return view('website.technology')->with($this->data);
     }
     
 	public function partnership(){ 
-        $this->data['title'] = 'Teknologi di Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Sebagai salah satu real broker tepercaya di Indonesia, Rajawali Kapital memberikan peluang pertnership bagi seluruh nasabah dan  anda yang ingin mendapatkan penghasilan tambahan dari networking anda yang anda ajak untuk bertransaksi melalui kami. ';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = 'Eagle Capital Futures Ltd中的技术';
+            $this->data['description'] = '作为印度尼西亚值得信赖的真实经纪人之一，Rajawali Kapital为所有客户以及希望从您的网络中赚取额外收入的客户（您邀请他们通过我们进行交易）提供了合作机会。';
+            $this->data['keywords'] = $this->keywords.', partnership, 合伙';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Technology in Eagle Capital Futures Ltd';
+            $this->data['description'] = 'As one of the trusted real brokers in Indonesia, Eagle Capital provides a partnership opportunity for all customers and those of you who want to earn extra income from your networking that you invite to transact through us.';
+            $this->data['keywords'] = $this->keywords.', partnership';
+		}else{
+            $this->data['title'] = 'Teknologi di Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Sebagai salah satu real broker tepercaya di Indonesia, Rajawali Kapital memberikan peluang pertnership bagi seluruh nasabah dan  anda yang ingin mendapatkan penghasilan tambahan dari networking anda yang anda ajak untuk bertransaksi melalui kami. ';
+            $this->data['keywords'] = $this->keywords.',partnership';
+        }
+        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',partnership';
+        
 		 
         return view('website.partnership')->with($this->data);
     }
@@ -599,11 +669,24 @@ class IndexController extends Controller
     
 
 	public function newsPerusahaanWeb(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
 
-        $this->data['title'] = 'Berita Pasar';
-        $this->data['description'] = 'Pasar Komoditi adalah tempat jual beli barang dari sektor ekonomi primer, baik dalam bentuk fisik maupun melalui kontrak derivatif. Secara umum, ada dua jenis komoditi yang diperdagangkan, yaitu Soft Commodities dan Hard Commodities.';
+        if($default_locale == 'cn'){
+			$this->data['title'] = '市场新闻';
+            $this->data['description'] = '商品市场是从主要经济领域以实物形式和通过衍生合同买卖商品的地方。 通常，有两种商品交易，即软商品和硬商品。';
+            $this->data['keywords'] = $this->keywords.', commodity market news, market news, commodity markets, commodity market prices, commodity prices，商品市场新闻，市场新闻，商品市场，商品市场价格，商品价格';
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Market News';
+            $this->data['description'] = 'Commodity Market is a place for buying and selling goods from the primary economic sector, both in physical form and through derivative contracts. In general, there are two types of commodities traded, namely Soft Commodities and Hard Commodities.';
+            $this->data['keywords'] = $this->keywords.', commodity market news, market news, commodity markets, commodity market prices, commodity prices';
+		}else{
+            $this->data['title'] = 'Berita Pasar';
+            $this->data['description'] = 'Pasar Komoditi adalah tempat jual beli barang dari sektor ekonomi primer, baik dalam bentuk fisik maupun melalui kontrak derivatif. Secara umum, ada dua jenis komoditi yang diperdagangkan, yaitu Soft Commodities dan Hard Commodities.';
+            $this->data['keywords'] = $this->keywords.',berita pasar komoditi,berita pasar, pasar komoditi, harga pasar komoditi, harga komoditi';
+        }
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        $this->data['keywords'] = $this->keywords.',berita pasar komoditi,berita pasar, pasar komoditi, harga pasar komoditi, harga komoditi';
+        
 		 
         $this->data['news'] =  Models\News::orderBy('id','DESC')->paginate(10);
 
@@ -724,15 +807,29 @@ private function getBodyNews($string, $start, $end){
 	
 
 	public function econimicCalender(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '新闻日历-Ealge Capital Futures期货';
+            $this->data['description'] = '新闻日历-Ealge Capital Futures期货';
+            $this->data['keywords'] = 'capital eagle calendar futures, forexfactory.com, rkb, eagle, 大鹰日历期货，forexfactory.com，rkb，鹰'.$this->keywords;
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'News Calendar - Ealge Capital Futures';
+            $this->data['description'] = 'News Calendar - Ealge Capital Futures';
+            $this->data['keywords'] = 'capital eagle calendar futures, forexfactory.com, rkb, eagle'.$this->keywords;
+		}else{
+            $this->data['title'] = 'Kalender Berita - Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Kalender Berita - Rajawali Kapital Berjangka';
+            $this->data['keywords'] = 'kalender rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.$this->keywords;
+        }
 		// $forex = new Models\ForexFactory;
 		// $res = $forex->getCalender();
 		// $xml = simplexml_load_string($res);
 		// $str_replace = str_replace('timezone.php', '', $xml);
 		// $str_replace = str_replace('<a class="calendar__detail-link calendar__detail-link--graph-icon calendar_chart"></a>', '-', $str_replace);
-		$this->data['title'] = 'Kalender Berita - Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Kalender Berita - Rajawali Kapital Berjangka';
+		
         $this->data['imageseo'] = '';
-        $this->data['keywords'] = 'kalender rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.$this->keywords;
              
         // $this->data['forexFactory'] = $str_replace;
         return view('website.forex-factory-calender')->with($this->data);
@@ -750,7 +847,8 @@ private function getBodyNews($string, $start, $end){
 		// $str_replace = str_replace('<span>Exit Graph</span>', '', $str_replace);
 		// $str_replace = str_replace('<span>Graph</span>', '', $str_replace);
 		// $str_replace = str_replace('<span class="loader"></span>', '', $str_replace);
-		// $str_replace = str_replace('Exit Detail View', '<a href="/kalender-ekonomi">Exit Detail View</a>', $str_replace);
+        // $str_replace = str_replace('Exit Detail View', '<a href="/kalender-ekonomi">Exit Detail View</a>', $str_replace);
+        
 		$this->data['title'] = 'Kalender Ekonomi - Rajawali Kapital Berjangka';
         $this->data['description'] = 'Kalender Ekonomi - Rajawali Kapital Berjangka';
         $this->data['imageseo'] = '';
@@ -768,13 +866,27 @@ private function getBodyNews($string, $start, $end){
 		$xml = simplexml_load_string($res);
 		$str_replace = str_replace('<span>More</span>', '', $xml);
 		$str_replace = str_replace('<span class="loader"></span>', '', $str_replace);
-		$str_replace = str_replace('/news/', '/berita-ekonomi/', $str_replace);
-		$this->data['title'] = 'Berita Ekonomi - Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Berita Ekonomi - Rajawali Kapital Berjangka';
-        $this->data['imageseo'] = '';
-        $this->data['keywords'] = 'berita ekonomi rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.$this->keywords;
-        $this->data['newsForexFactory'] = $str_replace;
+        $str_replace = str_replace('/news/', '/berita-ekonomi/', $str_replace);
+        
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$this->data['title'] = '新闻日历-Ealge Capital Futures期货';
+            $this->data['description'] = '新闻日历-Ealge Capital Futures期货';
+            $this->data['keywords'] = 'economic news eagle capital futures, forexfactory.com, rkb, eagle, 经济新闻鹰资本期货，forexfactory.com，rkb，鹰'.$this->keywords;
+		}elseif($default_locale == 'en'){
+			$this->data['title'] = 'Economic News - Ealge Capital Futures';
+            $this->data['description'] = 'Economic News - Ealge Capital Futures';
+            $this->data['keywords'] = 'economic news eagle capital futures, forexfactory.com, rkb, eagle'.$this->keywords;
+		}else{
+            $this->data['title'] = 'Berita Ekonomi - Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Berita Ekonomi - Rajawali Kapital Berjangka';
+            $this->data['keywords'] = 'berita ekonomi rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.$this->keywords;
+        }
 		
+        $this->data['imageseo'] = '';
+        $this->data['newsForexFactory'] = $str_replace;
 		// echo $str_replace;
         return view('website.forex-factory-new')->with($this->data);
 		
@@ -785,8 +897,9 @@ private function getBodyNews($string, $start, $end){
 		$res = $forex->getDetailNews($id);
 		$text = $this->getBodyNews($res , '<ul class="flexBox__body" data-index="main">', '</ul>');
 		$myArray = explode('-', $id);
-		$implode = implode(" ",$myArray);
-		$this->data['title'] = 'Berita Ekonomi - '.$implode;
+        $implode = implode(" ",$myArray);
+        
+        $this->data['title'] = 'Berita Ekonomi - '.$implode;
         $this->data['description'] = 'Berita Ekonomi - Rajawali Kapital Berjangka '.$implode;
         $this->data['imageseo'] = '';
         $this->data['keywords'] = 'berita ekonomi rajawali kapital berjangka, forexfactory.com, rkb,rajawali'.implode(" ",$myArray) ;
