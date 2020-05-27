@@ -87,7 +87,6 @@ return [
 		'id' => 'Indonesia',
 		// Add as many languages you want
 	],
-
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale

@@ -13,7 +13,7 @@
                         <b>@if(Config::get('app.locale') == 'id') Kunci untuk kemitraan IB adalah terhubung dengan real broker yang luar biasa seperti kami @elseif(Config::get('app.locale') == 'cn') IB合作的关键是与像我们这样的杰出真实经纪人建立联系 @else The key to an IB partnership is to connect with exceptional real brokers like us @endif </b>
                         </p>
                         <p>
-                        @if(Config::get('app.locale') == 'id') Sebagai salah satu real broker tepercaya di Indonesia, Rajawali Kapital memberikan peluang pertnership bagi seluruh nasabah dan  anda yang ingin mendapatkan penghasilan tambahan dari networking anda yang anda ajak untuk bertransaksi melalui kami.  @elseif(Config::get('app.locale') == 'cn') 作为印度尼西亚值得信赖的真实经纪人之一，Eagle Capital @else As one of the trusted real brokers in Indonesia, Rajawali Capital provides a partnership opportunity for all customers and those of you who want to earn extra income from your networking that you invite to transact through us. @endif 
+                        @if(Config::get('app.locale') == 'id') Sebagai salah satu real broker tepercaya di Indonesia, Rajawali Kapital memberikan peluang pertnership bagi seluruh nasabah dan  anda yang ingin mendapatkan penghasilan tambahan dari networking anda yang anda ajak untuk bertransaksi melalui kami.  @elseif(Config::get('app.locale') == 'cn') 作为印度尼西亚值得信赖的真实经纪人之一，Eagle Capital @else As one of the trusted real brokers in Indonesia, Eagle Capital provides a partnership opportunity for all customers and those of you who want to earn extra income from your networking that you invite to transact through us. @endif 
                         </p>
                         <p>
                         @if(Config::get('app.locale') == 'id') Anda dan seluruh nasabah Rajawali Kapital berkesempatan menjadi partner kami dengan menjadi Introduction Broker (IB) @elseif(Config::get('app.locale') == 'cn') 您和所有Eagle Capital客户都有机会通过成为介绍经纪人（IB）成为我们的合作伙伴 @else You and all Eagle Capital customers have the opportunity to become our partners by becoming an Introduction Broker (IB) @endif  
@@ -70,10 +70,10 @@
                             <div class="login-more-forgot register-policy">
                                 <input type="checkbox" class="e-cb-input policy" id="terms_and_conditions" value="1" name="terms_and_conditions" required="">
                                 <label class="policy-terms" id="policyLabel" for="terms_and_conditions">
-                                        @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="/kebijakan-privasi" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
+                                        @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="{{url('/'. Config::get('app.locale').'/kebijakan-privasi')}}" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
                                         {{-- text turun --}}
                                         {{-- @elseif(Config::get('app.locale') == 'cn') 我已阅读并同意 <a href="/privacy-policy" style="color:#eab016;" target="_blank">隐私政策</a> --}}
-                                        @else I have read and agree <a href="/privacy-policy" style="color:#eab016;" target="_blank">Privacy policy</a> 
+                                        @else I have read and agree <a href="{{url('/'. Config::get('app.locale').'/privacy-policy')}}" style="color:#eab016;" target="_blank">Privacy policy</a> 
                                         @endif
                                 </label>
                             </div>

@@ -88,10 +88,10 @@
                             <div class="login-more-forgot register-policy">
                                 <input type="checkbox" class="e-cb-input policy" id="terms_and_conditions" value="1" name="terms_and_conditions" required="">
                                 <label class="policy-terms" id="policyLabel" for="terms_and_conditions">
-                                    @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="/kebijakan-privasi" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
+                                    @if(Config::get('app.locale') == 'id') Saya telah membaca dan setuju <a href="{{url('/'. Config::get('app.locale').'/kebijakan-privasi')}}" style="color:#eab016;" target="_blank">kebijakan privasi</a> 
                                     {{-- text turun --}}
                                     {{-- @elseif(Config::get('app.locale') == 'cn') 我已阅读并同意 <a href="/privacy-policy" style="color:#eab016;" target="_blank">隐私政策</a> --}}
-                                    @else I have read and agree <a href="/privacy-policy" style="color:#eab016;" target="_blank">Privacy policy</a> 
+                                    @else I have read and agree <a href="{{url('/'. Config::get('app.locale').'/privacy-policy')}}" style="color:#eab016;" target="_blank">Privacy policy</a> 
                                     @endif
                                 
                                 </label>

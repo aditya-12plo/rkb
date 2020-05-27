@@ -74,7 +74,7 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <a href="/">
+            <a href="/{{Config::get('app.locale')}}/">
                     <h3 class="logo"><img src="{{asset('/public/assets/images/rajawali-kapital-berjangka-logo-biru.png')}}" alt="PT. Rajawali Kapital Berjangka - RKB" />@if(Config::get('app.locale') == 'id') Rajawali @else Eagle @endif</h3>
                 </a>
                 <i class="fas fa-times"></i>
@@ -84,7 +84,7 @@
                 <a href="{{url('/clients-area')}}">@if(Config::get('app.locale') == 'cn') 登录客户端 @else Login Client @endif</a>
             </div>
             <div class="box-list">
-                <a href="/" @if($menuName == 'indexWeb') class="active" @endif>
+                <a href="/{{Config::get('app.locale')}}/" @if($menuName == 'indexWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale') == 'id')Beranda @elseif(Config::get('app.locale') == 'cn') 家 @else Home @endif</p>
                 </a>
             </div>
@@ -95,11 +95,11 @@
 				  </a></p>
                 <ul class="list-unstyled components" id="mymenuAccount" style="display: none;"> 
                     <li @if($menuName == 'akunIndividuPerusahaanWeb') class="active" @endif>
-                            @if(Config::get('app.locale') == 'id') <a href="{{url('/akun-individu')}}"> @else <a href="{{url('/personal-account')}}"> @endif
+                            <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/akun-individu')}} @else {{url('/'. Config::get('app.locale').'/personal-account')}} @endif">
                             @if(Config::get('app.locale') == 'id')Akun Individu @elseif(Config::get('app.locale') == 'cn') 个人账户 @else Individual Account @endif</a>
                     </li>
                     <li @if($menuName == 'akunInstitusiPerusahaanWeb') class="active" @endif>
-                            @if(Config::get('app.locale') == 'id') <a href="{{url('/akun-institusi')}}"> @else <a href="{{url('/institutional-account')}}"> @endif
+                            <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/akun-institusi')}} @else {{url('/'. Config::get('app.locale').'/institutional-account')}} @endif">
                             @if(Config::get('app.locale') == 'id')Akun Institusi @elseif(Config::get('app.locale') == 'cn') 机构账户 @else Institutional Account @endif</a>
                     </li>
                 </ul>
@@ -111,13 +111,13 @@
 				  </a>
 				</p>
                 <ul class="list-unstyled components" id="mymenuProduct" style="display: none;"> 
-                    <li @if($menuName == 'gofxGoldPerusahaanWeb') class="active" @endif><a href="{{url('/gofx/gold')}}"> @if(Config::get('app.locale')=='cn') 金 @else Gold @endif</a></li>
-                    <li @if($menuName == 'gofxOilPerusahaanWeb') class="active" @endif><a href="{{url('/gofx/oil')}}"> @if(Config::get('app.locale')=='cn') 油 @else Oil @endif</a></li>
-                    <li @if($menuName == 'gofxForexPerusahaanWeb') class="active" @endif><a href="{{url('/gofx/forex')}}">@if(Config::get('app.locale')=='cn') 外汇交易 @else Forex @endif </a></li>
+                    <li @if($menuName == 'gofxGoldPerusahaanWeb') class="active" @endif><a href="{{url('/'. Config::get('app.locale').'/gofx/gold')}}"> @if(Config::get('app.locale')=='cn') 金 @else Gold @endif</a></li>
+                    <li @if($menuName == 'gofxOilPerusahaanWeb') class="active" @endif><a href="{{url('/'. Config::get('app.locale').'/gofx/oil')}}"> @if(Config::get('app.locale')=='cn') 油 @else Oil @endif</a></li>
+                    <li @if($menuName == 'gofxForexPerusahaanWeb') class="active" @endif><a href="{{url('/'. Config::get('app.locale').'/gofx/forex')}}">@if(Config::get('app.locale')=='cn') 外汇交易 @else Forex @endif </a></li>
                 </ul>
             </div>
             <div class="box-list">
-                    <a href="@if(Config::get('app.locale') == 'id') {{url('/teknologi')}} @else {{url('/technology')}} @endif" @if($menuName == 'technologyPerusahaanWeb') class="active" @endif>
+                    <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/teknologi')}} @else {{url('/'. Config::get('app.locale').'/technology')}} @endif" @if($menuName == 'technologyPerusahaanWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale') == 'id')Teknologi @elseif(Config::get('app.locale') == 'cn') 技术 @else Technology @endif </p>
                 </a>
             </div>
@@ -126,12 +126,16 @@
 						<i class="fa fa-caret-down"></i>
 					  </a></p>
 				<ul class="list-unstyled components" id="mymenuNews" style="display: none;"> 
-                    <li @if($menuName == 'econimiccalender') class="active" @endif><a href="@if(Config::get('app.locale') == 'id') {{url('/kalender-ekonomi')}} @else {{url('/economic-calendar')}} @endif">@if(Config::get('app.locale') == 'id')Kalender Ekonomi @elseif(Config::get('app.locale') == 'cn') 经济日历 @else Economic Calendar @endif </a></li>
-                    <li @if($menuName == 'newsForexFactory') class="active" @endif><a href="@if(Config::get('app.locale') == 'id') {{url('/berita-ekonomi')}} @else {{url('/economic-news')}} @endif">@if(Config::get('app.locale') == 'id')Berita @elseif(Config::get('app.locale') == 'cn') 新闻 @else News @endif </a></li>
+                    <li @if($menuName == 'econimiccalender') class="active" @endif>
+                        <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/kalender-ekonomi')}} @else {{url('/'. Config::get('app.locale').'/economic-calendar')}} @endif">
+                        @if(Config::get('app.locale') == 'id')Kalender Ekonomi @elseif(Config::get('app.locale') == 'cn') 经济日历 @else Economic Calendar @endif </a></li>
+                    <li @if($menuName == 'newsForexFactory') class="active" @endif>
+                        <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/berita-ekonomi')}} @else {{url('/'. Config::get('app.locale').'/economic-news')}} @endif">
+                        @if(Config::get('app.locale') == 'id')Berita @elseif(Config::get('app.locale') == 'cn') 新闻 @else News @endif </a></li>
                 </ul>
             </div>
             <div class="box-list">
-                <a href="{{url('/partnership')}}" @if($menuName == 'partnershipPerusahaanWeb') class="active" @endif>
+                <a href="{{url('/'. Config::get('app.locale').'/partnership')}}" @if($menuName == 'partnershipPerusahaanWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale')=='cn') 合伙 @else Partnership @endif </p>
                 </a>
             </div>
@@ -142,11 +146,11 @@
 				  </a></p>
                 <ul class="list-unstyled components" id="mymenuAboutUs" style="display: none;"> 
                     <li @if($menuName == 'profilPerusahaanWeb') class="active" @endif>
-                            @if(Config::get('app.locale') == 'id') <a href="{{url('/profil-perusahaan')}}"> @else <a href="{{url('/company-profile')}}"> @endif
+                            <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/profil-perusahaan')}} @else {{url('/'. Config::get('app.locale').'/company-profile')}} @endif">
                             @if(Config::get('app.locale') == 'id')Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif </a>
                     </li>
                     <li @if($menuName == 'danaPerusahaanWeb') class="active" @endif>
-                            @if(Config::get('app.locale') == 'id') <a href="{{url('/dana-terpisah-perusahaan')}}"> @else <a href="{{url('/separate-company-funds')}}"> @endif
+                            <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/dana-terpisah-perusahaan')}} @else {{url('/'. Config::get('app.locale').'/separate-company-funds')}} @endif">
                             @if(Config::get('app.locale') == 'id')Dana Terpisah @elseif(Config::get('app.locale') == 'cn') 分开的资金 @else Separate Funds @endif  </a>
                     </li>
                 </ul>
@@ -158,13 +162,19 @@
 				  </a>
 				</p>
                 <ul class="list-unstyled components" id="mymenuLanguage" style="display: none;"> 
-                    <li><a href="{{url('/en')}}"> English</a></li>
-                    <li><a href="{{url('/id')}}"> Indonesia</a></li>
-                    <li><a href="{{url('/cn')}}"> China</a></li>
+                    
+					@foreach (config('app.locales') as $localeKey => $locale)
+                    @if ($localeKey != app()->getLocale())
+                        <li><a class="dropdown-item" href="{{ route('locale.switch', $localeKey) }}">
+                            {{ $locale }}
+                        </a></li>
+                    @endif
+                    @endforeach			
+                   
                 </ul>
             </div>
             <div class="box-list">
-                   <a href="@if(Config::get('app.locale') == 'id') {{url('/hubungi-kami')}} @else {{url('/contact-us')}} @endif" @if($menuName == 'hubungiKamiWeb') class="active" @endif>
+                   <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/hubungi-kami')}} @else {{url('/'. Config::get('app.locale').'/contact-us')}} @endif" @if($menuName == 'hubungiKamiWeb') class="active" @endif>
                  <p class="sub-title">@if(Config::get('app.locale') == 'id')Hubungi Kami @elseif(Config::get('app.locale') == 'cn') 联系我们 @else Contact Us @endif </p>
                 </a>
             </div>
@@ -182,20 +192,23 @@
             <!-- Generate Crypto Value Dinamicaly -->
             @if($isMobile)
             <div class="box-languag1" style="right: 0% !important;">
-                 <a href="@if(Config::get('app.locale') == 'id') /daftar-akun-demo @else /register-demo-account @endif"><p class="md-trigger box-lang" data-modal="modal-demo" style="color:white;margin: 35px 0px 0 40px !important;">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else DEMO ACCOUNT @endif </p></a>
+                 <a href="@if(Config::get('app.locale') == 'id'){{url('/'. Config::get('app.locale').'/daftar-akun-demo')}} @else {{url('/'. Config::get('app.locale').'/register-demo-account')}} @endif">
+                    <p class="md-trigger box-lang" data-modal="modal-demo" style="color:white;margin: 35px 0px 0 40px !important;">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else DEMO ACCOUNT @endif </p></a>
             </div>
             <div class="box-language">
-                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif
+                <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/daftar-akun-real')}} @else {{url('/'. Config::get('app.locale').'/register-real-account')}} @endif">
                  <p class="md-trigger box-lang" data-modal="modal-real" style="color:white;">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</p></a>
             </div>
             @else
              <div id="root">
             </div> 
             <div class="box-languag1">
-                 <a href="@if(Config::get('app.locale') == 'id') /daftar-akun-demo @else /register-demo-account @endif"><p class="md-trigger box-lang" data-modal="modal-demo"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo Account @endif</span></p></a>
+                <a href="@if(Config::get('app.locale') == 'id'){{url('/'. Config::get('app.locale').'/daftar-akun-demo')}} @else {{url('/'. Config::get('app.locale').'/register-demo-account')}} @endif">
+                <p class="md-trigger box-lang" data-modal="modal-demo"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else DEMO ACCOUNT @endif</span></p></a>
             </div>
             <div class="box-language">
-                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</span></p></a>
+                <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/daftar-akun-real')}} @else {{url('/'. Config::get('app.locale').'/register-real-account')}} @endif">
+                <p class="md-trigger box-lang" data-modal="modal-real"><span class="txt-lg">@if(Config::get('app.locale') == 'id')AKUN REAL @elseif(Config::get('app.locale') == 'cn') 真实账户 @else REAL ACCOUNT @endif</span></p></a>
             </div>
             @endif 
         </nav>
@@ -239,7 +252,8 @@
                         <li>Meta Trader 5</li>
                     </ul>
                 </div>
-                <a href="/daftar-akun-demo"><button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif </button></a>
+                <a href="@if(Config::get('app.locale') == 'id'){{url('/'. Config::get('app.locale').'/daftar-akun-demo')}} @else {{url('/'. Config::get('app.locale').'/register-demo-account')}} @endif">
+                <button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif </button></a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -259,7 +273,8 @@
                         <li>Meta Trader 5</li>
                     </ul>
                 </div>
-                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
+                <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/daftar-akun-real')}} @else {{url('/'. Config::get('app.locale').'/register-real-account')}} @endif">
+                <button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
             </div>
         </div>
         <div class="col-lg-4">
@@ -279,7 +294,8 @@
                         <li>Meta Trader 5</li>
                     </ul>
                 </div>
-                @if(Config::get('app.locale') == 'id') <a href="daftar-akun-real"> @else <a href="register-real-account"> @endif<button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
+                <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/daftar-akun-real')}} @else {{url('/'. Config::get('app.locale').'/register-real-account')}} @endif">
+                <button class="btn btn-more" type="button">@if(Config::get('app.locale') == 'id') Daftar @elseif(Config::get('app.locale') == 'cn') 寄存器 @else Register @endif</button></a>
             </div>
         </div>
 
@@ -296,7 +312,8 @@
                             <div class="box-yellow">
                                 <h4 class="title">@if(Config::get('app.locale') == 'id') Mau trading di GOFX ? @elseif(Config::get('app.locale') == 'cn') 想在GOFX上交易吗？ @else Want to trade on GOFX ? @endif</h4>
                                 <p>@if(Config::get('app.locale') == 'id') biar trading lebih percaya diri, yuk klik tombol dibawah ini @elseif(Config::get('app.locale') == 'cn') 为了使交易更有信心，让我们点击下面的按钮 @else so that trading is more confident, let's click the button below @endif </p>
-                                <a href="@if(Config::get('app.locale') == 'id') /daftar-akun-demo @else /register-demo-account @endif"><button class="md-trigger box-lang btn btn-more" type="button">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo Account @endif</button></a>
+                                <a href="@if(Config::get('app.locale') == 'id'){{url('/'. Config::get('app.locale').'/daftar-akun-demo')}} @else {{url('/'. Config::get('app.locale').'/register-demo-account')}} @endif">
+                                <button class="md-trigger box-lang btn btn-more" type="button">@if(Config::get('app.locale') == 'id')AKUN DEMO @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo Account @endif</button></a>
                             </div>
                         </div>
                     </div>
@@ -408,13 +425,29 @@
                                     @if(Config::get('app.locale') == 'cn') 有用的链接 @else Useful Links @endif
                                 </h3>
                                 <ul>
-                                    <li><a href="{{url('/')}}">@if(Config::get('app.locale') == 'id') Beranda @elseif(Config::get('app.locale') == 'cn') 家 @else Home @endif</a></li>
-                                    <li>@if(Config::get('app.locale') == 'id') <a href="{{url('/profil-perusahaan')}}"> @else <a href="{{url('/company-profile')}}"> @endif
-                                        @if(Config::get('app.locale') == 'id') Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif</a></li>
-                                    <li><a href="{{url('/akun-individu')}}">@if(Config::get('app.locale') == 'id') Akun Individu @elseif(Config::get('app.locale') == 'cn') 个人账户 @else Individual Account @endif</a></li>
-                                    <li><a href="{{url('/akun-institusi')}}">@if(Config::get('app.locale') == 'id') Akun Institusi @elseif(Config::get('app.locale') == 'cn') 机构账户 @else Institutional Account @endif</a></li>
-                                    <li>@if(Config::get('app.locale') == 'id') <a href="{{url('/kebijakan-privasi')}}"> @else <a href="{{url('/privacy-policy')}}"> @endif 
-                                    @if(Config::get('app.locale') == 'id') Kebijakan Privasi @elseif(Config::get('app.locale') == 'cn') 隐私政策 @else Privacy policy @endif</a></li>
+                                    <li>
+                                    <a href="{{url('/'. Config::get('app.locale').'/')}}">
+                                    @if(Config::get('app.locale') == 'id') Beranda @elseif(Config::get('app.locale') == 'cn') 家 @else Home @endif</a>
+                                    </li>
+
+                                    <li>
+                                    <a href="@if(Config::get('app.locale') == 'id'){{url('/'. Config::get('app.locale').'/profil-perusahaan')}}  @else {{url('/'. Config::get('app.locale').'/company-profile')}} @endif">
+                                    @if(Config::get('app.locale') == 'id') Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/akun-individu')}} @else {{url('/'. Config::get('app.locale').'/personal-account')}}  @endif">
+                                        @if(Config::get('app.locale') == 'id') Akun Individu @elseif(Config::get('app.locale') == 'cn') 个人账户 @else Individual Account @endif</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/akun-institusi')}} @else {{url('/'. Config::get('app.locale').'/institutional-account')}} @endif">
+                                        @if(Config::get('app.locale') == 'id') Akun Institusi @elseif(Config::get('app.locale') == 'cn') 机构账户 @else Institutional Account @endif</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="@if(Config::get('app.locale') == 'id') {{url('/'. Config::get('app.locale').'/kebijakan-privasi')}} @else {{url('/'. Config::get('app.locale').'/privacy-policy')}} @endif">
+                                        @if(Config::get('app.locale') == 'id') Kebijakan Privasi @elseif(Config::get('app.locale') == 'cn') 隐私政策 @else Privacy policy @endif</a></li>
                                 </ul>
                             </div>
                             <div class="col-lg-3">

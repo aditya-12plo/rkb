@@ -63,11 +63,11 @@
                 <section class="box-tranding container">
                     <div class="row">
                         <div class="col-md-12 box-header-tranding">
-                            <h3 class="title">@if(Config::get('app.locale') == 'cn') 为什么要与真正的经纪人交易？@else Why Trade with <span>the truly broker ?  @endif</span></h3>
+                            <h3 class="title"> 
+                                @if(Config::get('app.locale') == 'cn') 为什么要与<span>真正的经纪人交易？</span>@else Why Trade with <span> the truly broker ? </span> @endif</h3>
                             <div class="line-centered-circolar"></div>
                             <p>
-                                @if(Config::get('app.locale') == 'id') Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada 
-                                tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.
+                                @if(Config::get('app.locale') == 'id') Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.
                                 Melalui proses peningkatan Literacy keuangan di seluruh lapisan masyarakat, 
                                 akan mengubah dan membantu dalam <b>memberikan nilai tambah</b> yang bermanfaat bagi 
                                 masyarakat luas dalam meraih dan meningkatkan kualitas keuangan yang lebih baik 
@@ -209,7 +209,8 @@
                     <img src="{{asset('/public/assets/images/Legal-dan-terpercaya.jpg')}}" alt="">
                         <div class="portfolio-overlay">
                             <div class="portfolio-btn-action">
-                                <a href="/">
+                                <a href="/
+                                ">
                                     <span class="lnr lnr-link"></span>
                                 </a>
                                 <a href="{{asset('/public/assets/images/Legal-dan-terpercaya.jpg')}}" class="popup-img">

@@ -30,7 +30,7 @@ class IndexController extends Controller
         
 		$config = app('config');
         $default_locale = $config['app.locale'];
-
+        
         if($default_locale == 'en'){
 			$this->data['title'] = 'Eagle Capital Futures Ltd';
 			$this->data['description'] = 'Eagle Capital Futures Ltd exists as a company or broker that relies on the goal of providing benefits and contributions to the community.';
@@ -45,7 +45,6 @@ class IndexController extends Controller
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
         $this->data['keywords'] = $this->keywords;
         $this->data['banners'] =  Models\Banners::orderBy('sequence','ASC')->get();
-		 
         return view('website.index')->with($this->data);
 
     }
@@ -55,7 +54,7 @@ class IndexController extends Controller
         $default_locale = $config['app.locale'];
 
         if($default_locale == 'en'){
-			$this->data['title'] = 'Eagle Capital Futures Ltd Privacy Policy';
+            $this->data['title'] = 'Eagle Capital Futures Ltd Privacy Policy';
             $this->data['description'] = 'Eagle Capital futures Ltd We will not sell or transmit your personal information to third parties except for those we need in connection with the normal operation of our business. Including credit card processing and verification centers, law enforcement agencies, regulators, auditors, and Introducing Brokers who have a business agreement with us.';
             $this->data['keywords'] = $this->keywords.',eagle capital futures privacy policy, rkb profile';
 		}elseif($default_locale == 'cn'){
@@ -67,7 +66,6 @@ class IndexController extends Controller
             $this->data['description'] = 'Rajawali kapital berjangka Kami tidak akan menjual atau menyampaikan informasi pribadi Anda kepada pihak ketiga kecuali bagi mereka yang kami perlukan dalam kaitannya dengan normal operasi bisnis kami. Termasuk pusat pengolahan dan verifikasi kartu kredit, lembaga penegak hukum, regulator, auditor, dan Introducing Broker yang memiliki perjanjian bisnis dengan kami.';
             $this->data['keywords'] = $this->keywords.',kebijakan privasi rajawali kapital berjangka,profil rkb';
 		}
-        
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
         
 		 
@@ -91,8 +89,6 @@ class IndexController extends Controller
             $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
 		}
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        
-		 
         return view('website.daftar-demo')->with($this->data);
     }
 
@@ -111,8 +107,7 @@ class IndexController extends Controller
 			$this->data['title'] = 'Daftar Akun Real di Rajawali Kapital Berjangka';
             $this->data['description'] = 'Pendaftaran akun real di Rajawali kapital berjangka.';
             $this->data['keywords'] = $this->keywords.',pendaftaran akun trading, akun trading,akun rajawali kapital';
-		}
-        
+        }
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
 		 
         return view('website.akun-real')->with($this->data);
@@ -123,13 +118,11 @@ class IndexController extends Controller
         $default_locale = $config['app.locale']; 
         if($default_locale == 'en'){
 			$this->data['title'] = 'Profile of Eagle Capital Futures Ltd';
-            $this->data['description'] = 'Real account registration in Eagle Capital Futures Ltd.';
+            $this->data['description'] = 'Eagle Capital Futures is a trusted brokerage company member of the Indonesian Commodity and Derivatives Exchange (ICDX), which is currently focusing in Southeast Asia, which provides services for both retail and corporate customers in conducting commodity futures products that transact directly on the stock exchange.';
             $this->data['keywords'] = $this->keywords.',eagle capital futures profiles, rkb profiles';
 		}elseif($default_locale == 'cn'){
-			$this->data['title'] = '老鹰资本期货简介';
-            $this->data['description'] = 'Eagle Capital futures is a brokerage company that is a member of the Commodity and Derivatives Exchange
-            Trusted Indonesia (ICDX), which currently focuses on providing Southeast Asia
-            services for both retail and corporate customers in conducting commodity-futures product transactions that are transacted directly on the exchange.';
+			$this->data['title'] = 'Eagle Capital Futures Ltd 个人资料';
+            $this->data['description'] = 'Eagle Capital Futures是一家经纪公司，隶属于印度尼西亚商品和衍生品交易所（ICDX），该公司目前致力于为零售和企业客户提供东南亚服务，以进行直接在商品交易所进行的商品期货产品交易。 交换。';
             $this->data['keywords'] = $this->keywords.',eagle capital futures ltd profiles, rkb profiles,rkb 个人资料, eagle capital futures ltd 个人资料';
 		}else{
 			$this->data['title'] = 'Profil Rajawali Kapital Berjangka';
@@ -138,7 +131,7 @@ class IndexController extends Controller
             layanan untuk para customer baik retail maupun corporate dalam melakukan transaksi produk-
             produk berjangka komoditi yang transaksinya langsung di dalam bursa.';
             $this->data['keywords'] = $this->keywords.',profil rajawali kapital berjangka,profil rkb';
-		}
+        };
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
 		 
         return view('website.profil-perusahaan')->with($this->data);
@@ -162,7 +155,7 @@ class IndexController extends Controller
             $this->data['keywords'] = $this->keywords.',dana terpisah,badan pengawas perdagangan berjangka komoditi, bappebti,bursa komoditi';
 		}
         $this->data['imageseo'] = asset('/public/images/RKB-Logo.jpeg');
-        
+
         return view('website.dana-perusahaan')->with($this->data);
     }
  
@@ -194,13 +187,13 @@ class IndexController extends Controller
         $default_locale = $config['app.locale'];
 
         if($default_locale == 'en'){
-			$this->data['title'] = 'Individual Account';
+			$this->data['title'] = 'Institutional Account';
             $this->data['description'] = 'Segregated Account or a separate account is an account whose use is intended only for the needs of customer transactions and resolve obligations that arise at the request of a transaction from the customer. The use of separate accounts is regulated and monitored by the Commodity Futures Trading Regulatory Agency (BAPPEBTI).';
-            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts';
+            $this->data['keywords'] = $this->keywords.', company trading account, company account, open real account, real trading, open real trading account, account, commodity trading account';
 		}elseif($default_locale == 'cn'){
-			$this->data['title'] = '个人账户';
+			$this->data['title'] = '机构账户';
             $this->data['description'] = '独立帐户或单独帐户是仅用于满足客户交易需求并解决客户在交易请求时产生的义务的帐户。 商品期货交易监管机构（BAPPEBTI）对单独帐户的使用进行监管。';
-            $this->data['keywords'] = $this->keywords.',individual trading accounts, personal accounts, open demo accounts, open real trading accounts, accounts, commodity trading accounts，个人交易账户，个人账户，开设模拟账户，开设真实交易账户，账户，商品交易账户';
+            $this->data['keywords'] = $this->keywords.', company trading account, company account, open real account, real trading, open real trading account, account, commodity trading account，公司交易账户，公司账户，开设真实账户，真实交易，开设真实交易账户，账户，商品交易账户';
 		}else{
 			$this->data['title'] = 'Akun Institusi';
             $this->data['description'] = 'Segregated Account atau rekening terpisah adalah rekening yang kegunaannya ditujukan hanya untuk keperluan transaksi nasabah dan menyelesaikan kewajiban yang muncul atas permintaan transaksi dari nasabah. Penggunaan rekening terpisah diatur dan diawasi oleh Badan Pengawas Perdagangan Berjangka Komoditi (BAPPEBTI).';

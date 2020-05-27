@@ -1,4 +1,6 @@
 <?php 
+ Route::name('locale.switch')->get('switch/{locale}', 'LocaleController@switch');
+ 
  
  Route::middleware(['localized'])->group(function () {
     Route::get('/', 'IndexController@index'); 
@@ -47,8 +49,8 @@
     Route::get('/berita-ekonomi', 'IndexController@newsForexFactory')->name('newsForexFactory');
     Route::get('/economic-news', 'IndexController@newsForexFactory')->name('newsForexFactory');
     
-    Route::get('/kalender-ekonomi', 'IndexController@econimicCalender')->name('econimicCalender');
-    Route::get('/economic-calendar', 'IndexController@econimicCalender')->name('econimicCalender');
+    Route::get('/kalender-ekonomi', 'IndexController@econimicCalender')->name('economicCalender');
+    Route::get('/economic-calendar', 'IndexController@econimicCalender')->name('economicCalender');
 
     Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
     Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);
