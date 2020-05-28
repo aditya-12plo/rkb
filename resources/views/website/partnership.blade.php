@@ -36,7 +36,7 @@
                     <h3 class="title" style="text-align:center !important;"><span>@if(Config::get('app.locale') == 'id') Daftar Sekarang @elseif(Config::get('app.locale') == 'cn') 立即注册 @else Sign up now @endif</span></h3>
 <div id="login" class="register-form d-flex flex-row justify-content-center align-items-center" style="padding: 0 !important;"> 
 <div class="box-info-reg col-12 col-lg-6 align-self-center">
-                    <form name="partnership" action="/partnership" method="POST">
+                    <form name="partnership" action="/{{Config::get('app.locale')}}/partnership" method="POST">
                 {{ csrf_field() }}
 
                     <div class="login-main-form">

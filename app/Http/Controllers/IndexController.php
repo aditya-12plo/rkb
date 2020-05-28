@@ -285,7 +285,7 @@ class IndexController extends Controller
         
             $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcINMUUAAAAAD5h_Eew3DNiipI2NB0kn-nm7Bsw&response='.$request->get('g-recaptcha-response');   
             $recaptcha = file_get_contents($url);
-            // $recaptcha = '{"success":true}';
+            //$recaptcha = '{"success":true}';
             $recaptcha = json_decode($recaptcha, true);
             if (!$recaptcha['success']) {
 				Session::flash('error', 'Oppsss, Human !!!');
@@ -310,8 +310,34 @@ class IndexController extends Controller
                 return redirect()->back();
             }
     }
+    public function addContactTest(){ 
 
+			$masuk = array(
+				'contact_name'                  => "asd name", 
+                'contact_company'               => "asd company",
+                'contact_email'                 => "asd email",
+				'contact_phone'                 =>"08587554545",
+				'contact_message'                => "testing",);
+				 
+			$crypt = Crypt::encrypt('email');
+			$masuk['url'] = url('/').'/akun-demo-konfirmasi/'.$crypt;
+            $masuk['type'] = 'demo';
+                //blade body emails.email_register_konfirmasi
+            $content = view('emails.email_content_contact')->with($masuk);
+            return view('emails.email_content_contact')->with($masuk);
+
+    }
     public function addNewslater(Request $request){ 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+
+        if($default_locale == 'cn'){
+			$pesan  = '感谢您发送电子邮件。';
+		}elseif($default_locale == 'en'){
+			$pesan  = 'Thank you for sending your e-mail.';
+		}else{
+           $pesan   = 'Terima kasih telah mengirimkan email anda.';
+        }
         $valid = $this->validate($request, [
             'email'     => 'required|max:255|email'
         ]); 
@@ -320,7 +346,7 @@ class IndexController extends Controller
                 );
         Models\Newslaters::create($masuk);
 
-        Session::flash('success', 'Terima kasih telah mengirimkan email anda.');
+        Session::flash('success', $pesan);
         return redirect()->back();
     }
 
@@ -395,6 +421,7 @@ class IndexController extends Controller
     }
 
     public function addDemoAccount(Request $request){ 
+        
         $valid = $this->validate($request, [
             'name'                  => 'required|max:255',
             'email'                 => 'required|max:191|email|unique:users,email',
@@ -403,9 +430,28 @@ class IndexController extends Controller
             'terms_and_conditions'  => 'required|in:0,1',
             'g-recaptcha-response'=>'required'
         ]); 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $successMessage = '请检查您的电子邮件，然后单击确认链接。';
+            $failMessage = '电子邮件未发送，请使用您的电子邮件和密码登录';
+            $subjectMail = '确认模拟账户注册';
+            $companyName = 'Eagle Capital Futures Ltd';
+		}elseif($default_locale == 'en'){
+            $successMessage = 'Please check your email and click the confirmation link.';
+            $failMessage = 'Email not sent, please login with your email and password';
+            $subjectMail = 'Confirm Demo Account Registration';
+            $companyName = 'Eagle Capital Futures Ltd';
+		}else{
+           $successMessage = 'Silahkan cek email anda dan klik link konfirmasi.';
+           $failMessage = 'Email tidak terkirimkan silahkan login dengan email dan password';
+           $subjectMail = 'Konfirmasi Pendaftaran Akun Demo';
+           $companyName = 'PT. Rajawali Kapital Berjangka';
+        }
 
 		$url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcINMUUAAAAAD5h_Eew3DNiipI2NB0kn-nm7Bsw&response='.$request->get('g-recaptcha-response');   
         $recaptcha = file_get_contents($url);
+        //$recaptcha = '{"success":true}';
         $recaptcha = json_decode($recaptcha, true);
 		if(!$recaptcha['success']) {
 			Session::flash('error', 'Oppsss, Human !!!');
@@ -433,24 +479,92 @@ class IndexController extends Controller
 			$crypt = Crypt::encrypt($request->get('email'));
 			$masuk['url'] = url('/').'/akun-demo-konfirmasi/'.$crypt;
             $masuk['type'] = 'demo';
-			$content = view('emails.email_register_konfirmasi')->with($masuk);
-			Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk){
-				$message->to($masuk['email'])->subject('Konfirmasi Pendaftaran Akun Demo');
-				$message->from('info@rajawalikapital.co.id','PT. Rajawali Kapital Berjangka');
+                //blade body emails.email_register_konfirmasi
+            $content = view('emails.email_register_konfirmasi')->with($masuk);
+            
+            // blade header  layouts.email
+			Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$subjectMail,$companyName){
+				$message->to($masuk['email'])->subject($subjectMail);
+				$message->from('info@rajawalikapital.co.id',$companyName);
 			});
 			if (Mail::failures()) {
-				Session::flash('success', 'Email tidak terkirimkan silahkan login dengan email dan password '.$uniqid);
+				Session::flash('success', $failMessage .$uniqid);
 			}else{
-				Session::flash('success', 'Silahkan cek email anda dan klik link konfirmasi.');
+				Session::flash('success', $successMessage);
 			}
 			return redirect()->back();
 		}
     }
-	
+    public function addDemoAccountTest(Request $request){ 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $successMessage = '请检查您的电子邮件，然后单击确认链接。';
+            $failMessage = '电子邮件未发送，请使用您的电子邮件和密码登录';
+            $subjectMail = '确认模拟账户注册';
+            $companyName = 'Eagle Capital Futures Ltd';
+		}elseif($default_locale == 'en'){
+            $successMessage = 'Please check your email and click the confirmation link.';
+            $failMessage = 'Email not sent, please login with your email and password';
+            $subjectMail = 'Confirm Demo Account Registration';
+            $companyName = 'Eagle Capital Futures Ltd';
+		}else{
+           $successMessage = 'Silahkan cek email anda dan klik link konfirmasi.';
+           $failMessage = 'Email tidak terkirimkan silahkan login dengan email dan password';
+           $subjectMail = 'Konfirmasi Pendaftaran Akun Demo';
+           $companyName = 'PT. Rajawali Kapital Berjangka';
+        }
+
+			$number = $this->generateBarcodeNumber(); 
+			$uniqid = uniqid();
+			if(empty($request->get('newslater_register'))){
+				$newslater_register = 0;
+			}else{
+				$newslater_register = $request->get('newslater_register');
+			}
+			$masuk = array(
+                'name'                          => "asd name", 
+                'email'                         => "asd email",
+                'phone'                         => "asd phone",
+                'referral_code'                 => "asd referral_code",
+                'password_first'                => $uniqid, 
+                'newslater'                     => $newslater_register, 
+                'terms_and_conditions'          => $request->get('terms_and_conditions'), 
+                'password'                      => Hash::make($uniqid), 
+                'status'                        => 'active');
+            $crypt = Crypt::encrypt($request->get('email'));
+            $masuk['url'] = url('/').'/akun-demo-konfirmasi/'.$crypt;
+            $masuk['type'] ='demo';
+                //blade body emails.email_register_konfirmasi
+            $content = view('emails.email_register_konfirmasi')->with($masuk);
+            return view('emails.email_register_konfirmasi')->with($masuk);
+
+
+            
+    }
     public function addRealAccount(Request $request){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $message = '请检查您的电子邮件，然后单击确认链接。';
+            $informationEmail = "您的电子邮件已经注册，请登录到客户区。";
+            $subjectMail = "与确认真实账户注册";
+            $companyName = "Eagle Capital Futures Ltd";
+		}elseif($default_locale == 'en'){
+            $message = 'Please check your email and click the confirmation link.';
+            $informationEmail = "Your email is already registered, please log in to the client area.";
+            $subjectMail = "Confirm Real Account Registration";
+            $companyName = "Eagle Capital Futures Ltd";
+		}else{
+           $message = 'Silahkan cek email anda dan klik link konfirmasi.';
+           $informationEmail = "Email anda sudah terdaftar, silahkan login ke client area.";
+           $subjectMail = "Konfirmasi Pendaftaran Akun Real";
+           $companyName = "PT. Rajawali Kapital Berjangka";
+           
+        }
         $check =  Models\User::where('email',$request->get('email'))->first();
         if($check){
-            Session::flash('success', 'Email anda sudah terdaftar, silahkan login ke client area.');
+            Session::flash('success', $informationEmail);
             return redirect()->route('login');
         }else{
             $valid = $this->validate($request, [
@@ -465,6 +579,7 @@ class IndexController extends Controller
     
             $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcINMUUAAAAAD5h_Eew3DNiipI2NB0kn-nm7Bsw&response='.$request->get('g-recaptcha-response');   
             $recaptcha = file_get_contents($url);
+            //$recaptcha = '{"success":true}';
             $recaptcha = json_decode($recaptcha, true);
             if(!$recaptcha['success']) {
                 Session::flash('error', 'Oppsss, Human !!!');
@@ -493,19 +608,85 @@ class IndexController extends Controller
                 $masuk['url'] = url('/').'/akun-real-konfirmasi/'.$crypt;
                 $masuk['type'] ='real';
                 $content = view('emails.email_register_konfirmasi')->with($masuk);
-                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk){
-                    $message->to($masuk['email'])->subject('Konfirmasi Pendaftaran Akun Real');
-                    $message->from('info@rajawalikapital.co.id','PT. Rajawali Kapital Berjangka');
+                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$subjectMail,$companyName){
+                    $message->to($masuk['email'])->subject($subjectMail);
+                    $message->from('info@rajawalikapital.co.id',$companyName);
                 });
     
-                Session::flash('success', 'Silahkan cek email anda dan klik link konfirmasi.');
+                Session::flash('success', $message);
                 return redirect()->back();
             }
 
         }
     }
+    public function addRealAccountTest(Request $request){ 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $message = '请检查您的电子邮件，然后单击确认链接。';
+            $informationEmail = "您的电子邮件已经注册，请登录到客户区。";
+            $subjectMail = "与确认真实账户注册";
+            $companyName = "Eagle Capital Futures Ltd";
+        }elseif($default_locale == 'en'){
+            $message = 'Please check your email and click the confirmation link.';
+            $informationEmail = "Your email is already registered, please log in to the client area.";
+            $subjectMail = "Confirm Real Account Registration";
+            $companyName = "Eagle Capital Futures Ltd";
+        }else{
+           $message = 'Silahkan cek email anda dan klik link konfirmasi.';
+           $informationEmail = "Email anda sudah terdaftar, silahkan login ke client area.";
+           $subjectMail = "Konfirmasi Pendaftaran Akun Real";
+           $companyName = "PT. Rajawali Kapital Berjangka"; 
+        }
+
+			$number = $this->generateBarcodeNumber(); 
+			$uniqid = uniqid();
+			if(empty($request->get('newslater_register'))){
+				$newslater_register = 0;
+			}else{
+				$newslater_register = $request->get('newslater_register');
+			}
+			$masuk = array(
+                'name'                          => "asd name", 
+                'email'                         => "asd email",
+                'phone'                         => "asd phone",
+                'referral_code'                 => "asd referral_code",
+                'password_first'                => $uniqid, 
+                'newslater'                     => $newslater_register, 
+                'terms_and_conditions'          => $request->get('terms_and_conditions'), 
+                'password'                      => Hash::make($uniqid), 
+                'status'                        => 'active');
+				 
+            $crypt = Crypt::encrypt($request->get('email'));
+            $masuk['url'] = url('/').'/akun-real-konfirmasi/'.$crypt;
+            $masuk['type'] ='real';
+                //blade body emails.email_register_konfirmasi
+            $content = view('emails.email_register_konfirmasi')->with($masuk);
+            return view('emails.email_register_konfirmasi')->with($masuk);
+
+
+            
+    }
     
     public function addPartnership(Request $request){ 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $message = '请检查您的电子邮件，我们将尽快与您联系。';
+            $informationEmail = "您的电子邮件已经被注册！";
+            $subjectMail = "与Eagle Capital合作";
+            $companyName = "Eagle Capital Futures Ltd";
+		}elseif($default_locale == 'en'){
+            $message = 'Please check your email and we will contact you soon.';
+            $informationEmail = "Your email has already been registered !!!";
+            $subjectMail = "Partnership with Eagle Capital";
+            $companyName = "Eagle Capital Futures Ltd";
+		}else{
+           $message = 'Silahkan cek email anda dan pihak kami akan segera menghubungi anda.';
+           $informationEmail = "Email anda sudah terdaftar !!!";
+           $subjectMail = "Partnership dengan Rajawali Kapital";
+           $companyName = "PT. Rajawali Kapital Berjangka";
+        }
         $valid = $this->validate($request, [
             'name'                  => 'required|max:255',
             'email'                 => 'required|max:191|email|unique:partnership,email',
@@ -515,6 +696,7 @@ class IndexController extends Controller
         ]); 
         $url = 'https://www.google.com/recaptcha/api/siteverify?secret=6LcINMUUAAAAAD5h_Eew3DNiipI2NB0kn-nm7Bsw&response='.$request->get('g-recaptcha-response');   
         $recaptcha = file_get_contents($url);
+        //$recaptcha = '{"success":true}';
         $recaptcha = json_decode($recaptcha, true);
         if(!$recaptcha['success']) {
 			Session::flash('error', 'Oppsss, Human !!!');
@@ -528,27 +710,61 @@ class IndexController extends Controller
 
             $check = Models\Partnership::where('email',$request->email)->first();
             if($check){
-                Session::flash('info', 'Email anda sudah terdaftar !!!');
+                Session::flash('info', $informationEmail);
                 return redirect()->back();
             }else{
 				
                 Models\Partnership::create($masuk);
                 $content = view('emails.email_partnership')->with($masuk);
-                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk){
-                    $message->to($masuk['email'])->subject('Partnership dengan Rajawali Kapital');
+                Mail::send('layouts.email', ['contentMessage' => $content], function($message)  use ($masuk,$subjectMail,$companyName){
+                    $message->to($masuk['email'])->subject($subjectMail);
                     $message->attach('public/assets/files/IB-Registration.pdf', ['mime' => 'application/pdf']);
                     $message->attach('public/assets/files/IB-Declaration.pdf', ['mime' => 'application/pdf']);
                     $message->attach('public/assets/files/IB-Scheme.pdf', ['mime' => 'application/pdf']);
-                    $message->from('info@rajawalikapital.co.id','PT. Rajawali Kapital Berjangka');
+                    $message->from('info@rajawalikapital.co.id',$companyName);
                 });
     
-                Session::flash('success', 'Silahkan cek email anda dan pihak kami akan segera menghubungi anda.');
+                Session::flash('success', $message);
                 return redirect()->back();
 
             }
         }
 		 
     }
+    public function addPartnershipTest(){ 
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $message = '请检查您的电子邮件，我们将尽快与您联系。';
+            $informationEmail = "您的电子邮件已经被注册！";
+            $subjectMail = "与Eagle Capital合作";
+		}elseif($default_locale == 'en'){
+            $message = 'Please check your email and we will contact you soon.';
+            $informationEmail = "Your email has already been registered !!!";
+            $subjectMail = "Partnership with Eagle Capital";
+		}else{
+           $message = 'Silahkan cek email anda dan pihak kami akan segera menghubungi anda.';
+           $informationEmail = "Email anda sudah terdaftar !!!";
+           $subjectMail = "Partnership dengan Rajawali Kapital";
+        }
+
+			$number = $this->generateBarcodeNumber(); 
+			$uniqid = uniqid();
+			
+			$masuk = array(
+				'name'                  => "asd name", 
+                'email'                 => "asd email",
+				'phone'                 =>"08587554545",
+				'terms_and_conditions'  => "testing",);
+				 
+			$crypt = Crypt::encrypt('email');
+			$masuk['url'] = url('/').'/akun-demo-konfirmasi/'.$crypt;
+            $masuk['type'] = 'demo';
+                //blade body emails.email_register_konfirmasi
+            $content = view('emails.email_partnership')->with($masuk);
+            return view('emails.email_partnership')->with($masuk);
+
+        }
     
     public function aktivasiAkun($token){
         $email = Crypt::decrypt($token);

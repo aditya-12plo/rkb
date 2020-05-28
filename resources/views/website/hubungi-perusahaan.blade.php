@@ -40,7 +40,7 @@
                 </div>
                 <div class="row" style="margin-right: 0%;margin-left: 0% !important;">
                     <div class="col-md-12">
-                        <form role="form" method="POST" action="/hubungi-kami">
+                        <form role="form" method="POST" action="/{{Config::get('app.locale')}}/hubungi-kami">
                         {{ csrf_field() }}
                             <div class="row">
                                 <div class="form-group col-lg-6">

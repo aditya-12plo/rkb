@@ -453,7 +453,7 @@
                             <div class="col-lg-3">
                                 <h3>@if(Config::get('app.locale') == 'cn') 通讯 @else Newsletter @endif </h3>
                                 <div class="newsletter-bx">
-                                    <form method="post" action="/newslater">
+                                    <form method="post" action="/{{Config::get('app.locale')}}/newslater">
                                     {{ csrf_field() }}
                                         <div class="input-group">
                                             <input name="email" class="form-control" placeholder="@if(Config::get('app.locale') == 'id') Masukan Email @elseif(Config::get('app.locale') == 'cn') 输入电子邮件 @else Enter email @endif" type="email" required>

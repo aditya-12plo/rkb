@@ -560,9 +560,9 @@ table{
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                       <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                      	<h3 class="heading">Info</h3>
+                      	<h3 class="heading">@if(Config::get('app.locale') == 'cn') 信息 @else Info @endif</h3>
                       	<ul>
-					                <li><span class="text">Ruko Kopo Plaza Blok B no 24, jl. peta (lingkar selatan),Kota Bandung,Jawa Barat, Indonesia</span></li>
+					                <li><span class="text">Ruko Kopo Plaza Blok B no 24, jl. peta (lingkar selatan),@if(Config::get('app.locale') == 'id') Kota Bandung,Jawa Barat, Indonesia @elseif(Config::get('app.locale') == 'cn') 印度尼西亚西爪哇省万隆市 @else Bandung City, West Java, Indonesia @endif </span></li>
                                     <li><span class="text">+62 222 0585 060</span></a></li>
                                     <li><span class="text">info@rajawalikapital.co.id</span></a></li>
 					              </ul>
@@ -574,13 +574,13 @@ table{
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                       <td style="text-align: left; padding-left: 10px;">
-                      	<h3 class="heading">Useful Links</h3>
+                      	<h3 class="heading">@if(Config::get('app.locale') == 'cn') 有用的链接 @else Useful Links @endif</h3>
                       	<ul>
-                                    <li><a href="{{url('/')}}">Beranda</a></li>
-                                    <li><a href="{{url('/profil-perusahaan')}}">Profil Perusahaan</a></li>
-                                    <li><a href="{{url('/akun-individu')}}">Akun Individu</a></li>
-                                    <li><a href="{{url('/akun-institusi')}}">Akun Institusi</a></li>
-                                    <li><a href="{{url('/kebijakan-privasi')}}">Kebijakan Privasi</a></li>
+                                    <li><a href="{{url('/')}}">@if(Config::get('app.locale') == 'id') Beranda @elseif(Config::get('app.locale') == 'cn') 家 @else Home @endif</a></li>
+                                    <li><a href="{{url('/profil-perusahaan')}}">@if(Config::get('app.locale') == 'id') Profil Perusahaan @elseif(Config::get('app.locale') == 'cn') 公司简介 @else Company Profile @endif</a></li>
+                                    <li><a href="{{url('/akun-individu')}}">@if(Config::get('app.locale') == 'id') Akun Individu @elseif(Config::get('app.locale') == 'cn') 个人账户 @else Individual Account @endif</a></li>
+                                    <li><a href="{{url('/akun-institusi')}}">@if(Config::get('app.locale') == 'id') Akun Institusi @elseif(Config::get('app.locale') == 'cn') 机构账户 @else Institutional Account @endif</a></li>
+                                    <li><a href="{{url('/kebijakan-privasi')}}">@if(Config::get('app.locale') == 'id') Kebijakan Privasi @elseif(Config::get('app.locale') == 'cn') 隐私政策 @else Privacy policy @endif</a></li>
                                 </ul>
                       </td>
                     </tr>
@@ -598,9 +598,13 @@ table{
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
                       <td style="text-align: left; padding-right: 10px;">
-					  <h4 style="color:#fff !important;">PEMBERITAHUAN RESIKO:</h4>
-                      	<p style="color:#fff !important;">Semua produk finansial yang ditransaksikan dalam sistem margin mempunyai resiko tinggi terhadap dana Anda. Produk finansial ini tidak diperuntukkan bagi semua investor dan Anda bisa saja kehilangan dana lebih dari deposit awal Anda. Pastikan bahwa Anda benar-benar mengerti resikonya, dan mintalah nasihat independen jika diperlukan.</p>
-						  <p style="color:#fff !important;">Mengingat transaksi ini adalah High Risk dan High Return, Calon nasabah diwajibkan melakukan Simulasi Transaksi (Demo Account) terlebih dahulu dan mempelajari Peraturan Transaksi (Trading Rules) sebelum melakukan transaksi.</p>  
+					  <h4 style="color:#fff !important;">@if(Config::get('app.locale') == 'id') PEMBERITAHUAN RESIKO: @elseif(Config::get('app.locale') == 'cn') 风险提示： @else RISK NOTICE: @endif</h4>
+						  <p style="color:#fff !important;">
+							@if(Config::get('app.locale') == 'id') Semua produk finansial yang ditransaksikan dalam sistem margin mempunyai resiko tinggi terhadap dana Anda. Produk finansial ini tidak diperuntukkan bagi semua investor dan Anda bisa saja kehilangan dana lebih dari deposit awal Anda. Pastikan bahwa Anda benar-benar mengerti resikonya, dan mintalah nasihat independen jika diperlukan. @elseif(Config::get('app.locale') == 'cn') 在保证金系统上交易的所有金融产品都会给您的资金带来高度风险。 此金融产品并不适合所有投资者，您损失的可能不止您的初始存款。 确保您真正了解风险，并在需要时寻求独立的建议。 @else All financial products traded on a margin system carry a high degree of risk to your funds. This financial product is not for all investors and you could lose more than your initial deposit. Make sure that you really understand the risks, and seek independent advice if needed. @endif
+						</p>
+						<p style="color:#fff !important;">
+							@if(Config::get('app.locale') == 'id') Mengingat transaksi ini adalah High Risk dan High Return, Calon nasabah diwajibkan melakukan Simulasi Transaksi (Demo Account) terlebih dahulu dan mempelajari Peraturan Transaksi (Trading Rules) sebelum melakukan transaksi. @elseif(Config::get('app.locale') == 'cn') 考虑到该交易是高风险和高回报，要求潜在客户在进行交易之前首先进行交易模拟（模拟帐户）并研究交易规则（交易规则）。 @else Considering this transaction is High Risk and High Return, prospective customers are required to do a Transaction Simulation (Demo Account) first and study the Transaction Rules (Trading Rules) before making a transaction. @endif
+						</p>  
 					</td>
                     </tr>
                   </table>
@@ -618,7 +622,7 @@ table{
                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                     <tr>
 					  <td style="text-align: left; padding-right: 10px;">
-                      	<p>&copy;{{ now()->year }} PT. Rajawali Kapital Berjangka - ALL RIGHTS RESERVED</p>
+                      	<p>&copy;{{ now()->year }} @if(Config::get('app.locale') == 'id') PT. Rajawali Kapital Berjangka @else Eagle Capital Futures Ltd @endif - ALL RIGHTS RESERVED</p>
                       </td>
                     </tr>
                   </table>

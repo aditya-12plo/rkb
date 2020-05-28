@@ -1,6 +1,6 @@
 <?php 
+
  Route::name('locale.switch')->get('switch/{locale}', 'LocaleController@switch');
- 
  
  Route::middleware(['localized'])->group(function () {
     Route::get('/', 'IndexController@index'); 
@@ -55,6 +55,16 @@
     Route::get('/page-not-found',['as' => 'pagenotfound','uses' => 'IndexController@index']);
     Route::get('/server-error',['as' => 'servererror','uses' => 'IndexController@index']);
         
+    
+    Route::post('/hubungi-kami', ['as' => 'addContact', 'uses' => 'IndexController@addContact']);
+    Route::post('/newslater', ['as' => 'addNewslater', 'uses' => 'IndexController@addNewslater']);
+    Route::post('/daftar-akun-demo', ['as' => 'addDemoAccount', 'uses' => 'IndexController@addDemoAccount']);
+    Route::post('/partnership', ['as' => 'addPartnership', 'uses' => 'IndexController@addPartnership']);
+    Route::post('/daftar-akun-real', ['as' => 'addRealAccount', 'uses' => 'IndexController@addRealAccount']);
+
+
+    
+    Route::get('/coba', ['as' => 'coba', 'uses' => 'IndexController@addPartnershipTest']);
 });
 
  /*

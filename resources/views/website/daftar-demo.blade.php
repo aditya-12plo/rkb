@@ -48,7 +48,7 @@
 
                 <div class="title-form"><h3 class="reg-title">@if(Config::get('app.locale') == 'id') Daftar Akun Demo @elseif(Config::get('app.locale') == 'cn') 注册模拟账户 @else Register a Demo Account @endif</h3></div>
 
-                <form name="daftar-akun-demo" action="/daftar-akun-demo" method="POST">
+                <form name="daftar-akun-demo" action="/{{Config::get('app.locale')}}/daftar-akun-demo" method="POST">
                 {{ csrf_field() }}
 
                     <div class="login-main-form">
