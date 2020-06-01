@@ -17,8 +17,11 @@
 
       <!-- plugins -->
       <link rel="stylesheet" type="text/css" href="/public/assets-miminium/css/plugins/font-awesome.min.css"/>
-	<link href="/public/assets-miminium/css/style.css" rel="stylesheet">
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+      <link href="/public/assets-miminium/css/style.css" rel="stylesheet">
+      <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+
+      {{-- DataTables --}}
+      <link rel="stylesheet" href="/public/assets-miminium/css/plugins/jquery.dataTables.css" type="text/css">
 	<!-- end: Css -->
 
   </head>
@@ -33,8 +36,8 @@
                 <span class="middle"></span>
                 <span class="bottom"></span>
               </div>
-                <a href="/clients-area" class="navbar-brand"> 
-                 <b>Rajawali</b>
+                <a href="/{{Config::get('app.locale')}}/clients-area" class="navbar-brand"> 
+                 <b>@if(Config::get('app.locale') == 'id') Rajawali @else Eagle @endif</b>
                 </a>
 
                 <ul class="nav navbar-nav navbar-right user-nav">
@@ -54,13 +57,20 @@
               <div class="sub-left-menu scroll">
                 <ul class="nav nav-list">
 
-                <li><a href="/clients-area"><span class="fa-home fa"></span> Dashboard</a></li>
-                <li><a href="{{url('/clients-area#/list-real-account/index')}}"><span class="fa fa-unlock"></span> Akun Real</a></li>
-                <li> <a href="{{url('/clients-area#/list-demo-account/index')}}"><span class="fa fa-lock"></span> Akun Demo</a></li>
-                <li><a href="{{url('/clients-area#/list-deposit/index')}}"><span class="fa fa-credit-card"></span> Deposit</a></li>
-                <li><a href="{{url('/clients-area#/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span> Withdrawal</a></li>
-                <li><a href="{{url('/clients-area#/profile/index')}}"><span class="fa fa-gears"></span> Pengaturan</a></li>
-                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fa fa-power-off"></span> Keluar</a></li>
+                <li><a href="/{{Config::get('app.locale')}}/clients-area"><span class="fa-home fa"></span> @if(Config::get('app.locale') == 'cn') 仪表板 @else Dashboard @endif</a></li>
+                {{-- <li><a href="{{url('/clients-area#/list-real-account/index')}}"><span class="fa fa-unlock"></span> @if(Config::get('app.locale') == 'id') Akun Real @elseif(Config::get('app.locale') == 'cn') 真实账户 @else Real Account @endif</a></li> --}}
+                <li><a href="{{url('/'. Config::get('app.locale').'/clients-area/list-real-account/index')}}"><span class="fa fa-unlock"></span> @if(Config::get('app.locale') == 'id') Akun Real @elseif(Config::get('app.locale') == 'cn') 真实账户 @else Real Account @endif</a></li>
+                {{-- <li> <a href="{{url('/clients-area#/list-demo-account/index')}}"><span class="fa fa-lock"></span> @if(Config::get('app.locale') == 'id') Akun Demo @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo account @endif</a></li> --}}
+                <li> <a href="{{url('/'. Config::get('app.locale').'/clients-area/list-demo-account/index')}}"><span class="fa fa-lock"></span> @if(Config::get('app.locale') == 'id') Akun Demo @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo account @endif</a></li>
+                {{-- <li><a href="{{url('/clients-area#/list-deposit/index')}}"><span class="fa fa-credit-card"></span> @if(Config::get('app.locale') == 'cn') 存款 @else Deposit @endif
+                </a></li> --}}
+                <li><a href="{{url('/'. Config::get('app.locale').'/clients-area/list-deposit/index')}}"><span class="fa fa-credit-card"></span> @if(Config::get('app.locale') == 'cn') 存款 @else Deposit @endif
+                </a></li>
+                {{-- <li><a href="{{url('/clients-area#/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span>@if(Config::get('app.locale') == 'cn') 退出 @else Withdrawal @endif</a></li> --}}
+                <li><a href="{{url('/'. Config::get('app.locale').'/clients-area/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span>@if(Config::get('app.locale') == 'cn') 退出 @else Withdrawal @endif</a></li>
+                {{-- <li><a href="{{url('/clients-area#/profile/index')}}"><span class="fa fa-gears"></span>@if(Config::get('app.locale') == 'id') Pengaturan @elseif(Config::get('app.locale') == 'cn') 设定值 @else Settings @endif</a></li> --}}
+                <li><a href="{{url('/'. Config::get('app.locale').'/clients-area/profile/index')}}"><span class="fa fa-gears"></span>@if(Config::get('app.locale') == 'id') Pengaturan @elseif(Config::get('app.locale') == 'cn') 设定值 @else Settings @endif</a></li>
+                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fa fa-power-off"></span>@if(Config::get('app.locale') == 'id')  Keluar @elseif(Config::get('app.locale') == 'cn') 出口 @else Exit @endif</a></li>
                     
     
                     
@@ -94,13 +104,13 @@
             <div class="col-md-12 sub-mimin-mobile-menu-list animated fadeInLeft">
                 <ul class="nav nav-list">
 
-                <li><a href="/clients-area"><span class="fa-home fa"></span> Dashboard</a></li>
-                <li><a href="{{url('/clients-area#/list-real-account/index')}}"><span class="fa fa-unlock"></span> Akun Real</a></li>
-                <li> <a href="{{url('/clients-area#/list-demo-account/index')}}"><span class="fa fa-lock"></span> Akun Demo</a></li>
-                <li><a href="{{url('/clients-area#/list-deposit/index')}}"><span class="fa fa-credit-card"></span> Deposit</a></li>
-                <li><a href="{{url('/clients-area#/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span> Withdrawal</a></li>
-                <li><a href="{{url('/clients-area#/profile/index')}}"><span class="fa fa-gears"></span> Pengaturan</a></li>
-                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fa fa-power-off"></span> Keluar</a></li>
+                <li><a href="/clients-area"><span class="fa-home fa"></span> @if(Config::get('app.locale') == 'cn') 仪表板 @else Dashboard @endif</a></li>
+                <li><a href="{{url('/clients-area#/list-real-account/index')}}"><span class="fa fa-unlock"></span> @if(Config::get('app.locale') == 'id') Akun Real @elseif(Config::get('app.locale') == 'cn') 真实账户 @else Real Account @endif</a></li>
+                <li> <a href="{{url('/clients-area#/list-demo-account/index')}}"><span class="fa fa-lock"></span> @if(Config::get('app.locale') == 'id') Akun Demo @elseif(Config::get('app.locale') == 'cn') 模拟账户 @else Demo account @endif</a></li>
+                <li><a href="{{url('/clients-area#/list-deposit/index')}}"><span class="fa fa-credit-card"></span> @if(Config::get('app.locale') == 'cn') 存款 @else Deposit @endif</a></li>
+                <li><a href="{{url('/clients-area#/list-withdrawal/index')}}"><span class="fa fa-google-wallet"></span> @if(Config::get('app.locale') == 'cn') 退出 @else Withdrawal @endif</a></li>
+                <li><a href="{{url('/clients-area#/profile/index')}}"><span class="fa fa-gears"></span> @if(Config::get('app.locale') == 'id') Pengaturan @elseif(Config::get('app.locale') == 'cn') 设定值 @else Settings @endif</a></li>
+                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fa fa-power-off"></span> @if(Config::get('app.locale') == 'id')  Keluar @elseif(Config::get('app.locale') == 'cn') 出口 @else Exit @endif</a></li>
 
 
                   </ul>
@@ -121,9 +131,19 @@
     <!-- plugins -->
     <script src="/public/assets-miminium/js/plugins/moment.min.js"></script> 
     <script src="/public/assets-miminium/js/plugins/jquery.nicescroll.js"></script>
+    {{-- Datatables --}}
+    <script src="/public/assets-miminium/js/plugins/jquery.datatables.min.js"></script>
     <!-- custom -->
      <script src="/public/assets-miminium/js/main.js"></script>
     <script src="{{ asset('public/js/app-003.js') }}"></script>
- 
+      <script>
+        $(document).ready(function() {
+        $('#realaccount_table').DataTable({
+          ordering:false,
+          searching:false,
+          lengthChange: false,
+        });
+      });
+      </script>
   </body>
 </html>

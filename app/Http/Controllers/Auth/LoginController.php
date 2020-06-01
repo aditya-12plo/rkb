@@ -75,8 +75,18 @@ class LoginController extends Controller
         return $this->username;
     }
     public function showLoginForm(){
-        $this->data['title'] = 'Client Area - PT. Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'en'){
+			$this->data['title'] = 'Client Area - Eagle Capital Futures Ltd';
+			$this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'cn'){
+			$this->data['title'] = '客户专区 - Eagle Capital Futures Ltd';
+			$this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+			$this->data['title'] = 'Client Area - PT. Rajawali Kapital Berjangka';
+			$this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+		}
         $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
         $this->data['keywords'] = $this->keywords;
         return view('auth.login')->with($this->data);

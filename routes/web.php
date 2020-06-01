@@ -65,6 +65,20 @@
 
     
     Route::get('/coba', ['as' => 'coba', 'uses' => 'IndexController@addPartnershipTest']);
+
+    Route::group(['prefix' => 'clients-area'], function () {
+        Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
+        Route::post('login', 'Auth\LoginController@login')->name('login.request');
+        Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+        Route::get('/', 'HomeClientsController@index')->name('client.home');
+        Route::get('/list-real-account/index','HomeClientsController@listRealAccount')->name('client.listRealAccount');
+        Route::get('/list-demo-account/index','HomeClientsController@listDemoAccount')->name('client.listDemoAccount');
+        Route::get('/list-deposit/index','HomeClientsController@listDeposit')->name('client.listDeposit');
+        Route::get('/list-withdrawal/index','HomeClientsController@listWithdrawal')->name('client.listWithdrawal');
+        Route::get('/profile/index','HomeClientsController@profile')->name('client.profile');
+        Route::get('/profile/detail-contact','HomeClientsController@detailProfile')->name('client.detailProfile');
+        Route::get('/profile/change-password','HomeClientsController@changePasswordView')->name('client.changePasswordView');
+    });
 });
 
  /*

@@ -12,15 +12,23 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Route;
 use App\Models;
- 
+
 
 class HomeClientsController extends Controller
 {
 
     public function __construct()
     {
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->keywords = 'Eagle Capital Futures Ltd，Eagle，Eagle Capital，外汇经纪人，印尼经纪人，印度尼西亚，石油经纪人，黄金经纪人，RKB经纪人，外汇期货，全球资本，Eagle Capital，RKB Trade，印尼商品';
+		}elseif($default_locale == 'en'){
+            $this->keywords = 'Eagle Capital Futures Ltd, Eagle, Eagle Capital, Forex Brokers, Indonesian Brokers, Indonesia, Oil Brokers, Gold Brokers, RKB Brokers, Forex Futures, Global Capital, Eagle Capital, RKB Trade, Indonesian Commodities';
+		}else{
+            $this->keywords = 'rajawali kapital berjangka, rajawali, rajawali kapital, broker forex, broker indonesia, indonesia, broker oil, broker gold,rkb broker, berjangka forex, global kapital, rajawali kapital forex , rkb trade, komoditi indonesia';
+        }
         $this->middleware('auth');
-        $this->keywords = 'rejawali kapital berjangka, rajawali, rajawali kapital, broker forex, broker indonesia, indonesia, broker oil, broker gold,rkb broker, berjangka forex, global kapital, rajawali kapital forex , rkb trade, komoditi indonesia';
 		$agent = new Agent();
         if($agent->isMobile()){
             $this->data['isMobile'] = true;
@@ -33,8 +41,18 @@ class HomeClientsController extends Controller
 
     public function index()
     {
-        $this->data['title'] = 'Rajawali Kapital Berjangka';
-        $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
         $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
         $this->data['keywords'] = $this->keywords;
         return view('clients.home')->with($this->data);
@@ -1896,7 +1914,126 @@ private function step_eight($id){
         return $pdf->download($request->file_name);
     }
 
-
+    public function listRealAccount(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.akun-real')->with($this->data);
+    }
+    public function listDemoAccount(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.akun-demo')->with($this->data);
+    }
+    public function listDeposit(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.deposit')->with($this->data);
+    }
+    public function listWithdrawal(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.withdrawal')->with($this->data);
+    }
+    public function profile(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.profile')->with($this->data);
+    }
+    public function detailProfile(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.detail-profile')->with($this->data);
+    }
+    public function changePasswordView(){
+        $config = app('config');
+        $default_locale = $config['app.locale'];
+        if($default_locale == 'cn'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital作为一家公司或经纪人存在，其宗旨是为社会提供利益和贡献。';
+		}elseif($default_locale == 'en'){
+            $this->data['title'] = 'Eagle Capital Futures Ltd';
+            $this->data['description'] = 'Eagle Capital exists as a company or broker that relies on the aim of providing benefits and contributions to society.';
+		}else{
+            $this->data['title'] = 'Rajawali Kapital Berjangka';
+            $this->data['description'] = 'Rajawali Kapital hadir sebagai perusahaan atau broker yang bertumpu pada tujuan untuk memberikan manfaat dan kontribusi bagi masyarakat.';
+        }
+        $this->data['imageseo'] = asset('/images/RKB-Logo.jpeg');
+        $this->data['keywords'] = $this->keywords;
+        return view('clients.ubah-password')->with($this->data);
+    }
+    
     public function coba(){
         $get = Models\RealAccount::where([["id",1],['user_id',Auth::user()->id]])->first();
         $pdf = PDF::loadview('website.aggrement_online',['data'=>$get])->setPaper('a4', 'potrait')->setWarnings(false);

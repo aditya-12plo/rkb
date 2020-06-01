@@ -763,7 +763,7 @@ class IndexController extends Controller
                 //blade body emails.email_register_konfirmasi
             $content = view('emails.email_partnership')->with($masuk);
             return view('emails.email_partnership')->with($masuk);
-
+        
         }
     
     public function aktivasiAkun($token){
